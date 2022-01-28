@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletViewController" customModule="Swift_Sample_Application" customModuleProvider="target">
+            <connections>
+                <outlet property="channelTextField" destination="A50-fs-IBr" id="9CZ-Ix-591"/>
+                <outlet property="phoneNumberTextField" destination="M8i-R4-fDh" id="PHl-eQ-zMi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="99XXXXXXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8i-R4-fDh">
+                    <rect key="frame" x="20" y="84" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="kXI-uI-r54"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phonepe,ola,freecharge,mobikwiq,airtelmoney" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A50-fs-IBr">
+                    <rect key="frame" x="20" y="139" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="vkv-o9-oNc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wk6-5K-MSv">
+                    <rect key="frame" x="107" y="214" width="200" height="35"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="96Z-SF-bEz"/>
+                        <constraint firstAttribute="width" constant="200" id="ON3-BD-20s"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Pay"/>
+                    <connections>
+                        <action selector="payButtonTapped:" destination="-1" eventType="touchUpInside" id="UNf-NF-5wM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wk6-5K-MSv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8kt-Bg-rYb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M8i-R4-fDh" secondAttribute="trailing" constant="20" id="Jrp-oW-JuN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A50-fs-IBr" secondAttribute="trailing" constant="20" id="Ms2-TY-hh9"/>
+                <constraint firstItem="A50-fs-IBr" firstAttribute="top" secondItem="M8i-R4-fDh" secondAttribute="bottom" constant="20" id="eBa-h5-bOy"/>
+                <constraint firstItem="A50-fs-IBr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="faH-5F-ZYZ"/>
+                <constraint firstItem="wk6-5K-MSv" firstAttribute="top" secondItem="A50-fs-IBr" secondAttribute="bottom" constant="40" id="gMt-wB-tOS"/>
+                <constraint firstItem="M8i-R4-fDh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="k3H-yN-Tzg"/>
+                <constraint firstItem="M8i-R4-fDh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="yfb-tP-XIy"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="137"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

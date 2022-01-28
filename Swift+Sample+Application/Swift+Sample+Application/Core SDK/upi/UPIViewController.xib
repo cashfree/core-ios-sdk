@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UPIViewController" customModule="Swift_Sample_Application" customModuleProvider="target">
+            <connections>
+                <outlet property="upiIDTextField" destination="onc-5H-AUd" id="j9C-e1-3bg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPI COLLECT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l87-xO-p4I">
+                    <rect key="frame" x="20" y="64" width="137.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UPI ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="onc-5H-AUd">
+                    <rect key="frame" x="20" y="110.5" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="eVV-8O-gwM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-Ui-k6I">
+                    <rect key="frame" x="107" y="165.5" width="200" height="35"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="PIh-1m-NbR"/>
+                        <constraint firstAttribute="width" constant="200" id="v1u-52-hqw"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Pay"/>
+                    <connections>
+                        <action selector="payButtonTapped:" destination="-1" eventType="touchUpInside" id="IXg-OX-EdZ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPI INTENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcN-CO-FSF">
+                    <rect key="frame" x="20" y="240.5" width="374" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPk-LC-u5S">
+                    <rect key="frame" x="20" y="287" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="ZdT-eo-hiq"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="GPay"/>
+                    <connections>
+                        <action selector="gpayTapped:" destination="-1" eventType="touchUpInside" id="2SK-m7-WB9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUy-JA-zAU">
+                    <rect key="frame" x="20" y="332" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="zik-zA-GRT"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Phonepe"/>
+                    <connections>
+                        <action selector="phonePeTapped:" destination="-1" eventType="touchUpInside" id="OIj-sh-hBv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbt-v0-RMP">
+                    <rect key="frame" x="20" y="377" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="ffh-TC-0HA"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Paytm"/>
+                    <connections>
+                        <action selector="paytmTapped:" destination="-1" eventType="touchUpInside" id="mNA-R5-niV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTR-wv-bCa">
+                    <rect key="frame" x="20" y="422" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="CBB-IR-Dhw"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="BHIM"/>
+                    <connections>
+                        <action selector="bhimTapped:" destination="-1" eventType="touchUpInside" id="35Q-UO-xeo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ZcN-CO-FSF" firstAttribute="top" secondItem="aoA-Ui-k6I" secondAttribute="bottom" constant="40" id="0fG-2d-Dud"/>
+                <constraint firstItem="aoA-Ui-k6I" firstAttribute="top" secondItem="onc-5H-AUd" secondAttribute="bottom" constant="20" id="5xW-ho-oDt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lbt-v0-RMP" secondAttribute="trailing" constant="20" id="7pb-sX-r5m"/>
+                <constraint firstItem="FUy-JA-zAU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Cfg-wu-GAl"/>
+                <constraint firstItem="ZcN-CO-FSF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Dtg-Tt-D0A"/>
+                <constraint firstItem="Lbt-v0-RMP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="E8P-G6-cJO"/>
+                <constraint firstItem="zPk-LC-u5S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="GsF-jt-7a8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zPk-LC-u5S" secondAttribute="trailing" constant="20" id="Ijr-2t-G2q"/>
+                <constraint firstItem="zPk-LC-u5S" firstAttribute="top" secondItem="ZcN-CO-FSF" secondAttribute="bottom" constant="20" id="JVo-tP-oaL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QTR-wv-bCa" secondAttribute="trailing" constant="20" id="KYG-SB-h7T"/>
+                <constraint firstItem="onc-5H-AUd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="KnI-cV-Otu"/>
+                <constraint firstItem="FUy-JA-zAU" firstAttribute="top" secondItem="zPk-LC-u5S" secondAttribute="bottom" constant="10" id="QbQ-gg-wUL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="onc-5H-AUd" secondAttribute="trailing" constant="20" id="RnL-Jb-1s1"/>
+                <constraint firstItem="l87-xO-p4I" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Sxe-tS-rgb"/>
+                <constraint firstItem="QTR-wv-bCa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="XZe-sl-WQa"/>
+                <constraint firstItem="QTR-wv-bCa" firstAttribute="top" secondItem="Lbt-v0-RMP" secondAttribute="bottom" constant="10" id="fhK-a7-k7F"/>
+                <constraint firstItem="l87-xO-p4I" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="jtG-6Y-H6Z"/>
+                <constraint firstItem="onc-5H-AUd" firstAttribute="top" secondItem="l87-xO-p4I" secondAttribute="bottom" constant="20" id="mqX-HR-Qcd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FUy-JA-zAU" secondAttribute="trailing" constant="20" id="oFP-I9-mu8"/>
+                <constraint firstItem="Lbt-v0-RMP" firstAttribute="top" secondItem="FUy-JA-zAU" secondAttribute="bottom" constant="10" id="pow-Wn-0v4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZcN-CO-FSF" secondAttribute="trailing" constant="20" id="uVO-6f-s6Z"/>
+                <constraint firstItem="aoA-Ui-k6I" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vxP-7p-eC6"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="98"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
