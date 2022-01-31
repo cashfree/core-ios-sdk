@@ -18,7 +18,7 @@ The following are the steps to be followed to getting the integration started:-
 
 ___
 
-### **Step 1: Create an account with Cashfree and get the API keys**
+## **Step 1: Create an account with Cashfree and get the API keys**
 
 1. Go to the [Cashfree website](https://merchant.cashfree.com/merchant/login) and create an account. Click [here](https://docs.cashfree.com/docs/create-account) for detailed steps on how to create and activate your account.
 2. Log in to your Merchant Dashboard using the same credentials.
@@ -27,18 +27,18 @@ ___
 
 ___
 
-### **Step 2: Integrate Cashfree SDK into your application**
+## **Step 2: Integrate Cashfree SDK into your application**
 
 #### COCOAPODS
 
 Open your pod file and add the following and then use `pod install`
 
 ```
-pod 'CashfreePGCoreSDK', '~> 0.0.1'
+pod 'CashfreePGCoreSDK', '~> 1.0.0'
 ```
 ___
 
-### **Step 3: Creating an order with Cashfree**
+## **Step 3: Creating an order with Cashfree**
 
 To process any payment on Cashfree PG, the merchant needs to create an order in the cashfree system. **This order must be created from your backend (as it uses your secret key)**.
 
@@ -119,7 +119,7 @@ We recommend that you store the following parameters at your end `order_id`, `cf
 
 ___
 
-### Step 4: **Create a session**
+## Step 4: **Create a session**
 
 As discussed above, the **`order_token`** contains all the order details and is used to authenticate the payment. The SDK exposes a class **`CFSession`** which has member variables for a payment session. One of them sets the order_token value.
 
@@ -145,7 +145,7 @@ do {
 
 ___
 
-### **Prerequisite - Card, Wallet and Netbanking Mode**
+## **Prerequisite - Card, Wallet and Netbanking Mode**
 
 When any of these payment modes is being used, the user is navigated to a web page to authenticate the payment. In this case, a web-view has to be loaded. For this purpose, the SDK exposes a web-view `CFWebView` which is a subclass of `WKWebView`. You have to create a WKWebView and set the custom class to `CFWebView`.
 
@@ -175,7 +175,7 @@ var cashfreeWebView: CFWebView!
 
 ___
 
-### **Step 5: Select a **payment mode** and create objects for the same**
+## **Step 5: Select a **payment mode** and create objects for the same**
 
 Cashfree PG provides multiple modes to make payment. You can choose any mode depending on the requirement and invoke that payment mode from the SDK. The following are supported by the iOS SDK:-
 
@@ -184,6 +184,7 @@ Cashfree PG provides multiple modes to make payment. You can choose any mode dep
 3. UPI Collect
 4. UPI Intent
 5. Wallet
+6. EMI
 
 ---
 
@@ -355,7 +356,36 @@ do {
 
 ___
 
-### Create a **Payment object**
+### **Create a EMICard Object**
+- An EMI card object has to be created by sending all the required details i.e., Card Holder Name, Card Number, Card CVV and more
+- The SDK exposes a class `CFEMICard` that collects these details.
+- The below code snippet creates an object of `CFEMICard`
+```
+do {
+        let card = try CFEMICard.CFEMICardBuilder()
+            .setCardNumber("1234123412341234")
+            .setCardHolderName("Suhas")
+            .setCardExpiryYear("25")
+            .setCardExpiryMonth("12")
+            .setCVV("123")
+            .setEMITenure(3)
+            .setBankName("ICICI")
+            .buildCard()
+    } catch let e {
+        let error = e as! CashfreeError
+        print(error.localizedDescription)
+    }
+```
+- In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with card-payment flow and the controller which is initiating this has to conform to the protocol `CFCardPaymentDelegate`.
+- This protocol comprises of 3 methods:
+    - `func initiatingCardPayment()`
+    - `func presentWebForAuthenticatingCardPayment()`
+    - `func cardPayment(didFinishExecutingWith error: CFErrorResponse)`
+    - `func verifyCardPaymentCompletion(for orderId: String)`
+`Note:` Refer to our API Reference documentation for more information about the methods.
+---
+
+## Create a **Payment object**
 
 - The Payment Object is a collection of the above created **session** and **payment mode**.
 - The SDK exposes separate Payment Object classes for each of the payment modes. Depending on the payment mode that you are using you can use that particular class
@@ -435,11 +465,27 @@ ___
 
 ---
 
-### Initiate payment
+#### 2. CFEMICardPayment
+- Code Snippet to create a payment object for EMI
+```
+    do {
+        let cardPaymentObject = try CFEMICardPayment.CFEMICardPaymentBuilder()
+                .setSession(cfSession)
+                .setCard(emiCard)
+                .build()
+    } catch let e {
+      let error = e as! CashfreeError
+      print(error.localizedDescription)
+    }
+```
+    
+Note: Refer to our API Reference documentation for more information about the methods.
+
+## Initiate payment
 
 - Finally to initiate the payment, the above created Payment Object has to be sent to the SDK.
 - The SDK exposes a class `CFPaymentGatewayService`, which can be used to set the Payment Object and initiate the payment.
-- The below code snippet is an example demonstration it's usage:
+- The below code snippet is an example demonstrating it's usage:
 
 ```
 let gatewayService = CFPaymentGatewayService.getInstance()
@@ -571,9 +617,6 @@ do {
                 .build()
             let netbanking = try CFNetbanking.CFNetbankingBuilder()
                 .setBankCode(3003)
-                .setBankName("Axis Bank")
-                .setBankIfsc("UTIB0000123")
-                .setBankAccountNumber("9999999999999")
                 .build()
             let netbankingPaymentObject = try CFNetbankingPayment.CFNetbankingPaymentBuilder()
                 .setSession(cfSession)
@@ -637,7 +680,7 @@ do {
 
 `Note:` For demo purpose we are taking the "id" of the first object in the array. The "id" of the app that is clicked has to be sent as the value
 
-### Error Codes
+## Error Codes
 
 There are 2 error codes that is sent from SDK to the application. One being the error code that is sent from Cashfree's Backend service when order initiation fails. Visit [here](https://docs.cashfree.com/docs/resources#errors) for details about such error codes.
 
@@ -671,6 +714,6 @@ The other type of error codes are the ones that are exposed by the SDK when requ
 | WALLET_PHONE_MISSING        	| The "phone number" is missing in the wallet payment request                                                                                                          	|
 | NB_BANK_CODE_MISSING        	| The "bank_code" is missing in the request                                                                                                                            	|
 
-### Payment Verification
+## Payment Verification
 
 Visit [here](https://docs.cashfree.com/reference#get-status) for details about verifying order payment status
