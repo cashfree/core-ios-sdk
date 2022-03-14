@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint CashfreePGUISDK.podspec' to ensure this is a
+# Be sure to run `pod lib lint CashfreePG.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
 
-s.name			= "CashfreePGUISDK"
-s.version		= "1.0.3"
+s.name			= "CashfreePG"
+s.version		= "1.0.4"
 s.summary		= "Cocoapods implementation of Cashfree Payment's Payment Gateway UI SDK"
 
 s.description		= <<-DESC
@@ -21,8 +21,8 @@ s.author			= { "Cashfree Payments" => "developers@cashfree.com" }
 s.source			= { :git => "https://github.com/cashfree/core-ios-sdk.git", :tag => s.version }
 s.social_media_url	= "https://twitter.com/gocashfree"
 s.platform		= :ios, "12.0"
-s.vendored_frameworks	= "CashfreePGUISDK.xcframework"
+s.vendored_frameworks	= "CashfreePG.xcframework"
 s.swift_version		= "5.0"
-s.dependency 'CashfreePGCoreSDK', '~> 1.0.1'
+s.dependency 'CashfreePGUISDK', '~> 1.0.3'
 
 end
