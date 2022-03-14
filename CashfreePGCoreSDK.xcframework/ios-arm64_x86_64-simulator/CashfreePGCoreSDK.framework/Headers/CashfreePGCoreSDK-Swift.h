@@ -194,6 +194,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreGraphics;
 @import Foundation;
 @import ObjectiveC;
+@import UIKit;
 @import WebKit;
 #endif
 
@@ -258,7 +259,7 @@ SWIFT_CLASS_NAMED("CFAnalytics")
 
 
 SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFCallbackDelegate_")
-@protocol CFCallbackDelegate <NSObject>
+@protocol CFCallbackDelegate
 @end
 
 
@@ -460,6 +461,45 @@ SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK21CFCardPaymentDelegate_")
 @end
 
 
+/// CFPaymentGatewayService class contains the payment initiation method. Invoking this method triggers the payment execution flow. It has a member variable of type <code>CFPayment</code>. The value of this variable can be set using <code>doPayment(payment: ...)</code> which takes in a CFPaymentt as a parameter and initiates the payment
+/// <h2>Code Snippet</h2>
+/// \code
+///
+/// private let cfPaymentGatewayService = CFPaymentGatewayService.getInstance()
+///
+/// override func viewDidLoad() {
+/// cfPaymentGatewayService.setCallback([self, self, self, self, self])
+/// // Callbacks are set for each of the payment mode -> Card, Netbanking, UPI, Wallet
+/// // Recommended to set the callbacks in viewDidLoad
+/// }
+///
+/// do {
+/// try cfPaymentGatewayService.doPayment(paymentOject: cardPayment)
+/// } catch {
+/// // Handle Exceptions
+/// }
+///
+/// \endcodenote:
+/// The CFPayment is a <em>mandatory</em> field ( Please read documentation <code>CFCardPayment</code>, <code>CFEMICardPayment</code>, <code>CFUPIPayment</code>, <code>CFWalletPayment</code>, <code>CFNetbankingPayment</code>, <code>CFQRCodePayment</code>). The <em>doPayment()</em> method call has to be surrounded by a <em>do-try-catch</em> as it throws an exception in case the CFPayment or the callback is not set .
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
+@interface CFCorePaymentService : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// This method returns the only available instance of CFPaymentGatewayService
+///
+/// returns:
+/// An instance of CFPaymentGatewayService
++ (CFCorePaymentService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
+- (void)setCallback:(id <CFCallbackDelegate> _Nonnull)callback;
+/// The method call invokes the respective payment flow (netbanking, card, UPI or wallet)
+///
+/// throws:
+/// In case the CFPayment instance variable is not set or not a payment mode, the method throws an exception
+- (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment error:(NSError * _Nullable * _Nullable)error;
+- (void)cancelPayment;
+@end
+
+
 SWIFT_CLASS_NAMED("CFCrash")
 @interface CFCrash : NSManagedObject
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
@@ -639,6 +679,52 @@ SWIFT_CLASS_NAMED("CFEvent")
 @property (nonatomic, strong) CFAnalytics * _Nullable transaction;
 @end
 
+@class NSCoder;
+@class UIImage;
+
+/// CFImageView inherits UIImageView. The user has to create a UIImageView and set the custom class to CFImageView (in case of storyboard UI creation) else use the below code snippet to create a image-view:-
+/// <ul>
+///   <li>
+///     <h2>Code Snippet</h2>
+///   </li>
+/// </ul>
+/// \code
+/// var cashfreeImageView: CFImageView!
+/// override func viewDidLoad() {
+///     super.viewDidLoad()
+///
+///     .......
+///
+///     self.cashfreeImageView = CFImageView(frame: .zero)
+///     self.cashfreeImageView.translatesAutoresizingMaskIntoConstraints = false
+///     self.view.addSubview(cashfreeImageView)
+///     self.cashfreeImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+///     self.cashfreeImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+///     self.cashfreeImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+///     self.cashfreeImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+///
+///     do {
+///         try self.cashfreeImageView.loadQRCode()
+///     } catch let e {
+///         let error = e as! CashfreeError
+///         print(error.localizedDescription)
+///     }
+/// }
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK11CFImageView")
+@interface CFImageView : UIImageView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+/// This method generates the QRCode as an image and sets it to the image-view which can be scanned by any UPI app to make payment.
+///
+/// throws:
+/// In case there is any error while generating the QRCode, this method throws an exception, so that the errors can be handled gracefully.
+- (BOOL)loadQRCodeAndReturnError:(NSError * _Nullable * _Nullable)error;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
+@end
+
 
 /// This <em>CFNetbanking</em> class consists of all the parameters that are required to initiate payment using NetBanking payment mode. A CFNetbanking object can be build with the help of a <code>CFNetbankingBuilder</code> class that is embedded within the CFNetbanking class.
 /// \code
@@ -792,50 +878,253 @@ typedef SWIFT_ENUM(NSInteger, CFPLATFORM, open) {
 };
 
 
-
-/// CFPaymentGatewayService class contains the payment initiation method. Invoking this method triggers the payment execution flow. It has a member variable of type <code>CFPayment</code>. The value of this variable can be set using <code>doPayment(payment: ...)</code> which takes in a CFPaymentt as a parameter and initiates the payment
+/// The <em>CFPaylater</em> consists of all the parameters that are required to initiate payment using Pay Later Payment mode. A CFPaylater object can be created with the help of <code>CFPaylater</code> class that is embedded within the CFPaylater class.
 /// <h2>Code Snippet</h2>
 /// \code
-///
-/// private let cfPaymentGatewayService = CFPaymentGatewayService.getInstance()
-///
-/// override func viewDidLoad() {
-/// cfPaymentGatewayService.setCallback([self, self, self, self, self])
-/// // Callbacks are set for each of the payment mode -> Card, Netbanking, UPI, Wallet
-/// // Recommended to set the callbacks in viewDidLoad
-/// }
-///
 /// do {
-///    try cfPaymentGatewayService.doPayment(paymentOject: cardPayment)
-/// } catch {
-///    // Handle Exceptions
+///    let payLater = try CFPaylater.CFPaylater()
+///        .setProvider("lazypay")
+///        .setPhone("9999999999")
+///        .build()
+/// } catch let e {
+///    let error = e as! CashfreeError
+///    print(error.localizedDescription)
 /// }
 ///
 /// \endcodenote:
-/// The CFPayment is a <em>mandatory</em> field ( Please read documentation <code>CFCardPayment</code>, <code>CFEMICardPayment</code>, <code>CFUPIPayment</code>, <code>CFWalletPayment</code>, <code>CFNetbankingPayment</code>, <code>CFQRCodePayment</code>). The <em>doPayment()</em> method call has to be surrounded by a <em>do-try-catch</em> as it throws an exception in case the CFPayment or the callback is not set .
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK23CFPaymentGatewayService")
-@interface CFPaymentGatewayService : NSObject
+/// The value of provider can be any of  the following:
+/// \code
+///      * lazypay
+///      * zestmoney
+///      * olapostpaid
+///      * kotak
+///      * flexipay
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK10CFPaylater")
+@interface CFPaylater : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// This method returns the only available instance of CFPaymentGatewayService
+@end
+
+
+/// The <em>CFPaylaterBuilder</em> class consists of all the setters that are needed to build an object of type <code>CFPaylater</code>
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK10CFPaylater17CFPaylaterBuilder")
+@interface CFPaylaterBuilder : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// This method sets the value as to which wallet has to be used to make payment.
+/// \param provider The parameter takes in a String and the value has to be the name of the paylater provider (<em>lazypay, zestmoney, olapostpaid, kotak, flexipay</em>)
+///
 ///
 /// returns:
-/// An instance of CFPaymentGatewayService
-+ (CFPaymentGatewayService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
-- (void)setCallback:(NSArray<id <CFCallbackDelegate>> * _Nonnull)callback;
-/// The method call invokes the respective payment flow (netbanking, card, UPI or wallet)
+/// It returns an instance of <em>CFPaylaterBuilder</em> to continue building the <em>CFPaylater</em> object
+- (CFPaylaterBuilder * _Nonnull)setProvider:(NSString * _Nonnull)provider SWIFT_WARN_UNUSED_RESULT;
+/// This method sets the phone number to authenticate the wallet account and make payment
+/// \param phone The parameter takes in a String, which is the phone number.
+///
+///
+/// returns:
+/// It returns an instance of <em>CFPaylaterBuilder</em> to continue building the <em>CFPaylater</em> object
+- (CFPaylaterBuilder * _Nonnull)setPhone:(NSString * _Nonnull)phone SWIFT_WARN_UNUSED_RESULT;
+/// The method creates an object of <em>CFPaylater</em>
 ///
 /// throws:
-/// In case the CFPayment instance variable is not set or not a payment mode, the method throws an exception
-- (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment error:(NSError * _Nullable * _Nullable)error;
-- (void)cancelPayment;
+/// In case the mandatory parameters are empty, an exception gets thrown
+///
+/// returns:
+/// It returns an object of <em>CFPaylater</em>
+- (CFPaylater * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
+
+
+/// The CFPaylaterPayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFPaylaterPaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the payment. An object of <code>CFPaylater</code>, <code>CFSession</code> for Pay Later payment are the class variables.
+/// <h2>Code Snippet</h2>
+/// \code
+/// let cfSession = ...
+/// let payLater = ...
+/// let cfWalletPaymentObject = try CFPaylaterPayment.CFPaylaterPaymentBuilder()
+///     .setSession(cfSession)
+///     .setPaylater(payLater)
+///     .build()
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFPaylaterPayment")
+@interface CFPaylaterPayment : CFPayment
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)printDescription;
+@end
+
+
+/// The CFWalletPaymentBuilder class can be used to create an object of CFWalletPayment. It consists of setter methods to set the values for <em>CFWallet</em>, <em>CFSession</em>. And finally a <em>build</em> method that returns an object of <em>CFWalletPayment</em>.
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFPaylaterPayment24CFPaylaterPaymentBuilder")
+@interface CFPaylaterPaymentBuilder : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// This method sets the value for CFSession variable of the CFWalletPayment class
+/// \param session It takes a parameter of type CFSession
+///
+///
+/// returns:
+/// It returns an instance of <em>CFWalletPaymentBuilder</em> to continue the build process
+- (CFPaylaterPaymentBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+/// This method sets the value for CFWallet variable of the CFWalletPayment class
+/// \param wallet It takes a parameter of type CFWallet
+///
+///
+/// returns:
+/// It returns an instance of <em>CFWalletPaymentBuilder</em> to continue the build process
+- (CFPaylaterPaymentBuilder * _Nonnull)setPaylater:(CFPaylater * _Nonnull)paylater SWIFT_WARN_UNUSED_RESULT;
+/// This method builds an object of <em>CFWalletPayment</em>
+///
+/// throws:
+/// It throws an error (CashfreeError), in case <em>CFWallet</em> or <em>CFSession</em> is not set.
+///
+/// returns:
+/// It returns an object of <em>CFWalletPayment</em>
+- (CFPaylaterPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+/// The UIViewController implementing the SDK’s paylater payment flow has to conform to this protocol. The protocol comes with four methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
+/// <h2>Code Snippet</h2>
+/// \code
+/// class MyViewController: UIViewController, CFPaylaterPaymentDelegate {
+///     
+///     override func viewDidLoad() {
+///         ....
+///         ....
+///         ....
+///     }
+///     
+///    func initiatingPaylaterPayment()  {
+///        // Show Loader here
+///    }
+///
+///    func verifyPaylaterPaymentCompletion() {
+///        // Start Payment Verification here by making an API call to Cashfree Server
+///    }
+///    
+///    func presentWebForAuthenticatingPaylaterPayment() {
+///         // Present the UIViewController that embeds CFWebView and call the below method in that class
+///         DispatchQueue.main.async {
+///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
+///             self.webViewController.modalPresentationStyle = .fullScreen
+///             self.present(self.webViewController, animated: true, completion: nil)
+///         }
+///    }
+///
+///    func payLaterPayment(didFinishExecutingWith error: CFErrorResponse) {
+///        // handle errors here.
+///    }
+///     
+/// }
+///
+/// \endcodenote:
+/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
+SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK25CFPaylaterPaymentDelegate_")
+@protocol CFPaylaterPaymentDelegate <CFCallbackDelegate>
+/// This method callback is invoked when the SDK starts creating the Pay Later payment process for the given order.
+/// note:
+/// Loaders can be implemented here.
+- (void)initiatingPaylaterPayment;
+/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
+- (void)presentWebForAuthenticatingPaylaterPayment;
+/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
+- (void)verifyPaylaterPaymentCompletionFor:(NSString * _Nonnull)orderId;
+/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid wallet_name)</em> or in case of <em>Internet Issues</em>
+/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
+///
+- (void)payLaterPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
+@end
+
 
 
 /// The CFErrorResponse class consists of class variables using which error codes and message can be sent back to the user in case of <em>Failed API</em> or <em>No Internet</em> or <em>Invalid Card Details</em> and more.
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFPaymentResponse")
 @interface CFPaymentResponse : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+/// The CFQRCodePayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFQRCodePaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the payment. An object of<code>CFSession</code>  for QRCode payment are the class variables.
+/// <h2>Code Snippet</h2>
+/// \code
+/// let cfSession = ...
+/// let wallet = ...
+/// let qrCodePaymentObject = try CFQRCodePayment.CFQRCodePaymentBuilder()
+///     .setSession(cfSession)
+///     .build()
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK15CFQRCodePayment")
+@interface CFQRCodePayment : CFPayment
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)printDescription;
+@end
+
+
+/// The CFQRCodePaymentBuilder class can be used to create an object of CFQRCodePayment. It consists of setter methods to set the values for <em>CFSession</em> . And finally a <em>build</em> method that returns an object of <em>CFQRCodePayment</em>.
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK15CFQRCodePayment22CFQRCodePaymentBuilder")
+@interface CFQRCodePaymentBuilder : NSObject
+/// No Argument Constructor
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+/// The UIViewController implementing the SDK’s QRCode payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to generating the QRCode to handling errors.
+/// <h2>Code Snippet</h2>
+/// \code
+/// class MyViewController: UIViewController, CFQRCodePaymentDelegate {
+///     
+///    var cashfreeImageView: CFImageView!
+///     override func viewDidLoad() {
+///         ....
+///         ....
+///         ....
+///        self.cashfreeImageView = .....
+///     }
+///     
+///    func initiatingQRCodeGeneration()  {
+///        // Show Loader here
+///    }
+///    
+///    func loadImageViewToPresentQRCode() {
+///         DispatchQueue.main.async {
+///             do {
+///                 try self.cashfreeImageView.loadQRCode()
+///             } catch {
+///                 
+///             }
+///         }
+///    }
+///
+///    func qrCodePayment(didFinishExecutingWith error: CFErrorResponse) {
+///        // handle errors here.
+///    }
+///
+///    func verifyQRCodePaymentCompletion(for orderId: String) {
+///        // Verify Payment
+///    }
+///     
+/// }
+///
+/// \endcodenote:
+/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
+SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFQRCodePaymentDelegate_")
+@protocol CFQRCodePaymentDelegate <CFCallbackDelegate>
+/// This method callback is invoked when the SDK starts creating the QRCode payment process for the given order.
+/// note:
+/// Loaders can be implemented here.
+- (void)initiatingQRCodeGeneration;
+/// This method callback is invoked when the payment request is created and the SDK is ready to dsplay the QRCode in the image-view(<code>CFImageView</code>). When this callback is invoked, the image-view instance has to call a method named <code>loadQRCode()</code> which can be accessed by any image-view which is a sub-class of <em>CFImageView</em>
+- (void)loadImageViewToPresentQRCode;
+/// This method callback gets invoked whenever there is a case of <em>Internet Issues</em> or more.
+/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
+///
+- (void)qrCodePaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
+/// This method gets invoked once the QR-Code is displayed to the user. It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
+- (void)verifyQRCodePaymentCompletionFor:(NSString * _Nonnull)orderId;
 @end
 
 
@@ -986,7 +1275,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK5CFUPI12CFUPIBuilder")
 ///
 /// returns:
 /// It returns an instance of <em>CFUPIBuilder</em> to further continue building an object of <em>CFUPI</em>
-- (CFUPIBuilder * _Nonnull)setUpiId:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+- (CFUPIBuilder * _Nonnull)setUPIID:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
 /// This methods creates an object of CFUPICollect by setting the value of channel and upi_id and returns the object back to the calling method
 ///
 /// throws:
@@ -1141,7 +1430,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK10CFUPIUtils")
 /// \code
 /// do {
 ///    let wallet = try CFWallet.CFWalletBuilder()
-///        .setChannel("phonepe")
+///        .setProvider("phonepe")
 ///        .setPhone("9999999999")
 ///        .build()
 /// } catch let e {
@@ -1150,7 +1439,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK10CFUPIUtils")
 /// }
 ///
 /// \endcodenote:
-/// The value of channel can be any of  the following:
+/// The value of provider can be any of  the following:
 /// \code
 ///      * phonepe
 ///      * paytm
@@ -1174,12 +1463,12 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK8CFWallet15CFWalletBuilder")
 @interface CFWalletBuilder : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 /// This method sets the value as to which wallet has to be used to make payment.
-/// \param channel The parameter takes in a String and the value has to be the name of the wallet (<em>gpay,phonepe,paytm,amazon,airtel,freecharge,mobikwik,jio,ola</em>)
+/// \param provider The parameter takes in a String and the value has to be the name of the wallet (<em>gpay,phonepe,paytm,amazon,airtel,freecharge,mobikwik,jio,ola</em>)
 ///
 ///
 /// returns:
 /// It returns an instance of <em>CFWalletBuilder</em> to continue building the <em>CFWallet</em> object
-- (CFWalletBuilder * _Nonnull)setChannel:(NSString * _Nonnull)channel SWIFT_WARN_UNUSED_RESULT;
+- (CFWalletBuilder * _Nonnull)setProvider:(NSString * _Nonnull)provider SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the phone number to authenticate the wallet account and make payment
 /// \param phone The parameter takes in a String, which is the phone number.
 ///
@@ -1298,7 +1587,6 @@ SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFWalletPaymentDelegate_")
 - (void)walletPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
 @end
 
-@class NSCoder;
 @class WKWebViewConfiguration;
 @class WKNavigationAction;
 
@@ -1368,8 +1656,8 @@ typedef SWIFT_ENUM(NSInteger, CashfreeError, open) {
   CashfreeErrorCARD_EMI_TENURE_MISSING = 12,
   CashfreeErrorUPI_ID_MISSING = 13,
   CashfreeErrorINVALID_UPI_APP_ID_SENT = 14,
-  CashfreeErrorWALLET_CHANNEL_MISSING = 15,
-  CashfreeErrorWALLET_PHONE_MISSING = 16,
+  CashfreeErrorPROVIDER_MISSING = 15,
+  CashfreeErrorPHONE_NUMBER_MISSING = 16,
   CashfreeErrorNB_BANK_CODE_MISSING = 17,
   CashfreeErrorNB_BANK_NAME_MISSING = 18,
   CashfreeErrorNB_BANK_IFSC_MISSING = 19,
@@ -1387,6 +1675,10 @@ typedef SWIFT_ENUM(NSInteger, CashfreeError, open) {
   CashfreeErrorINVALID_QRCODE_DATA = 31,
   CashfreeErrorIMAGE_VIEW_CALLBACK_MISSING = 32,
   CashfreeErrorMISSING_CALLBACK = 33,
+  CashfreeErrorMISSING_VIEW_CONTROLLER_INSTANCE = 34,
+  CashfreeErrorHEX_SHOULD_START_WITH = 35,
+  CashfreeErrorCOMPONENTS_MISSING = 36,
+  CashfreeErrorONE_PAYMENT_COMPONENT_SHOULD_BE_PRESENT = 37,
 };
 static NSString * _Nonnull const CashfreeErrorDomain = @"CashfreePGCoreSDK.CashfreeError";
 
@@ -1592,6 +1884,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreGraphics;
 @import Foundation;
 @import ObjectiveC;
+@import UIKit;
 @import WebKit;
 #endif
 
@@ -1656,7 +1949,7 @@ SWIFT_CLASS_NAMED("CFAnalytics")
 
 
 SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFCallbackDelegate_")
-@protocol CFCallbackDelegate <NSObject>
+@protocol CFCallbackDelegate
 @end
 
 
@@ -1858,6 +2151,45 @@ SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK21CFCardPaymentDelegate_")
 @end
 
 
+/// CFPaymentGatewayService class contains the payment initiation method. Invoking this method triggers the payment execution flow. It has a member variable of type <code>CFPayment</code>. The value of this variable can be set using <code>doPayment(payment: ...)</code> which takes in a CFPaymentt as a parameter and initiates the payment
+/// <h2>Code Snippet</h2>
+/// \code
+///
+/// private let cfPaymentGatewayService = CFPaymentGatewayService.getInstance()
+///
+/// override func viewDidLoad() {
+/// cfPaymentGatewayService.setCallback([self, self, self, self, self])
+/// // Callbacks are set for each of the payment mode -> Card, Netbanking, UPI, Wallet
+/// // Recommended to set the callbacks in viewDidLoad
+/// }
+///
+/// do {
+/// try cfPaymentGatewayService.doPayment(paymentOject: cardPayment)
+/// } catch {
+/// // Handle Exceptions
+/// }
+///
+/// \endcodenote:
+/// The CFPayment is a <em>mandatory</em> field ( Please read documentation <code>CFCardPayment</code>, <code>CFEMICardPayment</code>, <code>CFUPIPayment</code>, <code>CFWalletPayment</code>, <code>CFNetbankingPayment</code>, <code>CFQRCodePayment</code>). The <em>doPayment()</em> method call has to be surrounded by a <em>do-try-catch</em> as it throws an exception in case the CFPayment or the callback is not set .
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
+@interface CFCorePaymentService : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// This method returns the only available instance of CFPaymentGatewayService
+///
+/// returns:
+/// An instance of CFPaymentGatewayService
++ (CFCorePaymentService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
+- (void)setCallback:(id <CFCallbackDelegate> _Nonnull)callback;
+/// The method call invokes the respective payment flow (netbanking, card, UPI or wallet)
+///
+/// throws:
+/// In case the CFPayment instance variable is not set or not a payment mode, the method throws an exception
+- (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment error:(NSError * _Nullable * _Nullable)error;
+- (void)cancelPayment;
+@end
+
+
 SWIFT_CLASS_NAMED("CFCrash")
 @interface CFCrash : NSManagedObject
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
@@ -2037,6 +2369,52 @@ SWIFT_CLASS_NAMED("CFEvent")
 @property (nonatomic, strong) CFAnalytics * _Nullable transaction;
 @end
 
+@class NSCoder;
+@class UIImage;
+
+/// CFImageView inherits UIImageView. The user has to create a UIImageView and set the custom class to CFImageView (in case of storyboard UI creation) else use the below code snippet to create a image-view:-
+/// <ul>
+///   <li>
+///     <h2>Code Snippet</h2>
+///   </li>
+/// </ul>
+/// \code
+/// var cashfreeImageView: CFImageView!
+/// override func viewDidLoad() {
+///     super.viewDidLoad()
+///
+///     .......
+///
+///     self.cashfreeImageView = CFImageView(frame: .zero)
+///     self.cashfreeImageView.translatesAutoresizingMaskIntoConstraints = false
+///     self.view.addSubview(cashfreeImageView)
+///     self.cashfreeImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+///     self.cashfreeImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+///     self.cashfreeImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+///     self.cashfreeImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+///
+///     do {
+///         try self.cashfreeImageView.loadQRCode()
+///     } catch let e {
+///         let error = e as! CashfreeError
+///         print(error.localizedDescription)
+///     }
+/// }
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK11CFImageView")
+@interface CFImageView : UIImageView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+/// This method generates the QRCode as an image and sets it to the image-view which can be scanned by any UPI app to make payment.
+///
+/// throws:
+/// In case there is any error while generating the QRCode, this method throws an exception, so that the errors can be handled gracefully.
+- (BOOL)loadQRCodeAndReturnError:(NSError * _Nullable * _Nullable)error;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
+@end
+
 
 /// This <em>CFNetbanking</em> class consists of all the parameters that are required to initiate payment using NetBanking payment mode. A CFNetbanking object can be build with the help of a <code>CFNetbankingBuilder</code> class that is embedded within the CFNetbanking class.
 /// \code
@@ -2190,50 +2568,253 @@ typedef SWIFT_ENUM(NSInteger, CFPLATFORM, open) {
 };
 
 
-
-/// CFPaymentGatewayService class contains the payment initiation method. Invoking this method triggers the payment execution flow. It has a member variable of type <code>CFPayment</code>. The value of this variable can be set using <code>doPayment(payment: ...)</code> which takes in a CFPaymentt as a parameter and initiates the payment
+/// The <em>CFPaylater</em> consists of all the parameters that are required to initiate payment using Pay Later Payment mode. A CFPaylater object can be created with the help of <code>CFPaylater</code> class that is embedded within the CFPaylater class.
 /// <h2>Code Snippet</h2>
 /// \code
-///
-/// private let cfPaymentGatewayService = CFPaymentGatewayService.getInstance()
-///
-/// override func viewDidLoad() {
-/// cfPaymentGatewayService.setCallback([self, self, self, self, self])
-/// // Callbacks are set for each of the payment mode -> Card, Netbanking, UPI, Wallet
-/// // Recommended to set the callbacks in viewDidLoad
-/// }
-///
 /// do {
-///    try cfPaymentGatewayService.doPayment(paymentOject: cardPayment)
-/// } catch {
-///    // Handle Exceptions
+///    let payLater = try CFPaylater.CFPaylater()
+///        .setProvider("lazypay")
+///        .setPhone("9999999999")
+///        .build()
+/// } catch let e {
+///    let error = e as! CashfreeError
+///    print(error.localizedDescription)
 /// }
 ///
 /// \endcodenote:
-/// The CFPayment is a <em>mandatory</em> field ( Please read documentation <code>CFCardPayment</code>, <code>CFEMICardPayment</code>, <code>CFUPIPayment</code>, <code>CFWalletPayment</code>, <code>CFNetbankingPayment</code>, <code>CFQRCodePayment</code>). The <em>doPayment()</em> method call has to be surrounded by a <em>do-try-catch</em> as it throws an exception in case the CFPayment or the callback is not set .
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK23CFPaymentGatewayService")
-@interface CFPaymentGatewayService : NSObject
+/// The value of provider can be any of  the following:
+/// \code
+///      * lazypay
+///      * zestmoney
+///      * olapostpaid
+///      * kotak
+///      * flexipay
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK10CFPaylater")
+@interface CFPaylater : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// This method returns the only available instance of CFPaymentGatewayService
+@end
+
+
+/// The <em>CFPaylaterBuilder</em> class consists of all the setters that are needed to build an object of type <code>CFPaylater</code>
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK10CFPaylater17CFPaylaterBuilder")
+@interface CFPaylaterBuilder : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// This method sets the value as to which wallet has to be used to make payment.
+/// \param provider The parameter takes in a String and the value has to be the name of the paylater provider (<em>lazypay, zestmoney, olapostpaid, kotak, flexipay</em>)
+///
 ///
 /// returns:
-/// An instance of CFPaymentGatewayService
-+ (CFPaymentGatewayService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
-- (void)setCallback:(NSArray<id <CFCallbackDelegate>> * _Nonnull)callback;
-/// The method call invokes the respective payment flow (netbanking, card, UPI or wallet)
+/// It returns an instance of <em>CFPaylaterBuilder</em> to continue building the <em>CFPaylater</em> object
+- (CFPaylaterBuilder * _Nonnull)setProvider:(NSString * _Nonnull)provider SWIFT_WARN_UNUSED_RESULT;
+/// This method sets the phone number to authenticate the wallet account and make payment
+/// \param phone The parameter takes in a String, which is the phone number.
+///
+///
+/// returns:
+/// It returns an instance of <em>CFPaylaterBuilder</em> to continue building the <em>CFPaylater</em> object
+- (CFPaylaterBuilder * _Nonnull)setPhone:(NSString * _Nonnull)phone SWIFT_WARN_UNUSED_RESULT;
+/// The method creates an object of <em>CFPaylater</em>
 ///
 /// throws:
-/// In case the CFPayment instance variable is not set or not a payment mode, the method throws an exception
-- (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment error:(NSError * _Nullable * _Nullable)error;
-- (void)cancelPayment;
+/// In case the mandatory parameters are empty, an exception gets thrown
+///
+/// returns:
+/// It returns an object of <em>CFPaylater</em>
+- (CFPaylater * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
+
+
+/// The CFPaylaterPayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFPaylaterPaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the payment. An object of <code>CFPaylater</code>, <code>CFSession</code> for Pay Later payment are the class variables.
+/// <h2>Code Snippet</h2>
+/// \code
+/// let cfSession = ...
+/// let payLater = ...
+/// let cfWalletPaymentObject = try CFPaylaterPayment.CFPaylaterPaymentBuilder()
+///     .setSession(cfSession)
+///     .setPaylater(payLater)
+///     .build()
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFPaylaterPayment")
+@interface CFPaylaterPayment : CFPayment
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)printDescription;
+@end
+
+
+/// The CFWalletPaymentBuilder class can be used to create an object of CFWalletPayment. It consists of setter methods to set the values for <em>CFWallet</em>, <em>CFSession</em>. And finally a <em>build</em> method that returns an object of <em>CFWalletPayment</em>.
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFPaylaterPayment24CFPaylaterPaymentBuilder")
+@interface CFPaylaterPaymentBuilder : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// This method sets the value for CFSession variable of the CFWalletPayment class
+/// \param session It takes a parameter of type CFSession
+///
+///
+/// returns:
+/// It returns an instance of <em>CFWalletPaymentBuilder</em> to continue the build process
+- (CFPaylaterPaymentBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+/// This method sets the value for CFWallet variable of the CFWalletPayment class
+/// \param wallet It takes a parameter of type CFWallet
+///
+///
+/// returns:
+/// It returns an instance of <em>CFWalletPaymentBuilder</em> to continue the build process
+- (CFPaylaterPaymentBuilder * _Nonnull)setPaylater:(CFPaylater * _Nonnull)paylater SWIFT_WARN_UNUSED_RESULT;
+/// This method builds an object of <em>CFWalletPayment</em>
+///
+/// throws:
+/// It throws an error (CashfreeError), in case <em>CFWallet</em> or <em>CFSession</em> is not set.
+///
+/// returns:
+/// It returns an object of <em>CFWalletPayment</em>
+- (CFPaylaterPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+/// The UIViewController implementing the SDK’s paylater payment flow has to conform to this protocol. The protocol comes with four methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
+/// <h2>Code Snippet</h2>
+/// \code
+/// class MyViewController: UIViewController, CFPaylaterPaymentDelegate {
+///     
+///     override func viewDidLoad() {
+///         ....
+///         ....
+///         ....
+///     }
+///     
+///    func initiatingPaylaterPayment()  {
+///        // Show Loader here
+///    }
+///
+///    func verifyPaylaterPaymentCompletion() {
+///        // Start Payment Verification here by making an API call to Cashfree Server
+///    }
+///    
+///    func presentWebForAuthenticatingPaylaterPayment() {
+///         // Present the UIViewController that embeds CFWebView and call the below method in that class
+///         DispatchQueue.main.async {
+///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
+///             self.webViewController.modalPresentationStyle = .fullScreen
+///             self.present(self.webViewController, animated: true, completion: nil)
+///         }
+///    }
+///
+///    func payLaterPayment(didFinishExecutingWith error: CFErrorResponse) {
+///        // handle errors here.
+///    }
+///     
+/// }
+///
+/// \endcodenote:
+/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
+SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK25CFPaylaterPaymentDelegate_")
+@protocol CFPaylaterPaymentDelegate <CFCallbackDelegate>
+/// This method callback is invoked when the SDK starts creating the Pay Later payment process for the given order.
+/// note:
+/// Loaders can be implemented here.
+- (void)initiatingPaylaterPayment;
+/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
+- (void)presentWebForAuthenticatingPaylaterPayment;
+/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
+- (void)verifyPaylaterPaymentCompletionFor:(NSString * _Nonnull)orderId;
+/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid wallet_name)</em> or in case of <em>Internet Issues</em>
+/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
+///
+- (void)payLaterPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
+@end
+
 
 
 /// The CFErrorResponse class consists of class variables using which error codes and message can be sent back to the user in case of <em>Failed API</em> or <em>No Internet</em> or <em>Invalid Card Details</em> and more.
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFPaymentResponse")
 @interface CFPaymentResponse : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+/// The CFQRCodePayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFQRCodePaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the payment. An object of<code>CFSession</code>  for QRCode payment are the class variables.
+/// <h2>Code Snippet</h2>
+/// \code
+/// let cfSession = ...
+/// let wallet = ...
+/// let qrCodePaymentObject = try CFQRCodePayment.CFQRCodePaymentBuilder()
+///     .setSession(cfSession)
+///     .build()
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK15CFQRCodePayment")
+@interface CFQRCodePayment : CFPayment
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)printDescription;
+@end
+
+
+/// The CFQRCodePaymentBuilder class can be used to create an object of CFQRCodePayment. It consists of setter methods to set the values for <em>CFSession</em> . And finally a <em>build</em> method that returns an object of <em>CFQRCodePayment</em>.
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK15CFQRCodePayment22CFQRCodePaymentBuilder")
+@interface CFQRCodePaymentBuilder : NSObject
+/// No Argument Constructor
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+/// The UIViewController implementing the SDK’s QRCode payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to generating the QRCode to handling errors.
+/// <h2>Code Snippet</h2>
+/// \code
+/// class MyViewController: UIViewController, CFQRCodePaymentDelegate {
+///     
+///    var cashfreeImageView: CFImageView!
+///     override func viewDidLoad() {
+///         ....
+///         ....
+///         ....
+///        self.cashfreeImageView = .....
+///     }
+///     
+///    func initiatingQRCodeGeneration()  {
+///        // Show Loader here
+///    }
+///    
+///    func loadImageViewToPresentQRCode() {
+///         DispatchQueue.main.async {
+///             do {
+///                 try self.cashfreeImageView.loadQRCode()
+///             } catch {
+///                 
+///             }
+///         }
+///    }
+///
+///    func qrCodePayment(didFinishExecutingWith error: CFErrorResponse) {
+///        // handle errors here.
+///    }
+///
+///    func verifyQRCodePaymentCompletion(for orderId: String) {
+///        // Verify Payment
+///    }
+///     
+/// }
+///
+/// \endcodenote:
+/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
+SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFQRCodePaymentDelegate_")
+@protocol CFQRCodePaymentDelegate <CFCallbackDelegate>
+/// This method callback is invoked when the SDK starts creating the QRCode payment process for the given order.
+/// note:
+/// Loaders can be implemented here.
+- (void)initiatingQRCodeGeneration;
+/// This method callback is invoked when the payment request is created and the SDK is ready to dsplay the QRCode in the image-view(<code>CFImageView</code>). When this callback is invoked, the image-view instance has to call a method named <code>loadQRCode()</code> which can be accessed by any image-view which is a sub-class of <em>CFImageView</em>
+- (void)loadImageViewToPresentQRCode;
+/// This method callback gets invoked whenever there is a case of <em>Internet Issues</em> or more.
+/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
+///
+- (void)qrCodePaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
+/// This method gets invoked once the QR-Code is displayed to the user. It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
+- (void)verifyQRCodePaymentCompletionFor:(NSString * _Nonnull)orderId;
 @end
 
 
@@ -2384,7 +2965,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK5CFUPI12CFUPIBuilder")
 ///
 /// returns:
 /// It returns an instance of <em>CFUPIBuilder</em> to further continue building an object of <em>CFUPI</em>
-- (CFUPIBuilder * _Nonnull)setUpiId:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+- (CFUPIBuilder * _Nonnull)setUPIID:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
 /// This methods creates an object of CFUPICollect by setting the value of channel and upi_id and returns the object back to the calling method
 ///
 /// throws:
@@ -2539,7 +3120,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK10CFUPIUtils")
 /// \code
 /// do {
 ///    let wallet = try CFWallet.CFWalletBuilder()
-///        .setChannel("phonepe")
+///        .setProvider("phonepe")
 ///        .setPhone("9999999999")
 ///        .build()
 /// } catch let e {
@@ -2548,7 +3129,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK10CFUPIUtils")
 /// }
 ///
 /// \endcodenote:
-/// The value of channel can be any of  the following:
+/// The value of provider can be any of  the following:
 /// \code
 ///      * phonepe
 ///      * paytm
@@ -2572,12 +3153,12 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK8CFWallet15CFWalletBuilder")
 @interface CFWalletBuilder : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 /// This method sets the value as to which wallet has to be used to make payment.
-/// \param channel The parameter takes in a String and the value has to be the name of the wallet (<em>gpay,phonepe,paytm,amazon,airtel,freecharge,mobikwik,jio,ola</em>)
+/// \param provider The parameter takes in a String and the value has to be the name of the wallet (<em>gpay,phonepe,paytm,amazon,airtel,freecharge,mobikwik,jio,ola</em>)
 ///
 ///
 /// returns:
 /// It returns an instance of <em>CFWalletBuilder</em> to continue building the <em>CFWallet</em> object
-- (CFWalletBuilder * _Nonnull)setChannel:(NSString * _Nonnull)channel SWIFT_WARN_UNUSED_RESULT;
+- (CFWalletBuilder * _Nonnull)setProvider:(NSString * _Nonnull)provider SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the phone number to authenticate the wallet account and make payment
 /// \param phone The parameter takes in a String, which is the phone number.
 ///
@@ -2696,7 +3277,6 @@ SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFWalletPaymentDelegate_")
 - (void)walletPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
 @end
 
-@class NSCoder;
 @class WKWebViewConfiguration;
 @class WKNavigationAction;
 
@@ -2766,8 +3346,8 @@ typedef SWIFT_ENUM(NSInteger, CashfreeError, open) {
   CashfreeErrorCARD_EMI_TENURE_MISSING = 12,
   CashfreeErrorUPI_ID_MISSING = 13,
   CashfreeErrorINVALID_UPI_APP_ID_SENT = 14,
-  CashfreeErrorWALLET_CHANNEL_MISSING = 15,
-  CashfreeErrorWALLET_PHONE_MISSING = 16,
+  CashfreeErrorPROVIDER_MISSING = 15,
+  CashfreeErrorPHONE_NUMBER_MISSING = 16,
   CashfreeErrorNB_BANK_CODE_MISSING = 17,
   CashfreeErrorNB_BANK_NAME_MISSING = 18,
   CashfreeErrorNB_BANK_IFSC_MISSING = 19,
@@ -2785,6 +3365,10 @@ typedef SWIFT_ENUM(NSInteger, CashfreeError, open) {
   CashfreeErrorINVALID_QRCODE_DATA = 31,
   CashfreeErrorIMAGE_VIEW_CALLBACK_MISSING = 32,
   CashfreeErrorMISSING_CALLBACK = 33,
+  CashfreeErrorMISSING_VIEW_CONTROLLER_INSTANCE = 34,
+  CashfreeErrorHEX_SHOULD_START_WITH = 35,
+  CashfreeErrorCOMPONENTS_MISSING = 36,
+  CashfreeErrorONE_PAYMENT_COMPONENT_SHOULD_BE_PRESENT = 37,
 };
 static NSString * _Nonnull const CashfreeErrorDomain = @"CashfreePGCoreSDK.CashfreeError";
 
