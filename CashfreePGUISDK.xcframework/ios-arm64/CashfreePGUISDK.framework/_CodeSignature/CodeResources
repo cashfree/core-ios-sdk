@@ -14,11 +14,11 @@
 		</data>
 		<key>CFCardUITableViewCell.nib/objects-14.0+.nib</key>
 		<data>
-		XWdxJJ0cEOP4Cx0ynbf5Rxe6Fzs=
+		//Vw0nXKBWmdsAwXL/eDpgH1TXU=
 		</data>
 		<key>CFCardUITableViewCell.nib/runtime.nib</key>
 		<data>
-		qNztNBdeEuf6lNcLf5KjFVxQZ2M=
+		anmxE0qr5M7XnE8ClhEjH7mSQOw=
 		</data>
 		<key>CFCheckoutViewController.nib</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		KTBPevJJZjJ3jLpJm/gIQ+OqYnA=
+		zqt0zyVGQDQno6aclR+AiZYGbuw=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		KTBPevJJZjJ3jLpJm/gIQ+OqYnA=
+		zqt0zyVGQDQno6aclR+AiZYGbuw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -181,14 +181,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VOOcdeC9LhFT1/kzbz9nYLla5KyAJOiwXWfDakYikdU=
+			LIC7FVN4HPisE3tZ3tkI32bRA5VkZCMYFTZHrs3pvRk=
 			</data>
 		</dict>
 		<key>CFCardUITableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9v2aJOidCkV4V2sF/N0Dj6ozYBkjAR4oAMfQy6SLyoo=
+			W6/4jkOu+RA0YhPFMF53Z8dEEH87JSp7VY0NqxslxOs=
 			</data>
 		</dict>
 		<key>CFCheckoutViewController.nib</key>
@@ -384,7 +384,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8d9Q7rvgqfiXU5wwgBJ9IY8pc3BBm+c9XMf7F0JVlwU=
+			TaERevHAEDzBMsg54nOehU2BZeORWi4V3TUgTluxjfY=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64.swiftdoc</key>
@@ -405,7 +405,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8d9Q7rvgqfiXU5wwgBJ9IY8pc3BBm+c9XMf7F0JVlwU=
+			TaERevHAEDzBMsg54nOehU2BZeORWi4V3TUgTluxjfY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

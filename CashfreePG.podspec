@@ -20,7 +20,7 @@ s.license		= 'MIT'
 s.author			= { "Cashfree Payments" => "developers@cashfree.com" }
 s.source			= { :git => "https://github.com/cashfree/core-ios-sdk.git", :tag => s.version }
 s.social_media_url	= "https://twitter.com/gocashfree"
-s.platform		= :ios, "12.0"
+s.platform		= :ios, "12.1"
 s.vendored_frameworks	= "CashfreePG.xcframework"
 s.swift_version		= "5.0"
 s.dependency 'CashfreePGUISDK', '~> 1.0.3'
