@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
 
-s.name			= "CashfreePGCoreSDK"
-s.version		= "1.0.1"
-s.summary		= "Cocoapods implementation of Cashfree's Payment SDK"
+s.name			= "CashfreePGUISDK"
+s.version		= "1.0.2"
+s.summary		= "Cocoapods implementation of Cashfree Payment's Payment Gateway UI SDK"
 
 s.description		= <<-DESC
 	Cashfree Payment is a next generation payment gateway that helps 50,000+ Indian and global businesses collect and disburse payments via 100+ payment methods including Visa, MasterCard, Rupay, UPI, IMPS, NEFT, Paytm & other wallets, Pay Later and various EMI options. Cashfree is backed by Silicon Valley investor Y Combinator and was incubated by Paypal.
@@ -21,7 +21,8 @@ s.author			= { "Cashfree Payments" => "developers@cashfree.com" }
 s.source			= { :git => "https://github.com/cashfree/core-ios-sdk.git", :tag => s.version }
 s.social_media_url	= "https://twitter.com/gocashfree"
 s.platform		= :ios, "11.0"
-s.vendored_frameworks	= "CashfreePGCoreSDK.xcframework"
+s.vendored_frameworks	= "CashfreePGUISDK.xcframework"
 s.swift_version		= "5.0"
+s.dependency		= 'CashfreePGCoreSDK', '~> 1.0.1'
 
 end
