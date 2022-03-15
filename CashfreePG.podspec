@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name			= "CashfreePG"
-s.version		= "1.0.8"
+s.version		= "1.0.10"
 s.summary		= "Cocoapods implementation of Cashfree Payment's Payment Gateway UI SDK"
 
 s.description		= <<-DESC
@@ -23,6 +23,6 @@ s.social_media_url	= "https://twitter.com/gocashfree"
 s.platform		= :ios, "12.1"
 s.vendored_frameworks	= "CashfreePG.xcframework"
 s.swift_version		= "5.0"
-s.dependency 'CashfreePGUISDK', '~> 1.0.6'
+s.dependency 'CashfreePGUISDK', '~> 1.0.9'
 
 end
