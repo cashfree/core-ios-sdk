@@ -1,10 +1,10 @@
-# Cashfree iOS SDK (CashfreePGCoreSDK)
+# Cashfree iOS SDK (CashfreePG)
 
 Hey! fellow developers, welcome to Cashfree's Documentation Site. Now that you are here, we believe that you are looking to integrate our payment gateway into your iOS application. This documentation will guide you through the entire integration process.
 
 ## Getting Started
 
-Use our **CashfreePGCoreSDK** to integrate the Cashfree's Payment Gateway directly into your app for **iOS 11** and above. It has been designed to offload the complexity of handling and integrating payments in your app.
+Use our **CashfreePG** to integrate the Cashfree's Payment Gateway directly into your app for **iOS 11** and above. It has been designed to offload the complexity of handling and integrating payments in your app.
 
 The following are the steps to be followed to getting the integration started:-
 
@@ -12,9 +12,10 @@ The following are the steps to be followed to getting the integration started:-
 2. Integrate our Cashfree SDK into your application
 3. Create an order with Cashfree
 4. Create a **session**.
-5. Select a **payment mode** and create objects for the same.
+5.a. Native Checkout
+5.b. Seamless Checkout Select a **payment mode** and create objects for the same.
 6. Create a **payment object**.
-5. Initiate payment
+7. Initiate payment
 
 ___
 
@@ -29,12 +30,12 @@ ___
 
 ## **Step 2: Integrate Cashfree SDK into your application**
 
-#### COCOAPODS
+#### USING COCOAPODS
 
 Open your pod file and add the following and then use `pod install`
 
 ```
-pod 'CashfreePGCoreSDK', '~> 1.0.0'
+pod 'CashfreePG', '~> 1.0.11'
 ```
 ___
 
@@ -46,7 +47,7 @@ To process any payment on Cashfree PG, the merchant needs to create an order in 
 
 
 **Production** -> ```https://sandbox.cashfree.com/pg/orders```\
-**Sandbox** -> ```https://sandbox.cashfree.com/pg/orders```
+**Sandbox** -> ```https://api.cashfree.com/pg/orders```
 
 
 `Note:` Please see the description of the request below.
@@ -69,7 +70,6 @@ curl -XPOST -H 'Content-Type: application/json'
         "customer_phone": "customer_phone"
     },
     "order_meta": {
-        "return_url": "https://test.cashfree.com"
         "notify_url": "https://test.cashfree.com"
     },
     "order_note": "some order note here",
@@ -145,9 +145,68 @@ do {
 
 ___
 
+# 5.a. Native Checkout
+
+Cashfree provides a pre-built UI to enable the merchant to integrate the payment gateway in a jiffy. The UI SDK handles all the business logic and UI Components to make the payment smooth and easy to use. The SDK allows the merchant to customise the UI in terms of color coding and fonts and payment components. 
+
+### Permissions
+Open the info.plist file and add the following:
+```xml
+<key>LSApplicationCategoryType</key>
+<string></string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>bhim</string>
+  <string>paytm</string>
+  <string>phonepe</string>
+  <string>tez</string>
+</array>
+```
+
+### Payment Components
+The Cashfree pre-built UI allows to merchant to use a seamless flow with the pre-built UI by sending payment component parameters to the SDK.
+
+```
+let paymentComponent = try CFPaymentComponent.CFPaymentComponentBuilder()
+                        .enableComponents(["order-details", "card", "upi", "wallet", "netbanking", "emi", "paylater"])
+                        .build()
+```
+
+The `enableComponents()` method takes in an array of string and the order in which the merchant is set is honoured. If this method is not invoked, by default all the payment modes are enabled.
+
+```
+let theme = try CFTheme.CFThemeBuilder()
+                        .setNavigationBarBackgroundColor("#C3C3C3")
+                        .setNavigationBarTextColor("#FFFFFF")
+                        .setButtonBackgroundColor("#FF0000")
+                        .setButtonTextColor("#FFFFFF")
+                        .setPrimaryFont("Futura")
+                        .setSecondaryFont("Menlo")
+                        .build()
+```
+
+The `CFTheme` and `CFThemeBuilder` is used to set the theming for the UI SDK. The merchant can set the above information. For more details, refer our API Documentation.
+
+### Handling Responses
+
+In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with Native Checkout flow and the controller which is initiating this has to conform to the protocol CFNativeCheckoutResponseDelegate.
+
+This protocol comprises of 2 methods:
+
+1. `func didFinishExecution(with error: CFErrorResponse, order_id: String)`
+2. `func verifyPayment(order_id: String)`
+
+`Note:` Refer to our API Reference documentation for more information about the methods.
+
+---
+
+# 5.b Seamless Checkout
+
 ## **Prerequisite - Card, Wallet and Netbanking Mode**
 
 When any of these payment modes is being used, the user is navigated to a web page to authenticate the payment. In this case, a web-view has to be loaded. For this purpose, the SDK exposes a web-view `CFWebView` which is a subclass of `WKWebView`. You have to create a WKWebView and set the custom class to `CFWebView`.
+
+`Note` The below code is an example code. You can add this if you are build the UI programmatically or inherit `CFWebView` class to your web-view
 
 ```
 var cashfreeWebView: CFWebView!
@@ -175,7 +234,7 @@ var cashfreeWebView: CFWebView!
 
 ___
 
-## **Step 5: Select a **payment mode** and create objects for the same**
+## **Select a **payment mode** and create objects for the same**
 
 Cashfree PG provides multiple modes to make payment. You can choose any mode depending on the requirement and invoke that payment mode from the SDK. The following are supported by the iOS SDK:-
 
@@ -185,6 +244,7 @@ Cashfree PG provides multiple modes to make payment. You can choose any mode dep
 4. UPI Intent
 5. Wallet
 6. EMI
+7. Paylater
 
 ---
 
@@ -251,14 +311,14 @@ ___
 
 ### **Create a Wallet Object**
 
-- A Wallet object has to be created by sending all the required details i.e., channel name, phone number
+- A Wallet object has to be created by sending all the required details i.e., provider name, phone number
 - The SDK exposes a class `CFWallet` that collects these details.
 - The below code snippet creates an object of `CFWallet`
 
 ```
         do {
             let wallet = try CFWallet.CFWalletBuilder()
-                .setChannel("phonepe")
+                .setProvider("phonepe")
                 .setPhone("99999999")
                 .build()
         } catch let e {
@@ -303,7 +363,7 @@ ___
         do {
             let cfUPICollect = try CFUPI.CFUPIBuilder()
                 .setChannel(.COLLECT)
-                .setUpiId("test@gocashfree")
+                .setUPIID("test@gocashfree")
                 .build()
         } catch let e {
             let error = e as! CashfreeError
@@ -335,7 +395,7 @@ let upiApplications = CFUPIUtils().getInstalledUPIApplications() // Returns an a
 do {
             let cfUPICollect = try CFUPI.CFUPIBuilder()
                 .setChannel(.INTENT)
-                .setUpiId("id") // Here you have to send the "id" of the app that was clicked from the list that you received earlier
+                .setUPIID("id") // Here you have to send the "id" of the app that was clicked from the list that you received earlier
                 .build()
         } catch let e {
             let error = e as! CashfreeError
@@ -385,13 +445,62 @@ do {
 `Note:` Refer to our API Reference documentation for more information about the methods.
 ---
 
+### **Create a Paylater Object**
+
+- A Paylater object has to be created by sending all the required details i.e., provider name, phone number
+- The SDK exposes a class `CFPaylater` that collects these details.
+- The below code snippet creates an object of `CFPaylater`
+
+```
+        do {
+            let payLater = try CFPaylater.CFPaylaterBuilder()
+                .setProvider("lazypay")
+                .setPhone("99999999")
+                .build()
+        } catch let e {
+            let error = e as! CashfreeError
+            print(error.localizedDescription)
+       }
+```
+
+- In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with wallet-payment flow and the controller which is initiating this has to conform to the protocol `CFPaylaterPaymentDelegate`.
+
+- The **CFPaylaterPaymentDelegate** protocol comprises of 4 methods:
+    - `func initiatingPaylaterPayment()`
+    - `func presentWebForAuthenticatingPaylaterPayment()`
+    - `func verifyPaylaterPaymentCompletion(for orderId: String)`
+    - `func payLaterPayment(didFinishExecutingWith error: CFErrorResponse)`
+
+`Note:` Refer to our API Reference documentation for more information about the methods.
+
+---
+
 ## Create a **Payment object**
 
 - The Payment Object is a collection of the above created **session** and **payment mode**.
 - The SDK exposes separate Payment Object classes for each of the payment modes. Depending on the payment mode that you are using you can use that particular class
 - The classes that help in creating this Payment Object for different payment modes are as follows:
 
-#### 1. CFCardPayment
+#### 1. CFNativeCheckoutPayment
+
+- Code Snippet to create a payment object for Native Checkout (pre-built UI SDK)
+
+    ```
+    do {
+       let payment = try CFNativeCheckoutPayment.CFNativeCheckoutPaymentBuilder()
+                        .setSession(session)
+                        .setComponent(paymentComponent)
+                        .setTheme(theme)
+                        .build()
+    } catch let e {
+      let error = e as! CashfreeError
+      print(error.localizedDescription)
+    }
+    ```
+
+`Note:` Refer to our API Reference documentation for more information about the methods.
+
+#### 2. CFCardPayment
 
 - Code Snippet to create a payment object for card
 
@@ -409,7 +518,7 @@ do {
 
 `Note:` Refer to our API Reference documentation for more information about the methods.
 
-#### 2. CFNetbankingPayment
+#### 3. CFNetbankingPayment
 
 - Code Snippet to create a payment object for netbanking
 
@@ -427,7 +536,7 @@ do {
 
 `Note:` Refer to our API Reference documentation for more information about the methods.
 
-#### 3. CFWalletPayment
+#### 4. CFWalletPayment
 
 - Code Snippet to create a payment object for wallet
 
@@ -445,7 +554,7 @@ do {
 
 `Note:` Refer to our API Reference documentation for more information about the methods.
 
-#### 4. CFUPIPayment
+#### 5. CFUPIPayment
 
 - Code Snippet to create a payment object for UPI
 
@@ -465,7 +574,7 @@ do {
 
 ---
 
-#### 2. CFEMICardPayment
+#### 6. CFEMICardPayment
 - Code Snippet to create a payment object for EMI
 ```
     do {
@@ -481,6 +590,24 @@ do {
     
 Note: Refer to our API Reference documentation for more information about the methods.
 
+#### 7. CFPaylaterPayment
+
+- Code Snippet to create a payment object for card
+
+    ```
+    do {
+        let payLaterPaymentObject = try CFPaylaterPayment.CFPaylaterPaymentBuilder()
+                .setSession(cfSession)
+                .setPaylater(payLaterPaymentObject)
+                .build()
+    } catch let e {
+      let error = e as! CashfreeError
+      print(error.localizedDescription)
+    }
+    ```
+
+`Note:` Refer to our API Reference documentation for more information about the methods.
+
 ## Initiate payment
 
 - Finally to initiate the payment, the above created Payment Object has to be sent to the SDK.
@@ -491,13 +618,14 @@ Note: Refer to our API Reference documentation for more information about the me
 let gatewayService = CFPaymentGatewayService.getInstance()
 
 override func viewDidLoad() {
-  // We recommend that the callbacks be set separately in the viewDidLoad
-  gatewayService.setCallback([self, self, self, self]) // One for each payment mode
+  // We recommend that the callback be set separately in the viewDidLoad
+  gatewayService.setCallback(self)
 }
 
 
 
 do {
+   gatewayService.setCallback(self)
    try gatewayService.doPayment(payment: cardPaymentObject)
 } catch let e {
   let error = e as! CashfreeError
@@ -517,8 +645,40 @@ do {
 let gatewayService = CFPaymentGatewayService.getInstance()
 
 override func viewDidLoad() {
-  gatewayService.setCallback([self, self, self, self]) // One for each payment mode
+  gatewayService.setCallback(self)
 }
+```
+
+### Native Checkout
+```
+do {
+                    let session = try CFSession.CFSessionBuilder()
+                        .setOrderID(order_id)
+                        .setOrderToken(order_token)
+                        .setEnvironment(Utils.environment)
+                        .build()
+                    let paymentComponent = try CFPaymentComponent.CFPaymentComponentBuilder()
+                        .enableComponents(["order-details", "card", "upi", "wallet", "netbanking", "emi", "paylater"])
+                        .build()
+                    let theme = try CFTheme.CFThemeBuilder()
+                        .setNavigationBarBackgroundColor("#C3C3C3")
+                        .setNavigationBarTextColor("#FFFFFF")
+                        .setButtonBackgroundColor("#FF0000")
+                        .setButtonTextColor("#FFFFFF")
+                        .setPrimaryFont("Futura")
+                        .setSecondaryFont("Menlo")
+                        .build()
+                    let payment = try CFNativeCheckoutPayment.CFNativeCheckoutPaymentBuilder()
+                        .setSession(session)
+                        .setComponent(paymentComponent)
+                        .setTheme(theme)
+                        .build()
+                    let pgService = CFPaymentGatewayService.getInstance()
+                    pgService.setCallback(self)
+                    try pgService.doPayment(payment, viewController: self)
+                } catch {
+
+                }
 ```
 
 ### Card
@@ -542,6 +702,7 @@ do {
                 .setSession(cfSession)
                 .setCard(card)
                 .build()
+            gatewayService.setCallback(self)
             try gatewayService.doPayment(payment: cardPaymentObject)
         } catch {
 
@@ -573,6 +734,7 @@ do {
                 .setSession(cfSession)
                 .setCard(emiCard)
                 .build()
+            gatewayService.setCallback(self)
             try gatewayService.doPayment(payment: cardPaymentObject)
         } catch {
 
@@ -598,6 +760,7 @@ do {
                 .setSession(cfSession)
                 .setWallet(wallet)
                 .build()
+            gatewayService.setCallback(self)
             try gatewayService.doPayment(payment: cfWalletPaymentObject)
         } catch {
 
@@ -622,6 +785,7 @@ do {
                 .setSession(cfSession)
                 .setNetbankingObject(netbanking)
                 .build()
+            gatewayService.setCallback(self)
             try gatewayService.doPayment(paymentt: netbankingPaymentObject)
         } catch {
 
@@ -647,6 +811,7 @@ do {
                 .setSession(cfSession)
                 .setUPI(cfUPICollect)
                 .build()
+            gatewayService.setCallback(self)
             try gatewayService.doPayment(payment: cfUPIPaymentObject)
         } catch {
 
@@ -672,13 +837,40 @@ do {
                 .setSession(cfSession)
                 .setUPI(cfUPICollect)
                 .build()
+            gatewayService.setCallback(self)
             try gatewayService.doPayment(payment: cfUPIPaymentObject)
         } catch {
 
         }
 ```
-
 `Note:` For demo purpose we are taking the "id" of the first object in the array. The "id" of the app that is clicked has to be sent as the value
+
+---
+
+### Paylater
+
+```
+do {
+            let cfSession = try CFSession.CFSessionBuilder()
+                .setEnvironment(.PRODUCTION)
+                .setOrderToken("orderToken")
+                .setOrderId("order_Id")
+                .build()
+            let cfPayLater = try CFPaylater.CFPaylaterBuilder()
+                .setProvider("lazypay")
+                .setPhone("9999999999")
+                .build()
+            let cfPaylaterObject = try CFPaylaterPayment.CFPaylaterPaymentBuilder()
+                .setSession(cfSession)
+                .setPaylater(cfPayLater)
+                .build()
+            gatewayService.setCallback(self)
+            try gatewayService.doPayment(payment: cfPaylaterObject)
+        } catch {
+
+        }
+```
+---
 
 ## Error Codes
 
