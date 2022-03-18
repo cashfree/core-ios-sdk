@@ -1,6 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
-// swift-module-flags: -target x86_64-apple-ios12.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CashfreePGUISDK
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CashfreePGUISDK
+import CFNetworkSDK
+import CashfreeAnalyticsSDK
 import CashfreePGCoreSDK
 @_exported import CashfreePGUISDK
 import CoreData
@@ -18,25 +20,6 @@ import _Concurrency
   @objc public func setCallback(_ callback: CashfreePGUISDK.CFNativeCheckoutResponseDelegate)
   public func doPayment(viewController: UIKit.UIViewController, payment: CashfreePGUISDK.CFNativeCheckoutPayment)
   @objc deinit
-}
-@objc public enum CFPaymentComponentsEnum : Swift.Int {
-  case CARD
-  case NB
-  case WALLET
-  case UPI
-  case EMI
-  case PAYLATER
-  case ORDER_DETAILS
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension CashfreePGUISDK.CFPaymentComponentsEnum : Swift.CustomStringConvertible {
-  public var description: Swift.String {
-    get
-  }
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class CFNativeCheckoutPayment : CashfreePGCoreSDK.CFPayment {
   @_inheritsConvenienceInitializers @objc public class CFNativeCheckoutPaymentBuilder : ObjectiveC.NSObject {
@@ -65,11 +48,11 @@ extension CashfreePGUISDK.CFPaymentComponentsEnum : Swift.CustomStringConvertibl
   }
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class CFPaymentComponent : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc final public class CFPaymentComponent : ObjectiveC.NSObject {
   @objc override dynamic public init()
-  @_inheritsConvenienceInitializers @objc public class CFPaymentComponentBuilder : ObjectiveC.NSObject {
-    public func enableComponents(_ components: [CashfreePGUISDK.CFPaymentComponentsEnum]) -> CashfreePGUISDK.CFPaymentComponent.CFPaymentComponentBuilder
-    @objc public func build() throws -> CashfreePGUISDK.CFPaymentComponent
+  @_inheritsConvenienceInitializers @objc final public class CFPaymentComponentBuilder : ObjectiveC.NSObject {
+    @objc final public func enableComponents(_ components: [Swift.String]) -> CashfreePGUISDK.CFPaymentComponent.CFPaymentComponentBuilder
+    @objc final public func build() throws -> CashfreePGUISDK.CFPaymentComponent
     @objc override dynamic public init()
     @objc deinit
   }
@@ -94,6 +77,3 @@ extension CashfreePGUISDK.CFBankImage {
     @objc set
   }
 }
-extension CashfreePGUISDK.CFPaymentComponentsEnum : Swift.Equatable {}
-extension CashfreePGUISDK.CFPaymentComponentsEnum : Swift.Hashable {}
-extension CashfreePGUISDK.CFPaymentComponentsEnum : Swift.RawRepresentable {}
