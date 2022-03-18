@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A16B610B2696C83A0046A7C6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B61092696C83A0046A7C6 /* WebViewController.swift */; };
+		A16B610C2696C83A0046A7C6 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16B610A2696C83A0046A7C6 /* WebViewController.xib */; };
+		A173D595279FE21C00C6F9CD /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A173D594279FE21C00C6F9CD /* StartPageViewController.swift */; };
+		A173D599279FE2CF00C6F9CD /* CoreSDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A173D597279FE2CF00C6F9CD /* CoreSDKViewController.swift */; };
+		A173D59A279FE2CF00C6F9CD /* CoreSDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A173D598279FE2CF00C6F9CD /* CoreSDKViewController.xib */; };
+		A173D59D279FE7E400C6F9CD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A173D59C279FE7E400C6F9CD /* Utils.swift */; };
+		A173D5A1279FEBCA00C6F9CD /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A173D59F279FEBC900C6F9CD /* CardViewController.swift */; };
+		A173D5A2279FEBCA00C6F9CD /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A173D5A0279FEBCA00C6F9CD /* CardViewController.xib */; };
+		A173D5A7279FF37300C6F9CD /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A173D5A5279FF37300C6F9CD /* WalletViewController.swift */; };
+		A173D5A8279FF37300C6F9CD /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A173D5A6279FF37300C6F9CD /* WalletViewController.xib */; };
+		A173D5AC279FF5A300C6F9CD /* NetbankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A173D5AA279FF5A300C6F9CD /* NetbankingViewController.swift */; };
+		A173D5AD279FF5A300C6F9CD /* NetbankingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A173D5AB279FF5A300C6F9CD /* NetbankingViewController.xib */; };
+		A173D5B1279FF9A100C6F9CD /* UPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A173D5AF279FF9A100C6F9CD /* UPIViewController.swift */; };
+		A173D5B2279FF9A100C6F9CD /* UPIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A173D5B0279FF9A100C6F9CD /* UPIViewController.xib */; };
+		A17C8C88268B16C500A940AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17C8C87268B16C500A940AB /* AppDelegate.swift */; };
+		A17C8C8A268B16C500A940AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17C8C89268B16C500A940AB /* SceneDelegate.swift */; };
+		A17C8C91268B16D200A940AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17C8C90268B16D200A940AB /* Assets.xcassets */; };
+		A17C8C94268B16D200A940AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17C8C92268B16D200A940AB /* LaunchScreen.storyboard */; };
+		A1EFF2882692F11500E701C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EFF2872692F11500E701C6 /* Main.storyboard */; };
+		A1F50F0F27A4058200E67115 /* CashfreePGCoreSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F50F0D27A4057A00E67115 /* CashfreePGCoreSDK.xcframework */; };
+		A1F50F1027A4058200E67115 /* CashfreePGCoreSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1F50F0D27A4057A00E67115 /* CashfreePGCoreSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1F50EFE27A3EC4B00E67115 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1F50F1027A4058200E67115 /* CashfreePGCoreSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A16B61092696C83A0046A7C6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		A16B610A2696C83A0046A7C6 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		A173D594279FE21C00C6F9CD /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
+		A173D597279FE2CF00C6F9CD /* CoreSDKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSDKViewController.swift; sourceTree = "<group>"; };
+		A173D598279FE2CF00C6F9CD /* CoreSDKViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreSDKViewController.xib; sourceTree = "<group>"; };
+		A173D59C279FE7E400C6F9CD /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A173D59F279FEBC900C6F9CD /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		A173D5A0279FEBCA00C6F9CD /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		A173D5A5279FF37300C6F9CD /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		A173D5A6279FF37300C6F9CD /* WalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletViewController.xib; sourceTree = "<group>"; };
+		A173D5AA279FF5A300C6F9CD /* NetbankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetbankingViewController.swift; sourceTree = "<group>"; };
+		A173D5AB279FF5A300C6F9CD /* NetbankingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetbankingViewController.xib; sourceTree = "<group>"; };
+		A173D5AF279FF9A100C6F9CD /* UPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPIViewController.swift; sourceTree = "<group>"; };
+		A173D5B0279FF9A100C6F9CD /* UPIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UPIViewController.xib; sourceTree = "<group>"; };
+		A17C8C84268B16C500A940AB /* Swift+Sample+Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift+Sample+Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A17C8C87268B16C500A940AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A17C8C89268B16C500A940AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A17C8C90268B16D200A940AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A17C8C93268B16D200A940AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A17C8C95268B16D200A940AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1EFF2872692F11500E701C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A1F50F0D27A4057A00E67115 /* CashfreePGCoreSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CashfreePGCoreSDK.xcframework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A17C8C81268B16C500A940AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F50F0F27A4058200E67115 /* CashfreePGCoreSDK.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A173D593279FE1FE00C6F9CD /* Start Page */ = {
+			isa = PBXGroup;
+			children = (
+				A173D594279FE21C00C6F9CD /* StartPageViewController.swift */,
+			);
+			path = "Start Page";
+			sourceTree = "<group>";
+		};
+		A173D596279FE2BA00C6F9CD /* Core SDK */ = {
+			isa = PBXGroup;
+			children = (
+				A173D5AE279FF99200C6F9CD /* upi */,
+				A173D5A9279FF59000C6F9CD /* netbanking */,
+				A173D5A4279FF26500C6F9CD /* wallet */,
+				A173D5A3279FF13000C6F9CD /* web */,
+				A173D59E279FEBA700C6F9CD /* card */,
+				A173D597279FE2CF00C6F9CD /* CoreSDKViewController.swift */,
+				A173D598279FE2CF00C6F9CD /* CoreSDKViewController.xib */,
+			);
+			path = "Core SDK";
+			sourceTree = "<group>";
+		};
+		A173D59B279FE7D200C6F9CD /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A173D59C279FE7E400C6F9CD /* Utils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		A173D59E279FEBA700C6F9CD /* card */ = {
+			isa = PBXGroup;
+			children = (
+				A173D59F279FEBC900C6F9CD /* CardViewController.swift */,
+				A173D5A0279FEBCA00C6F9CD /* CardViewController.xib */,
+			);
+			path = card;
+			sourceTree = "<group>";
+		};
+		A173D5A3279FF13000C6F9CD /* web */ = {
+			isa = PBXGroup;
+			children = (
+				A16B61092696C83A0046A7C6 /* WebViewController.swift */,
+				A16B610A2696C83A0046A7C6 /* WebViewController.xib */,
+			);
+			path = web;
+			sourceTree = "<group>";
+		};
+		A173D5A4279FF26500C6F9CD /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				A173D5A5279FF37300C6F9CD /* WalletViewController.swift */,
+				A173D5A6279FF37300C6F9CD /* WalletViewController.xib */,
+			);
+			path = wallet;
+			sourceTree = "<group>";
+		};
+		A173D5A9279FF59000C6F9CD /* netbanking */ = {
+			isa = PBXGroup;
+			children = (
+				A173D5AA279FF5A300C6F9CD /* NetbankingViewController.swift */,
+				A173D5AB279FF5A300C6F9CD /* NetbankingViewController.xib */,
+			);
+			path = netbanking;
+			sourceTree = "<group>";
+		};
+		A173D5AE279FF99200C6F9CD /* upi */ = {
+			isa = PBXGroup;
+			children = (
+				A173D5AF279FF9A100C6F9CD /* UPIViewController.swift */,
+				A173D5B0279FF9A100C6F9CD /* UPIViewController.xib */,
+			);
+			path = upi;
+			sourceTree = "<group>";
+		};
+		A17C8C7B268B16C500A940AB = {
+			isa = PBXGroup;
+			children = (
+				A17C8CA3268B182700A940AB /* Frameworks */,
+				A17C8C86268B16C500A940AB /* Swift+Sample+Application */,
+				A17C8C85268B16C500A940AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A17C8C85268B16C500A940AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A17C8C84268B16C500A940AB /* Swift+Sample+Application.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A17C8C86268B16C500A940AB /* Swift+Sample+Application */ = {
+			isa = PBXGroup;
+			children = (
+				A173D59B279FE7D200C6F9CD /* utils */,
+				A173D596279FE2BA00C6F9CD /* Core SDK */,
+				A173D593279FE1FE00C6F9CD /* Start Page */,
+				A17C8C87268B16C500A940AB /* AppDelegate.swift */,
+				A17C8C89268B16C500A940AB /* SceneDelegate.swift */,
+				A17C8C90268B16D200A940AB /* Assets.xcassets */,
+				A1EFF2872692F11500E701C6 /* Main.storyboard */,
+				A17C8C92268B16D200A940AB /* LaunchScreen.storyboard */,
+				A17C8C95268B16D200A940AB /* Info.plist */,
+			);
+			path = "Swift+Sample+Application";
+			sourceTree = "<group>";
+		};
+		A17C8CA3268B182700A940AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1F50F0D27A4057A00E67115 /* CashfreePGCoreSDK.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A17C8C83268B16C500A940AB /* Swift+Sample+Application */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A17C8C98268B16D200A940AB /* Build configuration list for PBXNativeTarget "Swift+Sample+Application" */;
+			buildPhases = (
+				A17C8C80268B16C500A940AB /* Sources */,
+				A17C8C81268B16C500A940AB /* Frameworks */,
+				A17C8C82268B16C500A940AB /* Resources */,
+				A1F50EFE27A3EC4B00E67115 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swift+Sample+Application";
+			productName = "Swift+Sample+Application";
+			productReference = A17C8C84268B16C500A940AB /* Swift+Sample+Application.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A17C8C7C268B16C500A940AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					A17C8C83268B16C500A940AB = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = A17C8C7F268B16C500A940AB /* Build configuration list for PBXProject "Swift+Sample+Application" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A17C8C7B268B16C500A940AB;
+			productRefGroup = A17C8C85268B16C500A940AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A17C8C83268B16C500A940AB /* Swift+Sample+Application */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A17C8C82268B16C500A940AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EFF2882692F11500E701C6 /* Main.storyboard in Resources */,
+				A173D5AD279FF5A300C6F9CD /* NetbankingViewController.xib in Resources */,
+				A17C8C94268B16D200A940AB /* LaunchScreen.storyboard in Resources */,
+				A173D59A279FE2CF00C6F9CD /* CoreSDKViewController.xib in Resources */,
+				A17C8C91268B16D200A940AB /* Assets.xcassets in Resources */,
+				A173D5B2279FF9A100C6F9CD /* UPIViewController.xib in Resources */,
+				A173D5A2279FEBCA00C6F9CD /* CardViewController.xib in Resources */,
+				A173D5A8279FF37300C6F9CD /* WalletViewController.xib in Resources */,
+				A16B610C2696C83A0046A7C6 /* WebViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A17C8C80268B16C500A940AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A173D5B1279FF9A100C6F9CD /* UPIViewController.swift in Sources */,
+				A17C8C88268B16C500A940AB /* AppDelegate.swift in Sources */,
+				A173D595279FE21C00C6F9CD /* StartPageViewController.swift in Sources */,
+				A173D59D279FE7E400C6F9CD /* Utils.swift in Sources */,
+				A173D5A1279FEBCA00C6F9CD /* CardViewController.swift in Sources */,
+				A173D5AC279FF5A300C6F9CD /* NetbankingViewController.swift in Sources */,
+				A17C8C8A268B16C500A940AB /* SceneDelegate.swift in Sources */,
+				A173D599279FE2CF00C6F9CD /* CoreSDKViewController.swift in Sources */,
+				A16B610B2696C83A0046A7C6 /* WebViewController.swift in Sources */,
+				A173D5A7279FF37300C6F9CD /* WalletViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A17C8C92268B16D200A940AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A17C8C93268B16D200A940AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A17C8C96268B16D200A940AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Debug;
+		};
+		A17C8C97268B16D200A940AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Release;
+		};
+		A17C8C99268B16D200A940AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5T63X9F789;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Swift+Sample+Application",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "Swift+Sample+Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cashfree.Swift-Sample-Application123";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Debug;
+		};
+		A17C8C9A268B16D200A940AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5T63X9F789;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Swift+Sample+Application",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "Swift+Sample+Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cashfree.Swift-Sample-Application123";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A17C8C7F268B16C500A940AB /* Build configuration list for PBXProject "Swift+Sample+Application" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A17C8C96268B16D200A940AB /* Debug */,
+				A17C8C97268B16D200A940AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A17C8C98268B16D200A940AB /* Build configuration list for PBXNativeTarget "Swift+Sample+Application" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A17C8C99268B16D200A940AB /* Debug */,
+				A17C8C9A268B16D200A940AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A17C8C7C268B16C500A940AB /* Project object */;
+}

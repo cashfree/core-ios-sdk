@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NetbankingViewController" customModule="Swift_Sample_Application" customModuleProvider="target">
+            <connections>
+                <outlet property="bankCodeTextField" destination="hQj-hO-mKi" id="LmW-Td-0fw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bank Code (Eg:- 3003)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQj-hO-mKi">
+                    <rect key="frame" x="20" y="84" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="0hf-b0-teA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n6-In-4B6">
+                    <rect key="frame" x="107" y="159" width="200" height="35"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="8vD-L1-5m8"/>
+                        <constraint firstAttribute="width" constant="200" id="Wni-Qg-dlv"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Pay"/>
+                    <connections>
+                        <action selector="payButtonTapped:" destination="-1" eventType="touchUpInside" id="59P-7d-oIk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hQj-hO-mKi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="D5T-eK-73W"/>
+                <constraint firstItem="9n6-In-4B6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LFe-ed-dkc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hQj-hO-mKi" secondAttribute="trailing" constant="20" id="t9p-if-MC9"/>
+                <constraint firstItem="9n6-In-4B6" firstAttribute="top" secondItem="hQj-hO-mKi" secondAttribute="bottom" constant="40" id="u0j-FT-6Td"/>
+                <constraint firstItem="hQj-hO-mKi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="x1v-XQ-wxx"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="98"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
