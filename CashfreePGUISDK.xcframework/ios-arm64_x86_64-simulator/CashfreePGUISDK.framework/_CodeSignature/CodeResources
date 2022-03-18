@@ -6,35 +6,19 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		sNwUTEmz1W+L3mkNPESnGPR1JxU=
+		PZj6tItSjfr9h/xth52/TD3iWDw=
 		</data>
 		<key>CFAllBanksTableViewCell.nib</key>
 		<data>
 		oPWZ2jlMe5tc2ZAARTJkBUrbaZg=
 		</data>
-		<key>CFCardUITableViewCell.nib/objects-14.0+.nib</key>
+		<key>CFCardUITableViewCell.nib</key>
 		<data>
-		//Vw0nXKBWmdsAwXL/eDpgH1TXU=
-		</data>
-		<key>CFCardUITableViewCell.nib/runtime.nib</key>
-		<data>
-		anmxE0qr5M7XnE8ClhEjH7mSQOw=
+		Dv5DTmhWoNVfc2nx5PneGayEN7o=
 		</data>
 		<key>CFCheckoutViewController.nib</key>
 		<data>
 		Zegn3KTqJZvOMNCgaH0/WCK3hZw=
-		</data>
-		<key>CFEMICardInformationViewController.nib</key>
-		<data>
-		Mt/pb4snbvSVyBEFJTyQ2E4vjnc=
-		</data>
-		<key>CFEMIInformationTableViewCell.nib/objects-14.0+.nib</key>
-		<data>
-		LnaRMPPl1CPc4eG/BclorSFDbGs=
-		</data>
-		<key>CFEMIInformationTableViewCell.nib/runtime.nib</key>
-		<data>
-		ruUd9vAkO9fGS426oexy6AI6r/U=
 		</data>
 		<key>CFEMITableViewCell.nib</key>
 		<data>
@@ -46,7 +30,7 @@
 		</data>
 		<key>CFImages.momd/CFImages.mom</key>
 		<data>
-		J8WRYh8rwKSygv/4tIn+miYCzW4=
+		FX+AqTGQM2IR2dhBDVfd9gecRNM=
 		</data>
 		<key>CFImages.momd/VersionInfo.plist</key>
 		<data>
@@ -114,7 +98,7 @@
 		</data>
 		<key>Headers/CashfreePGUISDK-Swift.h</key>
 		<data>
-		S08Y+XRz+q+9NodQwTpTbiha1Wg=
+		e2DzsTa+cw52b69wx9BDyXXQO7M=
 		</data>
 		<key>Headers/CashfreePGUISDK.h</key>
 		<data>
@@ -122,55 +106,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Z/yUc0p2gn4X2Ejsb9iHjIWWYQQ=
+		VE/403OkocRtyM/EQGQfAynJxaA=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		P4iTS6/SWbjsf5RQd7Yrp2se0zM=
+		mKIk6iVRfUTkb1RQa+W5VRZhHLg=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BYw2BQOwsUlacZzgQVNZckbAbyk=
+		l4iHjrCGX5+0VgpXOPbsE4VO2Us=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ibseUkhe4+9det4Sgd2nDzgp7vE=
-		</data>
-		<key>Modules/CashfreePGUISDK.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		P4iTS6/SWbjsf5RQd7Yrp2se0zM=
-		</data>
-		<key>Modules/CashfreePGUISDK.swiftmodule/arm64.swiftinterface</key>
-		<data>
-		BYw2BQOwsUlacZzgQVNZckbAbyk=
-		</data>
-		<key>Modules/CashfreePGUISDK.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		ibseUkhe4+9det4Sgd2nDzgp7vE=
+		RjlF8peef51sgLPhoZ8jzVLyF4Y=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MesNP8TM46MbRI3mMaqvbvf2cgg=
+		sK3XeU50498OoSJoqGx3oNNua/g=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		UcB0n8XUFPfFHPiqwP89Sh6Ktsw=
+		oR8A/1BpmA8428byDBU2aXDNDEs=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YtLpShCFCwhLtSuExPHEA/ozWvQ=
-		</data>
-		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		MesNP8TM46MbRI3mMaqvbvf2cgg=
-		</data>
-		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		UcB0n8XUFPfFHPiqwP89Sh6Ktsw=
-		</data>
-		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		YtLpShCFCwhLtSuExPHEA/ozWvQ=
+		jxzyDJDGGuvpT8eiwmcJUD0+LLg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -191,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qi8ckzjW6qKoSSI194jyO6M0FDNAXQ2SlcRu7VG/2kY=
+			S1mEMn09853qR0YBOn11EUYx/XJy/Iog9nu9gDLpyhM=
 			</data>
 		</dict>
 		<key>CFAllBanksTableViewCell.nib</key>
@@ -201,18 +161,11 @@
 			/LMpaj7wJRMuXNJNiPzb3wz+1Ugkk4koOC4LXICwVec=
 			</data>
 		</dict>
-		<key>CFCardUITableViewCell.nib/objects-14.0+.nib</key>
+		<key>CFCardUITableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LIC7FVN4HPisE3tZ3tkI32bRA5VkZCMYFTZHrs3pvRk=
-			</data>
-		</dict>
-		<key>CFCardUITableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			W6/4jkOu+RA0YhPFMF53Z8dEEH87JSp7VY0NqxslxOs=
+			JnNJbuYR8HjaTENT1DyelMUHY08GzjdfsdrgJ5MkQSw=
 			</data>
 		</dict>
 		<key>CFCheckoutViewController.nib</key>
@@ -220,27 +173,6 @@
 			<key>hash2</key>
 			<data>
 			xK6d/itXE095e065TIZLdv+iVAudL85rhiYg7d4cxoM=
-			</data>
-		</dict>
-		<key>CFEMICardInformationViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VjHrlFI+XEX0lM163BIC2Mru2TYPxk/RY7bNHbHuYhA=
-			</data>
-		</dict>
-		<key>CFEMIInformationTableViewCell.nib/objects-14.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oM4+r8M3YOPUW7JYFZDgduRfYhrwPjOieYQzvx50naI=
-			</data>
-		</dict>
-		<key>CFEMIInformationTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aGem7o8WAYXap6yLfJyc2W/5TGWY02+2shCuAf1hAnA=
 			</data>
 		</dict>
 		<key>CFEMITableViewCell.nib</key>
@@ -261,7 +193,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9t74g8SdENsEOKYt0XDUqXhbtoWSWG6aLeaC214lOtM=
+			C68/7dA1tEptwzfXsXl42JP05w6vggKSbrU+4N6fM4M=
 			</data>
 		</dict>
 		<key>CFImages.momd/VersionInfo.plist</key>
@@ -380,7 +312,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iyzxcfIiXWy1OQ86Jb16uzTJ1bXevdbY6VTlW8/WoOI=
+			TFca6Oy/Vh9tXWb8XHdc4GqAvhpwS8gnoefomyXGGps=
 			</data>
 		</dict>
 		<key>Headers/CashfreePGUISDK.h</key>
@@ -394,84 +326,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7aGhMEb0TzEq0guuyuTJ8mbzZCTT2zWujTiW9+71fwQ=
+			ip1K+PuXHTjUv5VaF7GSMYpu8sBzko8LiRK8S1DS5jk=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dEOgT2Yc07c2WsbSlc696FXC2N3BRXPI04EGxIa7hUc=
+			sJ+pB61EGruLwmx7oRcf1yPraJKdyogU0OISSNogevQ=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b8J9cD1baQefS4pGqublEEZQ+hlEfrqt/FKPyak3MZo=
-			</data>
-		</dict>
-		<key>Modules/CashfreePGUISDK.swiftmodule/arm64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7aGhMEb0TzEq0guuyuTJ8mbzZCTT2zWujTiW9+71fwQ=
-			</data>
-		</dict>
-		<key>Modules/CashfreePGUISDK.swiftmodule/arm64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dEOgT2Yc07c2WsbSlc696FXC2N3BRXPI04EGxIa7hUc=
-			</data>
-		</dict>
-		<key>Modules/CashfreePGUISDK.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			b8J9cD1baQefS4pGqublEEZQ+hlEfrqt/FKPyak3MZo=
+			NTGzh+h4DhWDpyab6zyYNlE0dir0B3PzGMrcufuVnP8=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F2VcmVjrrcxVdP0CDGk82Q49c+3qrlCeWBarahRjWIc=
+			WuWa7r7xmro7HEPFTFPNFsTgTkttWr4y3vOLnS2+unE=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BSjiO/h6p8RzSxITfNmSqQpf8INOyK8AYCl9IqIqUzA=
+			1WDX6zx0q4HRIVak103f2r1M9gTIu59hWhBYAMpbEAM=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0RZHYC5I+g7QPO/Zt3+71Ntgrb7oYQtJYj/FjI3f2RM=
-			</data>
-		</dict>
-		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			F2VcmVjrrcxVdP0CDGk82Q49c+3qrlCeWBarahRjWIc=
-			</data>
-		</dict>
-		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			BSjiO/h6p8RzSxITfNmSqQpf8INOyK8AYCl9IqIqUzA=
-			</data>
-		</dict>
-		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0RZHYC5I+g7QPO/Zt3+71Ntgrb7oYQtJYj/FjI3f2RM=
+			+G4dPcgD+MCvW5yd+PsM4uYWJPL5aFl3OAPcN0JhjUY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
