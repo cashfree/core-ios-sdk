@@ -1,18 +1,19 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CashfreePGCoreSDK
 import AppTrackingTransparency
+import CFNetworkSDK
+import CashfreeAnalyticsSDK
 @_exported import CashfreePGCoreSDK
 import CoreData
 import Foundation
 import MachO
 import Swift
-import SystemConfiguration
 import UIKit
 import WebKit
 import _Concurrency
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) final public class CFWebView : WebKit.WKWebView, WebKit.WKNavigationDelegate {
-  @objc @_Concurrency.MainActor(unsafe) override dynamic public init(frame: CoreGraphics.CGRect, configuration: WebKit.WKWebViewConfiguration)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect, configuration: WebKit.WKWebViewConfiguration)
   @objc @_Concurrency.MainActor(unsafe) final public func startAuthentication() throws
   @_Concurrency.MainActor(unsafe) @objc final public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
   @_Concurrency.MainActor(unsafe) final public func removeWebViewReference()
@@ -20,6 +21,7 @@ import _Concurrency
 }
 @_hasMissingDesignatedInitializers open class CFConstantFunctions {
   public static func createCustomResponse(txStatus: Swift.String, response: Swift.Dictionary<Swift.String, Any>) -> CashfreePGCoreSDK.CFErrorResponse
+  public static func setXRequestId(orderId: Swift.String, orderToken: Swift.String)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFCardPayment : CashfreePGCoreSDK.CFPayment {
@@ -87,20 +89,6 @@ import _Concurrency
     @objc deinit
   }
   @objc deinit
-}
-public enum APIState : Swift.Int {
-  case VERIFY
-  case CONFIG_FETCH
-  case PAY
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public protocol APIHandlers : AnyObject {
-  func onSuccess(apiState: CashfreePGCoreSDK.APIState, result: Swift.Dictionary<Swift.String, Any>)
-  func onFailure(response: Swift.Dictionary<Swift.String, Any>)
 }
 @objc public protocol CFCallbackDelegate {
 }
@@ -187,6 +175,7 @@ public protocol APIHandlers : AnyObject {
   case CARD_OBJECT_MISSING
   case NETBANKING_OBJECT_MISSING
   case WALLET_OBJECT_MISSING
+  case PAYLATER_OBJECT_MISSING
   case UPI_OBJECT_MISSING
   case WEB_VIEW_CALLBACK_MISSING
   case INVALID_WEB_DATA
@@ -269,6 +258,13 @@ extension UIKit.UIImage {
   @objc @_Concurrency.MainActor(unsafe) final public func loadQRCode() throws
   @objc deinit
 }
+@_hasMissingDesignatedInitializers open class CFConstants {
+  public static var order_token_value: Swift.String
+  public static var order_id: Swift.String
+  public static let x_api_version: Swift.String
+  public static var x_request_id: Swift.String
+  @objc deinit
+}
 @objc public enum CFENVIRONMENT : Swift.Int {
   case PRODUCTION
   case SANDBOX
@@ -323,12 +319,6 @@ extension CashfreePGCoreSDK.CFPLATFORM : Swift.CustomStringConvertible {
   }
   @objc deinit
 }
-open class CFBaseNetworkService {
-  public init()
-  public func makeAPICall(url: Swift.String, body: Swift.Dictionary<Swift.String, Any>, method: Swift.String, headers: [Swift.String : Swift.String], apiState: CashfreePGCoreSDK.APIState, apiHandler: CashfreePGCoreSDK.APIHandlers)
-  public func cancelAllRequests()
-  @objc deinit
-}
 @_inheritsConvenienceInitializers @objc public class CFUPIUtils : ObjectiveC.NSObject {
   @objc override dynamic public init()
   @objc public func getInstalledUPIApplications() -> [[Swift.String : Swift.String]]
@@ -355,23 +345,6 @@ extension CashfreePGCoreSDK.CFUPIMODE : Swift.CustomStringConvertible {
     final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFQRCodePayment.CFQRCodePaymentBuilder
     final public func build() throws -> CashfreePGCoreSDK.CFQRCodePayment
     @objc deinit
-  }
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class CFReachability {
-  public static let shared: CashfreePGCoreSDK.CFReachability
-  public enum ReachabilityStatus : Swift.String {
-    case notReachable
-    case reachableViaWWAN
-    case reachableViaWiFi
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public var currentReachabilityStatus: CashfreePGCoreSDK.CFReachability.ReachabilityStatus {
-    get
   }
   @objc deinit
 }
@@ -414,122 +387,6 @@ extension CashfreePGCoreSDK.CFUPIMODE : Swift.CustomStringConvertible {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc(CFAnalytics) public class CFAnalytics : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
-  @objc deinit
-}
-extension CashfreePGCoreSDK.CFAnalytics {
-  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<CashfreePGCoreSDK.CFAnalytics>
-  @objc @NSManaged dynamic public var endTime: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var environment: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var meta_data: Foundation.Data? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var order_token: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var platform: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var sdk_version: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var startTime: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var timestamp: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var transaction_id: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var x_api_version: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var x_request_id: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var events: Foundation.NSOrderedSet? {
-    @objc get
-    @objc set
-  }
-}
-extension CashfreePGCoreSDK.CFAnalytics {
-  @objc(insertObject:inEventsAtIndex:) @NSManaged dynamic public func insertIntoEvents(_ value: CashfreePGCoreSDK.CFEvent, at idx: Swift.Int)
-  @objc(removeObjectFromEventsAtIndex:) @NSManaged dynamic public func removeFromEvents(at idx: Swift.Int)
-  @objc(insertEvents:atIndexes:) @NSManaged dynamic public func insertIntoEvents(_ values: [CashfreePGCoreSDK.CFEvent], at indexes: Foundation.NSIndexSet)
-  @objc(removeEventsAtIndexes:) @NSManaged dynamic public func removeFromEvents(at indexes: Foundation.NSIndexSet)
-  @objc(replaceObjectInEventsAtIndex:withObject:) @NSManaged dynamic public func replaceEvents(at idx: Swift.Int, with value: CashfreePGCoreSDK.CFEvent)
-  @objc(replaceEventsAtIndexes:withEvents:) @NSManaged dynamic public func replaceEvents(at indexes: Foundation.NSIndexSet, with values: [CashfreePGCoreSDK.CFEvent])
-  @objc(addEventsObject:) @NSManaged dynamic public func addToEvents(_ value: CashfreePGCoreSDK.CFEvent)
-  @objc(removeEventsObject:) @NSManaged dynamic public func removeFromEvents(_ value: CashfreePGCoreSDK.CFEvent)
-  @objc(addEvents:) @NSManaged dynamic public func addToEvents(_ values: Foundation.NSOrderedSet)
-  @objc(removeEvents:) @NSManaged dynamic public func removeFromEvents(_ values: Foundation.NSOrderedSet)
-}
-@_inheritsConvenienceInitializers @objc(CFCrash) public class CFCrash : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
-  @objc deinit
-}
-extension CashfreePGCoreSDK.CFCrash {
-  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<CashfreePGCoreSDK.CFCrash>
-}
-@_inheritsConvenienceInitializers @objc(CFEvent) public class CFEvent : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
-  @objc deinit
-}
-extension CashfreePGCoreSDK.CFEvent {
-  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<CashfreePGCoreSDK.CFEvent>
-  @objc @NSManaged dynamic public var callingObject: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var event_id: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var memoryUtilized: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var name: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var networkType: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var order_token: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var timeStamp: Swift.Int64 {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var transaction: CashfreePGCoreSDK.CFAnalytics? {
-    @objc get
-    @objc set
-  }
-}
-extension CashfreePGCoreSDK.APIState : Swift.Equatable {}
-extension CashfreePGCoreSDK.APIState : Swift.Hashable {}
-extension CashfreePGCoreSDK.APIState : Swift.RawRepresentable {}
 extension CashfreePGCoreSDK.CashfreeError : Swift.Equatable {}
 extension CashfreePGCoreSDK.CashfreeError : Swift.Hashable {}
 extension CashfreePGCoreSDK.CashfreeError : Swift.RawRepresentable {}
@@ -542,6 +399,3 @@ extension CashfreePGCoreSDK.CFPLATFORM : Swift.RawRepresentable {}
 extension CashfreePGCoreSDK.CFUPIMODE : Swift.Equatable {}
 extension CashfreePGCoreSDK.CFUPIMODE : Swift.Hashable {}
 extension CashfreePGCoreSDK.CFUPIMODE : Swift.RawRepresentable {}
-extension CashfreePGCoreSDK.CFReachability.ReachabilityStatus : Swift.Equatable {}
-extension CashfreePGCoreSDK.CFReachability.ReachabilityStatus : Swift.Hashable {}
-extension CashfreePGCoreSDK.CFReachability.ReachabilityStatus : Swift.RawRepresentable {}
