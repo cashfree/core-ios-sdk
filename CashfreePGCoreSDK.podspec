@@ -18,7 +18,7 @@ s.description		= <<-DESC
 s.homepage		= "https://cashfree.com"
 s.license		= 'MIT'
 s.author			= { "Cashfree Payments" => "developers@cashfree.com" }
-s.source			= { :git => "https://github.com/cashfree/core-ios-sdk.git", :tag => "core" + s.version.to_s }
+s.source			= { :git => "https://github.com/cashfree/core-ios-sdk.git", :tag => "core-" + s.version.to_s }
 s.social_media_url	= "https://twitter.com/gocashfree"
 s.platform		= :ios, "11.0"
 s.vendored_frameworks	= "CashfreePGCoreSDK.xcframework"
