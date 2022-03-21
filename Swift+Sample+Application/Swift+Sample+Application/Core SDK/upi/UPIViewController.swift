@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CashfreePG
 import CashfreePGCoreSDK
 
 class UPIViewController: UIViewController {
@@ -22,7 +23,7 @@ class UPIViewController: UIViewController {
         
         // NOTE:- We recommend that callbacks be registered independently and always in ViewDidLoad.
         
-        self.paymentService.setCallback([self])
+        self.paymentService.setCallback(self)
         
         if Utils.environment == .SANDBOX {
             self.upiIDTextField.text = "testsuccess@gocash"
@@ -53,7 +54,7 @@ class UPIViewController: UIViewController {
                 // Create CFUPI -> Collect
                 let upi = try CFUPI.CFUPIBuilder()
                     .setChannel(mode)
-                    .setUpiId(upi_id)
+                    .setUPIID(upi_id)
                     .build()
                 
                 // Create Payment
@@ -63,7 +64,8 @@ class UPIViewController: UIViewController {
                     .build()
                 
                 // Initiate Payment
-                try self.paymentService.doPayment(payment: payment)
+                self.paymentService.setCallback(self)
+                try self.paymentService.doPayment(payment, viewController: nil)
             } catch {
                 
             }

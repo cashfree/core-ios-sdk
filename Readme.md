@@ -12,10 +12,11 @@ The following are the steps to be followed to getting the integration started:-
 2. Integrate our Cashfree SDK into your application
 3. Create an order with Cashfree
 4. Create a **session**.
-5.a. Native Checkout
-5.b. Seamless Checkout Select a **payment mode** and create objects for the same.
-6. Create a **payment object**.
-7. Initiate payment
+5. Native Checkout
+6. Seamless Checkout 
+7. Select a **payment mode** and create objects for the same.
+8. Create a **payment object**.
+9. Initiate payment
 
 ___
 
@@ -46,8 +47,8 @@ To process any payment on Cashfree PG, the merchant needs to create an order in 
 `Note:` Please refer our [Order Creation](https://docs.cashfree.com/docs/create-order) for more details regarding parameters and more.
 
 
-**Production** -> ```https://sandbox.cashfree.com/pg/orders```\
-**Sandbox** -> ```https://api.cashfree.com/pg/orders```
+**Production** -> ```https://api.cashfree.com/pg/orders```\
+**Sandbox** -> ```https://sandbox.cashfree.com/pg/orders```
 
 
 `Note:` Please see the description of the request below.

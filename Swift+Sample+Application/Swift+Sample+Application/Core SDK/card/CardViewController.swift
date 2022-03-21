@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CashfreePG
 import CashfreePGCoreSDK
 
 class CardViewController: UIViewController {
@@ -24,7 +25,7 @@ class CardViewController: UIViewController {
         self.navigationItem.title = "Card Payment"
         
         // NOTE:- We recommend that callbacks be registered independently and always in ViewDidLoad.
-        self.paymentService.setCallback([self])
+        self.paymentService.setCallback(self)
         
         if Utils.environment == .SANDBOX {
             self.cardNumberTextField.text = "4111111111111111"
@@ -67,7 +68,8 @@ class CardViewController: UIViewController {
                     .build()
                 
                 // Initiate Payment
-                try self.paymentService.doPayment(payment: payment)
+                self.paymentService.setCallback(self)
+                try self.paymentService.doPayment(payment, viewController: nil)
                 
             } catch {
                 

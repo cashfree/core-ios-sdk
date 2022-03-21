@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import CashfreePG
+import CashfreePGCoreSDK
+import CashfreePGUISDK
 
-class StartPageViewController: UIViewController {
+class StartPageViewController: UIViewController, CFNativeCheckoutResponseDelegate {
+   
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,4 +25,44 @@ class StartPageViewController: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    @IBAction func nativeCheckoutSDKTapped(_ sender: Any) {
+        do {
+            let session = try CFSession.CFSessionBuilder()
+                .setOrderID(Utils.order_id) // Replace the order_id
+                .setOrderToken(Utils.order_token) // Replace the order_token
+                .setEnvironment(Utils.environment)
+                .build()
+            let paymentComponent = try CFPaymentComponent.CFPaymentComponentBuilder()
+                .enableComponents([
+                    "order-details",
+                    "card",
+                    "upi",
+                    "wallet",
+                    "netbanking",
+                    "emi",
+                    "paylater"
+                ])
+                .build()
+            let nativeCheckoutPayment = try CFNativeCheckoutPayment.CFNativeCheckoutPaymentBuilder()
+                .setSession(session)
+                .setComponent(paymentComponent)
+                .build()
+            
+            let service = CFPaymentGatewayService.getInstance()
+            service.setCallback(self)
+            try service.doPayment(nativeCheckoutPayment, viewController: self)
+        } catch let e {
+            let error = e as! CashfreeError
+            print(error.localizedDescription)
+        }
+    }
+    
+    func verifyPayment(order_id: String) {
+        print(order_id)
+    }
+    
+    func didFinishExecution(with error: CFErrorResponse, order_id: String) {
+        print(order_id)
+        print(error.message)
+    }
 }

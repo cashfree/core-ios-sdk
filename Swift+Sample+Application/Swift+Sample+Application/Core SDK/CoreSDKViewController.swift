@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CashfreePGCoreSDK
+import CashfreePG
 
 class CoreSDKViewController: UIViewController {
     

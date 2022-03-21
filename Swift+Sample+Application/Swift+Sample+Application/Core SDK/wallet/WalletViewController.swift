@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CashfreePG
 import CashfreePGCoreSDK
 
 class WalletViewController: UIViewController {
@@ -20,7 +21,7 @@ class WalletViewController: UIViewController {
         super.viewDidLoad()
         
         // NOTE:- We recommend that callbacks be registered independently and always in ViewDidLoad.
-        self.paymentService.setCallback([self])
+        self.paymentService.setCallback(self)
         self.navigationItem.title = "Wallet"
         
         if Utils.environment == .SANDBOX {
@@ -49,7 +50,7 @@ class WalletViewController: UIViewController {
                 // Create CFWallet
                 let wallet = try CFWallet.CFWalletBuilder()
                     .setPhone(self.phoneNumberTextField.text ?? "")
-                    .setChannel(self.channelTextField.text ?? "")
+                    .setProvider(self.channelTextField.text ?? "")
                     .build()
                 
                 // Create Payment
@@ -59,7 +60,8 @@ class WalletViewController: UIViewController {
                     .build()
                 
                 // Initiate Payment
-                try self.paymentService.doPayment(payment: payment)
+                self.paymentService.setCallback(self)
+                try self.paymentService.doPayment(payment, viewController: nil)
             } catch {
                 
             }
