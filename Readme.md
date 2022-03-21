@@ -20,7 +20,7 @@ The following are the steps to be followed to getting the integration started:-
 
 ___
 
-## **Step 1: Create an account with Cashfree and get the API keys**
+# Create an account with Cashfree and get the API keys**
 
 1. Go to the [Cashfree website](https://merchant.cashfree.com/merchant/login) and create an account. Click [here](https://docs.cashfree.com/docs/create-account) for detailed steps on how to create and activate your account.
 2. Log in to your Merchant Dashboard using the same credentials.
@@ -29,7 +29,7 @@ ___
 
 ___
 
-## **Step 2: Integrate Cashfree SDK into your application**
+# Integrate Cashfree SDK into your application**
 
 #### USING COCOAPODS
 
@@ -40,7 +40,7 @@ pod 'CashfreePG', '~> 1.0.11'
 ```
 ___
 
-## **Step 3: Creating an order with Cashfree**
+# Creating an order with Cashfree
 
 To process any payment on Cashfree PG, the merchant needs to create an order in the cashfree system. **This order must be created from your backend (as it uses your secret key)**.
 
@@ -120,7 +120,7 @@ We recommend that you store the following parameters at your end `order_id`, `cf
 
 ___
 
-## Step 4: **Create a session**
+# **Create a session**
 
 As discussed above, the **`order_token`** contains all the order details and is used to authenticate the payment. The SDK exposes a class **`CFSession`** which has member variables for a payment session. One of them sets the order_token value.
 
@@ -146,7 +146,7 @@ do {
 
 ___
 
-# 5.a. Native Checkout
+# Native Checkout
 
 Cashfree provides a pre-built UI to enable the merchant to integrate the payment gateway in a jiffy. The UI SDK handles all the business logic and UI Components to make the payment smooth and easy to use. The SDK allows the merchant to customise the UI in terms of color coding and fonts and payment components. 
 
@@ -165,7 +165,7 @@ Open the info.plist file and add the following:
 ```
 
 ### Payment Components
-The Cashfree pre-built UI allows to merchant to use a seamless flow with the pre-built UI by sending payment component parameters to the SDK.
+The Cashfree's native checkout allows the merchant to use a seamless flow with the pre-built UI by sending payment component parameters to the SDK.
 
 ```
 let paymentComponent = try CFPaymentComponent.CFPaymentComponentBuilder()
@@ -173,9 +173,11 @@ let paymentComponent = try CFPaymentComponent.CFPaymentComponentBuilder()
                         .build()
 ```
 
-The `enableComponents()` method takes in an array of string and the order in which the merchant is set is honoured. If this method is not invoked, by default all the payment modes are enabled.
+The `enableComponents()` method takes in an array of string and the order in which the merchant sends the components is honoured. If this method is not called, by default all the payment modes are enabled.
 
 ```
+
+### Theme
 let theme = try CFTheme.CFThemeBuilder()
                         .setNavigationBarBackgroundColor("#C3C3C3")
                         .setNavigationBarTextColor("#FFFFFF")
@@ -190,7 +192,7 @@ The `CFTheme` and `CFThemeBuilder` is used to set the theming for the UI SDK. Th
 
 ### Handling Responses
 
-In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with Native Checkout flow and the controller which is initiating this has to conform to the protocol CFNativeCheckoutResponseDelegate.
+In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with Native Checkout flow and the class which is initiating this has to conform to the protocol `CFNativeCheckoutResponseDelegate`.
 
 This protocol comprises of 2 methods:
 
@@ -201,13 +203,13 @@ This protocol comprises of 2 methods:
 
 ---
 
-# 5.b Seamless Checkout
+# Seamless Checkout
 
-## **Prerequisite - Card, Wallet and Netbanking Mode**
+## **Prerequisite - Card, Wallet, Paylater and Netbanking Mode**
 
 When any of these payment modes is being used, the user is navigated to a web page to authenticate the payment. In this case, a web-view has to be loaded. For this purpose, the SDK exposes a web-view `CFWebView` which is a subclass of `WKWebView`. You have to create a WKWebView and set the custom class to `CFWebView`.
 
-`Note` The below code is an example code. You can add this if you are build the UI programmatically or inherit `CFWebView` class to your web-view
+`Note` The below code is an example code. You can add this if you are building the UI programmatically or inherit `CFWebView` class to your web-view in stroyboard.
 
 ```
 var cashfreeWebView: CFWebView!
@@ -232,6 +234,8 @@ var cashfreeWebView: CFWebView!
      }
  }
 ```
+
+`Note:` In case the user chooses to close the web-view before completing the 2FA flow, we strongly recommend you to call the `removeWebViewReference()` method. This makes sure that you do not get unnecessary callbacks later.
 
 ___
 
@@ -327,7 +331,7 @@ ___
             print(error.localizedDescription)
        }
 ```
-`Note:` Below is the list of all channel values supported by Cashfree:-
+`Note:` Below is the list of all provider values supported by Cashfree:-
 1. phonepe
 2. paytm
 3. amazon
@@ -403,7 +407,7 @@ do {
             print(error.localizedDescription)
        }
 ```
-`Note:` In the above code-snippet, inside the `setUpiId()`, the id of the clicked application has to be sent. This `id` is the key that is present in the list of objects that was retrieved in the above **Prerequisites**
+`Note:` In the above code-snippet, inside the `setUPIID()`, the id of the clicked application has to be sent. This `id` is the key that is present in the list of objects that was retrieved in the above **Prerequisites**
 
 - In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with upi-payment flow and the controller which is initiating this has to conform to the protocol `CFUPIPaymentDelegate`.
 
@@ -619,7 +623,7 @@ Note: Refer to our API Reference documentation for more information about the me
 let gatewayService = CFPaymentGatewayService.getInstance()
 
 override func viewDidLoad() {
-  // We recommend that the callback be set separately in the viewDidLoad
+  // We recommend that the callback be set separately in the viewDidLoad as well
   gatewayService.setCallback(self)
 }
 
@@ -674,9 +678,8 @@ do {
                         .setComponent(paymentComponent)
                         .setTheme(theme)
                         .build()
-                    let pgService = CFPaymentGatewayService.getInstance()
-                    pgService.setCallback(self)
-                    try pgService.doPayment(payment, viewController: self)
+                    gatewayService.setCallback(self)
+                    try gatewayService.doPayment(payment, viewController: self)
                 } catch {
 
                 }
@@ -704,7 +707,7 @@ do {
                 .setCard(card)
                 .build()
             gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cardPaymentObject)
+            try gatewayService.doPayment(payment: cardPaymentObject, viewController: nil)
         } catch {
 
         }
@@ -736,7 +739,7 @@ do {
                 .setCard(emiCard)
                 .build()
             gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cardPaymentObject)
+            try gatewayService.doPayment(payment: cardPaymentObject, viewController: nil)
         } catch {
 
         }
@@ -754,7 +757,7 @@ do {
                 .setOrderId("order_Id")
                 .build()
             let wallet = try CFWallet.CFWalletBuilder()
-                .setChannel("phonepe")
+                .setProvider("phonepe")
                 .setPhone("9999999999")
                 .build()
             let cfWalletPaymentObject = try CFWalletPayment.CFWalletPaymentBuilder()
@@ -762,7 +765,7 @@ do {
                 .setWallet(wallet)
                 .build()
             gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cfWalletPaymentObject)
+            try gatewayService.doPayment(payment: cfWalletPaymentObject, viewController: nil)
         } catch {
 
         }
@@ -787,7 +790,7 @@ do {
                 .setNetbankingObject(netbanking)
                 .build()
             gatewayService.setCallback(self)
-            try gatewayService.doPayment(paymentt: netbankingPaymentObject)
+            try gatewayService.doPayment(paymentt: netbankingPaymentObject, viewController: nil)
         } catch {
 
         }
@@ -806,14 +809,14 @@ do {
                 .build()
             let cfUPICollect = try CFUPI.CFUPIBuilder()
                 .setChannel(.COLLECT)
-                .setUpiId("<SET UPI ID HERE>")
+                .setUPIID("<SET UPI ID HERE>")
                 .build()
             let cfUPIPaymentObject = try CFUPIPayment.CFUPIPaymentBuilder()
                 .setSession(cfSession)
                 .setUPI(cfUPICollect)
                 .build()
             gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cfUPIPaymentObject)
+            try gatewayService.doPayment(payment: cfUPIPaymentObject, viewController: nil)
         } catch {
 
         }
@@ -832,14 +835,14 @@ do {
                 .build()
             let cfUPICollect = try CFUPI.CFUPIBuilder()
                 .setChannel(.INTENT)
-                .setUpiId(CFUPIUtils().getInstalledUPIApplications().first!["id"]!)
+                .setUPIID(CFUPIUtils().getInstalledUPIApplications().first!["id"]!)
                 .build()
             let cfUPIPaymentObject = try CFUPIPayment.CFUPIPaymentBuilder()
                 .setSession(cfSession)
                 .setUPI(cfUPICollect)
                 .build()
             gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cfUPIPaymentObject)
+            try gatewayService.doPayment(payment: cfUPIPaymentObject, viewController: nil)
         } catch {
 
         }
@@ -866,7 +869,7 @@ do {
                 .setPaylater(cfPayLater)
                 .build()
             gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cfPaylaterObject)
+            try gatewayService.doPayment(payment: cfPaylaterObject, viewController: nil)
         } catch {
 
         }
