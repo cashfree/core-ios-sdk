@@ -20,7 +20,7 @@ The following are the steps to be followed to getting the integration started:-
 
 ___
 
-# Create an account with Cashfree and get the API keys**
+# Create an account with Cashfree and get the API keys
 
 1. Go to the [Cashfree website](https://merchant.cashfree.com/merchant/login) and create an account. Click [here](https://docs.cashfree.com/docs/create-account) for detailed steps on how to create and activate your account.
 2. Log in to your Merchant Dashboard using the same credentials.
@@ -29,7 +29,7 @@ ___
 
 ___
 
-# Integrate Cashfree SDK into your application**
+# Integrate Cashfree SDK into your application
 
 #### USING COCOAPODS
 
