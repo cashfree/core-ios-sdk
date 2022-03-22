@@ -25,7 +25,7 @@ class CoreSDKViewController: UIViewController {
 extension CoreSDKViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,6 +43,9 @@ extension CoreSDKViewController: UITableViewDataSource, UITableViewDelegate {
             break
         case 3:
             cell.textLabel?.text = "NETBANKING"
+            break
+        case 4:
+            cell.textLabel?.text = "PAYLATER"
             break
         default:
             break

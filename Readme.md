@@ -787,7 +787,7 @@ do {
                 .build()
             let netbankingPaymentObject = try CFNetbankingPayment.CFNetbankingPaymentBuilder()
                 .setSession(cfSession)
-                .setNetbankingObject(netbanking)
+                .setNetbanking(netbanking)
                 .build()
             gatewayService.setCallback(self)
             try gatewayService.doPayment(paymentt: netbankingPaymentObject, viewController: nil)
