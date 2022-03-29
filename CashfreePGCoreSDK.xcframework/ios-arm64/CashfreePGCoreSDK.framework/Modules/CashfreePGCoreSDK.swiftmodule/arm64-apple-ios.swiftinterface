@@ -225,9 +225,6 @@ extension CashfreePGCoreSDK.CashfreeError : Swift.CustomStringConvertible {
   }
   @objc deinit
 }
-extension UIKit.UIImage {
-  public func toBase64() -> Swift.String?
-}
 @_hasMissingDesignatedInitializers @objc final public class CFUPI : ObjectiveC.NSObject {
   @objc final public func printDescription()
   @_inheritsConvenienceInitializers @objc final public class CFUPIBuilder : ObjectiveC.NSObject {
