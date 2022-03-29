@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		PZj6tItSjfr9h/xth52/TD3iWDw=
+		a1To55V7kQtSCQHu6Yyjpjl6JJc=
 		</data>
 		<key>CFAllBanksTableViewCell.nib</key>
 		<data>
-		oPWZ2jlMe5tc2ZAARTJkBUrbaZg=
+		NOTFHdbAgzQlMn5hDjSWa4jnIfM=
 		</data>
 		<key>CFCardUITableViewCell.nib</key>
 		<data>
@@ -68,13 +68,9 @@
 		<data>
 		6Em1KhZ+7ky7LHz2MNAA8EL12LA=
 		</data>
-		<key>CFUIWebViewController.nib/objects-14.0+.nib</key>
+		<key>CFUIWebViewController.nib</key>
 		<data>
-		ROVgD/iIjDT+ryqqZA2Mns+BU+s=
-		</data>
-		<key>CFUIWebViewController.nib/runtime.nib</key>
-		<data>
-		Mrtkb8ZiREyMHDI1k4itqNequcg=
+		KtVX5O1dlTyEdJ0Nesx0i9Hd+kM=
 		</data>
 		<key>CFUPICollectTableViewCell.nib</key>
 		<data>
@@ -106,7 +102,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VE/403OkocRtyM/EQGQfAynJxaA=
+		gcBFtoOUk1qNLFaEsDGans6bZN8=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -118,7 +114,7 @@
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RjlF8peef51sgLPhoZ8jzVLyF4Y=
+		e3+rHp3BSjtTJnVUGwmFpysPd2g=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -130,7 +126,7 @@
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jxzyDJDGGuvpT8eiwmcJUD0+LLg=
+		SJeax9ywRXbvNylqn9HpPRfF72w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -151,14 +147,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S1mEMn09853qR0YBOn11EUYx/XJy/Iog9nu9gDLpyhM=
+			FGWp4MhwYX5ozVTwe2KLVSCc7Ihxmn5e8PDOnmtVsbw=
 			</data>
 		</dict>
 		<key>CFAllBanksTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/LMpaj7wJRMuXNJNiPzb3wz+1Ugkk4koOC4LXICwVec=
+			S0r33zFiycEyHKtAevOX6TEG2xeX5IGwCM7JL5I4XNo=
 			</data>
 		</dict>
 		<key>CFCardUITableViewCell.nib</key>
@@ -259,18 +255,11 @@
 			8dX0QId+90pHqHxWDKIKFc8BEomRhqyQFOa9JokfBxk=
 			</data>
 		</dict>
-		<key>CFUIWebViewController.nib/objects-14.0+.nib</key>
+		<key>CFUIWebViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wYLfxoXuPnYk7Gs9OLuA5q1b9oCNQ5Y72/zwJuz84gU=
-			</data>
-		</dict>
-		<key>CFUIWebViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			9F35QqfTA737NmQAK2M+hwZbZ9e2eFCIJ6PXtGsxVmg=
+			lRM1iprMiAbKiHWpy/7IquUhCO7g7rU8BZ978JGSeio=
 			</data>
 		</dict>
 		<key>CFUPICollectTableViewCell.nib</key>
@@ -340,7 +329,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NTGzh+h4DhWDpyab6zyYNlE0dir0B3PzGMrcufuVnP8=
+			sy4iEkdnDvx+k6amIra6WjkbGIZ645dW3qODTlUUok4=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -361,7 +350,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+G4dPcgD+MCvW5yd+PsM4uYWJPL5aFl3OAPcN0JhjUY=
+			t3txywsq8Pe8MCiqCmQ7cQ3O2FfImB3su5SHgHWSYHA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
