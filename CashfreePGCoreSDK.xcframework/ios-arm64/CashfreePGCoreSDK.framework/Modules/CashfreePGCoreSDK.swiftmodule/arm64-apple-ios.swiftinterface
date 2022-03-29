@@ -16,7 +16,7 @@ import _Concurrency
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect, configuration: WebKit.WKWebViewConfiguration)
   @objc @_Concurrency.MainActor(unsafe) final public func startAuthentication() throws
   @_Concurrency.MainActor(unsafe) @objc final public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) final public func removeWebViewReference()
+  @_Concurrency.MainActor(unsafe) final public func notifyWebViewClosed()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers open class CFConstantFunctions {
