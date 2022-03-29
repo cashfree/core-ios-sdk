@@ -239,8 +239,8 @@ SWIFT_CLASS_NAMED("CFBankImage")
 @class CFErrorResponse;
 
 /// The view controller initiating the UISDK payment must conform to this protocol
-SWIFT_PROTOCOL("_TtP15CashfreePGUISDK32CFNativeCheckoutResponseDelegate_")
-@protocol CFNativeCheckoutResponseDelegate <CFCallbackDelegate>
+SWIFT_PROTOCOL("_TtP15CashfreePGUISDK30CFDropCheckoutResponseDelegate_")
+@protocol CFDropCheckoutResponseDelegate <CFCallbackDelegate>
 /// This method gets invoked when the payment is completed be it successful or failed or pending and the merchant has to verify the payment.
 /// \param order_id Order Id that is used to do transaction
 ///
@@ -254,12 +254,12 @@ SWIFT_PROTOCOL("_TtP15CashfreePGUISDK32CFNativeCheckoutResponseDelegate_")
 @end
 
 
-SWIFT_CLASS("_TtC15CashfreePGUISDK23CFNativeCheckoutService")
-@interface CFNativeCheckoutService : NSObject
+SWIFT_CLASS("_TtC15CashfreePGUISDK21CFDropCheckoutService")
+@interface CFDropCheckoutService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-+ (CFNativeCheckoutService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
-- (void)setCallback:(id <CFNativeCheckoutResponseDelegate> _Nonnull)callback;
++ (CFDropCheckoutService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
+- (void)setCallback:(id <CFDropCheckoutResponseDelegate> _Nonnull)callback;
 @end
 
 
@@ -616,8 +616,8 @@ SWIFT_CLASS_NAMED("CFBankImage")
 @class CFErrorResponse;
 
 /// The view controller initiating the UISDK payment must conform to this protocol
-SWIFT_PROTOCOL("_TtP15CashfreePGUISDK32CFNativeCheckoutResponseDelegate_")
-@protocol CFNativeCheckoutResponseDelegate <CFCallbackDelegate>
+SWIFT_PROTOCOL("_TtP15CashfreePGUISDK30CFDropCheckoutResponseDelegate_")
+@protocol CFDropCheckoutResponseDelegate <CFCallbackDelegate>
 /// This method gets invoked when the payment is completed be it successful or failed or pending and the merchant has to verify the payment.
 /// \param order_id Order Id that is used to do transaction
 ///
@@ -631,12 +631,12 @@ SWIFT_PROTOCOL("_TtP15CashfreePGUISDK32CFNativeCheckoutResponseDelegate_")
 @end
 
 
-SWIFT_CLASS("_TtC15CashfreePGUISDK23CFNativeCheckoutService")
-@interface CFNativeCheckoutService : NSObject
+SWIFT_CLASS("_TtC15CashfreePGUISDK21CFDropCheckoutService")
+@interface CFDropCheckoutService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-+ (CFNativeCheckoutService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
-- (void)setCallback:(id <CFNativeCheckoutResponseDelegate> _Nonnull)callback;
++ (CFDropCheckoutService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
+- (void)setCallback:(id <CFDropCheckoutResponseDelegate> _Nonnull)callback;
 @end
 
 
