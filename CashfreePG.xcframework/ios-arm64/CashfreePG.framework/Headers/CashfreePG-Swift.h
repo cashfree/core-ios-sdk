@@ -231,7 +231,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 ///
 /// do {
 /// cfPaymentGatewayService.setCallback(self)
-/// try cfPaymentGatewayService.doPayment(paymentOject: cardPayment)
+/// try cfPaymentGatewayService.doPayment(paymentOject: cardPayment, viewController: nil)
+/// // NOTE:- Set viewController instance in case of Native Checkout.
 /// } catch {
 /// // Handle Exceptions
 /// }
