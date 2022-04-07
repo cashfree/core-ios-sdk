@@ -201,7 +201,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
-@import WebKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -218,11 +217,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="CashfreePGCoreSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
-
-
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFCallbackDelegate_")
-@protocol CFCallbackDelegate
-@end
 
 
 /// CFCard class consists of parameters required to make a card payment. CFCard object can be build using the <code>CFCardBuilder</code>. The CFCardBuilder class is embedded within the CFCard class and provides the users with setters to set the values of all the details that are required while making a card payment.
@@ -369,68 +363,16 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK13CFCardPayment20CFCardPaymentBuilder")
 - (CFCardPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class CFErrorResponse;
-
-/// The UIViewController implementing the SDK’s card payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, starting from payment initiation to payment authentication to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFCardPaymentDelegate {
-///     
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingCardPayment()  {
-///        // Show Loader here
-///    }
-///    
-///    func presentWebForAuthenticatingCardPayment() {
-///        // Present the UIViewController that embeds CFWebView and call the below method in that class
-///         DispatchQueue.main.async {
-///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///             self.webViewController.modalPresentationStyle = .fullScreen
-///             self.present(self.webViewController, animated: true, completion: nil)
-///         }
-///    }
-///
-///    func cardPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///
-///    func verifyCardPaymentCompletion(for orderId: String) {
-///        // Verify Payment
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code>
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK21CFCardPaymentDelegate_")
-@protocol CFCardPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the card payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingCardPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
-- (void)presentWebForAuthenticatingCardPayment;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid card, invalid cvv and more)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)cardPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
-- (void)verifyCardPaymentCompletionFor:(NSString * _Nonnull)orderId;
-@end
-
+@protocol CFResponseDelegate;
+@class UIViewController;
 
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
 @interface CFCorePaymentService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 + (CFCorePaymentService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
-- (void)setCallback:(id <CFCallbackDelegate> _Nonnull)callback;
-- (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment error:(NSError * _Nullable * _Nullable)error;
+- (void)setCallback:(id <CFResponseDelegate> _Nonnull)callback;
+- (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (void)cancelPayment;
 @end
 
@@ -725,59 +667,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK19CFNetbankingPayment26CFNetbankingPaymentB
 - (CFNetbankingPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-
-/// The UIViewController implementing the SDK’s netbanking payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFNetbankingPaymentDelegate {
-///
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingNetbankingPayment()  {
-///        // Show Loader here
-///    }
-///    
-///    func presentWebForAuthenticatingNetbankingPayment() {
-///         // Present the UIViewController that embeds CFWebView and call the below method in that class
-///         DispatchQueue.main.async {
-///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///             self.webViewController.modalPresentationStyle = .fullScreen
-///             self.present(self.webViewController, animated: true, completion: nil)
-///         }
-///    }
-///
-///    func netbankingPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///
-///    func verifyNetbankingPaymentCompletion(for orderId: String) {
-///        // Verify Payment
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code>
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK27CFNetbankingPaymentDelegate_")
-@protocol CFNetbankingPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the Netbanking payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingNetbankingPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
-- (void)presentWebForAuthenticatingNetbankingPayment;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid bank_ifsc)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)netbankingPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
-- (void)verifyNetbankingPaymentCompletionFor:(NSString * _Nonnull)orderId;
-@end
-
 typedef SWIFT_ENUM(NSInteger, CFPLATFORM, open) {
   CFPLATFORMIOS = 0,
   CFPLATFORMReact_Native_iOS = 1,
@@ -895,59 +784,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFPaylaterPayment24CFPaylaterPaymentBuild
 @end
 
 
-/// The UIViewController implementing the SDK’s paylater payment flow has to conform to this protocol. The protocol comes with four methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFPaylaterPaymentDelegate {
-///     
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingPaylaterPayment()  {
-///        // Show Loader here
-///    }
-///
-///    func verifyPaylaterPaymentCompletion() {
-///        // Start Payment Verification here by making an API call to Cashfree Server
-///    }
-///    
-///    func presentWebForAuthenticatingPaylaterPayment() {
-///         // Present the UIViewController that embeds CFWebView and call the below method in that class
-///         DispatchQueue.main.async {
-///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///             self.webViewController.modalPresentationStyle = .fullScreen
-///             self.present(self.webViewController, animated: true, completion: nil)
-///         }
-///    }
-///
-///    func payLaterPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK25CFPaylaterPaymentDelegate_")
-@protocol CFPaylaterPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the Pay Later payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingPaylaterPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
-- (void)presentWebForAuthenticatingPaylaterPayment;
-/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
-- (void)verifyPaylaterPaymentCompletionFor:(NSString * _Nonnull)orderId;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid wallet_name)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)payLaterPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-@end
-
-
 
 /// The CFErrorResponse class consists of class variables using which error codes and message can be sent back to the user in case of <em>Failed API</em> or <em>No Internet</em> or <em>Invalid Card Details</em> and more.
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFPaymentResponse")
@@ -982,47 +818,15 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK15CFQRCodePayment22CFQRCodePaymentBuilder")
 @end
 
 
-/// The UIViewController implementing the SDK’s QRCode payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to generating the QRCode to handling errors.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFQRCodePaymentDelegate {
-///     
-///    var cashfreeImageView: CFImageView!
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///        self.cashfreeImageView = .....
-///     }
-///     
-///    func initiatingQRCodeGeneration()  {
-///        // Show Loader here
-///    }
-///    
-///    func loadImageViewToPresentQRCode() {
-///         DispatchQueue.main.async {
-///             do {
-///                 try self.cashfreeImageView.loadQRCode()
-///             } catch {
-///                 
-///             }
-///         }
-///    }
-///
-///    func qrCodePayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///
-///    func verifyQRCodePaymentCompletion(for orderId: String) {
-///        // Verify Payment
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
+SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFResponseDelegate_")
+@protocol CFResponseDelegate
+- (void)onError:(CFErrorResponse * _Nonnull)error order_id:(NSString * _Nonnull)order_id;
+- (void)verifyPaymentWithOrder_id:(NSString * _Nonnull)order_id;
+@end
+
+
 SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFQRCodePaymentDelegate_")
-@protocol CFQRCodePaymentDelegate <CFCallbackDelegate>
+@protocol CFQRCodePaymentDelegate <CFResponseDelegate>
 /// This method callback is invoked when the SDK starts creating the QRCode payment process for the given order.
 /// note:
 /// Loaders can be implemented here.
@@ -1036,6 +840,7 @@ SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFQRCodePaymentDelegate_")
 /// This method gets invoked once the QR-Code is displayed to the user. It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
 - (void)verifyQRCodePaymentCompletionFor:(NSString * _Nonnull)orderId;
 @end
+
 
 
 /// The CFSession class wiith the help of CFSessionBuilder class helps in gathering mandatory information to initiate a payment session. The CFSession object can be built with the of <code>CFSessionBuilder</code> which is a class embedded inside the CFSession class.
@@ -1250,57 +1055,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK12CFUPIPayment19CFUPIPaymentBuilder")
 @end
 
 
-/// The UIViewController implementing the SDK’s UPI payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFUPIPaymentDelegate {
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingUPIPayment()  {
-///        // Show Loader here
-///    }
-///    
-///    func verifyUPIPaymentCompletion() {
-///        // Start Payment Verification here by making an API call to Cashfree Server
-///    }
-///
-///    func upiPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///
-///    func presentWebForAuthenticatingUPIPaymentInSandBoxEnvironment() {
-///         // Present the UIViewController that embeds CFWebView and call the below method in that class
-///          DispatchQueue.main.async {
-///              self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///              self.webViewController.modalPresentationStyle = .fullScreen
-///              self.present(self.webViewController, animated: true, completion: nil)
-///          }
-///    }
-///     
-/// }
-///
-/// \endcode
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK20CFUPIPaymentDelegate_")
-@protocol CFUPIPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the UPI payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingUPIPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page. This method will be invoked only in case of <em>SANDBOX</em> environment.
-- (void)presentWebForAuthenticatingUPIPaymentInSandBoxEnvironment;
-/// This method callback is invoked once the payment creation is complete and the user is automatically redirected to installed UPI application (in case of <em>UPI Intent</em>) or as soon as the user gets a payment notification (in case of <em>UPI Collect</em>) to entered VPA.
-- (void)verifyUPIPaymentCompletionFor:(NSString * _Nonnull)orderId;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid upi_id)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)upiPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-@end
-
-
 /// <em>CFUPIUtils</em> class helps in getting any configurations that are needed prior to making the payment page. One such example is getting the list of all the installed UPI applications from the user’s phone. The class provides a method called <code>CFUPIUtils().getInstalledUPIApplications()</code> which sends back a list of UPI applications installed in the user’s phone.
 /// note:
 /// Add the following permissions to info.plist file
@@ -1442,112 +1196,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK15CFWalletPayment22CFWalletPaymentBuilder")
 /// returns:
 /// It returns an object of <em>CFWalletPayment</em>
 - (CFWalletPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-/// The UIViewController implementing the SDK’s wallet payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFWalletPaymentDelegate {
-///     
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingWalletPayment()  {
-///        // Show Loader here
-///    }
-///
-///    func verifyWalletPaymentCompletion() {
-///        // Start Payment Verification here by making an API call to Cashfree Server
-///    }
-///    
-///    func presentWebForAuthenticatingWalletPayment() {
-///         // Present the UIViewController that embeds CFWebView and call the below method in that class
-///         DispatchQueue.main.async {
-///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///             self.webViewController.modalPresentationStyle = .fullScreen
-///             self.present(self.webViewController, animated: true, completion: nil)
-///         }
-///    }
-///
-///    func walletPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFWalletPaymentDelegate_")
-@protocol CFWalletPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the Wallet payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingWalletPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
-- (void)presentWebForAuthenticatingWalletPayment;
-/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
-- (void)verifyWalletPaymentCompletionFor:(NSString * _Nonnull)orderId;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid wallet_name)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)walletPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-@end
-
-@class WKWebViewConfiguration;
-@class WKNavigationAction;
-
-/// The class CFWebView inherits WKWebView. The user has to create a web-view and set the custom class to CFWebView (in case of storyboard UI creation) else use the below code snippet to create a web-view :-
-/// note:
-/// The <em>callback</em> has to be set explicitly (in case of Storyboards) or use the convenience initializer in case of programmatic UI creation.
-/// <ul>
-///   <li>
-///     <h2>Code Snippet</h2>
-///   </li>
-/// </ul>
-/// \code
-/// var cashfreeWebView: CFWebView!
-/// override func viewDidLoad() {
-///  super.viewDidLoad()
-///
-///  .......
-///
-///  self.cashfreeWebView = CFWebView(frame: .zero, configuration: WKWebViewConfiguration())
-///  self.cashfreeWebView.translatesAutoresizingMaskIntoConstraints = false
-///  self.view.addSubview(cashfreeWebView)
-///  self.cashfreeWebView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-///  self.cashfreeWebView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-///  self.cashfreeWebView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-///  self.cashfreeWebView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-///
-///  do {
-///      try self.cfWebView.startAuthentication()
-///  } catch let e {
-///      let error = e as! CashfreeError
-///      print(error.localizedDescription)
-///  }
-/// }
-///
-/// \endcodenote:
-/// If the UIViewController is removed from the stack (when the user closes the view controller before payment is complete), <code>CFWebView().removeWebViewReference()</code> method has to invoked to clear the reference of the web-view.
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK9CFWebView")
-@interface CFWebView : WKWebView <WKNavigationDelegate>
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-/// Constructor for the CFWebView
-/// \param frame Frame of the web-view
-///
-/// \param configuration configuration of the web-view
-///
-- (nonnull instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration * _Nonnull)configuration OBJC_DESIGNATED_INITIALIZER;
-/// This method loads the web-view with required URL for authenticating the payment (It can be bank authentication or wallet payment authenticaion)
-///
-/// throws:
-/// It throws an exception in case the <em>callback</em> is not set or in case <em>URI</em> is invalid. In that case, the payment has to be restarted again.
-- (BOOL)startAuthenticationAndReturnError:(NSError * _Nullable * _Nullable)error;
-- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
 @end
 
 typedef SWIFT_ENUM(NSInteger, CashfreeError, open) {
@@ -1802,7 +1450,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
-@import WebKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -1819,11 +1466,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="CashfreePGCoreSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
-
-
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFCallbackDelegate_")
-@protocol CFCallbackDelegate
-@end
 
 
 /// CFCard class consists of parameters required to make a card payment. CFCard object can be build using the <code>CFCardBuilder</code>. The CFCardBuilder class is embedded within the CFCard class and provides the users with setters to set the values of all the details that are required while making a card payment.
@@ -1970,68 +1612,16 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK13CFCardPayment20CFCardPaymentBuilder")
 - (CFCardPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class CFErrorResponse;
-
-/// The UIViewController implementing the SDK’s card payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, starting from payment initiation to payment authentication to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFCardPaymentDelegate {
-///     
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingCardPayment()  {
-///        // Show Loader here
-///    }
-///    
-///    func presentWebForAuthenticatingCardPayment() {
-///        // Present the UIViewController that embeds CFWebView and call the below method in that class
-///         DispatchQueue.main.async {
-///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///             self.webViewController.modalPresentationStyle = .fullScreen
-///             self.present(self.webViewController, animated: true, completion: nil)
-///         }
-///    }
-///
-///    func cardPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///
-///    func verifyCardPaymentCompletion(for orderId: String) {
-///        // Verify Payment
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code>
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK21CFCardPaymentDelegate_")
-@protocol CFCardPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the card payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingCardPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
-- (void)presentWebForAuthenticatingCardPayment;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid card, invalid cvv and more)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)cardPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
-- (void)verifyCardPaymentCompletionFor:(NSString * _Nonnull)orderId;
-@end
-
+@protocol CFResponseDelegate;
+@class UIViewController;
 
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
 @interface CFCorePaymentService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 + (CFCorePaymentService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
-- (void)setCallback:(id <CFCallbackDelegate> _Nonnull)callback;
-- (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment error:(NSError * _Nullable * _Nullable)error;
+- (void)setCallback:(id <CFResponseDelegate> _Nonnull)callback;
+- (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (void)cancelPayment;
 @end
 
@@ -2326,59 +1916,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK19CFNetbankingPayment26CFNetbankingPaymentB
 - (CFNetbankingPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-
-/// The UIViewController implementing the SDK’s netbanking payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFNetbankingPaymentDelegate {
-///
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingNetbankingPayment()  {
-///        // Show Loader here
-///    }
-///    
-///    func presentWebForAuthenticatingNetbankingPayment() {
-///         // Present the UIViewController that embeds CFWebView and call the below method in that class
-///         DispatchQueue.main.async {
-///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///             self.webViewController.modalPresentationStyle = .fullScreen
-///             self.present(self.webViewController, animated: true, completion: nil)
-///         }
-///    }
-///
-///    func netbankingPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///
-///    func verifyNetbankingPaymentCompletion(for orderId: String) {
-///        // Verify Payment
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code>
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK27CFNetbankingPaymentDelegate_")
-@protocol CFNetbankingPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the Netbanking payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingNetbankingPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
-- (void)presentWebForAuthenticatingNetbankingPayment;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid bank_ifsc)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)netbankingPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
-- (void)verifyNetbankingPaymentCompletionFor:(NSString * _Nonnull)orderId;
-@end
-
 typedef SWIFT_ENUM(NSInteger, CFPLATFORM, open) {
   CFPLATFORMIOS = 0,
   CFPLATFORMReact_Native_iOS = 1,
@@ -2496,59 +2033,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFPaylaterPayment24CFPaylaterPaymentBuild
 @end
 
 
-/// The UIViewController implementing the SDK’s paylater payment flow has to conform to this protocol. The protocol comes with four methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFPaylaterPaymentDelegate {
-///     
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingPaylaterPayment()  {
-///        // Show Loader here
-///    }
-///
-///    func verifyPaylaterPaymentCompletion() {
-///        // Start Payment Verification here by making an API call to Cashfree Server
-///    }
-///    
-///    func presentWebForAuthenticatingPaylaterPayment() {
-///         // Present the UIViewController that embeds CFWebView and call the below method in that class
-///         DispatchQueue.main.async {
-///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///             self.webViewController.modalPresentationStyle = .fullScreen
-///             self.present(self.webViewController, animated: true, completion: nil)
-///         }
-///    }
-///
-///    func payLaterPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK25CFPaylaterPaymentDelegate_")
-@protocol CFPaylaterPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the Pay Later payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingPaylaterPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
-- (void)presentWebForAuthenticatingPaylaterPayment;
-/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
-- (void)verifyPaylaterPaymentCompletionFor:(NSString * _Nonnull)orderId;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid wallet_name)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)payLaterPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-@end
-
-
 
 /// The CFErrorResponse class consists of class variables using which error codes and message can be sent back to the user in case of <em>Failed API</em> or <em>No Internet</em> or <em>Invalid Card Details</em> and more.
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFPaymentResponse")
@@ -2583,47 +2067,15 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK15CFQRCodePayment22CFQRCodePaymentBuilder")
 @end
 
 
-/// The UIViewController implementing the SDK’s QRCode payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to generating the QRCode to handling errors.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFQRCodePaymentDelegate {
-///     
-///    var cashfreeImageView: CFImageView!
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///        self.cashfreeImageView = .....
-///     }
-///     
-///    func initiatingQRCodeGeneration()  {
-///        // Show Loader here
-///    }
-///    
-///    func loadImageViewToPresentQRCode() {
-///         DispatchQueue.main.async {
-///             do {
-///                 try self.cashfreeImageView.loadQRCode()
-///             } catch {
-///                 
-///             }
-///         }
-///    }
-///
-///    func qrCodePayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///
-///    func verifyQRCodePaymentCompletion(for orderId: String) {
-///        // Verify Payment
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
+SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFResponseDelegate_")
+@protocol CFResponseDelegate
+- (void)onError:(CFErrorResponse * _Nonnull)error order_id:(NSString * _Nonnull)order_id;
+- (void)verifyPaymentWithOrder_id:(NSString * _Nonnull)order_id;
+@end
+
+
 SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFQRCodePaymentDelegate_")
-@protocol CFQRCodePaymentDelegate <CFCallbackDelegate>
+@protocol CFQRCodePaymentDelegate <CFResponseDelegate>
 /// This method callback is invoked when the SDK starts creating the QRCode payment process for the given order.
 /// note:
 /// Loaders can be implemented here.
@@ -2637,6 +2089,7 @@ SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFQRCodePaymentDelegate_")
 /// This method gets invoked once the QR-Code is displayed to the user. It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
 - (void)verifyQRCodePaymentCompletionFor:(NSString * _Nonnull)orderId;
 @end
+
 
 
 /// The CFSession class wiith the help of CFSessionBuilder class helps in gathering mandatory information to initiate a payment session. The CFSession object can be built with the of <code>CFSessionBuilder</code> which is a class embedded inside the CFSession class.
@@ -2851,57 +2304,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK12CFUPIPayment19CFUPIPaymentBuilder")
 @end
 
 
-/// The UIViewController implementing the SDK’s UPI payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFUPIPaymentDelegate {
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingUPIPayment()  {
-///        // Show Loader here
-///    }
-///    
-///    func verifyUPIPaymentCompletion() {
-///        // Start Payment Verification here by making an API call to Cashfree Server
-///    }
-///
-///    func upiPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///
-///    func presentWebForAuthenticatingUPIPaymentInSandBoxEnvironment() {
-///         // Present the UIViewController that embeds CFWebView and call the below method in that class
-///          DispatchQueue.main.async {
-///              self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///              self.webViewController.modalPresentationStyle = .fullScreen
-///              self.present(self.webViewController, animated: true, completion: nil)
-///          }
-///    }
-///     
-/// }
-///
-/// \endcode
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK20CFUPIPaymentDelegate_")
-@protocol CFUPIPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the UPI payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingUPIPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page. This method will be invoked only in case of <em>SANDBOX</em> environment.
-- (void)presentWebForAuthenticatingUPIPaymentInSandBoxEnvironment;
-/// This method callback is invoked once the payment creation is complete and the user is automatically redirected to installed UPI application (in case of <em>UPI Intent</em>) or as soon as the user gets a payment notification (in case of <em>UPI Collect</em>) to entered VPA.
-- (void)verifyUPIPaymentCompletionFor:(NSString * _Nonnull)orderId;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid upi_id)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)upiPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-@end
-
-
 /// <em>CFUPIUtils</em> class helps in getting any configurations that are needed prior to making the payment page. One such example is getting the list of all the installed UPI applications from the user’s phone. The class provides a method called <code>CFUPIUtils().getInstalledUPIApplications()</code> which sends back a list of UPI applications installed in the user’s phone.
 /// note:
 /// Add the following permissions to info.plist file
@@ -3043,112 +2445,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK15CFWalletPayment22CFWalletPaymentBuilder")
 /// returns:
 /// It returns an object of <em>CFWalletPayment</em>
 - (CFWalletPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-/// The UIViewController implementing the SDK’s wallet payment flow has to conform to this protocol. The protocol comes with three methods, which help in handling payment callbacks in each step, ranging from payment initiation to authentication payment to verifying the payment.
-/// <h2>Code Snippet</h2>
-/// \code
-/// class MyViewController: UIViewController, CFWalletPaymentDelegate {
-///     
-///     override func viewDidLoad() {
-///         ....
-///         ....
-///         ....
-///     }
-///     
-///    func initiatingWalletPayment()  {
-///        // Show Loader here
-///    }
-///
-///    func verifyWalletPaymentCompletion() {
-///        // Start Payment Verification here by making an API call to Cashfree Server
-///    }
-///    
-///    func presentWebForAuthenticatingWalletPayment() {
-///         // Present the UIViewController that embeds CFWebView and call the below method in that class
-///         DispatchQueue.main.async {
-///             self.webViewController = MyWebViewController(nibName: "WebViewController", bundle: nil)
-///             self.webViewController.modalPresentationStyle = .fullScreen
-///             self.present(self.webViewController, animated: true, completion: nil)
-///         }
-///    }
-///
-///    func walletPayment(didFinishExecutingWith error: CFErrorResponse) {
-///        // handle errors here.
-///    }
-///     
-/// }
-///
-/// \endcodenote:
-/// The payment verification has to be handled in the UIViewController that embeds the <code>CFWebView</code> for <em>gpay</em> wallet.
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFWalletPaymentDelegate_")
-@protocol CFWalletPaymentDelegate <CFCallbackDelegate>
-/// This method callback is invoked when the SDK starts creating the Wallet payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingWalletPayment;
-/// This method callback is invoked when the payment request is created and the SDK is ready to authenticate the payment by launching the web-view. When this callback is invoked, the web-view which is a sub-class of <em>CFWebView</em> has to call a method in SDK that initiates the authentication process by navigating the user to bank payment page.
-- (void)presentWebForAuthenticatingWalletPayment;
-/// This method gets invoked once the payment flow in the web-view is complete, It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
-- (void)verifyWalletPaymentCompletionFor:(NSString * _Nonnull)orderId;
-/// This method callback gets invoked whenever there is a <em>failure in the payment creation request (invalid wallet_name)</em> or in case of <em>Internet Issues</em>
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)walletPaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-@end
-
-@class WKWebViewConfiguration;
-@class WKNavigationAction;
-
-/// The class CFWebView inherits WKWebView. The user has to create a web-view and set the custom class to CFWebView (in case of storyboard UI creation) else use the below code snippet to create a web-view :-
-/// note:
-/// The <em>callback</em> has to be set explicitly (in case of Storyboards) or use the convenience initializer in case of programmatic UI creation.
-/// <ul>
-///   <li>
-///     <h2>Code Snippet</h2>
-///   </li>
-/// </ul>
-/// \code
-/// var cashfreeWebView: CFWebView!
-/// override func viewDidLoad() {
-///  super.viewDidLoad()
-///
-///  .......
-///
-///  self.cashfreeWebView = CFWebView(frame: .zero, configuration: WKWebViewConfiguration())
-///  self.cashfreeWebView.translatesAutoresizingMaskIntoConstraints = false
-///  self.view.addSubview(cashfreeWebView)
-///  self.cashfreeWebView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-///  self.cashfreeWebView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-///  self.cashfreeWebView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-///  self.cashfreeWebView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-///
-///  do {
-///      try self.cfWebView.startAuthentication()
-///  } catch let e {
-///      let error = e as! CashfreeError
-///      print(error.localizedDescription)
-///  }
-/// }
-///
-/// \endcodenote:
-/// If the UIViewController is removed from the stack (when the user closes the view controller before payment is complete), <code>CFWebView().removeWebViewReference()</code> method has to invoked to clear the reference of the web-view.
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK9CFWebView")
-@interface CFWebView : WKWebView <WKNavigationDelegate>
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-/// Constructor for the CFWebView
-/// \param frame Frame of the web-view
-///
-/// \param configuration configuration of the web-view
-///
-- (nonnull instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration * _Nonnull)configuration OBJC_DESIGNATED_INITIALIZER;
-/// This method loads the web-view with required URL for authenticating the payment (It can be bank authentication or wallet payment authenticaion)
-///
-/// throws:
-/// It throws an exception in case the <em>callback</em> is not set or in case <em>URI</em> is invalid. In that case, the payment has to be restarted again.
-- (BOOL)startAuthenticationAndReturnError:(NSError * _Nullable * _Nullable)error;
-- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
 @end
 
 typedef SWIFT_ENUM(NSInteger, CashfreeError, open) {
