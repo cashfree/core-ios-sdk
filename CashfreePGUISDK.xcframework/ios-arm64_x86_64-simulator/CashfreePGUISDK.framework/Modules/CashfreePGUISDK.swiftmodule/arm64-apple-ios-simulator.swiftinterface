@@ -11,13 +11,9 @@ import Swift
 import SystemConfiguration
 import UIKit
 import _Concurrency
-@objc public protocol CFDropCheckoutResponseDelegate : CashfreePGCoreSDK.CFCallbackDelegate {
-  @objc func verifyPayment(order_id: Swift.String)
-  @objc func didFinishExecution(with error: CashfreePGCoreSDK.CFErrorResponse, order_id: Swift.String)
-}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CFDropCheckoutService : ObjectiveC.NSObject {
   @objc public static func getInstance() -> CashfreePGUISDK.CFDropCheckoutService
-  @objc public func setCallback(_ callback: CashfreePGUISDK.CFDropCheckoutResponseDelegate)
+  @objc public func setCallback(_ callback: CashfreePGCoreSDK.CFResponseDelegate)
   public func doPayment(viewController: UIKit.UIViewController, payment: CashfreePGUISDK.CFDropCheckoutPayment)
   @objc deinit
 }
