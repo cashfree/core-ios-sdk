@@ -57,7 +57,7 @@ class NetbankingViewController: UIViewController {
                 
                 // Initiate Payment
                 self.paymentService.setCallback(self)
-                try self.paymentService.doPayment(payment, viewController: nil)
+                try self.paymentService.doPayment(payment, viewController: self)
             } catch {
                 
             }
@@ -66,30 +66,14 @@ class NetbankingViewController: UIViewController {
     }
 }
 
-extension NetbankingViewController: CFNetbankingPaymentDelegate {
-    func initiatingNetbankingPayment() {
-        // Show Loader here
+extension NetbankingViewController: CFResponseDelegate {
+    
+    func verifyPayment(order_id: String) {
+        print(order_id)
     }
     
-    func presentWebForAuthenticatingNetbankingPayment() {
-        // Present web for authentication here
-        DispatchQueue.main.async {
-            let webView = WebViewController(nibName: "WebViewController", bundle: nil)
-            webView.modalPresentationStyle = .fullScreen
-            self.present(webView, animated: true, completion: nil)
-        }
-    }
-    
-    func netbankingPayment(didFinishExecutingWith error: CFErrorResponse) {
-        // Handle Errors here
-    }
-    
-    func verifyNetbankingPaymentCompletion(for orderId: String) {
-        // Start verification here
-        DispatchQueue.main.async {
-            // Dismissing the web-view
-            self.dismiss(animated: true, completion: nil)
-        }
+    func onError(_ error: CFErrorResponse, order_id: String) {
+        print(error.message)
     }
     
     

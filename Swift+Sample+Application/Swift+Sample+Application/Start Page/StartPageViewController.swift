@@ -10,7 +10,7 @@ import CashfreePG
 import CashfreePGCoreSDK
 import CashfreePGUISDK
 
-class StartPageViewController: UIViewController, CFNativeCheckoutResponseDelegate {
+class StartPageViewController: UIViewController, CFResponseDelegate {
    
     
 
@@ -43,7 +43,7 @@ class StartPageViewController: UIViewController, CFNativeCheckoutResponseDelegat
                     "paylater"
                 ])
                 .build()
-            let nativeCheckoutPayment = try CFNativeCheckoutPayment.CFNativeCheckoutPaymentBuilder()
+            let nativeCheckoutPayment = try CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder()
                 .setSession(session)
                 .setComponent(paymentComponent)
                 .build()
@@ -61,8 +61,7 @@ class StartPageViewController: UIViewController, CFNativeCheckoutResponseDelegat
         print(order_id)
     }
     
-    func didFinishExecution(with error: CFErrorResponse, order_id: String) {
-        print(order_id)
+    func onError(_ error: CFErrorResponse, order_id: String) {
         print(error.message)
     }
 }

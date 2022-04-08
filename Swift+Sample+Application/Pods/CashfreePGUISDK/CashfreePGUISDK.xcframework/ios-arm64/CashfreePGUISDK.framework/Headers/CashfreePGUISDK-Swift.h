@@ -195,7 +195,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import CashfreePGCoreSDK;
 @import CoreData;
 @import Foundation;
 @import ObjectiveC;
@@ -234,30 +233,14 @@ SWIFT_CLASS_NAMED("CFBankImage")
 @property (nonatomic, copy) NSString * _Nullable urlString;
 @end
 
-@class CFErrorResponse;
+@protocol CFResponseDelegate;
 
-/// The view controller initiating the UISDK payment must conform to this protocol
-SWIFT_PROTOCOL("_TtP15CashfreePGUISDK32CFNativeCheckoutResponseDelegate_")
-@protocol CFNativeCheckoutResponseDelegate <CFCallbackDelegate>
-/// This method gets invoked when the payment is completed be it successful or failed or pending and the merchant has to verify the payment.
-/// \param order_id Order Id that is used to do transaction
-///
-- (void)verifyPaymentWithOrder_id:(NSString * _Nonnull)order_id;
-/// This method gets invoked whenever there is an error and the SDK closes.
-/// \param error It is of type <code>CFErrorResponse</code>
-///
-/// \param order_id Order ID that is used to do transaction
-///
-- (void)didFinishExecutionWith:(CFErrorResponse * _Nonnull)error order_id:(NSString * _Nonnull)order_id;
-@end
-
-
-SWIFT_CLASS("_TtC15CashfreePGUISDK23CFNativeCheckoutService")
-@interface CFNativeCheckoutService : NSObject
+SWIFT_CLASS("_TtC15CashfreePGUISDK21CFDropCheckoutService")
+@interface CFDropCheckoutService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-+ (CFNativeCheckoutService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
-- (void)setCallback:(id <CFNativeCheckoutResponseDelegate> _Nonnull)callback;
++ (CFDropCheckoutService * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
+- (void)setCallback:(id <CFResponseDelegate> _Nonnull)callback;
 @end
 
 

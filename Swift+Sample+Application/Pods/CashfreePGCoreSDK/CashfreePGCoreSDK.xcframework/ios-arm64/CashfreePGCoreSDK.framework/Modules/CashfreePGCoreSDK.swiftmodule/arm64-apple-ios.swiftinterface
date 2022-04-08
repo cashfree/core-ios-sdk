@@ -12,13 +12,6 @@ import Swift
 import UIKit
 import WebKit
 import _Concurrency
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) final public class CFWebView : WebKit.WKWebView, WebKit.WKNavigationDelegate {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect, configuration: WebKit.WKWebViewConfiguration)
-  @objc @_Concurrency.MainActor(unsafe) final public func startAuthentication() throws
-  @_Concurrency.MainActor(unsafe) @objc final public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) final public func removeWebViewReference()
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers open class CFConstantFunctions {
   public static func createCustomResponse(txStatus: Swift.String, response: Swift.Dictionary<Swift.String, Any>) -> CashfreePGCoreSDK.CFErrorResponse
   public static func setXRequestId(orderId: Swift.String, orderToken: Swift.String)
@@ -90,39 +83,11 @@ import _Concurrency
   }
   @objc deinit
 }
-@objc public protocol CFCallbackDelegate {
+@objc public protocol CFResponseDelegate {
+  @objc func onError(_ error: CashfreePGCoreSDK.CFErrorResponse, order_id: Swift.String)
+  @objc func verifyPayment(order_id: Swift.String)
 }
-@objc public protocol CFCardPaymentDelegate : CashfreePGCoreSDK.CFCallbackDelegate {
-  @objc func initiatingCardPayment()
-  @objc func presentWebForAuthenticatingCardPayment()
-  @objc func cardPayment(didFinishExecutingWith error: CashfreePGCoreSDK.CFErrorResponse)
-  @objc func verifyCardPaymentCompletion(for orderId: Swift.String)
-}
-@objc public protocol CFUPIPaymentDelegate : CashfreePGCoreSDK.CFCallbackDelegate {
-  @objc func initiatingUPIPayment()
-  @objc func presentWebForAuthenticatingUPIPaymentInSandBoxEnvironment()
-  @objc func verifyUPIPaymentCompletion(for orderId: Swift.String)
-  @objc func upiPayment(didFinishExecutingWith error: CashfreePGCoreSDK.CFErrorResponse)
-}
-@objc public protocol CFNetbankingPaymentDelegate : CashfreePGCoreSDK.CFCallbackDelegate {
-  @objc func initiatingNetbankingPayment()
-  @objc func presentWebForAuthenticatingNetbankingPayment()
-  @objc func netbankingPayment(didFinishExecutingWith error: CashfreePGCoreSDK.CFErrorResponse)
-  @objc func verifyNetbankingPaymentCompletion(for orderId: Swift.String)
-}
-@objc public protocol CFWalletPaymentDelegate : CashfreePGCoreSDK.CFCallbackDelegate {
-  @objc func initiatingWalletPayment()
-  @objc func presentWebForAuthenticatingWalletPayment()
-  @objc func verifyWalletPaymentCompletion(for orderId: Swift.String)
-  @objc func walletPayment(didFinishExecutingWith error: CashfreePGCoreSDK.CFErrorResponse)
-}
-@objc public protocol CFPaylaterPaymentDelegate : CashfreePGCoreSDK.CFCallbackDelegate {
-  @objc func initiatingPaylaterPayment()
-  @objc func presentWebForAuthenticatingPaylaterPayment()
-  @objc func verifyPaylaterPaymentCompletion(for orderId: Swift.String)
-  @objc func payLaterPayment(didFinishExecutingWith error: CashfreePGCoreSDK.CFErrorResponse)
-}
-@objc public protocol CFQRCodePaymentDelegate : CashfreePGCoreSDK.CFCallbackDelegate {
+@objc public protocol CFQRCodePaymentDelegate : CashfreePGCoreSDK.CFResponseDelegate {
   @objc func initiatingQRCodeGeneration()
   @objc func loadImageViewToPresentQRCode()
   @objc func qrCodePayment(didFinishExecutingWith error: CashfreePGCoreSDK.CFErrorResponse)
@@ -224,9 +189,6 @@ extension CashfreePGCoreSDK.CashfreeError : Swift.CustomStringConvertible {
     @objc deinit
   }
   @objc deinit
-}
-extension UIKit.UIImage {
-  public func toBase64() -> Swift.String?
 }
 @_hasMissingDesignatedInitializers @objc final public class CFUPI : ObjectiveC.NSObject {
   @objc final public func printDescription()
@@ -361,8 +323,8 @@ extension CashfreePGCoreSDK.CFUPIMODE : Swift.CustomStringConvertible {
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFCorePaymentService : ObjectiveC.NSObject {
   @objc public static func getInstance() -> CashfreePGCoreSDK.CFCorePaymentService
-  @objc final public func setCallback(_ callback: CashfreePGCoreSDK.CFCallbackDelegate)
-  @objc final public func doPayment(payment: CashfreePGCoreSDK.CFPayment) throws
+  @objc final public func setCallback(_ callback: CashfreePGCoreSDK.CFResponseDelegate)
+  @objc final public func doPayment(payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc final public func cancelPayment()
   @objc deinit
 }

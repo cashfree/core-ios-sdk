@@ -54,7 +54,7 @@ public struct CFTransactionMeta {
 @_hasMissingDesignatedInitializers final public class CFEventManager : CFNetworkSDK.APIHandlers {
   public static let shared: CashfreeAnalyticsSDK.CFEventManager
   final public func add_new_event(eventName: Swift.String, callingObject: Swift.String)
-  final public func sendEventsToBackEnd()
+  final public func sendEventsToBackEnd(fromUISDK: Swift.Bool)
   final public func onSuccess(apiState: CFNetworkSDK.APIState, result: Swift.Dictionary<Swift.String, Any>)
   final public func onFailure(response: Swift.Dictionary<Swift.String, Any>)
   @objc deinit
@@ -75,6 +75,7 @@ public enum UserEventList : Swift.CustomStringConvertible {
   case SET_EXPIRY_MONTH
   case SET_EXPIRY_YEAR
   case SET_CVV
+  case INITIATING_EMI_CARD_PAYMENT
   case SET_BANK_NAME
   case SET_EMI_TENURE
   case MISSING_EMI_TENURE
@@ -178,6 +179,26 @@ public enum UserEventList : Swift.CustomStringConvertible {
   case INVALID_PAYMENT_OBJECT_SENT
   case MISSING_CALLBACK
   case FETCH_CONFIG_API
+  case FETCH_CONFIG_API_SUCCESS
+  case ORDER_STATUS_NOT_ACTIVE
+  case SOMETHING_WENT_WRONG
+  case FETCH_CONFIG_API_FAILED
+  case BACK_BUTTON_TAPPED
+  case EMPTY_PAYMENT_COMPONENTS
+  case OPENING_QUICK_CHECKOUT
+  case MERCHANT_LOGO_NOT_PRESENT
+  case NETBANKING_PAYMENT_INITIATION_ERROR_THROWN
+  case UPI_PAYMENT_INITIATION_ERROR_THROWN
+  case WALLET_PAYMENT_INITIATION_ERROR_THROWN
+  case PAY_LATER_PAYMENT_INITIATION_ERROR_THROWN
+  case CARD_PAYMENT_INITIATION_ERROR_THROWN
+  case EMI_CARD_PAYMENT_INITIATION_ERROR_THROWN
+  case UPI_COLLECT_FROM_QUICK_CHECKOUT
+  case UPI_INTENT_FROM_QUICK_CHECKOUT
+  case NETBANKING_FROM_QUICK_CHECKOUT
+  case WALLET_FROM_QUICK_CHECKOUT
+  case PAYLATER_FROM_QUICK_CHECKOUT
+  case PAYMENT_VERFICATION_RECON
   public var description: Swift.String {
     get
   }

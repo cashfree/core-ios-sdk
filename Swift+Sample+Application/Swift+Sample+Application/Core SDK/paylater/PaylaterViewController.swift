@@ -43,7 +43,7 @@ class PaylaterViewController: UIViewController {
                     .setPaylater(payLater)
                     .build()
                 self.pgService.setCallback(self)
-                try self.pgService.doPayment(payLaterPayment, viewController: nil)
+                try self.pgService.doPayment(payLaterPayment, viewController: self)
             } catch let e {
                 let error = e as! CashfreeError
                 print(error.localizedDescription)
@@ -52,30 +52,14 @@ class PaylaterViewController: UIViewController {
     }
 }
 
-extension PaylaterViewController: CFPaylaterPaymentDelegate {
-    func initiatingPaylaterPayment() {
-        // Show Loader here
+extension PaylaterViewController: CFResponseDelegate {
+    
+    func verifyPayment(order_id: String) {
+        print(order_id)
     }
     
-    func presentWebForAuthenticatingPaylaterPayment() {
-        // Present web for authentication here
-        DispatchQueue.main.async {
-            let webView = WebViewController(nibName: "WebViewController", bundle: nil)
-            webView.modalPresentationStyle = .fullScreen
-            self.present(webView, animated: true, completion: nil)
-        }
-    }
-    
-    func verifyPaylaterPaymentCompletion(for orderId: String) {
-        // Start verification here
-        DispatchQueue.main.async {
-            // Dismissing the web-view
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    func payLaterPayment(didFinishExecutingWith error: CFErrorResponse) {
-        // Handle Errors here
+    func onError(_ error: CFErrorResponse, order_id: String) {
+        print(error.message)
     }
     
     
