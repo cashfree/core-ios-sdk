@@ -69,7 +69,7 @@ class CardViewController: UIViewController {
                 
                 // Initiate Payment
                 self.paymentService.setCallback(self)
-                try self.paymentService.doPayment(payment, viewController: nil)
+                try self.paymentService.doPayment(payment, viewController: self)
                 
             } catch {
                 
@@ -78,31 +78,14 @@ class CardViewController: UIViewController {
     }
 }
 
-extension CardViewController: CFCardPaymentDelegate {
+extension CardViewController: CFResponseDelegate {
     
-    func initiatingCardPayment() {
-        // Show Loader here
+    func verifyPayment(order_id: String) {
+        print(order_id)
     }
     
-    func presentWebForAuthenticatingCardPayment() {
-        // Present web for authentication here
-        DispatchQueue.main.async {
-            let webView = WebViewController(nibName: "WebViewController", bundle: nil)
-            webView.modalPresentationStyle = .fullScreen
-            self.present(webView, animated: true, completion: nil)
-        }
-    }
-    
-    func cardPayment(didFinishExecutingWith error: CFErrorResponse) {
-        // Show error response here
-    }
-    
-    func verifyCardPaymentCompletion(for orderId: String) {
-        // Start verification here
-        DispatchQueue.main.async {
-            // Dismissing the web-view
-            self.dismiss(animated: true, completion: nil)
-        }
+    func onError(_ error: CFErrorResponse, order_id: String) {
+        print(error.message)
     }
     
     

@@ -215,7 +215,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-@protocol CFCallbackDelegate;
+@protocol CFResponseDelegate;
 @class CFPayment;
 @class UIViewController;
 
@@ -233,7 +233,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 ///
 /// do {
 /// cfPaymentGatewayService.setCallback(self)
-/// try cfPaymentGatewayService.doPayment(paymentOject: cardPayment)
+/// try cfPaymentGatewayService.doPayment(paymentOject: cardPayment, viewController: nil)
+/// // NOTE:- Set viewController instance in case of Native Checkout.
 /// } catch {
 /// // Handle Exceptions
 /// }
@@ -247,7 +248,7 @@ SWIFT_CLASS("_TtC10CashfreePG23CFPaymentGatewayService")
 /// This method registers the callback instances which are used to send the response to the parent application
 /// \param callback An instance of <code>CFCallbackDelegate</code> has to be sent.
 ///
-- (void)setCallback:(id <CFCallbackDelegate> _Nonnull)callback;
+- (void)setCallback:(id <CFResponseDelegate> _Nonnull)callback;
 /// The method call invokes the respective payment flow (netbanking, card, UPI or wallet)
 /// \param payment An instance of <code>CFPayment</code> has to be sent to this method. ( Please read documentation <code>CFCardPayment</code>, <code>CFEMICardPayment</code>, <code>CFUPIPayment</code>, <code>CFWalletPayment</code>, <code>CFNetbankingPayment</code>, <code>CFPaylaterPayment</code>,<code>CFQRCodePayment</code>, <code>CFNativeCheckoutPayment</code>)
 ///
@@ -256,7 +257,7 @@ SWIFT_CLASS("_TtC10CashfreePG23CFPaymentGatewayService")
 ///
 /// throws:
 /// In case the CFPayment instance variable is not set or not a payment mode, the method throws an exception
-- (BOOL)doPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nullable)viewController error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)doPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 @end
 
 #if __has_attribute(external_source_symbol)
@@ -481,7 +482,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-@protocol CFCallbackDelegate;
+@protocol CFResponseDelegate;
 @class CFPayment;
 @class UIViewController;
 
@@ -499,7 +500,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 ///
 /// do {
 /// cfPaymentGatewayService.setCallback(self)
-/// try cfPaymentGatewayService.doPayment(paymentOject: cardPayment)
+/// try cfPaymentGatewayService.doPayment(paymentOject: cardPayment, viewController: nil)
+/// // NOTE:- Set viewController instance in case of Native Checkout.
 /// } catch {
 /// // Handle Exceptions
 /// }
@@ -513,7 +515,7 @@ SWIFT_CLASS("_TtC10CashfreePG23CFPaymentGatewayService")
 /// This method registers the callback instances which are used to send the response to the parent application
 /// \param callback An instance of <code>CFCallbackDelegate</code> has to be sent.
 ///
-- (void)setCallback:(id <CFCallbackDelegate> _Nonnull)callback;
+- (void)setCallback:(id <CFResponseDelegate> _Nonnull)callback;
 /// The method call invokes the respective payment flow (netbanking, card, UPI or wallet)
 /// \param payment An instance of <code>CFPayment</code> has to be sent to this method. ( Please read documentation <code>CFCardPayment</code>, <code>CFEMICardPayment</code>, <code>CFUPIPayment</code>, <code>CFWalletPayment</code>, <code>CFNetbankingPayment</code>, <code>CFPaylaterPayment</code>,<code>CFQRCodePayment</code>, <code>CFNativeCheckoutPayment</code>)
 ///
@@ -522,7 +524,7 @@ SWIFT_CLASS("_TtC10CashfreePG23CFPaymentGatewayService")
 ///
 /// throws:
 /// In case the CFPayment instance variable is not set or not a payment mode, the method throws an exception
-- (BOOL)doPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nullable)viewController error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)doPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 @end
 
 #if __has_attribute(external_source_symbol)

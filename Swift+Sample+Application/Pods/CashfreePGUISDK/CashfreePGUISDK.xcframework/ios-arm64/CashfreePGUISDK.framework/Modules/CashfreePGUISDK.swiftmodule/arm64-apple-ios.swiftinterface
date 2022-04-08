@@ -11,22 +11,18 @@ import Swift
 import SystemConfiguration
 import UIKit
 import _Concurrency
-@objc public protocol CFNativeCheckoutResponseDelegate : CashfreePGCoreSDK.CFCallbackDelegate {
-  @objc func verifyPayment(order_id: Swift.String)
-  @objc func didFinishExecution(with error: CashfreePGCoreSDK.CFErrorResponse, order_id: Swift.String)
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CFNativeCheckoutService : ObjectiveC.NSObject {
-  @objc public static func getInstance() -> CashfreePGUISDK.CFNativeCheckoutService
-  @objc public func setCallback(_ callback: CashfreePGUISDK.CFNativeCheckoutResponseDelegate)
-  public func doPayment(viewController: UIKit.UIViewController, payment: CashfreePGUISDK.CFNativeCheckoutPayment)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CFDropCheckoutService : ObjectiveC.NSObject {
+  @objc public static func getInstance() -> CashfreePGUISDK.CFDropCheckoutService
+  @objc public func setCallback(_ callback: CashfreePGCoreSDK.CFResponseDelegate)
+  public func doPayment(viewController: UIKit.UIViewController, payment: CashfreePGUISDK.CFDropCheckoutPayment)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class CFNativeCheckoutPayment : CashfreePGCoreSDK.CFPayment {
-  @_inheritsConvenienceInitializers @objc public class CFNativeCheckoutPaymentBuilder : ObjectiveC.NSObject {
-    @objc public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGUISDK.CFNativeCheckoutPayment.CFNativeCheckoutPaymentBuilder
-    @objc public func setTheme(_ theme: CashfreePGUISDK.CFTheme) -> CashfreePGUISDK.CFNativeCheckoutPayment.CFNativeCheckoutPaymentBuilder
-    @objc public func setComponent(_ paymentComponent: CashfreePGUISDK.CFPaymentComponent) -> CashfreePGUISDK.CFNativeCheckoutPayment.CFNativeCheckoutPaymentBuilder
-    public func build() throws -> CashfreePGUISDK.CFNativeCheckoutPayment
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class CFDropCheckoutPayment : CashfreePGCoreSDK.CFPayment {
+  @_inheritsConvenienceInitializers @objc public class CFDropCheckoutPaymentBuilder : ObjectiveC.NSObject {
+    @objc public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
+    @objc public func setTheme(_ theme: CashfreePGUISDK.CFTheme) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
+    @objc public func setComponent(_ paymentComponent: CashfreePGUISDK.CFPaymentComponent) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
+    public func build() throws -> CashfreePGUISDK.CFDropCheckoutPayment
     @objc override dynamic public init()
     @objc deinit
   }

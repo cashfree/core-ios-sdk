@@ -65,7 +65,7 @@ class UPIViewController: UIViewController {
                 
                 // Initiate Payment
                 self.paymentService.setCallback(self)
-                try self.paymentService.doPayment(payment, viewController: nil)
+                try self.paymentService.doPayment(payment, viewController: self)
             } catch {
                 
             }
@@ -109,31 +109,15 @@ class UPIViewController: UIViewController {
     }
 }
 
-extension UPIViewController: CFUPIPaymentDelegate {
-    func initiatingUPIPayment() {
-        // Show Loader here
+extension UPIViewController: CFResponseDelegate {
+    
+    func verifyPayment(order_id: String) {
+        print(order_id)
     }
     
-    func verifyUPIPaymentCompletion(for orderId: String) {
-        // Verify Payment here
-        // Dismiss web-view in case of SANDBOX INTENT
-        if self.isSandboxAndIntent {
-            DispatchQueue.main.async {
-                self.dismiss(animated: true, completion: nil)
-            }
-        }
+    func onError(_ error: CFErrorResponse, order_id: String) {
+        print(error.message)
     }
     
-    func upiPayment(didFinishExecutingWith error: CFErrorResponse) {
-        // Handle errors here
-    }
     
-    func presentWebForAuthenticatingUPIPaymentInSandBoxEnvironment() {
-        // Present web for authentication here
-        DispatchQueue.main.async {
-            let webView = WebViewController(nibName: "WebViewController", bundle: nil)
-            webView.modalPresentationStyle = .fullScreen
-            self.present(webView, animated: true, completion: nil)
-        }
-    }
 }

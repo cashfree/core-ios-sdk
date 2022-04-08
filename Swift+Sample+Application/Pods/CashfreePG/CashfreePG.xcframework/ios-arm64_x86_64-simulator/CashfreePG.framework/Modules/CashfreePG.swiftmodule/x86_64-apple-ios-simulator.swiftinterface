@@ -10,7 +10,7 @@ import UIKit
 import _Concurrency
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFPaymentGatewayService : ObjectiveC.NSObject {
   public static func getInstance() -> CashfreePG.CFPaymentGatewayService
-  @objc final public func setCallback(_ callback: CashfreePGCoreSDK.CFCallbackDelegate)
-  @objc final public func doPayment(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController?) throws
+  @objc final public func setCallback(_ callback: CashfreePGCoreSDK.CFResponseDelegate)
+  @objc final public func doPayment(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc deinit
 }
