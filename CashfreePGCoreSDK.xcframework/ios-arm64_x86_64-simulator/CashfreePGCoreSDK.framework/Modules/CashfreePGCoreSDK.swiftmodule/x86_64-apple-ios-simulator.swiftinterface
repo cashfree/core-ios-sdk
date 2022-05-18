@@ -14,7 +14,7 @@ import WebKit
 import _Concurrency
 @_hasMissingDesignatedInitializers open class CFConstantFunctions {
   public static func createCustomResponse(txStatus: Swift.String, response: Swift.Dictionary<Swift.String, Any>) -> CashfreePGCoreSDK.CFErrorResponse
-  public static func setXRequestId(orderId: Swift.String, orderToken: Swift.String)
+  public static func setXRequestId(environment: CashfreePGCoreSDK.CFENVIRONMENT, orderToken: Swift.String)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFCardPayment : CashfreePGCoreSDK.CFPayment {
