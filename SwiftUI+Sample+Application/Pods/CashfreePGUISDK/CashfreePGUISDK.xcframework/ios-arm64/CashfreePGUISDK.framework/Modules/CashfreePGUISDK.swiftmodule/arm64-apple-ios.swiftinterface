@@ -1,0 +1,75 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CashfreePGUISDK
+import CFNetworkSDK
+import CashfreeAnalyticsSDK
+import CashfreePGCoreSDK
+@_exported import CashfreePGUISDK
+import CoreData
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CFDropCheckoutService : ObjectiveC.NSObject {
+  @objc public static func getInstance() -> CashfreePGUISDK.CFDropCheckoutService
+  @objc public func setCallback(_ callback: CashfreePGCoreSDK.CFResponseDelegate)
+  public func doPayment(viewController: UIKit.UIViewController, payment: CashfreePGUISDK.CFDropCheckoutPayment)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class CFDropCheckoutPayment : CashfreePGCoreSDK.CFPayment {
+  @_inheritsConvenienceInitializers @objc public class CFDropCheckoutPaymentBuilder : ObjectiveC.NSObject {
+    @objc public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
+    @objc public func setTheme(_ theme: CashfreePGUISDK.CFTheme) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
+    @objc public func setComponent(_ paymentComponent: CashfreePGUISDK.CFPaymentComponent) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
+    public func build() throws -> CashfreePGUISDK.CFDropCheckoutPayment
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class CFTheme : ObjectiveC.NSObject {
+  @_inheritsConvenienceInitializers @objc final public class CFThemeBuilder : ObjectiveC.NSObject {
+    @objc final public func setButtonTextColor(_ buttonTextColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
+    @objc final public func setButtonBackgroundColor(_ buttonColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
+    @objc final public func setPrimaryFont(_ fontName: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
+    @objc final public func setSecondaryFont(_ fontName: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
+    @objc final public func setPrimaryTextColor(_ textColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
+    @objc final public func setSecondaryTextColor(_ textColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
+    @objc final public func setNavigationBarBackgroundColor(_ navigationBarBackgroundColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
+    @objc final public func setNavigationBarTextColor(_ navigationBarTextColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
+    @objc final public func build() throws -> CashfreePGUISDK.CFTheme
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class CFPaymentComponent : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @_inheritsConvenienceInitializers @objc final public class CFPaymentComponentBuilder : ObjectiveC.NSObject {
+    @objc final public func enableComponents(_ components: [Swift.String]) -> CashfreePGUISDK.CFPaymentComponent.CFPaymentComponentBuilder
+    @objc final public func build() throws -> CashfreePGUISDK.CFPaymentComponent
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(CFBankImage) public class CFBankImage : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension CashfreePGUISDK.CFBankImage {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<CashfreePGUISDK.CFBankImage>
+  @objc @NSManaged dynamic public var icon: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var timeStamp: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var urlString: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
