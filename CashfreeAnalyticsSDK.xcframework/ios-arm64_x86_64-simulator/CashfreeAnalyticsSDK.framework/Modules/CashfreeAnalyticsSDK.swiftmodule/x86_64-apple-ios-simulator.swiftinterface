@@ -182,6 +182,7 @@ public enum UserEventList : Swift.CustomStringConvertible {
   case FETCH_CONFIG_API_SUCCESS
   case ORDER_STATUS_NOT_ACTIVE
   case ORDER_EXPIRED
+  case ORDER_ID_MISMATCH
   case SOMETHING_WENT_WRONG
   case FETCH_CONFIG_API_FAILED
   case BACK_BUTTON_TAPPED
