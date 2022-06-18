@@ -6,7 +6,7 @@
 	<dict>
 		<key>CashFreeAnalytics.momd/CFAnalytics.mom</key>
 		<data>
-		1ginzYhu4isBXNB49udW9hTG0ZQ=
+		1zQUI6aIwqIiL5FgcRhdy0xEoV8=
 		</data>
 		<key>CashFreeAnalytics.momd/VersionInfo.plist</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7tUQAayF3wsuCREOJK78RKgSxNw=
+		3J5xHWsewUqh7rNlAacOUyIFbEQ=
 		</data>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		M6eydnryt5ksOqArK5ANnDDjyTk=
+		ajEJLYLieX5QKOINuK8HhTf/Yok=
 		</data>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		jYsb9qtSi3jkROrXIJUEjeohlag=
+		13QARK9iXn+fBWhu7Yd3UdFeEF8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RkNjGfRcUGU3DsM5QcO/SFAt60owkmlMloCzd87LV58=
+			iAXm/1TCYVxYDqUIEuOyzjS3Su6+wa0A+8Lu5zBczoM=
 			</data>
 		</dict>
 		<key>CashFreeAnalytics.momd/VersionInfo.plist</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5hCwwkk7/OPtW7yXfBZGcPu6ShoftuUB8X10gXs6rXE=
+			f40c+N1d+H+WrsARd5abMGSja20LELdfkrzeudjdMTU=
 			</data>
 		</dict>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SbRRf1HQnes+AHlF6Pk8i/4rh04hnLgl+KzFS6HQAz0=
+			Uf4IxvkDryzjy43YzbKLMk5nIKz17p9PJJHnP1l+JIA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

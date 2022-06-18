@@ -6,7 +6,7 @@
 	<dict>
 		<key>CashFreeAnalytics.momd/CFAnalytics.mom</key>
 		<data>
-		1ginzYhu4isBXNB49udW9hTG0ZQ=
+		1zQUI6aIwqIiL5FgcRhdy0xEoV8=
 		</data>
 		<key>CashFreeAnalytics.momd/VersionInfo.plist</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ay7+5oUBFyNEB3BTcbkpKntHBMA=
+		WZa/fdwa3EVTuZSd6u87uuiklDQ=
 		</data>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ecTjf1xwBc5FQ4BHeJezBBbrbQE=
+		dHbSEC4MGHrQA0SzttlvLartrbU=
 		</data>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aY8p56Qm+1KCYUzEC4XiA3pWn2M=
+		BQXiqyKCzEp8aHOPOa6kuX5EVEs=
 		</data>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ksU11S/Jo0V3Cvjio2tH4W3Eee8=
+		tcEata5v03/GEcq4Icg53WT32wU=
 		</data>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pZ2r/YUjE7XuhX01um8eeCkW02Y=
+		XuexDUmmcElvPHN/HYdFINQbp4U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,7 +59,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RkNjGfRcUGU3DsM5QcO/SFAt60owkmlMloCzd87LV58=
+			iAXm/1TCYVxYDqUIEuOyzjS3Su6+wa0A+8Lu5zBczoM=
 			</data>
 		</dict>
 		<key>CashFreeAnalytics.momd/VersionInfo.plist</key>
@@ -94,14 +94,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sG0sxm6MdvMxhC8kW0DvIE6SjS5GG1gwEujuWhEJXuk=
+			ZTQW1uX1TpPKn+0C/seua4sXHJ0Q+D+cT+86H/q32ao=
 			</data>
 		</dict>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QGPv560zqJBIkfDmmu3rb52lzzlXWAzLR9JEUd1ugLM=
+			mSYjrAbkY4c/Ff1I4+e0kpWmWXoH2yuP9iDPPCto4mE=
 			</data>
 		</dict>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -115,14 +115,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gxw5nHQm5QhU4j6xe2toxDLSfbwD0G5SdB/ah0tb8GQ=
+			k8EXFYy60yDuC3AeGPyyv0VWvqww1MSzMSoYNm7KMHc=
 			</data>
 		</dict>
 		<key>Modules/CashfreeAnalyticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oqUCcM0qkQx1IfkUHnUINoH7BmlBxjLCRVGEmZ9VXk0=
+			VhTMmejgXe4X3LeNiatyvFR6N1QUbCix6UueKCy+bY8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
