@@ -9,11 +9,11 @@
 3. Send failed response, if any, from 2FA.
 4. Timeout Bug Fix.
 
-## Version 1.1.2 - 26th May, 2022
+## Version 1.1.0 (internal module changes) - 26th May, 2022
 
 Order Expiry check in Drop Checkout
 
-## Version 1.1.1 - 18th May, 2022
+## Version 1.1.0 (internal module changes) - 18th May, 2022
 
 1. Fixed header length issue which was exceeding 255 characters
 2. Fixed Axis Bank redirection issue
