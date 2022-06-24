@@ -2,6 +2,13 @@
 
 ### This page records the changes made in subsequent versions of the SDK.
 
+## Version 1.1.1 - 18th June, 2022
+
+1. Added handling to only show payment modes sent in the create order request.
+2. Added check for orderID mismatch in Drop payment.
+3. Send failed response, if any, from 2FA.
+4. Timeout Bug Fix.
+
 ## Version 1.1.2 - 26th May, 2022
 
 Order Expiry check in Drop Checkout
