@@ -86,12 +86,7 @@ import _Concurrency
 @objc public protocol CFResponseDelegate {
   @objc func onError(_ error: CashfreePGCoreSDK.CFErrorResponse, order_id: Swift.String)
   @objc func verifyPayment(order_id: Swift.String)
-}
-@objc public protocol CFQRCodePaymentDelegate : CashfreePGCoreSDK.CFResponseDelegate {
-  @objc func initiatingQRCodeGeneration()
-  @objc func loadImageViewToPresentQRCode()
-  @objc func qrCodePayment(didFinishExecutingWith error: CashfreePGCoreSDK.CFErrorResponse)
-  @objc func verifyQRCodePaymentCompletion(for orderId: Swift.String)
+  @objc optional func loadQRAndVerifyPayment(base64: Swift.String, order_id: Swift.String)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFEMICardPayment : CashfreePGCoreSDK.CFPayment {
   @objc override final public func printDescription()
