@@ -299,7 +299,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK9CFPayment")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)printDescription;
 /// This method sets the platform that is being used when invoking the payment mode
-/// \param platform It is of type CFPLATFORM, which is an enum. By default it is set to iOS
+/// \param platform It is of type string, by default it set to ios-el
 ///
 - (void)setPlatform:(NSString * _Nonnull)platform;
 @end
@@ -819,25 +819,9 @@ SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFResponseDelegate_")
 @protocol CFResponseDelegate
 - (void)onError:(CFErrorResponse * _Nonnull)error order_id:(NSString * _Nonnull)order_id;
 - (void)verifyPaymentWithOrder_id:(NSString * _Nonnull)order_id;
+@optional
+- (void)loadQRAndVerifyPaymentWithBase64:(NSString * _Nonnull)base64 order_id:(NSString * _Nonnull)order_id;
 @end
-
-
-SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK23CFQRCodePaymentDelegate_")
-@protocol CFQRCodePaymentDelegate <CFResponseDelegate>
-/// This method callback is invoked when the SDK starts creating the QRCode payment process for the given order.
-/// note:
-/// Loaders can be implemented here.
-- (void)initiatingQRCodeGeneration;
-/// This method callback is invoked when the payment request is created and the SDK is ready to dsplay the QRCode in the image-view(<code>CFImageView</code>). When this callback is invoked, the image-view instance has to call a method named <code>loadQRCode()</code> which can be accessed by any image-view which is a sub-class of <em>CFImageView</em>
-- (void)loadImageViewToPresentQRCode;
-/// This method callback gets invoked whenever there is a case of <em>Internet Issues</em> or more.
-/// \param error The parameter <em>error</em> is of type <em>CFErrorResponse</em>. It has <em>status</em>, <em>message</em>, <em>code</em> and <em>type</em>, which consists of extra information about the error that was encountered.
-///
-- (void)qrCodePaymentWithDidFinishExecutingWith:(CFErrorResponse * _Nonnull)error;
-/// This method gets invoked once the QR-Code is displayed to the user. It is your responsibility to check the status of the payment by making a call to Cashfree’s server.
-- (void)verifyQRCodePaymentCompletionFor:(NSString * _Nonnull)orderId;
-@end
-
 
 
 /// The CFSession class wiith the help of CFSessionBuilder class helps in gathering mandatory information to initiate a payment session. The CFSession object can be built with the of <code>CFSessionBuilder</code> which is a class embedded inside the CFSession class.
