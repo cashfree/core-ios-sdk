@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		zPFeS0NkXd/LkPtIsOtDu95IJK8=
+		rxVSFfruSNuPeQenP/jX7e8P63A=
 		</data>
 		<key>CFAllBanksTableViewCell.nib</key>
 		<data>
@@ -58,15 +58,19 @@
 		</data>
 		<key>CFPaymentVerificationReconViewController.nib</key>
 		<data>
-		hLrPDLtuyZeGHwWPqF41hNpkSBM=
+		Yhr2LZ5nHxysqkC6KvLKbCjqCFg=
 		</data>
 		<key>CFQRCodeTableViewCell.nib</key>
 		<data>
-		HLPhttn/LOO/wN0WwHoILavg974=
+		S9a+R6gMfYB57Pj8PEhxjCBCdgA=
+		</data>
+		<key>CFQRCodeUIViewController.nib</key>
+		<data>
+		oMH9ZZIhicey9+nH4E5VCUav82c=
 		</data>
 		<key>CFQuickCheckoutViewController.nib</key>
 		<data>
-		mFV1F8WXR+0g/s0Yz09CQ2eapaY=
+		ZPjZtooIuJSj6i97QOVSpFmKn4I=
 		</data>
 		<key>CFUPICollectTableViewCell.nib</key>
 		<data>
@@ -74,7 +78,7 @@
 		</data>
 		<key>CFUPIIntentPayTableViewCell.nib</key>
 		<data>
-		4+cfYVsHkEOE/98kXCG/B3YmSZw=
+		SuejARYJVBnSnFyHWyVBcZMLn5Y=
 		</data>
 		<key>CFUPIIntentTableViewCell.nib</key>
 		<data>
@@ -82,7 +86,7 @@
 		</data>
 		<key>CFWalletPhoneNumberTableViewCell.nib</key>
 		<data>
-		z0a8hri+3UYdYNY0xuLAr1pF9gA=
+		Kiy2dutkIScPDAuAuoB9YLUDoLM=
 		</data>
 		<key>CFWalletTableViewCell.nib</key>
 		<data>
@@ -98,7 +102,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Zgglmmr+VzbLFFXYGnE/KN96/0E=
+		OzTkG5/hXrzpiEj4H6Kc5mLef9c=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -110,7 +114,7 @@
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		29p+JJPdBPcAbSZcHuCPEcV+OY8=
+		rOBALYspgO9lMu2q84KCl7aU8Z0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -118,11 +122,11 @@
 		</data>
 		<key>QuickCheckoutPaymentModeTableViewCell.nib/objects-14.0+.nib</key>
 		<data>
-		XZuCq15vJ3WdAwMkEfSV6V0vgso=
+		cxETqdxUQPub/NPKmixhliS3Sv4=
 		</data>
 		<key>QuickCheckoutPaymentModeTableViewCell.nib/runtime.nib</key>
 		<data>
-		zoCNdRNffycIn5Zn2VqODz04pNU=
+		tZT/sOQfH5JO9+El0/cc2MdHVN8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -131,7 +135,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ea0fwfIvzNeJlPmNOVsbRg7tmsggkAAcGGuXPnzeEI4=
+			0UdLVmJtuVdYtm8uG4D/opgBXSpJNaN+t/qTzkd4G/k=
 			</data>
 		</dict>
 		<key>CFAllBanksTableViewCell.nib</key>
@@ -222,21 +226,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RvvK4IBv35j/bqKUobzjPOsyzNu08O+N4pbkYblxao8=
+			mzpyZZMaiWGSJUWFZ0MQ2sTGRZw7Bw7oF8vkQ585bCc=
 			</data>
 		</dict>
 		<key>CFQRCodeTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u/+E/9nlT55Ga+6KJIV61S03crK1z4bYK4pAp5O7lII=
+			+dC4Ehq2uDVWHoTxlT+OYdUcQc+xqXaaW8u9YYmaYWE=
+			</data>
+		</dict>
+		<key>CFQRCodeUIViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			U5Z7pwf/f2s0ldRCXUDBc3cazx1zDKPbGIPGtYj/Nlo=
 			</data>
 		</dict>
 		<key>CFQuickCheckoutViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7kJYUz8zz+wMo8UMqVGeM0Qib7mFgMHqe+aC/vtRkAQ=
+			BC8nERb0aPzLt5LpS7+A8nUKWYwq4msxb5/pnQLxYGg=
 			</data>
 		</dict>
 		<key>CFUPICollectTableViewCell.nib</key>
@@ -250,7 +261,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aaIHc3LcaUNGkXFnKwwhj5p9+E1E6eR8dZW6SLlqcVU=
+			Cazx4pIBPwl0LdOd65i+w6xVeycgHBD0KbTEU/RQuKs=
 			</data>
 		</dict>
 		<key>CFUPIIntentTableViewCell.nib</key>
@@ -264,7 +275,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			er6yp+bOzsJvA1kvn3sf6kchw0d8SSEeld9R2QO90WA=
+			gQRCPs8LZA0d4pBCROFp6flMw7VrN3m+h6KEvTvNlFQ=
 			</data>
 		</dict>
 		<key>CFWalletTableViewCell.nib</key>
@@ -306,7 +317,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			q4xT3deD0vNovOUnTtskjTW8bUeBJWK5u6gvWd7egVw=
+			IjGjo0OjOlijS3hTuqJfw4fEmn/TzML3wnVKvnQZdS4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -320,14 +331,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e0xhcD37/MjglB403kBH9chFWPrGgFQ6e8wdiLIvMjU=
+			yDW0eul0GV794pbA4wT8/dMuX1m4rRFdXlGFCxw1DAY=
 			</data>
 		</dict>
 		<key>QuickCheckoutPaymentModeTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wVe6b/RZ+5jWBgUpKJvdjGv+8uGn9Nf+f13tzBq628g=
+			F98/X9+AXfHeStGeUirLqaBB2foOHoeiL+Ghnm5S9w4=
 			</data>
 		</dict>
 	</dict>
