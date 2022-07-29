@@ -2,6 +2,12 @@
 
 ### This page records the changes made in subsequent versions of the SDK.
 
+## Version 1.1.2 - 28th July 2022
+
+1 Visibility of UPI Collect flow when it is not enabled in Drop payment.
+2 Added UPI QR code support for tablets in Drop payment.
+3 Performance and QoS improvements.
+
 ## Version 1.1.1 - 18th June, 2022
 
 1. Added handling to only show payment modes sent in the create order request.
