@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cQPGYBcA0GijFntFDUtWZ10Yk0k=
+		LmriBREBr2L7rjra0kx+GRwbv4Y=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HviUczvbPgGP+lwhytF/JkOaIuo=
+		hFpLeZuRtR8tmf5e3RhLkr2Bstk=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aogz3g5ntvQi/mIKGmLuDPyUWlw=
+		5IDdp8Oh7pkmzST4rUixfGJkqTs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rDurc++ZKVKQVsT03fEHnwqdwndqq2OEAeQe5jsgTuc=
+			ctCB38hp5rNKAFl8wh8cpZdk7cCK538HHKagL5PfBRI=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/JKDPRf54eFXGaTphnJfRJ067/meZCzaK3MtkWjk39g=
+			K2N0YRwfZeaEZ6uUjmkMP9VcQUayDdPH9ODPAmLHyxc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
