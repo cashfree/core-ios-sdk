@@ -2,11 +2,28 @@
 
 ### This page records the changes made in subsequent versions of the SDK.
 
-## Version 1.1.2 - 26th May, 2022
+## Version 1.1.3 - 19th July, 2022
+
+1. Web View Redirection Bug Fix
+
+## Version 1.1.2 - 28th July, 2022
+
+1.Visibility of UPI Collect flow when it is not enabled in Drop payment.
+2. Added UPI QR code support for tablets in Drop payment.
+3. Performance and QoS improvements.
+
+##Version 1.1.1 - 18th June, 2022
+
+1.Added handling to only show payment modes sent in the create order request.
+2. Added check for orderID mismatch in Drop payment.
+3. Send failed response, if any, from 2FA.
+4. Timeout Bug Fix.
+
+## Version 1.1.0 - 26th May, 2022
 
 Order Expiry check in Drop Checkout
 
-## Version 1.1.1 - 18th May, 2022
+## Version 1.1.0 - 18th May, 2022
 
 1. Fixed header length issue which was exceeding 255 characters
 2. Fixed Axis Bank redirection issue
