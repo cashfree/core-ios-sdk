@@ -23,6 +23,6 @@ s.social_media_url	= "https://twitter.com/gocashfree"
 s.platform		= :ios, "11"
 s.vendored_frameworks	= "CashfreePGUISDK.xcframework"
 s.swift_version		= "5.0"
-s.dependency 'CashfreePGCoreSDK', '~> 1.1.3'
+s.dependency 'CashfreePGCoreSDK', '~> 1.1.4'
 
 end
