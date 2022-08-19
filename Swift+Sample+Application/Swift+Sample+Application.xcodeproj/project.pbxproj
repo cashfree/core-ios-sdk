@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		514E35031EC531960D473485 /* Pods_Swift_Sample_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54C2CFAB1A8F30E915119FA /* Pods_Swift_Sample_Application.framework */; };
 		A173D595279FE21C00C6F9CD /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A173D594279FE21C00C6F9CD /* StartPageViewController.swift */; };
 		A173D599279FE2CF00C6F9CD /* CoreSDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A173D597279FE2CF00C6F9CD /* CoreSDKViewController.swift */; };
 		A173D59A279FE2CF00C6F9CD /* CoreSDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A173D598279FE2CF00C6F9CD /* CoreSDKViewController.xib */; };
@@ -27,6 +26,7 @@
 		A1843EE427EA0B1F00A7C6FE /* PaylaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1843EE227EA0B1F00A7C6FE /* PaylaterViewController.swift */; };
 		A1843EE527EA0B1F00A7C6FE /* PaylaterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1843EE327EA0B1F00A7C6FE /* PaylaterViewController.xib */; };
 		A1EFF2882692F11500E701C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EFF2872692F11500E701C6 /* Main.storyboard */; };
+		B48668EC41776CD345CEAB95 /* Pods_Swift_Sample_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83426C23088D867042E6DF5 /* Pods_Swift_Sample_Application.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +43,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		406BEBD20E007E99A37B7858 /* Pods-Swift+Sample+Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift+Sample+Application.release.xcconfig"; path = "Target Support Files/Pods-Swift+Sample+Application/Pods-Swift+Sample+Application.release.xcconfig"; sourceTree = "<group>"; };
 		A173D594279FE21C00C6F9CD /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 		A173D597279FE2CF00C6F9CD /* CoreSDKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSDKViewController.swift; sourceTree = "<group>"; };
 		A173D598279FE2CF00C6F9CD /* CoreSDKViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreSDKViewController.xib; sourceTree = "<group>"; };
@@ -65,8 +64,9 @@
 		A1843EE227EA0B1F00A7C6FE /* PaylaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaylaterViewController.swift; sourceTree = "<group>"; };
 		A1843EE327EA0B1F00A7C6FE /* PaylaterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaylaterViewController.xib; sourceTree = "<group>"; };
 		A1EFF2872692F11500E701C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E54C2CFAB1A8F30E915119FA /* Pods_Swift_Sample_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Sample_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECCCDC3E2B574E67CECF6D6B /* Pods-Swift+Sample+Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift+Sample+Application.debug.xcconfig"; path = "Target Support Files/Pods-Swift+Sample+Application/Pods-Swift+Sample+Application.debug.xcconfig"; sourceTree = "<group>"; };
+		A83426C23088D867042E6DF5 /* Pods_Swift_Sample_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Sample_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB01DADEA0F80AB5FEE296D /* Pods-Swift+Sample+Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift+Sample+Application.release.xcconfig"; path = "Target Support Files/Pods-Swift+Sample+Application/Pods-Swift+Sample+Application.release.xcconfig"; sourceTree = "<group>"; };
+		E6B0D541057E27E61899CA2D /* Pods-Swift+Sample+Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift+Sample+Application.debug.xcconfig"; path = "Target Support Files/Pods-Swift+Sample+Application/Pods-Swift+Sample+Application.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514E35031EC531960D473485 /* Pods_Swift_Sample_Application.framework in Frameworks */,
+				B48668EC41776CD345CEAB95 /* Pods_Swift_Sample_Application.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +184,7 @@
 		A17C8CA3268B182700A940AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E54C2CFAB1A8F30E915119FA /* Pods_Swift_Sample_Application.framework */,
+				A83426C23088D867042E6DF5 /* Pods_Swift_Sample_Application.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -201,8 +201,8 @@
 		D453E3405A540D4318FEBAFE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ECCCDC3E2B574E67CECF6D6B /* Pods-Swift+Sample+Application.debug.xcconfig */,
-				406BEBD20E007E99A37B7858 /* Pods-Swift+Sample+Application.release.xcconfig */,
+				E6B0D541057E27E61899CA2D /* Pods-Swift+Sample+Application.debug.xcconfig */,
+				BDB01DADEA0F80AB5FEE296D /* Pods-Swift+Sample+Application.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -214,12 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A17C8C98268B16D200A940AB /* Build configuration list for PBXNativeTarget "Swift+Sample+Application" */;
 			buildPhases = (
-				F9A93BC0B449739ABDC64D07 /* [CP] Check Pods Manifest.lock */,
+				936C4FA7C9EA7FE164235287 /* [CP] Check Pods Manifest.lock */,
 				A17C8C80268B16C500A940AB /* Sources */,
 				A17C8C81268B16C500A940AB /* Frameworks */,
 				A17C8C82268B16C500A940AB /* Resources */,
 				A1F50EFE27A3EC4B00E67115 /* Embed Frameworks */,
-				648DE872ED447DA6AE01F81C /* [CP] Embed Pods Frameworks */,
+				2F423B979F07D81FE5080E33 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,7 +282,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		648DE872ED447DA6AE01F81C /* [CP] Embed Pods Frameworks */ = {
+		2F423B979F07D81FE5080E33 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,7 +299,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift+Sample+Application/Pods-Swift+Sample+Application-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9A93BC0B449739ABDC64D07 /* [CP] Check Pods Manifest.lock */ = {
+		936C4FA7C9EA7FE164235287 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -476,7 +476,7 @@
 		};
 		A17C8C99268B16D200A940AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECCCDC3E2B574E67CECF6D6B /* Pods-Swift+Sample+Application.debug.xcconfig */;
+			baseConfigurationReference = E6B0D541057E27E61899CA2D /* Pods-Swift+Sample+Application.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -504,7 +504,7 @@
 		};
 		A17C8C9A268B16D200A940AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 406BEBD20E007E99A37B7858 /* Pods-Swift+Sample+Application.release.xcconfig */;
+			baseConfigurationReference = BDB01DADEA0F80AB5FEE296D /* Pods-Swift+Sample+Application.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
