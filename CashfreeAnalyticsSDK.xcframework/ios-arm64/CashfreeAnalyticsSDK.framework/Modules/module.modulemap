@@ -6,6 +6,6 @@ framework module CashfreeAnalyticsSDK {
 }
 
 module CashfreeAnalyticsSDK.Swift {
-    header "CashfreeAnalyticsSDK-Swift.h"
-    requires objc
+  header "CashfreeAnalyticsSDK-Swift.h"
+  requires objc
 }
