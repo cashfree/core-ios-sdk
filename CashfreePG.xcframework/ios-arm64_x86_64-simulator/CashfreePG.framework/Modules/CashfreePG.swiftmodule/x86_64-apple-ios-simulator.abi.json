@@ -1,0 +1,202 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "CashfreePGCoreSDK",
+        "printedName": "CashfreePGCoreSDK",
+        "declKind": "Import",
+        "moduleName": "CashfreePG"
+      },
+      {
+        "kind": "Import",
+        "name": "CashfreePGUISDK",
+        "printedName": "CashfreePGUISDK",
+        "declKind": "Import",
+        "moduleName": "CashfreePG"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CashfreePG"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CashfreePG"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CFPaymentGatewayService",
+        "printedName": "CFPaymentGatewayService",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getInstance",
+            "printedName": "getInstance()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CFPaymentGatewayService",
+                "printedName": "CashfreePG.CFPaymentGatewayService",
+                "usr": "c:@M@CashfreePG@objc(cs)CFPaymentGatewayService"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CashfreePG23CFPaymentGatewayServiceC11getInstanceACyFZ",
+            "mangledName": "$s10CashfreePG23CFPaymentGatewayServiceC11getInstanceACyFZ",
+            "moduleName": "CashfreePG",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCallback",
+            "printedName": "setCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFResponseDelegate",
+                "printedName": "CashfreePGCoreSDK.CFResponseDelegate",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(pl)CFResponseDelegate"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePG@objc(cs)CFPaymentGatewayService(im)setCallback:",
+            "mangledName": "$s10CashfreePG23CFPaymentGatewayServiceC11setCallbackyy0A9PGCoreSDK18CFResponseDelegate_pF",
+            "moduleName": "CashfreePG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "doPayment",
+            "printedName": "doPayment(_:viewController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFPayment",
+                "printedName": "CashfreePGCoreSDK.CFPayment",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePG@objc(cs)CFPaymentGatewayService(im)doPayment:viewController:error:",
+            "mangledName": "$s10CashfreePG23CFPaymentGatewayServiceC9doPayment_14viewControllery0A9PGCoreSDK0C0C_So06UIViewI0CtKF",
+            "moduleName": "CashfreePG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CashfreePG@objc(cs)CFPaymentGatewayService",
+        "mangledName": "$s10CashfreePG23CFPaymentGatewayServiceC",
+        "moduleName": "CashfreePG",
+        "declAttributes": [
+          "AccessControl",
+          "Final",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}
