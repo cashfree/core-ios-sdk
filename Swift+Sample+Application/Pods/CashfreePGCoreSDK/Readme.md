@@ -37,7 +37,7 @@ ___
 Open your pod file and add the following and then use `pod install`
 
 ```
-pod 'CashfreePG', '~> 1.1'
+pod 'CashfreePG', '~> 1.1.3'
 ```
 ___
 

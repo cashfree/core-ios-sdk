@@ -2,6 +2,14 @@
 
 ### This page records the changes made in subsequent versions of the SDK.
 
+## Version 2.0.0 - 25th November, 2022
+
+1. Introduced payment_session_id payment flow
+2. Headless OTP for card payment
+3. Bug Fixes
+
+`NOTE` **Deprecated payment flow using order_token**
+
 ## Version 1.1.3 - 19th July, 2022
 
 1. Web View Redirection Bug Fix

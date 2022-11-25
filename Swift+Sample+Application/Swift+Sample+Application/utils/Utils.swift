@@ -10,8 +10,8 @@ import CashfreePGCoreSDK
 
 class Utils {
     
-    static var environment: CFENVIRONMENT = .SANDBOX
-    static let order_token = "LA3DaVeArPK2wjPOML9Y"
-    static let order_id = "order_3242E1iDhG1aXtjKgETgKtxj0sDlnS"
+    static var environment: CFENVIRONMENT = .PRODUCTION
+    static let payment_session_id = "session_3GP-DAWa7IDJcgCzU1Hh4LaQ4PwvWe-IACO17vCv72MvTiFXbByzSehzwTQr66iid6YxQ2-2J2dp9CnJSzCxLwzR02dZNt379xDCjosDQixy"
+    static let order_id = "order_18482I0Pd7Uu0A8y5aAtQ5a6blzb1OS"
     
 }
