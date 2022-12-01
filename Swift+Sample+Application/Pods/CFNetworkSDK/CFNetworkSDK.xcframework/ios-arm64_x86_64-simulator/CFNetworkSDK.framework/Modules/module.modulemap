@@ -6,6 +6,6 @@ framework module CFNetworkSDK {
 }
 
 module CFNetworkSDK.Swift {
-    header "CFNetworkSDK-Swift.h"
-    requires objc
+  header "CFNetworkSDK-Swift.h"
+  requires objc
 }
