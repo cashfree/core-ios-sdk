@@ -44,7 +44,7 @@ class WalletViewController: UIViewController {
                 let session = try CFSession.CFSessionBuilder()
                     .setOrderID(Utils.order_id)
                     .setEnvironment(Utils.environment)
-                    .setOrderToken(Utils.order_token)
+                    .setPaymentSessionId(Utils.payment_session_id)
                     .build()
                 
                 // Create CFWallet

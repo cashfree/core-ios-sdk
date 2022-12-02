@@ -6,6 +6,6 @@ framework module CashfreePGUISDK {
 }
 
 module CashfreePGUISDK.Swift {
-    header "CashfreePGUISDK-Swift.h"
-    requires objc
+  header "CashfreePGUISDK-Swift.h"
+  requires objc
 }

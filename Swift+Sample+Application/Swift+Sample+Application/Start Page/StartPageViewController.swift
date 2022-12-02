@@ -29,7 +29,7 @@ class StartPageViewController: UIViewController, CFResponseDelegate {
         do {
             let session = try CFSession.CFSessionBuilder()
                 .setOrderID(Utils.order_id) // Replace the order_id
-                .setOrderToken(Utils.order_token) // Replace the order_token
+                .setPaymentSessionId(Utils.payment_session_id) // Replace the order_token
                 .setEnvironment(Utils.environment)
                 .build()
             let paymentComponent = try CFPaymentComponent.CFPaymentComponentBuilder()

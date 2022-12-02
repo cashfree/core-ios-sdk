@@ -32,7 +32,7 @@ class PaylaterViewController: UIViewController {
                 let session = try CFSession.CFSessionBuilder()
                     .setEnvironment(Utils.environment)
                     .setOrderID(Utils.order_id)
-                    .setOrderToken(Utils.order_token)
+                    .setPaymentSessionId(Utils.payment_session_id)
                     .build()
                 let payLater = try CFPaylater.CFPaylaterBuilder()
                     .setProvider(self.providerTextField.text ?? "")
