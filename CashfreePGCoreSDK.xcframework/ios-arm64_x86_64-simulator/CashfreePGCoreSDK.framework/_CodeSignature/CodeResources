@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		N+AfzBXrtANMe1bEhChvva7Ff6Q=
+		ZJS9MHV6Cs41bKo0rDSQM+3fbWY=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DFRHyMG2bLZuWQUbkrvIIHAuX5c=
+		qAlIorIRiTRfUtBY0HZ+rzUUfeA=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		F5r4nA8rw4Uee0W33wDhFTMvYEU=
+		V0p++ka/kL+ZBalnFBVLde8sdLA=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DFRHyMG2bLZuWQUbkrvIIHAuX5c=
+		qAlIorIRiTRfUtBY0HZ+rzUUfeA=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Bfr9EmEjTAP+j1rFleIwUfGvK00=
+		Q7WXx/lgCtblKOknZE3TMKRWM7o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -125,7 +125,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BLLnYtzrKHFQRkWLf053H4JsRfhwxkua0kJwbJgrb0o=
+			H5/yexJBVxckIBl8qR9GCdEmV1gegYoLlSMwObt0H6k=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -153,14 +153,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			F7OILvGN7mQ/mVF2GihGl3TYxRuUkkcJforhRUwSt5g=
+			m3axzU3voVI0DR6TH9oun+zmYtejLM6xsy1GLzJqGUA=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BLLnYtzrKHFQRkWLf053H4JsRfhwxkua0kJwbJgrb0o=
+			H5/yexJBVxckIBl8qR9GCdEmV1gegYoLlSMwObt0H6k=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -188,7 +188,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nvB3BXqTq0X7SCuDgFz2m4+6SzvMUc/WKvkD1Zu89eU=
+			Di/Rvlc0qRtNLA6B5OEjj+lRF8Vlzt7P7dde2SJo2yM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
