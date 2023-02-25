@@ -6,6 +6,6 @@ target 'SwiftUI+Sample+Application' do
   use_frameworks!
 
   # Pods for SwiftUI+Sample+Application
-  pod 'CashfreePG', '~> 1.1'
+  pod 'CashfreePG', '~> 2.0.3'
 
 end

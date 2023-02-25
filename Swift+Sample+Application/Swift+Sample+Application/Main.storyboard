@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kc4-fM-sYz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kc4-fM-sYz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlR-te-tq7">
-                                <rect key="frame" x="20" y="128" width="374" height="40"/>
+                                <rect key="frame" x="20" y="132" width="374" height="40"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="w42-lN-uiP"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuR-AX-U7R">
-                                <rect key="frame" x="20" y="188" width="374" height="35"/>
+                                <rect key="frame" x="20" y="192" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="uFo-Fv-EJh"/>
                                 </constraints>
@@ -41,12 +41,26 @@
                                     <action selector="nativeCheckoutSDKTapped:" destination="Mgn-3l-5c9" eventType="touchUpInside" id="269-7V-XpW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnH-3J-ikQ">
+                                <rect key="frame" x="20" y="247" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CHs-Vv-NUp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Web Checkout"/>
+                                <connections>
+                                    <action selector="webCheckoutTapped:" destination="Mgn-3l-5c9" eventType="touchUpInside" id="6Io-GH-ecf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ayM-D4-g7X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YnH-3J-ikQ" firstAttribute="leading" secondItem="ayM-D4-g7X" secondAttribute="leading" constant="20" id="8Sj-nm-csg"/>
                             <constraint firstItem="ayM-D4-g7X" firstAttribute="trailing" secondItem="WlR-te-tq7" secondAttribute="trailing" constant="20" id="CfC-a7-kNW"/>
                             <constraint firstItem="ayM-D4-g7X" firstAttribute="trailing" secondItem="iuR-AX-U7R" secondAttribute="trailing" constant="20" id="OF4-rB-uN3"/>
+                            <constraint firstItem="YnH-3J-ikQ" firstAttribute="top" secondItem="iuR-AX-U7R" secondAttribute="bottom" constant="20" id="Rzq-R2-0Py"/>
+                            <constraint firstItem="ayM-D4-g7X" firstAttribute="trailing" secondItem="YnH-3J-ikQ" secondAttribute="trailing" constant="20" id="dQF-Uh-HrR"/>
                             <constraint firstItem="WlR-te-tq7" firstAttribute="top" secondItem="ayM-D4-g7X" secondAttribute="top" constant="40" id="dVH-iI-KQV"/>
                             <constraint firstItem="iuR-AX-U7R" firstAttribute="leading" secondItem="ayM-D4-g7X" secondAttribute="leading" constant="20" id="l5K-VC-iTI"/>
                             <constraint firstItem="WlR-te-tq7" firstAttribute="leading" secondItem="ayM-D4-g7X" secondAttribute="leading" constant="20" id="qlP-nG-6WJ"/>
@@ -65,7 +79,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kc4-fM-sYz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tj1-AV-Ns5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

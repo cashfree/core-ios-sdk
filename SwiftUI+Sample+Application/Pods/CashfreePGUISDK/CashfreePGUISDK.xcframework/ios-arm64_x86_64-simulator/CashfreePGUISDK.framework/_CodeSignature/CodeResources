@@ -6,31 +6,31 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		a1To55V7kQtSCQHu6Yyjpjl6JJc=
+		jE3hbLOefLyCf7gWAePxUYZZYoQ=
 		</data>
 		<key>CFAllBanksTableViewCell.nib</key>
 		<data>
-		LtT6t+rIgrSOx+syQNXBFkvV41w=
+		asQJCzTXAfUpVkFii/3LX2GYG3Q=
 		</data>
 		<key>CFCardUITableViewCell.nib</key>
 		<data>
-		LcU4UreAnOkRUoExdylorKY4SdI=
+		VS9CByqbwTDUxNrkTd5L5GaZ0EI=
 		</data>
 		<key>CFCheckoutViewController.nib</key>
 		<data>
-		Zegn3KTqJZvOMNCgaH0/WCK3hZw=
+		ZnG1ZhXbg9N27J6gR80+xyZD4qw=
 		</data>
 		<key>CFEMITableViewCell.nib</key>
 		<data>
-		6djTgrlIOHUps3UDITSvzioXXgc=
+		FAOLEAgFXUodfGPDC7+57BlZL4s=
 		</data>
 		<key>CFEmiCheckoutViewController.nib</key>
 		<data>
-		9fC0I5LRN1x3/MHrbICTEsXKKBo=
+		7TSURdzWFy6wBV1vJIshvEUIodU=
 		</data>
 		<key>CFImages.momd/CFImages.mom</key>
 		<data>
-		FX+AqTGQM2IR2dhBDVfd9gecRNM=
+		aomvaZAnPVs3wfGphndLZXOBttE=
 		</data>
 		<key>CFImages.momd/VersionInfo.plist</key>
 		<data>
@@ -38,15 +38,15 @@
 		</data>
 		<key>CFNativeCheckoutEMIInformationTableViewCell.nib</key>
 		<data>
-		IeZSHdVEoah+lVSuasTNrrNZ1uU=
+		8nw8bUe74CJAzxJATtLBEfTgK4U=
 		</data>
 		<key>CFNetbankingListTableViewCell.nib</key>
 		<data>
-		W144g75eC5VnqnSxy5orBQa8SYA=
+		DQmYFIRokM3CmPY96Ti4xlmuwvY=
 		</data>
 		<key>CFNetbankingListViewController.nib</key>
 		<data>
-		88BkC/pw1PrMV+joYBvOVpBCWiA=
+		NrxFsZAhHXnzDUTatDP0difhXj8=
 		</data>
 		<key>CFOrderComponentView.nib</key>
 		<data>
@@ -54,43 +54,43 @@
 		</data>
 		<key>CFPaylaterTableViewCell.nib</key>
 		<data>
-		ORXEA3upvk63oL0M+/De2bW3J/c=
-		</data>
-		<key>CFPaymentVerificationReconViewController.nib</key>
-		<data>
-		WCgLbp5bUWhTPQJSKCJZ+ZJ7JZ4=
+		PXzX7zIB+5vsumix9g6zGXrYdhA=
 		</data>
 		<key>CFQRCodeTableViewCell.nib</key>
 		<data>
-		4Nh/dWLQdbFXRNIHRg/KEScQBRg=
+		L8nBHyQHiUbKtriI7lVvPejXPuo=
+		</data>
+		<key>CFQRCodeUIViewController.nib</key>
+		<data>
+		YjPRZsi1c+i1Oq6MSLjWBjlAAVo=
 		</data>
 		<key>CFQuickCheckoutViewController.nib</key>
 		<data>
-		6Em1KhZ+7ky7LHz2MNAA8EL12LA=
+		LwVwAd9+goToG2kJPLdjMbOs/9o=
 		</data>
 		<key>CFUPICollectTableViewCell.nib</key>
 		<data>
-		Vo+mMW61udKPANsIz2rNW3LcnF4=
+		nRT6dw0PFLhbA0JXFijXiP4ob1w=
 		</data>
 		<key>CFUPIIntentPayTableViewCell.nib</key>
 		<data>
-		4+cfYVsHkEOE/98kXCG/B3YmSZw=
+		vwl+Ci6Ubu0arbzCitq/TDTafn0=
 		</data>
 		<key>CFUPIIntentTableViewCell.nib</key>
 		<data>
-		PsFDdZHiCJ2r2lkLXfDXBL2KSCk=
+		M3JbgFG7rMQ81TpPjSvXYZNXkeI=
 		</data>
 		<key>CFWalletPhoneNumberTableViewCell.nib</key>
 		<data>
-		ivjeNMm+wjWPrEo0fW5SmbK14UM=
+		ftxUkntl2Lrx3LVILRu9nhxAzZc=
 		</data>
 		<key>CFWalletTableViewCell.nib</key>
 		<data>
-		SnVZXPqcyHsXktkE3iIwS+jVDrY=
+		sa6rPajiUR8EIBYgmAHQs1pwDyg=
 		</data>
 		<key>Headers/CashfreePGUISDK-Swift.h</key>
 		<data>
-		TykFqz2Jjuz4TosBJ1KWykvNqfQ=
+		uYQsRY+90retubz7nf2h5sNeN+g=
 		</data>
 		<key>Headers/CashfreePGUISDK.h</key>
 		<data>
@@ -98,43 +98,59 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XFncjNllKYNrvbg9ubUtG/2Ov0s=
+		hlPeVP38lvZPyqMmPnomCCDTkrk=
+		</data>
+		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		jaP6I1nq3Ejvmbv7QdGoYTcV+gw=
+		</data>
+		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		DorY05Fh45RQD8u5tjvu3ZHdzWI=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		U3sLSMFeoB07UC3xIOkB14iF2UA=
+		TPvv9F9cBbnmEwDlZOxPIMmXmmk=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		MzQjvC9qYY0upGET3rodNepaYHY=
+		DorY05Fh45RQD8u5tjvu3ZHdzWI=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uoeYu6T53+XukkRXzxcoozLNOoU=
+		YoN/G1iMjEi4BhsWFWlYFFKvf78=
+		</data>
+		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		jaP6I1nq3Ejvmbv7QdGoYTcV+gw=
+		</data>
+		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		JxfLeNqdcQ1wouVY/+JHIzWeQOs=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		jcIgRbdQANkFRNrkKTr6ojONsK4=
+		qFj703v4jTvFaybs52/h2+58RFs=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		uUHefVWoFObUWJ37amRyaXMwFOY=
+		JxfLeNqdcQ1wouVY/+JHIzWeQOs=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eUmv0UZeX7gAl1ZewXpGUCTrlh8=
+		FpLNNuj6l3BPL1UwRKwxlLB5kBo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		8dcie09DDI6A7jeAdkm3CoTaYgM=
+		7okWCTpfwK9g1Qw4vQJoyPaozYM=
 		</data>
 		<key>QuickCheckoutPaymentModeTableViewCell.nib/objects-14.0+.nib</key>
 		<data>
-		yk7OHo3wgOyZw/CG6TBE6v/zuDw=
+		nN2Jdf+dn53rmiznNXNFXcUhu+k=
 		</data>
 		<key>QuickCheckoutPaymentModeTableViewCell.nib/runtime.nib</key>
 		<data>
-		bj+eNWYpuxVHMIMKyUFoupCRRKk=
+		9Baa8uO1jGItxsowUbxj/MzwVnM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -143,49 +159,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FGWp4MhwYX5ozVTwe2KLVSCc7Ihxmn5e8PDOnmtVsbw=
+			xXEBMxp1tQ9i5f6Wym+Auex16Pk5x9sNho1zXYNkzqA=
 			</data>
 		</dict>
 		<key>CFAllBanksTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fm18hz7XkUlk5ZvncHLPCUat62wkidw5xNrLxSZ4/Jo=
+			LYtgObqrJa0jCZ6/lssdQ1P4UncGjzfTzBrwPvOM9cc=
 			</data>
 		</dict>
 		<key>CFCardUITableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aIKczkTD/yaOlpq1tY6vm4gsig8NF8Waqb1IMwwTU3g=
+			JUFCIa3me4wrommFg+LeIXhLdLKsVm926cTncecqrVM=
 			</data>
 		</dict>
 		<key>CFCheckoutViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xK6d/itXE095e065TIZLdv+iVAudL85rhiYg7d4cxoM=
+			qhREaYQt/CbWafi+4Vw1C70DnXIVkLkOtRnfkT+1nmM=
 			</data>
 		</dict>
 		<key>CFEMITableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p0T+T7eMXQmtyrLmD1lOySC2DdQCq9pJM76r6bd7B9Y=
+			txyVc88T+0uel7EGT3Kx9RYKLf+SZqXNLUErXHQM1f8=
 			</data>
 		</dict>
 		<key>CFEmiCheckoutViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9dEyCyL+MXGNrVNNWIZEwZ/tqJnk8/iJyWZbyZCkm4Q=
+			vMPauAnKUqvJ+NkAkwnmDF0CSvsQ6RxB+8x9pAJryOU=
 			</data>
 		</dict>
 		<key>CFImages.momd/CFImages.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			C68/7dA1tEptwzfXsXl42JP05w6vggKSbrU+4N6fM4M=
+			06tRJ7ChcnJm2VhKxCwWv1Aze0R8NuhtHH+liEX/bOQ=
 			</data>
 		</dict>
 		<key>CFImages.momd/VersionInfo.plist</key>
@@ -199,21 +215,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bOZiuB8mN/QyGzNU9i9FU1nDqsYHcpOipYDfQIG6mZY=
+			Sfq+6jZX6Ma0x8KOnRK8JLpVjuRS4OcLw9sQ+HrabZc=
 			</data>
 		</dict>
 		<key>CFNetbankingListTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/ODi9Bp7Mgcb4vaYI3dPc0HB+RC+pG3ytSNjdGHO64A=
+			qWl/1fSHZyjEbsxQy9tpwogersmcUGLZHXNcBq4rTBw=
 			</data>
 		</dict>
 		<key>CFNetbankingListViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Io3iBPCE3C2gmTE1IviQinR7tWuY+PjHZuAHSJT0cco=
+			XMLwI4bRFcq6N4SACHruWmPRNJI3fWM+0tWurgBBz54=
 			</data>
 		</dict>
 		<key>CFOrderComponentView.nib</key>
@@ -227,70 +243,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xk+a10nXcGQiJBaPSREg/217UuxWiBxipGd8fDpHTEg=
-			</data>
-		</dict>
-		<key>CFPaymentVerificationReconViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			s7QHbfiEnXaKiflpF50OFiv9WQKs0ETMVcL+yLht8Y8=
+			On4NbaPzbDksVZ/RNfD0Ky6wHjuAFTu0CmMgtD5NJ/s=
 			</data>
 		</dict>
 		<key>CFQRCodeTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DvarMxhEyASf5gNNzWhobiYvmuv4k2LB7EDB2K2QywA=
+			KGtYybb/1kIurvcJcMqwCgU8x0SFVsH2vIjNo+PtFgA=
+			</data>
+		</dict>
+		<key>CFQRCodeUIViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7liUYM/SNeInIdoUiMKUyB9abXjW9yGTuyoWk+5oVRk=
 			</data>
 		</dict>
 		<key>CFQuickCheckoutViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8dX0QId+90pHqHxWDKIKFc8BEomRhqyQFOa9JokfBxk=
+			YF3fAhUIe1SMn7q6mwI3E1yCl7RCBCWEpMRe+Lyd17s=
 			</data>
 		</dict>
 		<key>CFUPICollectTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8iCjqTbFO4ByOv8rfBb+3R605umctY1zYbjdLnAr+/U=
+			9inLA3BuXCd2K6V53F3n+q/arCRUYAruU/6ehNykX1A=
 			</data>
 		</dict>
 		<key>CFUPIIntentPayTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aaIHc3LcaUNGkXFnKwwhj5p9+E1E6eR8dZW6SLlqcVU=
+			QFH8sV9yccKM5Vyo9Fv0tW9jXyWixObFsYZiEG8Et80=
 			</data>
 		</dict>
 		<key>CFUPIIntentTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i3WphRCKeOGb/malyychqNj5Zcuik/r1GJmFBFLg3gc=
+			e5xcPcCPJf3N6gOzQNFXPfPquCd022MgfK021xVM+lQ=
 			</data>
 		</dict>
 		<key>CFWalletPhoneNumberTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nz8iAca31ksKX8OPvAq5QIilRMmKmDosQNHUdjgRadE=
+			zxP1w15aXmpNm2ewsF6t+XCja5ohvVnry2zUuxd3qv0=
 			</data>
 		</dict>
 		<key>CFWalletTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Um06r2NrwpRsmakZkmgNLI1H8GOYTMMpqi7FCC7gKdI=
+			JxbR0oxhcUrbAtSW/T02D24izIbngkQ/F3yYSFsfQfk=
 			</data>
 		</dict>
 		<key>Headers/CashfreePGUISDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WbziWwAiFQouwyIrKjV95/a/X5DrzbfDtBwklDLfDtc=
+			ymv+sIBotyU3VGan7HASgpQF9LJ2jIk8qGa6uZAlwSg=
 			</data>
 		</dict>
 		<key>Headers/CashfreePGUISDK.h</key>
@@ -300,67 +316,95 @@
 			fr6gm+akqBFDmiW4GWPnTarpLlO0qGAnj0oDP6X0EpU=
 			</data>
 		</dict>
+		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RLyLzU8Q1efYhLzPB8Dr8pMDcr/dCaXa7jNfefqVNi4=
+			</data>
+		</dict>
+		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0q4wNcJ0Lxd9IYFGwOW8uhuWPESS0p57gvIsxRUjQ4g=
+			</data>
+		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vqhUBRlRVqmQaUEvBnYta+wteX3qWYhHb4bQ18yNMJo=
+			vi2LK1wK1hcjcjyw6lIC5x/gapnt2COlO0RuUb9z5GU=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ptxskD81EbQkNewZGhlZK/ALo9lhuvv/Mstl7Qris54=
+			0q4wNcJ0Lxd9IYFGwOW8uhuWPESS0p57gvIsxRUjQ4g=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3paBsNlJHZ2cWBU7UB09bALVy6O2tBErlWfgexnN/Pw=
+			O1gaikbxG09/AwOBU6LtaaiZ5JdLBcMmyjlkxt/Irso=
+			</data>
+		</dict>
+		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RLyLzU8Q1efYhLzPB8Dr8pMDcr/dCaXa7jNfefqVNi4=
+			</data>
+		</dict>
+		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			SDHVb0s1xIukW9CH/9EGb8vwcOuuZCVyUSO1dUqR0Go=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UBndLfn+3ElgOsFiLm4D8REVUPJ2X39BvI+qexh9WHI=
+			c4vK/RlOulCRGpAQ9A48heScpItl97nB1fILpzB2kgk=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5btfTZXpjkVKO0NrWts2ejrO+mw+P+cCu3USBQIUFbk=
+			SDHVb0s1xIukW9CH/9EGb8vwcOuuZCVyUSO1dUqR0Go=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J+Odr4imQT74bFSl6Xzz8sWpNeer/MQpM/jgLGnSAuI=
+			8zmg0+op0Fs/hQUh8D9lJgkwnHreEC2BYbqDaTz5Sf0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2u6/xfR3BxpGs7wqo0HK8niKiElst329h26HYsPO6mE=
+			uVTzjZBCAnlmJUxFRrxlbdrnedaSBKDfPiqYEp5jSog=
 			</data>
 		</dict>
 		<key>QuickCheckoutPaymentModeTableViewCell.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ozLRkDBhEzR1a7P8F7D8GtE3Qfgny31Dnj3BM5NgJnY=
+			Xs5UN+a7uMhBdQnFPChl3/A16f4oZr1sqXGvAf2pd04=
 			</data>
 		</dict>
 		<key>QuickCheckoutPaymentModeTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yw0hSBVdpC/YLiKSSDzoi5u0QynWKlrSooWHapYAsWw=
+			GNnIyy0jKR4mYYShCWSQZNrA2z99QPP4C9XmMhQXqVc=
 			</data>
 		</dict>
 	</dict>

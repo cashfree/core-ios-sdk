@@ -2710,32 +2710,6 @@
         "printedName": "CFPayment",
         "children": [
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CFPayment",
-                "printedName": "CashfreePGCoreSDK.CFPayment",
-                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment(im)init",
-            "mangledName": "$s17CashfreePGCoreSDK9CFPaymentCACycfc",
-            "moduleName": "CashfreePGCoreSDK",
-            "overriding": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override",
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
             "kind": "Function",
             "name": "printDescription",
             "printedName": "printDescription()",
@@ -2809,8 +2783,8 @@
           },
           {
             "kind": "Function",
-            "name": "setThemeForCore",
-            "printedName": "setThemeForCore(_:)",
+            "name": "setTheme",
+            "printedName": "setTheme(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2819,14 +2793,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "CFThemeCore",
-                "printedName": "CashfreePGCoreSDK.CFThemeCore",
-                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFThemeCore"
+                "name": "CFTheme",
+                "printedName": "CashfreePGCoreSDK.CFTheme",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFTheme"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment(im)setThemeForCore:",
-            "mangledName": "$s17CashfreePGCoreSDK9CFPaymentC15setThemeForCoreyyAA07CFThemeH0CF",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment(im)setTheme:",
+            "mangledName": "$s17CashfreePGCoreSDK9CFPaymentC8setThemeyyAA7CFThemeCF",
             "moduleName": "CashfreePGCoreSDK",
             "declAttributes": [
               "AccessControl",
@@ -2835,6 +2809,32 @@
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CFPayment",
+                "printedName": "CashfreePGCoreSDK.CFPayment",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment(im)init",
+            "mangledName": "$s17CashfreePGCoreSDK9CFPaymentCACycfc",
+            "moduleName": "CashfreePGCoreSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
@@ -6857,6 +6857,274 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CashfreeAnalyticsSDK",
+        "printedName": "CashfreeAnalyticsSDK",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CFWebCheckoutPayment",
+        "printedName": "CFWebCheckoutPayment",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "printDescription",
+            "printedName": "printDescription()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFWebCheckoutPayment(im)printDescription",
+            "mangledName": "$s17CashfreePGCoreSDK20CFWebCheckoutPaymentC16printDescriptionyyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "overriding": true,
+            "objc_name": "printDescription",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "CFWebCheckoutPaymentBuilder",
+            "printedName": "CFWebCheckoutPaymentBuilder",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFWebCheckoutPaymentBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFWebCheckoutPayment.CFWebCheckoutPaymentBuilder",
+                    "usr": "s:17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderC"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderCAEycfc",
+                "mangledName": "$s17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderCAEycfc",
+                "moduleName": "CashfreePGCoreSDK",
+                "overriding": true,
+                "objc_name": "init",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC",
+                  "Override",
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "setSession",
+                "printedName": "setSession(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFWebCheckoutPaymentBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFWebCheckoutPayment.CFWebCheckoutPaymentBuilder",
+                    "usr": "s:17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFSession",
+                    "printedName": "CashfreePGCoreSDK.CFSession",
+                    "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFSession"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderC10setSessionyAeA9CFSessionCF",
+                "mangledName": "$s17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderC10setSessionyAeA9CFSessionCF",
+                "moduleName": "CashfreePGCoreSDK",
+                "declAttributes": [
+                  "Final",
+                  "AccessControl",
+                  "ObjC",
+                  "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "build",
+                "printedName": "build()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFWebCheckoutPayment",
+                    "printedName": "CashfreePGCoreSDK.CFWebCheckoutPayment",
+                    "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFWebCheckoutPayment"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderC5buildACyKF",
+                "mangledName": "$s17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderC5buildACyKF",
+                "moduleName": "CashfreePGCoreSDK",
+                "objc_name": "buildAndReturnError:",
+                "declAttributes": [
+                  "Final",
+                  "AccessControl",
+                  "ObjC",
+                  "RawDocComment"
+                ],
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderC",
+            "mangledName": "$s17CashfreePGCoreSDK20CFWebCheckoutPaymentC0deF7BuilderC",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "AccessControl",
+              "Final",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "superclassUsr": "c:objc(cs)NSObject",
+            "inheritsConvenienceInitializers": true,
+            "superclassNames": [
+              "ObjectiveC.NSObject"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CVarArg",
+                "printedName": "CVarArg",
+                "usr": "s:s7CVarArgP",
+                "mangledName": "$ss7CVarArgP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "_KeyValueCodingAndObservingPublishing",
+                "printedName": "_KeyValueCodingAndObservingPublishing",
+                "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+                "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "_KeyValueCodingAndObserving",
+                "printedName": "_KeyValueCodingAndObserving",
+                "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+                "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomDebugStringConvertible",
+                "printedName": "CustomDebugStringConvertible",
+                "usr": "s:s28CustomDebugStringConvertibleP",
+                "mangledName": "$ss28CustomDebugStringConvertibleP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFWebCheckoutPayment",
+        "mangledName": "$s17CashfreePGCoreSDK20CFWebCheckoutPaymentC",
+        "moduleName": "CashfreePGCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "Final",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "CashfreePGCoreSDK.CFPayment",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -7624,20 +7892,6 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "CashfreePGCoreSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CashfreePGCoreSDK"
-      },
-      {
-        "kind": "Import",
         "name": "CashfreeAnalyticsSDK",
         "printedName": "CashfreeAnalyticsSDK",
         "declKind": "Import",
@@ -8115,6 +8369,44 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CashfreeAnalyticsSDK",
+        "printedName": "CashfreeAnalyticsSDK",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK"
+      },
+      {
+        "kind": "Import",
         "name": "CashfreeAnalyticsSDK",
         "printedName": "CashfreeAnalyticsSDK",
         "declKind": "Import",
@@ -8373,6 +8665,16 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -8826,13 +9128,365 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "CFThemeCore",
-        "printedName": "CFThemeCore",
+        "name": "CFTheme",
+        "printedName": "CFTheme",
         "children": [
           {
+            "kind": "Function",
+            "name": "getPrimaryFontString",
+            "printedName": "getPrimaryFontString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC20getPrimaryFontStringSSyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC20getPrimaryFontStringSSyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSecondaryFontString",
+            "printedName": "getSecondaryFontString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC22getSecondaryFontStringSSyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC22getSecondaryFontStringSSyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPrimaryTextColor",
+            "printedName": "getPrimaryTextColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC19getPrimaryTextColorSo7UIColorCyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC19getPrimaryTextColorSo7UIColorCyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPrimaryTextColorHex",
+            "printedName": "getPrimaryTextColorHex()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC22getPrimaryTextColorHexSSyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC22getPrimaryTextColorHexSSyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSecondaryTextColor",
+            "printedName": "getSecondaryTextColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC21getSecondaryTextColorSo7UIColorCyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC21getSecondaryTextColorSo7UIColorCyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSecondaryTextColorHex",
+            "printedName": "getSecondaryTextColorHex()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC24getSecondaryTextColorHexSSyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC24getSecondaryTextColorHexSSyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getbackgroundColor",
+            "printedName": "getbackgroundColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC18getbackgroundColorSo7UIColorCyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC18getbackgroundColorSo7UIColorCyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getNavigationBarBackgroundColor",
+            "printedName": "getNavigationBarBackgroundColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC31getNavigationBarBackgroundColorSo7UIColorCyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC31getNavigationBarBackgroundColorSo7UIColorCyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getNavigationBarBackgroundColorHex",
+            "printedName": "getNavigationBarBackgroundColorHex()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC34getNavigationBarBackgroundColorHexSSyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC34getNavigationBarBackgroundColorHexSSyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getNavigationBarTextColor",
+            "printedName": "getNavigationBarTextColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC25getNavigationBarTextColorSo7UIColorCyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC25getNavigationBarTextColorSo7UIColorCyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPrimaryFont",
+            "printedName": "getPrimaryFont()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC14getPrimaryFontSo6UIFontCyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC14getPrimaryFontSo6UIFontCyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSecondaryFont",
+            "printedName": "getSecondaryFont()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC16getSecondaryFontSo6UIFontCyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC16getSecondaryFontSo6UIFontCyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getButtonBackgroundColor",
+            "printedName": "getButtonBackgroundColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC24getButtonBackgroundColorSo7UIColorCyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC24getButtonBackgroundColorSo7UIColorCyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getButtonBackgroundColorHex",
+            "printedName": "getButtonBackgroundColorHex()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC27getButtonBackgroundColorHexSSyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC27getButtonBackgroundColorHexSSyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getButtonTextColor",
+            "printedName": "getButtonTextColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC18getButtonTextColorSo7UIColorCyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC18getButtonTextColorSo7UIColorCyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getButtonTextColorHex",
+            "printedName": "getButtonTextColorHex()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC21getButtonTextColorHexSSyF",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC21getButtonTextColorHexSSyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "TypeDecl",
-            "name": "CFThemeCoreBuilder",
-            "printedName": "CFThemeCoreBuilder",
+            "name": "CFThemeBuilder",
+            "printedName": "CFThemeBuilder",
             "children": [
               {
                 "kind": "Function",
@@ -8841,9 +9495,9 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CFThemeCoreBuilder",
-                    "printedName": "CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder",
-                    "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC"
+                    "name": "CFThemeBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFTheme.CFThemeBuilder",
+                    "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC"
                   },
                   {
                     "kind": "TypeNominal",
@@ -8853,8 +9507,8 @@
                   }
                 ],
                 "declKind": "Func",
-                "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC18setButtonTextColoryAESSF",
-                "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC18setButtonTextColoryAESSF",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC18setButtonTextColoryAESSF",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC18setButtonTextColoryAESSF",
                 "moduleName": "CashfreePGCoreSDK",
                 "declAttributes": [
                   "Final",
@@ -8871,9 +9525,9 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CFThemeCoreBuilder",
-                    "printedName": "CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder",
-                    "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC"
+                    "name": "CFThemeBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFTheme.CFThemeBuilder",
+                    "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC"
                   },
                   {
                     "kind": "TypeNominal",
@@ -8883,8 +9537,8 @@
                   }
                 ],
                 "declKind": "Func",
-                "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC24setButtonBackgroundColoryAESSF",
-                "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC24setButtonBackgroundColoryAESSF",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC24setButtonBackgroundColoryAESSF",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC24setButtonBackgroundColoryAESSF",
                 "moduleName": "CashfreePGCoreSDK",
                 "declAttributes": [
                   "Final",
@@ -8901,9 +9555,9 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CFThemeCoreBuilder",
-                    "printedName": "CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder",
-                    "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC"
+                    "name": "CFThemeBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFTheme.CFThemeBuilder",
+                    "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC"
                   },
                   {
                     "kind": "TypeNominal",
@@ -8913,8 +9567,8 @@
                   }
                 ],
                 "declKind": "Func",
-                "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC14setPrimaryFontyAESSF",
-                "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC14setPrimaryFontyAESSF",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC14setPrimaryFontyAESSF",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC14setPrimaryFontyAESSF",
                 "moduleName": "CashfreePGCoreSDK",
                 "declAttributes": [
                   "Final",
@@ -8931,9 +9585,9 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CFThemeCoreBuilder",
-                    "printedName": "CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder",
-                    "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC"
+                    "name": "CFThemeBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFTheme.CFThemeBuilder",
+                    "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC"
                   },
                   {
                     "kind": "TypeNominal",
@@ -8943,8 +9597,8 @@
                   }
                 ],
                 "declKind": "Func",
-                "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC16setSecondaryFontyAESSF",
-                "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC16setSecondaryFontyAESSF",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC16setSecondaryFontyAESSF",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC16setSecondaryFontyAESSF",
                 "moduleName": "CashfreePGCoreSDK",
                 "declAttributes": [
                   "Final",
@@ -8961,9 +9615,9 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CFThemeCoreBuilder",
-                    "printedName": "CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder",
-                    "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC"
+                    "name": "CFThemeBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFTheme.CFThemeBuilder",
+                    "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC"
                   },
                   {
                     "kind": "TypeNominal",
@@ -8973,8 +9627,8 @@
                   }
                 ],
                 "declKind": "Func",
-                "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC19setPrimaryTextColoryAESSF",
-                "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC19setPrimaryTextColoryAESSF",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC19setPrimaryTextColoryAESSF",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC19setPrimaryTextColoryAESSF",
                 "moduleName": "CashfreePGCoreSDK",
                 "declAttributes": [
                   "Final",
@@ -8991,9 +9645,9 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CFThemeCoreBuilder",
-                    "printedName": "CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder",
-                    "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC"
+                    "name": "CFThemeBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFTheme.CFThemeBuilder",
+                    "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC"
                   },
                   {
                     "kind": "TypeNominal",
@@ -9003,8 +9657,8 @@
                   }
                 ],
                 "declKind": "Func",
-                "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC21setSecondaryTextColoryAESSF",
-                "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC21setSecondaryTextColoryAESSF",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC21setSecondaryTextColoryAESSF",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC21setSecondaryTextColoryAESSF",
                 "moduleName": "CashfreePGCoreSDK",
                 "declAttributes": [
                   "Final",
@@ -9021,9 +9675,9 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CFThemeCoreBuilder",
-                    "printedName": "CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder",
-                    "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC"
+                    "name": "CFThemeBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFTheme.CFThemeBuilder",
+                    "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC"
                   },
                   {
                     "kind": "TypeNominal",
@@ -9033,8 +9687,38 @@
                   }
                 ],
                 "declKind": "Func",
-                "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC31setNavigationBarBackgroundColoryAESSF",
-                "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC31setNavigationBarBackgroundColoryAESSF",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC31setNavigationBarBackgroundColoryAESSF",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC31setNavigationBarBackgroundColoryAESSF",
+                "moduleName": "CashfreePGCoreSDK",
+                "declAttributes": [
+                  "Final",
+                  "AccessControl",
+                  "ObjC",
+                  "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "setNavigationBarTextColor",
+                "printedName": "setNavigationBarTextColor(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFThemeBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFTheme.CFThemeBuilder",
+                    "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC25setNavigationBarTextColoryAESSF",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC25setNavigationBarTextColoryAESSF",
                 "moduleName": "CashfreePGCoreSDK",
                 "declAttributes": [
                   "Final",
@@ -9051,14 +9735,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CFThemeCore",
-                    "printedName": "CashfreePGCoreSDK.CFThemeCore",
-                    "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFThemeCore"
+                    "name": "CFTheme",
+                    "printedName": "CashfreePGCoreSDK.CFTheme",
+                    "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFTheme"
                   }
                 ],
                 "declKind": "Func",
-                "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC5buildACyKF",
-                "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC5buildACyKF",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC5buildACyKF",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC5buildACyKF",
                 "moduleName": "CashfreePGCoreSDK",
                 "objc_name": "buildAndReturnError:",
                 "declAttributes": [
@@ -9077,14 +9761,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CFThemeCoreBuilder",
-                    "printedName": "CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder",
-                    "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC"
+                    "name": "CFThemeBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFTheme.CFThemeBuilder",
+                    "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderCAEycfc",
-                "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderCAEycfc",
+                "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderCAEycfc",
+                "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderCAEycfc",
                 "moduleName": "CashfreePGCoreSDK",
                 "overriding": true,
                 "implicit": true,
@@ -9098,8 +9782,8 @@
               }
             ],
             "declKind": "Class",
-            "usr": "s:17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC",
-            "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC0dE7BuilderC",
+            "usr": "s:17CashfreePGCoreSDK7CFThemeC0D7BuilderC",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeC0D7BuilderC",
             "moduleName": "CashfreePGCoreSDK",
             "declAttributes": [
               "AccessControl",
@@ -9171,14 +9855,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "CFThemeCore",
-                "printedName": "CashfreePGCoreSDK.CFThemeCore",
-                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFThemeCore"
+                "name": "CFTheme",
+                "printedName": "CashfreePGCoreSDK.CFTheme",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFTheme"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFThemeCore(im)init",
-            "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreCACycfc",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFTheme(im)init",
+            "mangledName": "$s17CashfreePGCoreSDK7CFThemeCACycfc",
             "moduleName": "CashfreePGCoreSDK",
             "overriding": true,
             "implicit": true,
@@ -9192,8 +9876,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFThemeCore",
-        "mangledName": "$s17CashfreePGCoreSDK11CFThemeCoreC",
+        "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFTheme",
+        "mangledName": "$s17CashfreePGCoreSDK7CFThemeC",
         "moduleName": "CashfreePGCoreSDK",
         "declAttributes": [
           "AccessControl",
@@ -11766,6 +12450,168 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "UIColor",
+        "printedName": "UIColor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(red:green:blue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:So7UIColorC17CashfreePGCoreSDKE3red5green4blueABSi_S2itcfc",
+            "mangledName": "$sSo7UIColorC17CashfreePGCoreSDKE3red5green4blueABSi_S2itcfc",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(hex:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:So7UIColorC17CashfreePGCoreSDKE3hexABSS_tcfc",
+            "mangledName": "$sSo7UIColorC17CashfreePGCoreSDKE3hexABSS_tcfc",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIColor",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIColor",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByColorLiteral",
+            "printedName": "_ExpressibleByColorLiteral",
+            "usr": "s:s26_ExpressibleByColorLiteralP",
+            "mangledName": "$ss26_ExpressibleByColorLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "UITextField",
         "printedName": "UITextField",
         "children": [
@@ -12086,7 +12932,7 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 428,
+      "offset": 424,
       "length": 2,
       "value": "\"\""
     },
@@ -12149,7 +12995,7 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 519,
+      "offset": 610,
       "length": 5,
       "value": "false"
     },
@@ -12163,22 +13009,8 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreePaymentObject.swift",
       "kind": "StringLiteral",
-      "offset": 420,
-      "length": 70,
-      "value": "\"iosx-d-2.0.3-x-m-x-x-i-\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreePaymentObject.swift",
-      "kind": "IntegerLiteral",
-      "offset": 486,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreePaymentObject.swift",
-      "kind": "StringLiteral",
-      "offset": 489,
-      "length": 20,
+      "offset": 210,
+      "length": 2,
       "value": "\"\""
     },
     {
@@ -12730,28 +13562,28 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "StringLiteral",
-      "offset": 969,
+      "offset": 960,
       "length": 9,
       "value": "\"#00854A\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1029,
+      "offset": 1015,
       "length": 9,
       "value": "\"#DA3930\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1138,
+      "offset": 1124,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1265,
+      "offset": 1251,
       "length": 1,
       "value": "0"
     },
@@ -13059,168 +13891,175 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 869,
+      "offset": 870,
+      "length": 13,
+      "value": "\"WEBCHECKOUT\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 923,
       "length": 12,
       "value": "\"NETBANKING\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 914,
+      "offset": 968,
       "length": 5,
       "value": "\"UPI\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 955,
+      "offset": 1009,
       "length": 8,
       "value": "\"QRCODE\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1006,
+      "offset": 1060,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1065,
+      "offset": 1119,
       "length": 9,
       "value": "\"channel\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1106,
+      "offset": 1160,
       "length": 6,
       "value": "\"post\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1145,
+      "offset": 1199,
       "length": 16,
       "value": "\"payment_method\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1191,
+      "offset": 1245,
       "length": 13,
       "value": "\"order_token\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1242,
+      "offset": 1296,
       "length": 21,
       "value": "\"save_payment_method\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1297,
+      "offset": 1351,
       "length": 17,
       "value": "\"save_instrument\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1378,
+      "offset": 1432,
       "length": 11,
       "value": "\"GOOGLEPAY\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1419,
+      "offset": 1473,
       "length": 9,
       "value": "\"PHONEPE\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1456,
+      "offset": 1510,
       "length": 7,
       "value": "\"PAYTM\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1490,
+      "offset": 1544,
       "length": 6,
       "value": "\"BHIM\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1526,
+      "offset": 1580,
       "length": 24,
       "value": "\"CASHFREE PAYMENTS TEST\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1625,
+      "offset": 1679,
       "length": 8,
       "value": "\"tez:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1666,
+      "offset": 1720,
       "length": 12,
       "value": "\"phonepe:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1709,
+      "offset": 1763,
       "length": 12,
       "value": "\"paytmmp:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1751,
+      "offset": 1805,
       "length": 9,
       "value": "\"bhim:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1793,
+      "offset": 1847,
       "length": 11,
       "value": "\"cftest:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1851,
+      "offset": 1905,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "Array",
-      "offset": 1906,
+      "offset": 1960,
       "length": 87,
       "value": "[\"tez:\/\/\", \"phonepe:\/\/\", \"paytmmp:\/\/\", \"bhim:\/\/\"]"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2738,
+      "offset": 2792,
       "length": 7,
       "value": "1"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2738,
+      "offset": 2792,
       "length": 7,
       "value": "1"
     },
@@ -13267,60 +14106,102 @@
       "value": "1"
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme+Core.swift",
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
       "kind": "StringLiteral",
-      "offset": 2087,
+      "offset": 609,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
+      "kind": "StringLiteral",
+      "offset": 659,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
+      "kind": "StringLiteral",
+      "offset": 3551,
       "length": 9,
       "value": "\"#11385b\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme+Core.swift",
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
       "kind": "StringLiteral",
-      "offset": 2147,
+      "offset": 3611,
       "length": 9,
       "value": "\"#808080\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme+Core.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2220,
-      "length": 2,
-      "value": "17"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme+Core.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2289,
-      "length": 2,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme+Core.swift",
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
       "kind": "StringLiteral",
-      "offset": 2346,
-      "length": 9,
-      "value": "\"#6A3FD3\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme+Core.swift",
-      "kind": "StringLiteral",
-      "offset": 2403,
+      "offset": 3668,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme+Core.swift",
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
       "kind": "StringLiteral",
-      "offset": 2473,
+      "offset": 3738,
       "length": 9,
       "value": "\"#6A3FD3\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme+Core.swift",
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
       "kind": "StringLiteral",
-      "offset": 222,
-      "length": 11,
-      "value": "\"CashfreePGCoreSDK.CFThemeCore\""
+      "offset": 3802,
+      "length": 9,
+      "value": "\"#FFFFFF\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3875,
+      "length": 2,
+      "value": "17"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3944,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
+      "kind": "StringLiteral",
+      "offset": 3997,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
+      "kind": "StringLiteral",
+      "offset": 4051,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
+      "kind": "StringLiteral",
+      "offset": 4107,
+      "length": 9,
+      "value": "\"#6A3FD3\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
+      "kind": "StringLiteral",
+      "offset": 4164,
+      "length": 9,
+      "value": "\"#FFFFFF\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
+      "kind": "StringLiteral",
+      "offset": 214,
+      "length": 7,
+      "value": "\"CashfreePGCoreSDK.CFTheme\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
@@ -13339,77 +14220,77 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1423,
+      "offset": 1419,
       "length": 3,
       "value": "106"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1429,
+      "offset": 1425,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1441,
+      "offset": 1437,
       "length": 2,
       "value": "63"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1446,
+      "offset": 1442,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1457,
+      "offset": 1453,
       "length": 3,
       "value": "211"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1463,
+      "offset": 1459,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1475,
+      "offset": 1471,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1516,
+      "offset": 1512,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1548,
+      "offset": 1544,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1611,
+      "offset": 1607,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1843,
+      "offset": 1839,
       "length": 2,
       "value": "\"\""
     },

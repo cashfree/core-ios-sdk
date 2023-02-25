@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CashfreePGUISDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import CFNetworkSDK
 import CashfreeAnalyticsSDK
 import CashfreePGCoreSDK
@@ -11,6 +12,7 @@ import Swift
 import SystemConfiguration
 import UIKit
 import _Concurrency
+import _StringProcessing
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CFDropCheckoutService : ObjectiveC.NSObject {
   @objc public static func getInstance() -> CashfreePGUISDK.CFDropCheckoutService
   @objc public func setCallback(_ callback: CashfreePGCoreSDK.CFResponseDelegate)
@@ -20,25 +22,9 @@ import _Concurrency
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class CFDropCheckoutPayment : CashfreePGCoreSDK.CFPayment {
   @_inheritsConvenienceInitializers @objc public class CFDropCheckoutPaymentBuilder : ObjectiveC.NSObject {
     @objc public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
-    @objc public func setTheme(_ theme: CashfreePGUISDK.CFTheme) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
+    @objc public func setTheme(_ theme: CashfreePGCoreSDK.CFTheme) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
     @objc public func setComponent(_ paymentComponent: CashfreePGUISDK.CFPaymentComponent) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
     public func build() throws -> CashfreePGUISDK.CFDropCheckoutPayment
-    @objc override dynamic public init()
-    @objc deinit
-  }
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc final public class CFTheme : ObjectiveC.NSObject {
-  @_inheritsConvenienceInitializers @objc final public class CFThemeBuilder : ObjectiveC.NSObject {
-    @objc final public func setButtonTextColor(_ buttonTextColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setButtonBackgroundColor(_ buttonColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setPrimaryFont(_ fontName: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setSecondaryFont(_ fontName: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setPrimaryTextColor(_ textColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setSecondaryTextColor(_ textColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setNavigationBarBackgroundColor(_ navigationBarBackgroundColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setNavigationBarTextColor(_ navigationBarTextColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func build() throws -> CashfreePGUISDK.CFTheme
     @objc override dynamic public init()
     @objc deinit
   }

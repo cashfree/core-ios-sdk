@@ -22,25 +22,9 @@ import _StringProcessing
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class CFDropCheckoutPayment : CashfreePGCoreSDK.CFPayment {
   @_inheritsConvenienceInitializers @objc public class CFDropCheckoutPaymentBuilder : ObjectiveC.NSObject {
     @objc public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
-    @objc public func setTheme(_ theme: CashfreePGUISDK.CFTheme) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
+    @objc public func setTheme(_ theme: CashfreePGCoreSDK.CFTheme) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
     @objc public func setComponent(_ paymentComponent: CashfreePGUISDK.CFPaymentComponent) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
     public func build() throws -> CashfreePGUISDK.CFDropCheckoutPayment
-    @objc override dynamic public init()
-    @objc deinit
-  }
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc final public class CFTheme : ObjectiveC.NSObject {
-  @_inheritsConvenienceInitializers @objc final public class CFThemeBuilder : ObjectiveC.NSObject {
-    @objc final public func setButtonTextColor(_ buttonTextColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setButtonBackgroundColor(_ buttonColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setPrimaryFont(_ fontName: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setSecondaryFont(_ fontName: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setPrimaryTextColor(_ textColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setSecondaryTextColor(_ textColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setNavigationBarBackgroundColor(_ navigationBarBackgroundColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func setNavigationBarTextColor(_ navigationBarTextColor: Swift.String) -> CashfreePGUISDK.CFTheme.CFThemeBuilder
-    @objc final public func build() throws -> CashfreePGUISDK.CFTheme
     @objc override dynamic public init()
     @objc deinit
   }

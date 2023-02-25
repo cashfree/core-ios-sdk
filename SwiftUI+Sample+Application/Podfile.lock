@@ -1,16 +1,16 @@
 PODS:
-  - CashfreeAnalyticsSDK (1.0.12):
-    - CFNetworkSDK (~> 1.0)
-  - CashfreePG (1.1.0):
-    - CashfreePGUISDK (~> 1.1)
-  - CashfreePGCoreSDK (1.1.0):
-    - CashfreeAnalyticsSDK (~> 1.0)
-  - CashfreePGUISDK (1.1.0):
-    - CashfreePGCoreSDK (~> 1.1)
-  - CFNetworkSDK (1.0.12)
+  - CashfreeAnalyticsSDK (2.0.0):
+    - CFNetworkSDK (~> 2.0.0)
+  - CashfreePG (2.0.4):
+    - CashfreePGUISDK (~> 2.0.4)
+  - CashfreePGCoreSDK (2.0.4):
+    - CashfreeAnalyticsSDK (~> 2.0.0)
+  - CashfreePGUISDK (2.0.4):
+    - CashfreePGCoreSDK (~> 2.0.4)
+  - CFNetworkSDK (2.0.0)
 
 DEPENDENCIES:
-  - CashfreePG (~> 1.1)
+  - CashfreePG (~> 2.0.3)
 
 SPEC REPOS:
   trunk:
@@ -21,12 +21,12 @@ SPEC REPOS:
     - CFNetworkSDK
 
 SPEC CHECKSUMS:
-  CashfreeAnalyticsSDK: 6da67e248893f068742a4e14c39f4fee38c4535d
-  CashfreePG: 2fb3d115865fda6874956f878371034e76683f02
-  CashfreePGCoreSDK: ea6145d0573bb1ac35355c54d47ec31625a9aef5
-  CashfreePGUISDK: de165edee5b986a09bfdf01fdcdb89157cdd4345
-  CFNetworkSDK: 1524f0a602fae2fc0fc572e1485b0abeb7290145
+  CashfreeAnalyticsSDK: d36845057f2f2bfda662dbe8c29a64f56805ec48
+  CashfreePG: d237f95459c50c55f3f08f70ab7f0f63289054e1
+  CashfreePGCoreSDK: b90c1cefd39a1f09d7eb6a712654b035e21f7028
+  CashfreePGUISDK: 0b0e1cf34a0b46a3f708d0185b98af7d4830c930
+  CFNetworkSDK: fca644b42b741bd154764bc2c67d85008a9be489
 
-PODFILE CHECKSUM: 85d9ca75c87bcdd6b64669b29c8586f8cb9c0b66
+PODFILE CHECKSUM: d812cb799e4a80057118632a3f972ade17d8044b
 
 COCOAPODS: 1.11.2

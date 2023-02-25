@@ -6,15 +6,23 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		O9nMuodIsHYL1VXKbO8mICZ8PPs=
+		2tjdf1UZVwAUlpceOe1c4e81FSg=
 		</data>
 		<key>CF2FAWebViewController.nib</key>
 		<data>
-		bNeeQhmPhetziDQXheH9lujIJHs=
+		wpi8POF4gQhdvJ9b9aDjZqmRnlQ=
+		</data>
+		<key>CFOTPViewController.nib</key>
+		<data>
+		FwBdTJAJHFYwSKzGKX9TVY7nr0Y=
+		</data>
+		<key>CFPaymentVerificationReconViewController.nib</key>
+		<data>
+		0T9nvJaWjOjMqW1fL7XXbhakZq0=
 		</data>
 		<key>Headers/CashfreePGCoreSDK-Swift.h</key>
 		<data>
-		BQQKEG96lWmsK+Y1+PiGmVnbK0Q=
+		JGsL7xegfwiCGhhn9s4voP6g8WY=
 		</data>
 		<key>Headers/CashfreePGCoreSDK.h</key>
 		<data>
@@ -22,23 +30,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		D4Va36nDeARdwZ6d6ayhfWlHTxo=
+		Q3E2X8QqC8uXBreCwOGdrPpOstI=
+		</data>
+		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		91Z5kTCURPCzj5Ch+nnLVQKn6cQ=
+		</data>
+		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		uD1MWwd4UrWNDFVm15N0+T0vhzg=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		7UhnTdpkiBxZ/twcJpRqsUQLBUQ=
+		UaNyblZilr2Tm+oGE0bxV5Ah7tw=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		u8Wz7y6/pEYqR8eMbg9gjWDVeSs=
+		uD1MWwd4UrWNDFVm15N0+T0vhzg=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		h7rS0tz6zN5Lbi56icTagI0jRgk=
+		OXKW4oy9ksyirSIPXPVvoaCRM6Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		1fno5DVfEoO5SYiF0D3guLqaZNw=
+		azXNDAlu96nocAOhQgu+LCX7mrY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -47,21 +63,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lCDE29opKk9HCCRC7quEzvr/gigrsXEpI7c07KWodps=
+			Pz/DgcygnCYrVAe7TdAfbdosM5Oz3a8PuErU5qxPCDQ=
 			</data>
 		</dict>
 		<key>CF2FAWebViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rBwDEeUNW1PFdmxM+6ZLS/uLwEN5jT/uxygZcWxvHpU=
+			S51TkbhKgWl5+iVJRFoh+kpOfqY91qBeqbQcNz0cxwo=
+			</data>
+		</dict>
+		<key>CFOTPViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1qcjmTtGeto6TZ9r4ajTzXvPPg1m+gEXsHTMNATkdaI=
+			</data>
+		</dict>
+		<key>CFPaymentVerificationReconViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VzGe3FrQDpb5hwY2k0wKPb3PT0qFDqP5C1IcazaNoBo=
 			</data>
 		</dict>
 		<key>Headers/CashfreePGCoreSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ie+M/S8NZ2rfZkMmalO/c5J5e87Q5T9K3+no1ncup6k=
+			b67bLNjSkRApYwl8k2RCBqaQ126cp6lR2dS8W7jv5HY=
 			</data>
 		</dict>
 		<key>Headers/CashfreePGCoreSDK.h</key>
@@ -71,32 +101,46 @@
 			+qVDhGJAXVWAOQEGOTu/tp3mlRbHFFapaX3hJ18R8P8=
 			</data>
 		</dict>
+		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DSIClXZkPXNA0r8FQhm+tR8r0iiwCL+lmNqeAJ8HD/w=
+			</data>
+		</dict>
+		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			54ss4eYA69+NWB57b4TIRoR1VoM9hXhuW0E4nRoI6W0=
+			</data>
+		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mYym0iyf+JrwBlD7TtkRh0iu497F4eyDN2Lc+K3lZSU=
+			CnjYKBWm0IG6zViak5hKc2C9Bpctz+FTQcewQGfVlwA=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t32zs0VfiMl7a6e2jZRyu+Mlb7yWUbpyqBvQh2YewrE=
+			54ss4eYA69+NWB57b4TIRoR1VoM9hXhuW0E4nRoI6W0=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/5KsvvJVG8O99NIK9P/IgSuStfPbGBxPhJFcKMt2FAo=
+			zecyhHDAav0z3zCwoy4orLZLqIOesk+c/0VfE+v1j00=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RPEsd+YvX24X9ZKVggpIl5ZhtT7Rd01eY08UyxIKibk=
+			5myjn7SkfxweBVEaIcIYf/pc6KAaDXz/4r4Ipax0EgQ=
 			</data>
 		</dict>
 	</dict>
