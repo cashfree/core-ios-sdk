@@ -57,6 +57,26 @@ class StartPageViewController: UIViewController, CFResponseDelegate {
         }
     }
     
+    @IBAction func webCheckoutTapped(_ sender: Any) {
+        do {
+            let session = try CFSession.CFSessionBuilder()
+                .setPaymentSessionId(Utils.payment_session_id)
+                .setOrderID(Utils.order_id)
+                .setEnvironment(Utils.environment)
+                .build()
+            let webCheckoutPayment = try CFWebCheckoutPayment.CFWebCheckoutPaymentBuilder()
+                .setSession(session)
+                .build()
+            let cfPaymentGateway = CFPaymentGatewayService.getInstance()
+            cfPaymentGateway.setCallback(self)
+            try cfPaymentGateway.doPayment(webCheckoutPayment, viewController: self)
+        } catch let e {
+            let err = e as! CashfreeError
+            print(err.description)
+        }
+    }
+    
+    
     func verifyPayment(order_id: String) {
         print(order_id)
     }

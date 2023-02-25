@@ -11,12 +11,13 @@ The following are the steps to be followed to getting the integration started:-
 1. Create an account with Cashfree and get the API keys
 2. Integrate our Cashfree SDK into your application
 3. Create an order with Cashfree
-4. Create a **session**.
-5. Native Checkout
-6. Seamless Checkout 
-7. Select a **payment mode** and create objects for the same.
-8. Create a **payment object**.
-9. Initiate payment
+4. Handling Responses
+5. Create a **session**.
+6. Native Checkout
+7. Seamless Checkout 
+8. Select a **payment mode** and create objects for the same.
+9. Create a **payment object**.
+10. Initiate payment
 
 ___
 
@@ -36,7 +37,7 @@ ___
 Open your pod file and add the following and then use `pod install`
 
 ```
-pod 'CashfreePG', '~> 1.0.11'
+pod 'CashfreePG', '~> 1.1.3'
 ```
 ___
 
@@ -120,6 +121,15 @@ We recommend that you store the following parameters at your end `order_id`, `cf
 
 ___
 
+### Handling Responses From the SDK
+
+The SDK exposes a protocol `CFResponseDelegate` which the Class has to conform to. It comes with 2 functions; one of them informs the user to verify the payment and the other informs the user that there was an error while trying to make payment.
+
+1. `@objc func onError(_ error: CFErrorResponse, order_id: String)`
+2. `@objc func verifyPayment(order_id: String)`
+
+---
+
 # **Create a session**
 
 As discussed above, the **`order_token`** contains all the order details and is used to authenticate the payment. The SDK exposes a class **`CFSession`** which has member variables for a payment session. One of them sets the order_token value.
@@ -175,9 +185,8 @@ let paymentComponent = try CFPaymentComponent.CFPaymentComponentBuilder()
 
 The `enableComponents()` method takes in an array of string and the order in which the merchant sends the components is honoured. If this method is not called, by default all the payment modes are enabled.
 
-```
-
 ### Theme
+```
 let theme = try CFTheme.CFThemeBuilder()
                         .setNavigationBarBackgroundColor("#C3C3C3")
                         .setNavigationBarTextColor("#FFFFFF")
@@ -190,56 +199,11 @@ let theme = try CFTheme.CFThemeBuilder()
 
 The `CFTheme` and `CFThemeBuilder` is used to set the theming for the UI SDK. The merchant can set the above information. For more details, refer our API Documentation.
 
-### Handling Responses
-
-In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with Native Checkout flow and the class which is initiating this has to conform to the protocol `CFNativeCheckoutResponseDelegate`.
-
-This protocol comprises of 2 methods:
-
-1. `func didFinishExecution(with error: CFErrorResponse, order_id: String)`
-2. `func verifyPayment(order_id: String)`
-
-`Note:` Refer to our API Reference documentation for more information about the methods.
-
 ---
 
 # Seamless Checkout
 
-## **Prerequisite - Card, Wallet, Paylater and Netbanking Mode**
-
-When any of these payment modes is being used, the user is navigated to a web page to authenticate the payment. In this case, a web-view has to be loaded. For this purpose, the SDK exposes a web-view `CFWebView` which is a subclass of `WKWebView`. You have to create a WKWebView and set the custom class to `CFWebView`.
-
-`Note` The below code is an example code. You can add this if you are building the UI programmatically or inherit `CFWebView` class to your web-view in stroyboard.
-
-```
-var cashfreeWebView: CFWebView!
- override func viewDidLoad() {
-     super.viewDidLoad()
-
-     .......
-
-     self.cashfreeWebView = CFWebView(frame: .zero, configuration: WKWebViewConfiguration())
-     self.cashfreeWebView.translatesAutoresizingMaskIntoConstraints = false
-     self.view.addSubview(cashfreeWebView)
-     self.cashfreeWebView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-     self.cashfreeWebView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-     self.cashfreeWebView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-     self.cashfreeWebView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-
-     do {
-         try self.cfWebView.startAuthentication()
-     } catch let e {
-         let error = e as! CashfreeError
-         print(error.localizedDescription)
-     }
- }
-```
-
-`Note:` In case the user chooses to close the web-view before completing the 2FA flow, we strongly recommend you to call the `removeWebViewReference()` method. This makes sure that you do not get unnecessary callbacks later.
-
-___
-
-## **Select a **payment mode** and create objects for the same**
+### **Select a **payment mode** and create objects for the same**
 
 Cashfree PG provides multiple modes to make payment. You can choose any mode depending on the requirement and invoke that payment mode from the SDK. The following are supported by the iOS SDK:-
 
@@ -267,23 +231,13 @@ do {
             .setCardExpiryYear("25") // in YY format
             .setCardExpiryMonth("12")
             .setCVV("123")
-            .buildCard()
+            .build()
 
     } catch let e {
         let error = e as! CashfreeError
         print(error.localizedDescription)
     }
 ```
-
-- In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with card-payment flow and the controller which is initiating this has to conform to the protocol `CFCardPaymentDelegate`.
-
-- This protocol comprises of 4 methods:
-    - `func initiatingCardPayment()`
-    - `func presentWebForAuthenticatingCardPayment()`
-    - `func cardPayment(didFinishExecutingWith error: CFErrorResponse)`
-    - `func verifyCardPaymentCompletion(for orderId: String)`
-
-`Note:` Refer to our API Reference documentation for more information about the methods.
 ___
 
 ### **Create a Netbanking Object**
@@ -303,15 +257,6 @@ ___
        }
 ```
 `Note:` Visit to get a list of all the [bank codes.](https://docs.cashfree.com/docs/net-banking)
-- In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with netbanking-payment flow and the controller which is initiating this has to conform to the protocol `CFNetbankingPaymentDelegate`.
-
-- The **CFNetbankingPaymentDelegate** protocol comprises of 4 methods:
-    - `func initiatingNetbankingPayment()`
-    - `func presentWebForAuthenticatingNetbankingPayment()`
-    - `func netbankingPayment(didFinishExecutingWith error: CFErrorResponse)`
-    - `func verifyNetbankingPaymentCompletion(for orderId: String)`
-
-`Note:` Refer to our API Reference documentation for more information about the methods.
 ___
 
 ### **Create a Wallet Object**
@@ -340,16 +285,6 @@ ___
 6. mobikwik
 7. jio
 8. ola
-
-- In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with wallet-payment flow and the controller which is initiating this has to conform to the protocol `CFWalletPaymentDelegate`.
-
-- The **CFWalletPaymentDelegate** protocol comprises of 4 methods:
-    - `func initiatingWalletPayment()`
-    - `func presentWebForAuthenticatingWalletPayment()`
-    - `func verifyWalletPaymentCompletion(for orderId: String)`
-    - `func walletPayment(didFinishExecutingWith error: CFErrorResponse)`
-
-`Note:` Refer to our API Reference documentation for more information about the methods.
 
 ___
 
@@ -409,16 +344,6 @@ do {
 ```
 `Note:` In the above code-snippet, inside the `setUPIID()`, the id of the clicked application has to be sent. This `id` is the key that is present in the list of objects that was retrieved in the above **Prerequisites**
 
-- In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with upi-payment flow and the controller which is initiating this has to conform to the protocol `CFUPIPaymentDelegate`.
-
-- The **CFUPIPaymentDelegate** protocol comprises of 4 methods:
-    - `func initiatingUPIPayment()`
-    - `func presentWebForAuthenticatingUPIPaymentInSandBoxEnvironment()`
-    - `func upiPayment(didFinishExecutingWith error: CFErrorResponse)`
-    - `func verifyUPIPaymentCompletion(for orderId: String)`
-
-`Note:` Refer to our API Reference documentation for more information about the methods.
-
 ___
 
 ### **Create a EMICard Object**
@@ -435,19 +360,12 @@ do {
             .setCVV("123")
             .setEMITenure(3)
             .setBankName("ICICI")
-            .buildCard()
+            .build()
     } catch let e {
         let error = e as! CashfreeError
         print(error.localizedDescription)
     }
 ```
-- In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with card-payment flow and the controller which is initiating this has to conform to the protocol `CFCardPaymentDelegate`.
-- This protocol comprises of 3 methods:
-    - `func initiatingCardPayment()`
-    - `func presentWebForAuthenticatingCardPayment()`
-    - `func cardPayment(didFinishExecutingWith error: CFErrorResponse)`
-    - `func verifyCardPaymentCompletion(for orderId: String)`
-`Note:` Refer to our API Reference documentation for more information about the methods.
 ---
 
 ### **Create a Paylater Object**
@@ -467,16 +385,6 @@ do {
             print(error.localizedDescription)
        }
 ```
-
-- In order to establish a 2-way communication, the SDK exposes a protocol that is coupled tightly with wallet-payment flow and the controller which is initiating this has to conform to the protocol `CFPaylaterPaymentDelegate`.
-
-- The **CFPaylaterPaymentDelegate** protocol comprises of 4 methods:
-    - `func initiatingPaylaterPayment()`
-    - `func presentWebForAuthenticatingPaylaterPayment()`
-    - `func verifyPaylaterPaymentCompletion(for orderId: String)`
-    - `func payLaterPayment(didFinishExecutingWith error: CFErrorResponse)`
-
-`Note:` Refer to our API Reference documentation for more information about the methods.
 
 ---
 
@@ -624,13 +532,12 @@ let gatewayService = CFPaymentGatewayService.getInstance()
 
 override func viewDidLoad() {
   // We recommend that the callback be set separately in the viewDidLoad as well
-  gatewayService.setCallback(self)
+  gatewayService.setCallback(self) // CFResponseDelegate
 }
 
 
 
 do {
-   gatewayService.setCallback(self)
    try gatewayService.doPayment(payment: cardPaymentObject)
 } catch let e {
   let error = e as! CashfreeError
@@ -656,223 +563,345 @@ override func viewDidLoad() {
 
 ### Native Checkout
 ```
-do {
-                    let session = try CFSession.CFSessionBuilder()
-                        .setOrderID(order_id)
-                        .setOrderToken(order_token)
-                        .setEnvironment(Utils.environment)
-                        .build()
-                    let paymentComponent = try CFPaymentComponent.CFPaymentComponentBuilder()
-                        .enableComponents(["order-details", "card", "upi", "wallet", "netbanking", "emi", "paylater"])
-                        .build()
-                    let theme = try CFTheme.CFThemeBuilder()
-                        .setNavigationBarBackgroundColor("#C3C3C3")
-                        .setNavigationBarTextColor("#FFFFFF")
-                        .setButtonBackgroundColor("#FF0000")
-                        .setButtonTextColor("#FFFFFF")
-                        .setPrimaryFont("Futura")
-                        .setSecondaryFont("Menlo")
-                        .build()
-                    let payment = try CFNativeCheckoutPayment.CFNativeCheckoutPaymentBuilder()
-                        .setSession(session)
-                        .setComponent(paymentComponent)
-                        .setTheme(theme)
-                        .build()
-                    gatewayService.setCallback(self)
-                    try gatewayService.doPayment(payment, viewController: self)
-                } catch {
+import Foundation
+import UIKit
+import CashfreePGCoreSDK
+import CashfreePGUISDK
+import CashfreePG
 
-                }
-```
-
-### Card
-
-```
-
-do {
-            let cfSession = try CFSession.CFSessionBuilder()
-                .setEnvironment(.PRODUCTION)
-                .setOrderToken(orderToken)
-                .setOrderId("order_Id")
-                .build()
-            let card = try CFCard.CFCardBuilder()
-                .setCardNumber("4444333322221111")
-                .setCardHolderName("Name")
-                .setCardExpiryMonth("05")
-                .setCardExpiryYear("25")
-                .setCVV("794")
-                .build()
-            let cardPaymentObject = try CFCardPayment.CFCardPaymentBuilder()
-                .setSession(cfSession)
-                .setCard(card)
-                .build()
-            gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cardPaymentObject, viewController: nil)
-        } catch {
-
-        }
-```
-
----
-
-### EMI Card
-
-```
-
-do {
-            let cfSession = try CFSession.CFSessionBuilder()
-                .setEnvironment(.PRODUCTION)
-                .setOrderToken(orderToken)
-                .setOrderId("order_Id")
-                .build()
-            let emiCard = try CFEMICard.CFEMICardBuilder()
-                .setCardNumber("4444333322221111")
-                .setCardHolderName("Name")
-                .setCardExpiryMonth("05")
-                .setCardExpiryYear("25")
-                .setCVV("794")
-                .setEMITenure(3)
-                .setBankName("ICICI")
-                .build()
-            let cardPaymentObject = try CFCardPayment.CFCardPaymentBuilder()
-                .setSession(cfSession)
-                .setCard(emiCard)
-                .build()
-            gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cardPaymentObject, viewController: nil)
-        } catch {
-
-        }
-```
-
----
-
-### Wallet
-
-```
-do {
-            let cfSession = try CFSession.CFSessionBuilder()
-                .setEnvironment(.PRODUCTION)
-                .setOrderToken(orderToken)
-                .setOrderId("order_Id")
-                .build()
-            let wallet = try CFWallet.CFWalletBuilder()
-                .setProvider("phonepe")
-                .setPhone("9999999999")
-                .build()
-            let cfWalletPaymentObject = try CFWalletPayment.CFWalletPaymentBuilder()
-                .setSession(cfSession)
-                .setWallet(wallet)
-                .build()
-            gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cfWalletPaymentObject, viewController: nil)
-        } catch {
-
-        }
-```
-
----
-
-### Netbanking
-
-```
-do {
-            let cfSession = try CFSession.CFSessionBuilder()
-                .setEnvironment(.PRODUCTION)
-                .setOrderToken(orderToken)
-                .setOrderId("order_Id")
-                .build()
-            let netbanking = try CFNetbanking.CFNetbankingBuilder()
-                .setBankCode(3003)
-                .build()
-            let netbankingPaymentObject = try CFNetbankingPayment.CFNetbankingPaymentBuilder()
-                .setSession(cfSession)
-                .setNetbanking(netbanking)
-                .build()
-            gatewayService.setCallback(self)
-            try gatewayService.doPayment(paymentt: netbankingPaymentObject, viewController: nil)
-        } catch {
-
-        }
-```
-
----
-
-### UPI Collect
-
-```
-do {
-            let cfSession = try CFSession.CFSessionBuilder()
-                .setEnvironment(.PRODUCTION)
-                .setOrderToken(orderToken)
-                .setOrderId("order_Id")
-                .build()
-            let cfUPICollect = try CFUPI.CFUPIBuilder()
-                .setChannel(.COLLECT)
-                .setUPIID("<SET UPI ID HERE>")
-                .build()
-            let cfUPIPaymentObject = try CFUPIPayment.CFUPIPaymentBuilder()
-                .setSession(cfSession)
-                .setUPI(cfUPICollect)
-                .build()
-            gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cfUPIPaymentObject, viewController: nil)
-        } catch {
-
-        }
-```
-
----
-
-### UPI Intent
-
-```
-do {
-            let cfSession = try CFSession.CFSessionBuilder()
-                .setEnvironment(.PRODUCTION)
+class MyViewController: UIViewController {
+    
+    private let cfPaymentGatewayService = CFPaymentGatewayService.getInstance()
+    
+    override func viewDidLoad() {
+        self.cfPaymentGatewayService.setCallback(self)
+    }
+    
+    private func getSession() -> CFSession? {
+        do {
+            let session = try CFSession.CFSessionBuilder()
+                .setEnvironment(.SANDBOX)
+                .setOrderID("order_id")
                 .setOrderToken("orderToken")
-                .setOrderId("order_Id")
                 .build()
-            let cfUPICollect = try CFUPI.CFUPIBuilder()
-                .setChannel(.INTENT)
-                .setUPIID(CFUPIUtils().getInstalledUPIApplications().first!["id"]!)
-                .build()
-            let cfUPIPaymentObject = try CFUPIPayment.CFUPIPaymentBuilder()
-                .setSession(cfSession)
-                .setUPI(cfUPICollect)
-                .build()
-            gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cfUPIPaymentObject, viewController: nil)
-        } catch {
-
+            return session
+        } catch let e {
+            let error = e as! CashfreeError
+            print(error.localizedDescription)
+            // Handle errors here
         }
+        return nil
+    }
+    
+    @IBAction func invokeNativeiOSSDK(_ sender: Any) {
+        if let session = self.getSession() {
+            do {
+              
+                // Set Components
+                let paymentComponents = try CFPaymentComponent.CFPaymentComponentBuilder()
+                    .enableComponents([
+                        "order-details",
+                        "card",
+                        "paylater",
+                        "wallet",
+                        "emi",
+                        "netbanking",
+                        "upi"
+                    ])
+                    .build()
+                
+                // Set Theme
+                let theme = try CFTheme.CFThemeBuilder()
+                    .setPrimaryFont("Source Sans Pro")
+                    .setSecondaryFont("Gill Sans")
+                    .setButtonTextColor("#FFFFFF")
+                    .setButtonBackgroundColor("#FF0000")
+                    .setNavigationBarTextColor("#FFFFFF")
+                    .setNavigationBarBackgroundColor("#FF0000")
+                    .setPrimaryTextColor("#FF0000")
+                    .setSecondaryTextColor("#FF0000")
+                    .build()
+                
+                // Native payment
+                let nativePayment = try CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder()
+                    .setSession(session)
+                    .setTheme(theme)
+                    .setComponent(paymentComponents)
+                    .build()
+                
+                // Invoke SDK
+                try self.cfPaymentGatewayService.doPayment(nativePayment, viewController: self)
+                
+                
+            } catch let e {
+                let error = e as! CashfreeError
+                print(error.localizedDescription)
+                // Handle errors here
+            }
+        }
+    }
+       
+}
+
+extension MyViewController: CFResponseDelegate {
+    
+    func onError(_ error: CFErrorResponse, order_id: String) {
+        print(error.message)
+    }
+    
+    func verifyPayment(order_id: String) {
+        // Verify The Payment here
+    }
+    
+}
+
 ```
-`Note:` For demo purpose we are taking the "id" of the first object in the array. The "id" of the app that is clicked has to be sent as the value
 
----
-
-### Paylater
+### Seamless
 
 ```
-do {
-            let cfSession = try CFSession.CFSessionBuilder()
-                .setEnvironment(.PRODUCTION)
+import Foundation
+import UIKit
+import CashfreePGCoreSDK
+import CashfreePG
+
+class YourViewController: UIViewController {
+    
+    private let cfPaymentGatewayService = CFPaymentGatewayService.getInstance()
+    
+    override func viewDidLoad() {
+        self.cfPaymentGatewayService.setCallback(self)
+    }
+    
+    
+    private func getSession() -> CFSession? {
+        do {
+            let session = try CFSession.CFSessionBuilder()
+                .setEnvironment(.SANDBOX)
+                .setOrderID("order_id")
                 .setOrderToken("orderToken")
-                .setOrderId("order_Id")
                 .build()
-            let cfPayLater = try CFPaylater.CFPaylaterBuilder()
-                .setProvider("lazypay")
-                .setPhone("9999999999")
-                .build()
-            let cfPaylaterObject = try CFPaylaterPayment.CFPaylaterPaymentBuilder()
-                .setSession(cfSession)
-                .setPaylater(cfPayLater)
-                .build()
-            gatewayService.setCallback(self)
-            try gatewayService.doPayment(payment: cfPaylaterObject, viewController: nil)
-        } catch {
-
+            return session
+        } catch let e {
+            let error = e as! CashfreeError
+            print(error.localizedDescription)
+            // Handle errors here
         }
+        return nil
+    }
+    
+    @IBAction func cardPayTapped(_ sender: Any) {
+        // Get Session
+        if let session = self.getSession() {
+            do {
+                
+                // CFCard
+                let card = try CFCard.CFCardBuilder()
+                    .setCVV("123")
+                    .setCardNumber("4111111111111111")
+                    .setCardExpiryYear("22") // in YY format
+                    .setCardExpiryMonth("12")
+                    .setCardHolderName("Cashfree")
+                    .build()
+                
+                // CFCardPayment
+                let cardPayment = try CFCardPayment.CFCardPaymentBuilder()
+                    .setCard(card)
+                    .setSession(session)
+                    .build()
+                
+                // Initiate SDK Payment
+                try self.cfPaymentGatewayService.doPayment(cardPayment, viewController: self)
+            } catch let e {
+                let error = e as! CashfreeError
+                print(error.localizedDescription)
+                // Handle errors here
+            }
+        }
+    }
+    
+    @IBAction func emiCardPayTapped(_ sender: Any) {
+        // Get Session
+        if let session = self.getSession() {
+            do {
+                
+                // CFEMICard
+                let card = try CFEMICard.CFEMICardBuilder()
+                    .setCVV("123")
+                    .setCardNumber("4111111111111111")
+                    .setCardExpiryYear("22") // in YY format
+                    .setCardExpiryMonth("12")
+                    .setCardHolderName("Cashfree")
+                    .setEMITenure(3)
+                    .setBankName("icici")
+                    .build()
+                
+                // CFEMICardPayment
+                let emiCardPayment = try CFEMICardPayment.CFEMICardPaymentBuilder()
+                    .setCard(card)
+                    .setSession(session)
+                    .build()
+                
+                // Initiate SDK Payment
+                try self.cfPaymentGatewayService.doPayment(emiCardPayment, viewController: self)
+            } catch let e {
+                let error = e as! CashfreeError
+                print(error.localizedDescription)
+                // Handle errors here
+            }
+        }
+    }
+    
+    @IBAction func upiCollectPayTapped(_ sender: Any) {
+        // Get Session
+        if let session = self.getSession() {
+            do {
+                
+                // CFUPI
+                let upiCollect = try CFUPI.CFUPIBuilder()
+                    .setChannel(.COLLECT)
+                    .setUPIID("testsuccess@gocash")
+                    .build()
+                
+                // CFUPIPayment
+                let upiPayment = try CFUPIPayment.CFUPIPaymentBuilder()
+                    .setUPI(upiCollect)
+                    .setSession(session)
+                    .build()
+                
+                // Initiate SDK Payment
+                try self.cfPaymentGatewayService.doPayment(upiPayment, viewController: self)
+            } catch let e {
+                let error = e as! CashfreeError
+                print(error.localizedDescription)
+                // Handle errors here
+            }
+        }
+    }
+    
+    @IBAction func upiIntentPayTapped(_ sender: Any) {
+        let installedApps = CFUPIUtils().getInstalledUPIApplications()
+        // Get Session
+        if let session = self.getSession() {
+            do {
+                
+                // CFUPI
+                let upiIntent = try CFUPI.CFUPIBuilder()
+                    .setChannel(.INTENT)
+                    .setUPIID(installedApps[0]["id"] ?? "") // Using first index. (App should be shown to user based on the list and clicked app's "id" has to be sent here
+                    .build()
+                
+                // CFUPIPayment
+                let upiPayment = try CFUPIPayment.CFUPIPaymentBuilder()
+                    .setUPI(upiIntent)
+                    .setSession(session)
+                    .build()
+                
+                // Initiate SDK Payment
+                try self.cfPaymentGatewayService.doPayment(upiPayment, viewController: self)
+            } catch let e {
+                let error = e as! CashfreeError
+                print(error.localizedDescription)
+                // Handle errors here
+            }
+        }
+    }
+    
+    @IBAction func walletPayTapped(_ sender: Any) {
+        // Get Session
+        if let session = self.getSession() {
+            do {
+                
+                // CFWallet
+                let wallet = try CFWallet.CFWalletBuilder()
+                    .setProvider("phonepe")
+                    .setPhone("9999999999")
+                    .build()
+                
+                // CFWalletPayment
+                let walletPayment = try CFWalletPayment.CFWalletPaymentBuilder()
+                    .setWallet(wallet)
+                    .setSession(session)
+                    .build()
+                
+                // Initiate SDK Payment
+                try self.cfPaymentGatewayService.doPayment(walletPayment, viewController: self)
+            } catch let e {
+                let error = e as! CashfreeError
+                print(error.localizedDescription)
+                // Handle errors here
+            }
+        }
+    }
+    
+    @IBAction func netBankingPayTapped(_ sender: Any) {
+        // Get Session
+        if let session = self.getSession() {
+            do {
+                
+                // CFNetbanking
+                let nb = try CFNetbanking.CFNetbankingBuilder()
+                    .setBankCode(3003)
+                    .build()
+                
+                // CFNetbankingPayment
+                let nbPayment = try CFNetbankingPayment.CFNetbankingPaymentBuilder()
+                    .setNetbanking(nb)
+                    .setSession(session)
+                    .build()
+                
+                // Initiate SDK Payment
+                try self.cfPaymentGatewayService.doPayment(nbPayment, viewController: self)
+            } catch let e {
+                let error = e as! CashfreeError
+                print(error.localizedDescription)
+                // Handle errors here
+            }
+        }
+    }
+    
+    @IBAction func paylaterPayTapped(_ sender: Any) {
+        // Get Session
+        if let session = self.getSession() {
+            do {
+                
+                // CFPayLater
+                let payLater = try CFPaylater.CFPaylaterBuilder()
+                    .setPhone("9999999999")
+                    .setProvider("lazypay")
+                    .build()
+                
+                // CFPaylaterPayment
+                let payLaterPayment = try CFPaylaterPayment.CFPaylaterPaymentBuilder()
+                    .setPaylater(payLater)
+                    .setSession(session)
+                    .build()
+                
+                // Initiate SDK Payment
+                try self.cfPaymentGatewayService.doPayment(payLaterPayment, viewController: self)
+            } catch let e {
+                let error = e as! CashfreeError
+                print(error.localizedDescription)
+                // Handle errors here
+            }
+        }
+    }
+    
+}
+
+// MARK: - CALLBACK
+extension YourViewController: CFResponseDelegate {
+    
+    func onError(_ error: CFErrorResponse, order_id: String) {
+        print(error.message)
+    }
+    
+    func verifyPayment(order_id: String) {
+        print(order_id)
+    }
+    
+}
+
 ```
 ---
 
@@ -912,4 +941,4 @@ The other type of error codes are the ones that are exposed by the SDK when requ
 
 ## Payment Verification
 
-Visit [here](https://docs.cashfree.com/reference#get-status) for details about verifying order payment status
+Visit [here](https://docs.cashfree.com/reference/get-status) for details about verifying order payment status
