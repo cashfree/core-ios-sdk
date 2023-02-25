@@ -342,12 +342,11 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
 - (CFCard * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class CFThemeCore;
+@class CFTheme;
 
 /// CFPaymentObject is a parent class for all the payment objects (Card, Netbanking, Wallet, UPI)
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK9CFPayment")
 @interface CFPayment : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)printDescription;
 /// This method sets the platform that is being used when invoking the payment mode
 /// \param platform It is of type string, by default it set to ios-el
@@ -357,7 +356,8 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK9CFPayment")
 /// This method sets the theme for core ui -> Headless OTP
 /// \param theme It is of type CFThemeCore
 ///
-- (void)setThemeForCore:(CFThemeCore * _Nonnull)theme;
+- (void)setTheme:(CFTheme * _Nonnull)theme;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -932,71 +932,78 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK9CFSession16CFSessionBuilder")
 @end
 
 
-/// <code>CFThemeCore</code> is a class that is used to set the theme for the SDK. It internally uses a <code>CFThemeCoreBuilder</code> which is used to add theme information to the SDK.
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK11CFThemeCore")
-@interface CFThemeCore : NSObject
+/// <code>CFTheme</code> is a class that is used to set the theme for the SDK. It internally uses a <code>CFThemeBuilder</code> which is used to add theme information to the SDK.
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK7CFTheme")
+@interface CFTheme : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
-/// <code>CFThemeCoreBuilder</code> class is used to set the theme information for the SDK.
-SWIFT_CLASS("_TtCC17CashfreePGCoreSDK11CFThemeCore18CFThemeCoreBuilder")
-@interface CFThemeCoreBuilder : NSObject
+/// <code>CFThemeBuilder</code> class is used to set the theme information for the SDK.
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK7CFTheme14CFThemeBuilder")
+@interface CFThemeBuilder : NSObject
 /// This method sets the text color for the button throughout the SDK
 /// \param buttonTextColor Hex value has to be sent as parameter (Eg:- “#FFFFFF”)
 ///
 ///
 /// returns:
-/// The method returns an instance of <code>CFThemeCoreBuilder</code> to continue adding the next set of theme information
-- (CFThemeCoreBuilder * _Nonnull)setButtonTextColor:(NSString * _Nonnull)buttonTextColor SWIFT_WARN_UNUSED_RESULT;
+/// The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
+- (CFThemeBuilder * _Nonnull)setButtonTextColor:(NSString * _Nonnull)buttonTextColor SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the background color for the button throughout the SDK
 /// \param buttonColor Hex value has to be sent as parameter (Eg:- “#FFFFFF”)
 ///
 ///
 /// returns:
-/// The method returns an instance of <code>CFThemeCoreBuilder</code> to continue adding the next set of theme information
-- (CFThemeCoreBuilder * _Nonnull)setButtonBackgroundColor:(NSString * _Nonnull)buttonColor SWIFT_WARN_UNUSED_RESULT;
+/// The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
+- (CFThemeBuilder * _Nonnull)setButtonBackgroundColor:(NSString * _Nonnull)buttonColor SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the Font for labels in multiple places throughout the SDK
 /// \param fontName Font name has to be sent as String value (Eg:- “Futura”)
 ///
 ///
 /// returns:
-/// The method returns an instance of <code>CFThemeCoreBuilder</code> to continue adding the next set of theme information
-- (CFThemeCoreBuilder * _Nonnull)setPrimaryFont:(NSString * _Nonnull)fontName SWIFT_WARN_UNUSED_RESULT;
+/// The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
+- (CFThemeBuilder * _Nonnull)setPrimaryFont:(NSString * _Nonnull)fontName SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the Font for labels in multiple places throughout the SDK
 /// \param fontName Font name has to be sent as String value (Eg:- “Futura”)
 ///
 ///
 /// returns:
-/// The method returns an instance of <code>CFThemeCoreBuilder</code> to continue adding the next set of theme information
-- (CFThemeCoreBuilder * _Nonnull)setSecondaryFont:(NSString * _Nonnull)fontName SWIFT_WARN_UNUSED_RESULT;
+/// The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
+- (CFThemeBuilder * _Nonnull)setSecondaryFont:(NSString * _Nonnull)fontName SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the label text color for the button throughout the SDK
 /// \param textColor Hex value has to be sent as parameter (Eg:- “#FFFFFF”)
 ///
 ///
 /// returns:
-/// The method returns an instance of <code>CFThemeCoreBuilder</code> to continue adding the next set of theme information
-- (CFThemeCoreBuilder * _Nonnull)setPrimaryTextColor:(NSString * _Nonnull)textColor SWIFT_WARN_UNUSED_RESULT;
+/// The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
+- (CFThemeBuilder * _Nonnull)setPrimaryTextColor:(NSString * _Nonnull)textColor SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the label text color for the button throughout the SDK
 /// \param textColor Hex value has to be sent as parameter (Eg:- “#FFFFFF”)
 ///
 ///
 /// returns:
-/// The method returns an instance of <code>CFThemeCoreBuilder</code> to continue adding the next set of theme information
-- (CFThemeCoreBuilder * _Nonnull)setSecondaryTextColor:(NSString * _Nonnull)textColor SWIFT_WARN_UNUSED_RESULT;
+/// The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
+- (CFThemeBuilder * _Nonnull)setSecondaryTextColor:(NSString * _Nonnull)textColor SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the background color for the top navigation bar and border color to multiple UI Elements
-/// \param navigationBarBackgroundColor /// - Returns: The method returns an instance of <code>CFThemeCoreBuilder</code> to continue adding the next set of theme information
+/// \param navigationBarBackgroundColor /// - Returns: The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
 ///
 ///
 /// returns:
-/// The method returns an instance of <code>CFThemeCoreBuilder</code> to continue adding the next set of theme information
-- (CFThemeCoreBuilder * _Nonnull)setNavigationBarBackgroundColor:(NSString * _Nonnull)navigationBarBackgroundColor SWIFT_WARN_UNUSED_RESULT;
-/// The method considers all the theme elements set by the user (sets default value, if not) and returns a CFThemeCore instance to be used in the payment Object
+/// The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
+- (CFThemeBuilder * _Nonnull)setNavigationBarBackgroundColor:(NSString * _Nonnull)navigationBarBackgroundColor SWIFT_WARN_UNUSED_RESULT;
+/// This method sets the text color for the top navigation bar.
+/// \param navigationBarTextColor /// - Returns: The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
+///
 ///
 /// returns:
-/// The method returns an instance of <code>CFThemeCore</code>
-- (CFThemeCore * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// The method returns an instance of <code>CFThemeBuilder</code> to continue adding the next set of theme information
+- (CFThemeBuilder * _Nonnull)setNavigationBarTextColor:(NSString * _Nonnull)navigationBarTextColor SWIFT_WARN_UNUSED_RESULT;
+/// The method considers all the theme elements set by the user (sets default value, if not) and returns a CFTheme instance to be used in the payment Object
+///
+/// returns:
+/// The method returns an instance of <code>CFTheme</code>
+- (CFTheme * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1261,6 +1268,36 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK15CFWalletPayment22CFWalletPaymentBuilder")
 /// returns:
 /// It returns an object of <em>CFWalletPayment</em>
 - (CFWalletPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFWebCheckoutPayment")
+@interface CFWebCheckoutPayment : CFPayment
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)printDescription;
+@end
+
+
+/// The CFWalletPaymentBuilder class can be used to create an object of CFWebCheckoutPayment. It consists of setter methods to set the values for <em>CFSession</em>. And finally a <em>build</em> method that returns an object of <em>CFWebCheckoutPayment</em>.
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK20CFWebCheckoutPayment27CFWebCheckoutPaymentBuilder")
+@interface CFWebCheckoutPaymentBuilder : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// This method sets the value for CFSession variable of the CFWebCheckoutPayment class
+/// \param session It takes a parameter of type CFSession
+///
+///
+/// returns:
+/// It returns an instance of <em>CFWebCheckoutPaymentBuilder</em> to continue the build process
+- (CFWebCheckoutPaymentBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+/// This method builds an object of <em>CFWebCheckoutPayment</em>
+///
+/// throws:
+/// It throws an error (CashfreeError), in case <em>CFSession</em> is not set.
+///
+/// returns:
+/// It returns an object of <em>CFWebCheckoutPayment</em>
+- (CFWebCheckoutPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
 typedef SWIFT_ENUM(NSInteger, CashfreeError, open) {

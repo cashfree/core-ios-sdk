@@ -108,11 +108,11 @@ import _StringProcessing
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc open class CFPayment : ObjectiveC.NSObject {
-  @objc override dynamic public init()
   @objc public func printDescription()
   @objc final public func setPlatform(_ platform: Swift.String)
   @objc public func getPlatform() -> Swift.String
-  @objc final public func setThemeForCore(_ theme: CashfreePGCoreSDK.CFThemeCore)
+  @objc final public func setTheme(_ theme: CashfreePGCoreSDK.CFTheme)
+  @objc override dynamic public init()
   @objc deinit
 }
 @objc public enum CashfreeError : Swift.Int, Swift.Error {
@@ -240,6 +240,16 @@ extension CashfreePGCoreSDK.CFCardValidator {
   }
   @objc deinit
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFWebCheckoutPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFWebCheckoutPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFWebCheckoutPayment.CFWebCheckoutPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFWebCheckoutPayment
+    @objc deinit
+  }
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers open class CFConstants {
   public static var order_token_value: Swift.String
   public static var order_id: Swift.String
@@ -277,6 +287,10 @@ extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.CustomStringConvertible {
   }
   @objc deinit
 }
+extension UIKit.UIColor {
+  convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
+  convenience public init(hex: Swift.String)
+}
 @_hasMissingDesignatedInitializers @objc final public class CFNetbanking : ObjectiveC.NSObject {
   @_inheritsConvenienceInitializers @objc final public class CFNetbankingBuilder : ObjectiveC.NSObject {
     @objc override dynamic public init()
@@ -305,16 +319,33 @@ extension CashfreePGCoreSDK.CFUPIMODE : Swift.CustomStringConvertible {
     get
   }
 }
-@_hasMissingDesignatedInitializers @objc final public class CFThemeCore : ObjectiveC.NSObject {
-  @_inheritsConvenienceInitializers @objc final public class CFThemeCoreBuilder : ObjectiveC.NSObject {
-    @objc final public func setButtonTextColor(_ buttonTextColor: Swift.String) -> CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder
-    @objc final public func setButtonBackgroundColor(_ buttonColor: Swift.String) -> CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder
-    @objc final public func setPrimaryFont(_ fontName: Swift.String) -> CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder
-    @objc final public func setSecondaryFont(_ fontName: Swift.String) -> CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder
-    @objc final public func setPrimaryTextColor(_ textColor: Swift.String) -> CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder
-    @objc final public func setSecondaryTextColor(_ textColor: Swift.String) -> CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder
-    @objc final public func setNavigationBarBackgroundColor(_ navigationBarBackgroundColor: Swift.String) -> CashfreePGCoreSDK.CFThemeCore.CFThemeCoreBuilder
-    @objc final public func build() throws -> CashfreePGCoreSDK.CFThemeCore
+@_hasMissingDesignatedInitializers @objc final public class CFTheme : ObjectiveC.NSObject {
+  final public func getPrimaryFontString() -> Swift.String
+  final public func getSecondaryFontString() -> Swift.String
+  final public func getPrimaryTextColor() -> UIKit.UIColor
+  final public func getPrimaryTextColorHex() -> Swift.String
+  final public func getSecondaryTextColor() -> UIKit.UIColor
+  final public func getSecondaryTextColorHex() -> Swift.String
+  final public func getbackgroundColor() -> UIKit.UIColor
+  final public func getNavigationBarBackgroundColor() -> UIKit.UIColor
+  final public func getNavigationBarBackgroundColorHex() -> Swift.String
+  final public func getNavigationBarTextColor() -> UIKit.UIColor
+  final public func getPrimaryFont() -> UIKit.UIFont
+  final public func getSecondaryFont() -> UIKit.UIFont
+  final public func getButtonBackgroundColor() -> UIKit.UIColor
+  final public func getButtonBackgroundColorHex() -> Swift.String
+  final public func getButtonTextColor() -> UIKit.UIColor
+  final public func getButtonTextColorHex() -> Swift.String
+  @_inheritsConvenienceInitializers @objc final public class CFThemeBuilder : ObjectiveC.NSObject {
+    @objc final public func setButtonTextColor(_ buttonTextColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setButtonBackgroundColor(_ buttonColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setPrimaryFont(_ fontName: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setSecondaryFont(_ fontName: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setPrimaryTextColor(_ textColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setSecondaryTextColor(_ textColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setNavigationBarBackgroundColor(_ navigationBarBackgroundColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setNavigationBarTextColor(_ navigationBarTextColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFTheme
     @objc override dynamic public init()
     @objc deinit
   }

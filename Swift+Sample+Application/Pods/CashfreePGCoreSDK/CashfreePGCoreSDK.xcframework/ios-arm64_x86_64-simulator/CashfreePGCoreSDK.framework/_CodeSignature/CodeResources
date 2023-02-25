@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		GtvrmW069X6+UpFVkTuIl2IIrYU=
+		2tjdf1UZVwAUlpceOe1c4e81FSg=
 		</data>
 		<key>CF2FAWebViewController.nib</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/CashfreePGCoreSDK-Swift.h</key>
 		<data>
-		HnDlLjoqoJ1xGJm5CQNIDKWXsbI=
+		sHDob/B5q72vzXuYF6YFdhTVmUU=
 		</data>
 		<key>Headers/CashfreePGCoreSDK.h</key>
 		<data>
@@ -30,47 +30,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xwIbN+rL9xiBvoqs6NR9QvkMLyE=
+		ZJS9MHV6Cs41bKo0rDSQM+3fbWY=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		3hNiImV6BBlYJ2hiwgi4GjeKMqg=
+		qAlIorIRiTRfUtBY0HZ+rzUUfeA=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		LYJZAuxwGh1Gb+bD0LoX+SymFLU=
+		1/SoXz6Xp1WFMY4uxQHBN9ON7yQ=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		88uJXTbR4BthH+7UiM6M+zkWh3U=
+		g7MtpR5JG20SueJFPkR+OypgC9A=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		LYJZAuxwGh1Gb+bD0LoX+SymFLU=
+		1/SoXz6Xp1WFMY4uxQHBN9ON7yQ=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		q9v9D3Q6TwU2xRRoeyWapS9zDqw=
+		V0p++ka/kL+ZBalnFBVLde8sdLA=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		3hNiImV6BBlYJ2hiwgi4GjeKMqg=
+		qAlIorIRiTRfUtBY0HZ+rzUUfeA=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		GLt3Smu0gvmX7PLj4ImjcTnjkFw=
+		Vv+xVUSxAR9FGfPATsr0MfAbUgU=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		6qYiQ8ZdS8CUe3qrqbvylIhRsWo=
+		zQvH8n4ggE1Mw2vA06O0yGent2o=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		GLt3Smu0gvmX7PLj4ImjcTnjkFw=
+		Vv+xVUSxAR9FGfPATsr0MfAbUgU=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		B7y9EARhxA7MiwPDl0pmNUa8aqw=
+		Q7WXx/lgCtblKOknZE3TMKRWM7o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -83,7 +83,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GS7wDrJyJBa+PdUCRsIfvyde0C180uzfhjV6gfkYphI=
+			Pz/DgcygnCYrVAe7TdAfbdosM5Oz3a8PuErU5qxPCDQ=
 			</data>
 		</dict>
 		<key>CF2FAWebViewController.nib</key>
@@ -111,7 +111,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aFOsfxS0pnw/yFzbSBMPW4r1itfcqldPs61BFMc336k=
+			wjIlr/ZgTiiqC6Z+CPO7HRDpSRSxxGlA/XP69eWPpgo=
 			</data>
 		</dict>
 		<key>Headers/CashfreePGCoreSDK.h</key>
@@ -125,70 +125,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7iBctAnXG2ekRSgY0MuOVNNmrLnxqtMggB0pI9FoS2E=
+			H5/yexJBVxckIBl8qR9GCdEmV1gegYoLlSMwObt0H6k=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J4adW/bk70t/7ruaDwsHJKKfzkTx6R74NLSONfJUpF4=
+			MnDd9t0FEo852EpmElG/9F0wH+wxaUfCkPA+X+mbzs8=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2azLbkzEEsEOxoVXJoCVELBREPXFc4FBeTEZeQLESSY=
+			YUfNvygGpXuTUL04G9k1mGvWISXt8p+jnl2CuG75pLk=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J4adW/bk70t/7ruaDwsHJKKfzkTx6R74NLSONfJUpF4=
+			MnDd9t0FEo852EpmElG/9F0wH+wxaUfCkPA+X+mbzs8=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gNo0yGY1X2RgT3ad13pkpwV2Rf1lOfMiv3ZpqMBi/Cw=
+			m3axzU3voVI0DR6TH9oun+zmYtejLM6xsy1GLzJqGUA=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7iBctAnXG2ekRSgY0MuOVNNmrLnxqtMggB0pI9FoS2E=
+			H5/yexJBVxckIBl8qR9GCdEmV1gegYoLlSMwObt0H6k=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4yI/dAZC2vCX+afJscJQCgVOaP+iP+m4HAaGu7GHOGw=
+			ua55LJxMKIQZdrHVWphcz0A1lckN8q2la8XJ0Q74cy4=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z8crXsoWMM12SHUUCxjnYoeOZIU+qghqvcDw9E+Z1as=
+			nJ+1AUyr3GIAKH+xj/JmLH0k8nYMdlfMkA2KRmP1bFk=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4yI/dAZC2vCX+afJscJQCgVOaP+iP+m4HAaGu7GHOGw=
+			ua55LJxMKIQZdrHVWphcz0A1lckN8q2la8XJ0Q74cy4=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ybXPapx5My5OrKbLFXUpNZRfvRVDlnWB0xKqaUb3oxU=
+			Di/Rvlc0qRtNLA6B5OEjj+lRF8Vlzt7P7dde2SJo2yM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
