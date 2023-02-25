@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CashfreePG-Swift.h</key>
 		<data>
-		bDXAWHlD3pIEPzK6Sd1t/hg8E/Q=
+		JZs9wIxKlBCzQ0M67crh91dGPiU=
 		</data>
 		<key>Headers/CashfreePG.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WyBeRCDSrc9nJGuw9QPoB2GK72s=
+		3Cf9qbrkfJarFflQJFRsaGTKoWs=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -22,19 +22,19 @@
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/ChOLPFopdQyW/RUqh3Re1CKAvM=
+		xXSlHCSSei0pk0Gpgnu571GJ1Sw=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Hw2Iej/dUkbn/TePO4wHb3i6GZM=
+		aEizNi/r1dxRFSCYfdESENElPFs=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/ChOLPFopdQyW/RUqh3Re1CKAvM=
+		xXSlHCSSei0pk0Gpgnu571GJ1Sw=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+YxPEEp0IUhZxKLwWc+iUgVn+vY=
+		BolzqkfxhD12ShRsxl16z7cnNFQ=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Xfhway8SwlO1EK9e4ZXzC2iZvxU=
+		Ok4YxT/axAcVGzFNBi7rcGin7II=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		7z9qLOU4bMHm+DGGqU00Y2DXoLY=
+		1OmX1/h6i+775NBdmmkUE+iDq2c=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Xfhway8SwlO1EK9e4ZXzC2iZvxU=
+		Ok4YxT/axAcVGzFNBi7rcGin7II=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		s9XWKNWLgMvg4R3NSuZ34Oby8vA=
+		0TqjgTZZTSX/oXTDaHqqgyjTqq0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dqpewj4WnFLKbCskscS7C/wA7lG1042GnBO5etCfN1E=
+			DyQ5kJkHtwRT9gSQz4aqfo6WSAgwIHEdyvfwxx1igI0=
 			</data>
 		</dict>
 		<key>Headers/CashfreePG.h</key>
@@ -88,28 +88,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m+K5AJ0WAUYSG35FPgtLd5WVfVOGeJfzJ3SpsJvyo2I=
+			S1Fiis0MyqeODQ9x74jER2neueEUa9ahRpm7S7mYw6g=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D+8kz73dz/RvCFdVXaygRJAagZDmOl0JwC2Vtbi2X5k=
+			JCByPQi8NJPet+hD/GrgqP7CgvYp4WvkJliXtPbbi6o=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m+K5AJ0WAUYSG35FPgtLd5WVfVOGeJfzJ3SpsJvyo2I=
+			S1Fiis0MyqeODQ9x74jER2neueEUa9ahRpm7S7mYw6g=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p4h4KkgUiyuT6cka741Rp0CikQvpghCkv6d4vkJGvs4=
+			MKOaOeFYsfVMhx2rr7YxYvGBeQzUguGmedyXuoc4TEE=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -123,28 +123,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ohmggvwb/xw4T5BKOvbXavVLlFyZix2xP+JPHe8SSoY=
+			tW4euwY+2RIV1oxPkI8ZovkfQ+mUfPVx1nzBjFRK6Xg=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qbQDNSKNVBIAzMRDdBt8xsreI6w79iN+R3Hn2OEHe4I=
+			ms2kNq6NEOS7R0pXSap47DhtxNwkOc1xXZPDSEWSP2M=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ohmggvwb/xw4T5BKOvbXavVLlFyZix2xP+JPHe8SSoY=
+			tW4euwY+2RIV1oxPkI8ZovkfQ+mUfPVx1nzBjFRK6Xg=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sxJtoLBbn1gciagplZ5FyTt5fLRs507ZHhoqjJVZf5Q=
+			gWF4uYwPZRwSDqlVoNyt+ZihNMcfByng0cEk10OFCic=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
