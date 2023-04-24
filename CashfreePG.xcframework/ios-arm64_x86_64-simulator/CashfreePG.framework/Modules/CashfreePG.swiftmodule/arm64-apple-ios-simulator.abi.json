@@ -198,5 +198,118 @@
     ],
     "json_format_version": 8
   },
-  "ConstValues": []
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 2969,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 3013,
+      "length": 7,
+      "value": "\"2.0.2\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 3114,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 3223,
+      "length": 72,
+      "value": "\"iosx-d-\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 3238,
+      "length": 1,
+      "value": "\"-x-m-x-x-i-\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3291,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 3294,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 3832,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 4019,
+      "length": 72,
+      "value": "\"iosx-c-\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 4034,
+      "length": 1,
+      "value": "\"-x-m-x-x-i-\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4087,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 4090,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 4158,
+      "length": 72,
+      "value": "\"iosx-e-\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 4173,
+      "length": 1,
+      "value": "\"-x-m-x-x-i-\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4226,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "kind": "StringLiteral",
+      "offset": 4229,
+      "length": 2,
+      "value": "\"\""
+    }
+  ]
 }
