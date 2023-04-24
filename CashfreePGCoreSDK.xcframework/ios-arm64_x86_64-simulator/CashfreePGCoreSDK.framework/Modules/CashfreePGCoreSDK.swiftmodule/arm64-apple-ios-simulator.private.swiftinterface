@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CashfreePGCoreSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AppTrackingTransparency
@@ -63,6 +63,8 @@ import _StringProcessing
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc final public class CFPaylater : ObjectiveC.NSObject {
+  final public func getChannel() -> Swift.String
+  final public func getProvider() -> Swift.String
   @_inheritsConvenienceInitializers @objc final public class CFPaylaterBuilder : ObjectiveC.NSObject {
     @objc override dynamic public init()
     @objc final public func setProvider(_ provider: Swift.String) -> CashfreePGCoreSDK.CFPaylater.CFPaylaterBuilder
@@ -94,6 +96,7 @@ import _StringProcessing
   @objc func onError(_ error: CashfreePGCoreSDK.CFErrorResponse, order_id: Swift.String)
   @objc func verifyPayment(order_id: Swift.String)
   @objc optional func loadQRAndVerifyPayment(base64: Swift.String, order_id: Swift.String)
+  @objc optional func receivedEvent(event_name: Swift.String, meta_data: Swift.Dictionary<Swift.String, Any>)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFEMICardPayment : CashfreePGCoreSDK.CFPayment {
   @objc override final public func printDescription()
@@ -216,6 +219,8 @@ extension CashfreePGCoreSDK.CFCardValidator {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc final public class CFUPI : ObjectiveC.NSObject {
+  final public func getChannel() -> CashfreePGCoreSDK.CFUPIMODE
+  final public func getUpiId() -> Swift.String
   @objc final public func printDescription()
   @_inheritsConvenienceInitializers @objc final public class CFUPIBuilder : ObjectiveC.NSObject {
     @objc override dynamic public init()
@@ -229,6 +234,8 @@ extension CashfreePGCoreSDK.CFCardValidator {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc final public class CFWallet : ObjectiveC.NSObject {
+  final public func getChannel() -> Swift.String
+  final public func getProvider() -> Swift.String
   @_inheritsConvenienceInitializers @objc final public class CFWalletBuilder : ObjectiveC.NSObject {
     @objc override dynamic public init()
     @objc final public func setProvider(_ provider: Swift.String) -> CashfreePGCoreSDK.CFWallet.CFWalletBuilder
@@ -273,6 +280,7 @@ extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.CustomStringConvertible {
   }
 }
 @_hasMissingDesignatedInitializers @objc final public class CFCard : ObjectiveC.NSObject {
+  final public func getChannel() -> Swift.String
   @_inheritsConvenienceInitializers @objc final public class CFCardBuilder : ObjectiveC.NSObject {
     @objc override dynamic public init()
     @objc final public func setChannel(_ channel: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
@@ -292,11 +300,38 @@ extension UIKit.UIColor {
   convenience public init(hex: Swift.String)
 }
 @_hasMissingDesignatedInitializers @objc final public class CFNetbanking : ObjectiveC.NSObject {
+  final public func getChannel() -> Swift.String
+  final public func getBankCode() -> Swift.Int
   @_inheritsConvenienceInitializers @objc final public class CFNetbankingBuilder : ObjectiveC.NSObject {
     @objc override dynamic public init()
     @objc final public func setBankCode(_ code: Swift.Int) -> CashfreePGCoreSDK.CFNetbanking.CFNetbankingBuilder
     @objc final public func build() throws -> CashfreePGCoreSDK.CFNetbanking
     @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CFAnalyticsService {
+  public static let shared: CashfreePGCoreSDK.CFAnalyticsService
+  public func createMetaData(order_id: Swift.String, payment_id: Swift.String, request_id: Swift.String, currency: Swift.String, event_name: CashfreePGCoreSDK.CFAnalyticsService.AnalyticsEvent, callback: (any CashfreePGCoreSDK.CFResponseDelegate)?, payment_mode: Swift.String = "", payment_method: Swift.String = "", channel: Swift.String = "", error_code: Swift.String = "", error_message: Swift.String = "")
+  public enum AnalyticsEvent : Swift.String {
+    case cfevent_checkout_open
+    case cfevent_payment_mode_focus
+    case cfevent_payment_method_select
+    case cfevent_payment_pay
+    case cfevent_payment_started
+    case cfevent_payment_initiation_error
+    case cfevent_payment_ended
+    case cfevent_checkout_close
+    case cfevent_payment_processing_error
+    case cfevent_general_error
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
   @objc deinit
 }
@@ -382,7 +417,7 @@ extension UIKit.UITextField {
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFCorePaymentService : ObjectiveC.NSObject {
   @objc public static func getInstance() -> CashfreePGCoreSDK.CFCorePaymentService
-  @objc final public func setCallback(_ callback: CashfreePGCoreSDK.CFResponseDelegate)
+  @objc final public func setCallback(_ callback: any CashfreePGCoreSDK.CFResponseDelegate)
   @objc final public func doPayment(payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc final public func cancelPayment()
   @objc deinit
@@ -417,6 +452,9 @@ extension CashfreePGCoreSDK.CFCardValidator : Swift.RawRepresentable {}
 extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.Equatable {}
 extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.Hashable {}
 extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.RawRepresentable {}
+extension CashfreePGCoreSDK.CFAnalyticsService.AnalyticsEvent : Swift.Equatable {}
+extension CashfreePGCoreSDK.CFAnalyticsService.AnalyticsEvent : Swift.Hashable {}
+extension CashfreePGCoreSDK.CFAnalyticsService.AnalyticsEvent : Swift.RawRepresentable {}
 extension CashfreePGCoreSDK.CFUPIMODE : Swift.Equatable {}
 extension CashfreePGCoreSDK.CFUPIMODE : Swift.Hashable {}
 extension CashfreePGCoreSDK.CFUPIMODE : Swift.RawRepresentable {}
