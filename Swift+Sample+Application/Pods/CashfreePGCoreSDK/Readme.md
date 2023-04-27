@@ -1,6 +1,6 @@
 # Cashfree iOS SDK Integration Steps
 
-### Please refer our official android documentation [here](https://docs.cashfree.com/docs/ios-native).
+### Please refer our official iOS documentation [here](https://docs.cashfree.com/docs/ios-native).
 
 ### ChangeLog
 you can view the changelogs [here](https://docs.cashfree.com/docs/ios-changelog)

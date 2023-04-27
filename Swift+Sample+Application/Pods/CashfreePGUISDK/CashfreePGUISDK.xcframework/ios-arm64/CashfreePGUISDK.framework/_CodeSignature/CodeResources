@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		jE3hbLOefLyCf7gWAePxUYZZYoQ=
+		b10FE6z2aHcxAk/e81n4Jc0QzX0=
 		</data>
 		<key>CFAllBanksTableViewCell.nib</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>CFImages.momd/CFImages.mom</key>
 		<data>
-		aomvaZAnPVs3wfGphndLZXOBttE=
+		6F2W3tkcpZO4UsuvDkXX1vC59KA=
 		</data>
 		<key>CFImages.momd/VersionInfo.plist</key>
 		<data>
@@ -68,6 +68,10 @@
 		<data>
 		LwVwAd9+goToG2kJPLdjMbOs/9o=
 		</data>
+		<key>CFSavedCardTableViewCell.nib</key>
+		<data>
+		Ij7lqdBPrQ08wkl2O0bXm69XdbU=
+		</data>
 		<key>CFUPICollectTableViewCell.nib</key>
 		<data>
 		nRT6dw0PFLhbA0JXFijXiP4ob1w=
@@ -90,7 +94,7 @@
 		</data>
 		<key>Headers/CashfreePGUISDK-Swift.h</key>
 		<data>
-		bpRMlw6b1/1FirZ2zJTXGhroapU=
+		BBQwE0O6fgEmLNlL21fIUNUK+Yg=
 		</data>
 		<key>Headers/CashfreePGUISDK.h</key>
 		<data>
@@ -98,27 +102,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		eL/c38ZjLQNd3dbGZF/kX9DWwoI=
+		93RLvORvbXjdKDoKD2pq/Dyxx2I=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		jaP6I1nq3Ejvmbv7QdGoYTcV+gw=
+		GmxEx7OacYhs4NrJlu86m4egEKY=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		3dg2sp2pyBbW6yJxq6jsxdfwv3Y=
+		IaPWe4H33xUGKVX5SZ8mleIuQ3E=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		sDTUV+ZX38MjvjDjFAAwrbZy0Ac=
+		0DGxml6/fuHhy7QX/hTGXjrCuV0=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		3dg2sp2pyBbW6yJxq6jsxdfwv3Y=
+		IaPWe4H33xUGKVX5SZ8mleIuQ3E=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		6xPSXcN/nDueXQmMkQsvtAci5j0=
+		FGGmzIqSyQcswXRyFlR4Eq2mS9E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -130,7 +134,7 @@
 		</data>
 		<key>QuickCheckoutPaymentModeTableViewCell.nib/runtime.nib</key>
 		<data>
-		9Baa8uO1jGItxsowUbxj/MzwVnM=
+		c8uzwXyNlKbw9bNHH531Q7ceQ6c=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -139,7 +143,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xXEBMxp1tQ9i5f6Wym+Auex16Pk5x9sNho1zXYNkzqA=
+			8i3tnF7kbF5g+HTkKSyFnIsKhoQSwkT5qL6jouJ1PSg=
 			</data>
 		</dict>
 		<key>CFAllBanksTableViewCell.nib</key>
@@ -181,7 +185,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			06tRJ7ChcnJm2VhKxCwWv1Aze0R8NuhtHH+liEX/bOQ=
+			Kk+7afVHQb+HgHi78sJudEub+Hbffj+uIkpIXQxXVT0=
 			</data>
 		</dict>
 		<key>CFImages.momd/VersionInfo.plist</key>
@@ -247,6 +251,13 @@
 			YF3fAhUIe1SMn7q6mwI3E1yCl7RCBCWEpMRe+Lyd17s=
 			</data>
 		</dict>
+		<key>CFSavedCardTableViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6+/QMYHbtgdVrOObHM1CdGSBbN95pokkn3DxQCzLb54=
+			</data>
+		</dict>
 		<key>CFUPICollectTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -286,7 +297,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XsWh8jVxfFAyv+Qy0UbQcKkMiF59B70lSZZdX5GjAIw=
+			1D7nBfV6avuPMslr26YIoG7ZmQ2VWhffM+bbqBCENf4=
 			</data>
 		</dict>
 		<key>Headers/CashfreePGUISDK.h</key>
@@ -300,35 +311,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RLyLzU8Q1efYhLzPB8Dr8pMDcr/dCaXa7jNfefqVNi4=
+			k+kLLuJ8vIi+4h3jzgaBWzVUZzQTZHBN0FQ6zqUo+Ko=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FprVrand1DSSh+B3ChG/XWlxl8x/Lk+u+5oWAVgIpYs=
+			4wQuJNIRvb1WWVBHpEAQghztEJDRoAHsDx+m6odpDkI=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uTIqnVmak4l8y6ej08DkjsGuk6X4W41CMuLVQVlEkYU=
+			yeL8d8yS860AEad++hr/Iv8dHmQ7tuLG+z32WsiFzM0=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FprVrand1DSSh+B3ChG/XWlxl8x/Lk+u+5oWAVgIpYs=
+			4wQuJNIRvb1WWVBHpEAQghztEJDRoAHsDx+m6odpDkI=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xGmll8zEm1kIhhOpKxFNNn2Nzfk+7UkyZr0a8eHYXvQ=
+			gklbYi6TkU2CGSG7hvk5bqrwsUAAke2vn8pW6HfeHMg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -349,7 +360,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GNnIyy0jKR4mYYShCWSQZNrA2z99QPP4C9XmMhQXqVc=
+			m4WaA7CP0J6VaO2fYMu2TYhibG9VEkg0GoLMpOp/KVA=
 			</data>
 		</dict>
 	</dict>
