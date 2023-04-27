@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CFNetworkSDK-Swift.h</key>
 		<data>
-		xlygVxOt7smI0TAOXPawugyKQVc=
+		15KyNFyLH2dxdDPpJkFJ5yuE+RU=
 		</data>
 		<key>Headers/CFNetworkSDK.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xhFEdbhgnqTZVX0vhVGZKkb6vk0=
+		A/52DmPz+MWK5g7sqcK6CalSStY=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		6pzWq5yYMlDfkG359bF1ZVXLZek=
+		ZaHAmtf+0gO1RFLkMGfWyVaCAa4=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Yk/etxLczRBah5/GLqExxCeP9TY=
+		1DSEH5zbtUFKdm4vfYsXtSnhiGE=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		AZkc10TrV55yhKrM+YQ1r/Xvuf4=
+		dBx1c9ywwQBeayXNkmI9j2PDn3s=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Yk/etxLczRBah5/GLqExxCeP9TY=
+		1DSEH5zbtUFKdm4vfYsXtSnhiGE=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		4qL1p/9Kcom/SM4bnAuv0IBVS14=
+		luamu4xXDCqmLbG5BAifkAO4MrY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uOYHkeAAHQ7OQXisnF8i1XDx2PVR3EDzvCZitCOv8IE=
+			/xk4OGFl9gcCNXJTX1nIWvEwHZ71qiZOCLR1J3C2xXU=
 			</data>
 		</dict>
 		<key>Headers/CFNetworkSDK.h</key>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gAml4b+vIm2J+OnWt+/jWJzqf9WmUzPXxWZeNSlB4dg=
+			MC/v87n7Q6Lu35e9iMmoeWue402qHax90yzeM///aoY=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HuRjBXLGbZeLQli6Pygwz6pColUqohoeL0VPasBNydM=
+			/Zg/X4c4Hlev5YpVkF5jMQtpLtYW/b/Lsqw5WJCSi6w=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nsWX00Cvj9AhKjvDl5VaHHfid4ZS2YYKt0qS04Hb8uc=
+			MdKyQBA0HG9zJn+f6Wemr6cL9wNgIYOwYQuleG/NYek=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HuRjBXLGbZeLQli6Pygwz6pColUqohoeL0VPasBNydM=
+			/Zg/X4c4Hlev5YpVkF5jMQtpLtYW/b/Lsqw5WJCSi6w=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fM/7kBEldTO3+PaMVZgIWbUlR0q1yuUQ6/wufvH7tp4=
+			5fjC+SsF6//gMxc9A2QITBotPH9pbcbOogKz5oGa6s4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
