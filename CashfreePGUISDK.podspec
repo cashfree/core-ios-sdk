@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name			= "CashfreePGUISDK"
-s.version		= "2.0.6"
+s.version		= "2.0.7"
 s.summary		= "Cocoapods implementation of Cashfree Payment's Payment Gateway UI SDK"
 
 s.description		= <<-DESC
