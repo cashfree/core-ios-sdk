@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		jE3hbLOefLyCf7gWAePxUYZZYoQ=
+		b10FE6z2aHcxAk/e81n4Jc0QzX0=
 		</data>
 		<key>CFAllBanksTableViewCell.nib</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>CFImages.momd/CFImages.mom</key>
 		<data>
-		aomvaZAnPVs3wfGphndLZXOBttE=
+		6F2W3tkcpZO4UsuvDkXX1vC59KA=
 		</data>
 		<key>CFImages.momd/VersionInfo.plist</key>
 		<data>
@@ -68,6 +68,10 @@
 		<data>
 		LwVwAd9+goToG2kJPLdjMbOs/9o=
 		</data>
+		<key>CFSavedCardTableViewCell.nib</key>
+		<data>
+		Ij7lqdBPrQ08wkl2O0bXm69XdbU=
+		</data>
 		<key>CFUPICollectTableViewCell.nib</key>
 		<data>
 		nRT6dw0PFLhbA0JXFijXiP4ob1w=
@@ -90,7 +94,7 @@
 		</data>
 		<key>Headers/CashfreePGUISDK-Swift.h</key>
 		<data>
-		uYQsRY+90retubz7nf2h5sNeN+g=
+		yJkjlkUBeRJLfgbAAB3lduGx3yc=
 		</data>
 		<key>Headers/CashfreePGUISDK.h</key>
 		<data>
@@ -98,47 +102,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hlPeVP38lvZPyqMmPnomCCDTkrk=
+		1kOFuIJpquIf9bIknuO6Dz91vAs=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		jaP6I1nq3Ejvmbv7QdGoYTcV+gw=
+		pEFbG/2ultT7sXrJrRXlJej+dgQ=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		DorY05Fh45RQD8u5tjvu3ZHdzWI=
+		95eDScyKkAdLPCqwlVtnJkeVKog=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		TPvv9F9cBbnmEwDlZOxPIMmXmmk=
+		XwD2ZUXpEef8BDRtzapgiIMeLjY=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		DorY05Fh45RQD8u5tjvu3ZHdzWI=
+		95eDScyKkAdLPCqwlVtnJkeVKog=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YoN/G1iMjEi4BhsWFWlYFFKvf78=
+		PyGOgoY0CwVuGuhUWSSYiFvnKt4=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		jaP6I1nq3Ejvmbv7QdGoYTcV+gw=
+		pEFbG/2ultT7sXrJrRXlJej+dgQ=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		JxfLeNqdcQ1wouVY/+JHIzWeQOs=
+		zaaYlGkCQ1uz4xIMY5bKMaH+kUU=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		qFj703v4jTvFaybs52/h2+58RFs=
+		yiuIQXwpd+qNwAwe3Lot7ASkKF4=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		JxfLeNqdcQ1wouVY/+JHIzWeQOs=
+		zaaYlGkCQ1uz4xIMY5bKMaH+kUU=
 		</data>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FpLNNuj6l3BPL1UwRKwxlLB5kBo=
+		qBQ+9mUMeCajAd/T7J2U/egCxJg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -150,7 +154,7 @@
 		</data>
 		<key>QuickCheckoutPaymentModeTableViewCell.nib/runtime.nib</key>
 		<data>
-		9Baa8uO1jGItxsowUbxj/MzwVnM=
+		c8uzwXyNlKbw9bNHH531Q7ceQ6c=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -159,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xXEBMxp1tQ9i5f6Wym+Auex16Pk5x9sNho1zXYNkzqA=
+			8i3tnF7kbF5g+HTkKSyFnIsKhoQSwkT5qL6jouJ1PSg=
 			</data>
 		</dict>
 		<key>CFAllBanksTableViewCell.nib</key>
@@ -201,7 +205,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			06tRJ7ChcnJm2VhKxCwWv1Aze0R8NuhtHH+liEX/bOQ=
+			Kk+7afVHQb+HgHi78sJudEub+Hbffj+uIkpIXQxXVT0=
 			</data>
 		</dict>
 		<key>CFImages.momd/VersionInfo.plist</key>
@@ -267,6 +271,13 @@
 			YF3fAhUIe1SMn7q6mwI3E1yCl7RCBCWEpMRe+Lyd17s=
 			</data>
 		</dict>
+		<key>CFSavedCardTableViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6+/QMYHbtgdVrOObHM1CdGSBbN95pokkn3DxQCzLb54=
+			</data>
+		</dict>
 		<key>CFUPICollectTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -306,7 +317,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ymv+sIBotyU3VGan7HASgpQF9LJ2jIk8qGa6uZAlwSg=
+			sESXBS7eQz9FTyQBu2SIbxEdoUj+CHE46nqNWSDwt08=
 			</data>
 		</dict>
 		<key>Headers/CashfreePGUISDK.h</key>
@@ -320,70 +331,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RLyLzU8Q1efYhLzPB8Dr8pMDcr/dCaXa7jNfefqVNi4=
+			FdGPakUfoJhcj5/IJDoPP2a+C//1Qs2F0XjdIbAAmHE=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0q4wNcJ0Lxd9IYFGwOW8uhuWPESS0p57gvIsxRUjQ4g=
+			9h6MeRpm6VUW+Blm/XDzEKZZDBHrmXHnfihwsJm0jmA=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vi2LK1wK1hcjcjyw6lIC5x/gapnt2COlO0RuUb9z5GU=
+			40ZaOadyflimuEUZ95qf97tWAuV1WDaJQ7jV9Qzqyqw=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0q4wNcJ0Lxd9IYFGwOW8uhuWPESS0p57gvIsxRUjQ4g=
+			9h6MeRpm6VUW+Blm/XDzEKZZDBHrmXHnfihwsJm0jmA=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O1gaikbxG09/AwOBU6LtaaiZ5JdLBcMmyjlkxt/Irso=
+			G/RvWUr3oq6qA+t4DSvTNNlJ71QW9qwHZHZTgUJYU4A=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RLyLzU8Q1efYhLzPB8Dr8pMDcr/dCaXa7jNfefqVNi4=
+			FdGPakUfoJhcj5/IJDoPP2a+C//1Qs2F0XjdIbAAmHE=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SDHVb0s1xIukW9CH/9EGb8vwcOuuZCVyUSO1dUqR0Go=
+			SWE398flsQAdTzYfmUiJP/aWHRP1RvR+JZ8wUv1VvyA=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c4vK/RlOulCRGpAQ9A48heScpItl97nB1fILpzB2kgk=
+			5tLvIT85MFeJO3kTJ+tRdu1GfuJ6ULYFm8Ok/Us21mM=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SDHVb0s1xIukW9CH/9EGb8vwcOuuZCVyUSO1dUqR0Go=
+			SWE398flsQAdTzYfmUiJP/aWHRP1RvR+JZ8wUv1VvyA=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGUISDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8zmg0+op0Fs/hQUh8D9lJgkwnHreEC2BYbqDaTz5Sf0=
+			ueMy5k6kJlBVI0IKnYRvZXyJKQYvDxqbKaPsutKgCG0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -404,7 +415,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GNnIyy0jKR4mYYShCWSQZNrA2z99QPP4C9XmMhQXqVc=
+			m4WaA7CP0J6VaO2fYMu2TYhibG9VEkg0GoLMpOp/KVA=
 			</data>
 		</dict>
 	</dict>
