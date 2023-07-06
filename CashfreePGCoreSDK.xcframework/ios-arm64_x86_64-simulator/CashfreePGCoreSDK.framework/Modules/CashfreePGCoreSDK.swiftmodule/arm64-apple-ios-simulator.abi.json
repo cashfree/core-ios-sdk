@@ -14735,126 +14735,133 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 12261,
+      "offset": 12236,
+      "length": 9,
+      "value": "\"credpay\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
+      "kind": "StringLiteral",
+      "offset": 12450,
       "length": 18,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 12278,
+      "offset": 12467,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 12405,
+      "offset": 12594,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 12612,
+      "offset": 12801,
       "length": 5,
       "value": "\"UPI\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 12776,
+      "offset": 12965,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 12820,
+      "offset": 13009,
       "length": 13,
       "value": "\"displayName\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 12849,
+      "offset": 13038,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 12854,
+      "offset": 13043,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "BooleanLiteral",
-      "offset": 13176,
+      "offset": 13365,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 13333,
+      "offset": 13522,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 13388,
+      "offset": 13577,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 13518,
+      "offset": 13707,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 13989,
+      "offset": 14178,
       "length": 6,
       "value": "\"code\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 13999,
+      "offset": 14188,
       "length": 31,
       "value": "\"transaction_cancelled_by_user\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 14110,
+      "offset": 14299,
       "length": 14,
       "value": "\"USER_DROPPED\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 14254,
+      "offset": 14443,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 14309,
+      "offset": 14498,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 14439,
+      "offset": 14628,
       "length": 2,
       "value": "\"\""
     },
@@ -16352,35 +16359,42 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 8133,
+      "offset": 8119,
+      "length": 9,
+      "value": "\"credpay\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 8160,
       "length": 7,
       "value": "\"paytm\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 8195,
+      "offset": 8222,
       "length": 8,
       "value": "\"paytm:\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 8211,
+      "offset": 8238,
       "length": 10,
       "value": "\"paytmmp:\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 8283,
+      "offset": 8310,
       "length": 23,
       "value": "\"verifyPaymentForiOS()\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
       "kind": "Dictionary",
-      "offset": 8488,
+      "offset": 8515,
       "length": 3,
       "value": "[]"
     },
@@ -19257,112 +19271,126 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1580,
+      "offset": 1577,
+      "length": 6,
+      "value": "\"CRED\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1613,
       "length": 24,
       "value": "\"CASHFREE PAYMENTS TEST\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1679,
+      "offset": 1712,
       "length": 8,
       "value": "\"tez:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1720,
+      "offset": 1753,
       "length": 12,
       "value": "\"phonepe:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1763,
+      "offset": 1796,
       "length": 12,
       "value": "\"paytmmp:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1805,
+      "offset": 1838,
       "length": 9,
       "value": "\"bhim:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1847,
+      "offset": 1877,
+      "length": 12,
+      "value": "\"credpay:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1922,
       "length": 11,
       "value": "\"cftest:\/\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1905,
+      "offset": 1980,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "Array",
-      "offset": 1960,
-      "length": 87,
-      "value": "[\"tez:\/\/\", \"phonepe:\/\/\", \"paytmmp:\/\/\", \"bhim:\/\/\"]"
+      "offset": 2035,
+      "length": 109,
+      "value": "[\"tez:\/\/\", \"phonepe:\/\/\", \"paytmmp:\/\/\", \"bhim:\/\/\", \"credpay:\/\/\"]"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2216,
+      "offset": 2313,
       "length": 53,
       "value": "\"https:\/\/sandbox.cashfree.com\/pg\/orders\/sessions\/app\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2306,
+      "offset": 2492,
       "length": 49,
       "value": "\"https:\/\/api.cashfree.com\/pg\/orders\/sessions\/app\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2485,
+      "offset": 2765,
       "length": 45,
       "value": "\"https:\/\/sandbox.cashfree.com\/pg\/view\/recon\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2567,
+      "offset": 2932,
       "length": 41,
       "value": "\"https:\/\/api.cashfree.com\/pg\/view\/recon\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2792,
+      "offset": 3243,
       "length": 7,
       "value": "1"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2792,
+      "offset": 3243,
       "length": 7,
       "value": "1"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2958,
+      "offset": 3409,
       "length": 12,
       "value": "\"PRODUCTION\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3013,
+      "offset": 3464,
       "length": 9,
       "value": "\"SANDBOX\""
     },
@@ -20601,126 +20629,126 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 954,
+      "offset": 910,
       "length": 12,
       "value": "\"payment_id\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 1060,
+      "offset": 1016,
       "length": 14,
       "value": "\"payment_mode\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 1172,
+      "offset": 1128,
       "length": 16,
       "value": "\"payment_method\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 1282,
+      "offset": 1238,
       "length": 10,
       "value": "\"currency\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 1379,
+      "offset": 1335,
       "length": 9,
       "value": "\"channel\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 1477,
+      "offset": 1433,
       "length": 12,
       "value": "\"error_code\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 1584,
+      "offset": 1540,
       "length": 15,
       "value": "\"error_message\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 2361,
+      "offset": 2317,
       "length": 23,
       "value": "\"cfevent_general_error\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 2460,
+      "offset": 2416,
       "length": 34,
       "value": "\"cfevent_payment_processing_error\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 2560,
+      "offset": 2516,
       "length": 24,
       "value": "\"cfevent_checkout_close\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 2649,
+      "offset": 2605,
       "length": 23,
       "value": "\"cfevent_payment_ended\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 2748,
+      "offset": 2704,
       "length": 34,
       "value": "\"cfevent_payment_initiation_error\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 2849,
+      "offset": 2805,
       "length": 25,
       "value": "\"cfevent_payment_started\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 2937,
+      "offset": 2893,
       "length": 21,
       "value": "\"cfevent_payment_pay\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 3023,
+      "offset": 2979,
       "length": 23,
       "value": "\"cfevent_checkout_open\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 3116,
+      "offset": 3072,
       "length": 28,
       "value": "\"cfevent_payment_mode_focus\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 3217,
+      "offset": 3173,
       "length": 31,
       "value": "\"cfevent_payment_method_select\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 3293,
+      "offset": 3249,
       "length": 2,
       "value": "\"\""
     },
@@ -20741,98 +20769,98 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 419,
+      "offset": 520,
       "length": 52,
       "value": "\"https:\/\/api.cashfree.com\/pg\/view\/sessions\/checkout\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 529,
+      "offset": 732,
       "length": 8,
       "value": "\"<html>\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 556,
+      "offset": 759,
       "length": 8,
       "value": "\"<body>\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 583,
+      "offset": 786,
       "length": 83,
       "value": "\"<form id='redirectForm' name='order' action='\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 646,
+      "offset": 849,
       "length": 1,
       "value": "\"' method='post'>\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 699,
+      "offset": 902,
       "length": 97,
       "value": "\"<input type='hidden' name='payment_session_id' value='\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 791,
+      "offset": 994,
       "length": 1,
       "value": "\"'\/>\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 811,
+      "offset": 1014,
       "length": 66,
       "value": "\"<input type='hidden' name='platform' value='\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 872,
+      "offset": 1075,
       "length": 1,
       "value": "\"'\/>\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 892,
+      "offset": 1095,
       "length": 9,
       "value": "\"<\/form>\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 912,
+      "offset": 1115,
       "length": 11,
       "value": "\"<script\n\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 950,
+      "offset": 1153,
       "length": 529,
       "value": "\" type=\"text\/javascript\">\t window.onload = function () { const form = document.getElementById(\"redirectForm\"); const meta = { userAgent: window.navigator.userAgent, }; const sortedMeta = Object.entries(meta).sort().reduce((o, [k, v]) => { o[k] = v; return o; }, {}); const base64Meta = btoa(JSON.stringify(sortedMeta)); FN = document.createElement('input'); FN.setAttribute('type', 'hidden'); FN.setAttribute('name', 'browser_meta'); FN.setAttribute('value', base64Meta); form.appendChild(FN); form.submit(); }  <\/script>\n\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 1494,
+      "offset": 1697,
       "length": 9,
       "value": "\"<\/body>\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/WebCheckout\/CFWebCheckout+Helper.swift",
       "kind": "StringLiteral",
-      "offset": 1518,
+      "offset": 1721,
       "length": 9,
       "value": "\"<\/html>\""
     },
@@ -21266,42 +21294,77 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
       "kind": "StringLiteral",
-      "offset": 2424,
+      "offset": 2390,
+      "length": 13,
+      "value": "\"displayName\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 2443,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
       "kind": "StringLiteral",
-      "offset": 2433,
+      "offset": 2490,
+      "length": 6,
+      "value": "\"icon\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 2514,
+      "length": 9,
+      "value": "\"credpay\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 2596,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 2678,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 2687,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
       "kind": "IntegerLiteral",
-      "offset": 2674,
+      "offset": 2928,
       "length": 6,
       "value": "1"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
       "kind": "IntegerLiteral",
-      "offset": 2674,
+      "offset": 2928,
       "length": 6,
       "value": "1"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
       "kind": "StringLiteral",
-      "offset": 2832,
+      "offset": 3086,
       "length": 9,
       "value": "\"collect\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
       "kind": "StringLiteral",
-      "offset": 2883,
+      "offset": 3137,
       "length": 6,
       "value": "\"link\""
     },
