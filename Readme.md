@@ -1,4 +1,4 @@
-# Cashfree Flutter SDK Sample
+# Cashfree iOS SDK Sample
 
 ![GitHub](https://img.shields.io/github/license/cashfree/core-ios-sdk) ![Discord](https://img.shields.io/discord/931125665669972018?label=discord) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/cashfree/core-ios-sdk/master) ![GitHub release (with filter)](https://img.shields.io/github/v/release/cashfree/core-ios-sdk?label=latest) ![GitHub forks](https://img.shields.io/github/forks/cashfree/core-ios-sdk) ![GitHub Repo stars](https://img.shields.io/github/stars/cashfree/core-ios-sdk)
 
