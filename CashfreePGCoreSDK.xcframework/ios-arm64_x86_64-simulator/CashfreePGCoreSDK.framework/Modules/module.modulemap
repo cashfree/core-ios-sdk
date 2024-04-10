@@ -1,7 +1,7 @@
 framework module CashfreePGCoreSDK {
   umbrella header "CashfreePGCoreSDK.h"
-
   export *
+
   module * { export * }
 }
 
