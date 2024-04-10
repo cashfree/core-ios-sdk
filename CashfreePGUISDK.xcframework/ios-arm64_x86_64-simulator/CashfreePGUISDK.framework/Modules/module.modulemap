@@ -1,7 +1,7 @@
 framework module CashfreePGUISDK {
   umbrella header "CashfreePGUISDK.h"
-
   export *
+
   module * { export * }
 }
 
