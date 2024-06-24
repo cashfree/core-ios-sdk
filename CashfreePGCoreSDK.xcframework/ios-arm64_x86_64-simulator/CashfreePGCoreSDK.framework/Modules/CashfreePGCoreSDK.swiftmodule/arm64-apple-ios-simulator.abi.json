@@ -6103,6 +6103,35 @@
               },
               {
                 "kind": "Function",
+                "name": "enableBackgroundBlur",
+                "printedName": "enableBackgroundBlur(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFUPIPaymentBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder",
+                    "usr": "s:17CashfreePGCoreSDK12CFUPIPaymentC0D7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17CashfreePGCoreSDK12CFUPIPaymentC0D7BuilderC20enableBackgroundBluryAESbF",
+                "mangledName": "$s17CashfreePGCoreSDK12CFUPIPaymentC0D7BuilderC20enableBackgroundBluryAESbF",
+                "moduleName": "CashfreePGCoreSDK",
+                "declAttributes": [
+                  "Final",
+                  "AccessControl",
+                  "ObjC"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
                 "name": "build",
                 "printedName": "build()",
                 "children": [
@@ -13958,22 +13987,29 @@
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 387,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "StringLiteral",
-      "offset": 444,
+      "offset": 494,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "BooleanLiteral",
-      "offset": 719,
+      "offset": 769,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "IntegerLiteral",
-      "offset": 15491,
+      "offset": 15755,
       "length": 1,
       "value": "0"
     },
@@ -14616,17 +14652,31 @@
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1071,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1178,
+      "offset": 1228,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1305,
+      "offset": 1355,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2022,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
@@ -14813,7 +14863,21 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreeUPIObject.swift",
       "kind": "BooleanLiteral",
-      "offset": 1794,
+      "offset": 777,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreeUPIObject.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1999,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreeUPIObject.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2053,
       "length": 4,
       "value": "true"
     },
