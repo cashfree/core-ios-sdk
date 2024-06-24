@@ -1165,6 +1165,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK12CFUPIPayment19CFUPIPaymentBuilder")
 /// It returns an instance of <em>CFUPIPaymentBuilder</em> to continue the build process
 - (CFUPIPaymentBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
 - (CFUPIPaymentBuilder * _Nonnull)enableRecon:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
+- (CFUPIPaymentBuilder * _Nonnull)enableBackgroundBlur:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
 /// This method builds an object of <em>CFUPIPayment</em>
 ///
 /// throws:

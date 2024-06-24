@@ -216,6 +216,7 @@ extension CashfreePGCoreSDK.CFCardValidator {
     @objc final public func setUPI(_ upi: CashfreePGCoreSDK.CFUPI) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
     @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
     @objc final public func enableRecon(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
+    @objc final public func enableBackgroundBlur(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
     @objc final public func build() throws -> CashfreePGCoreSDK.CFUPIPayment
     @objc deinit
   }
