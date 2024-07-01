@@ -2863,6 +2863,34 @@
           },
           {
             "kind": "Function",
+            "name": "setShowLoader",
+            "printedName": "setShowLoader(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment(im)setShowLoader:",
+            "mangledName": "$s17CashfreePGCoreSDK9CFPaymentC13setShowLoaderyySbF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "AccessControl",
+              "Final",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getPlatform",
             "printedName": "getPlatform()",
             "children": [
@@ -14008,8 +14036,15 @@
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 888,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "IntegerLiteral",
-      "offset": 15755,
+      "offset": 17107,
       "length": 1,
       "value": "0"
     },
@@ -14089,6 +14124,13 @@
       "offset": 210,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreePaymentObject.swift",
+      "kind": "BooleanLiteral",
+      "offset": 380,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
