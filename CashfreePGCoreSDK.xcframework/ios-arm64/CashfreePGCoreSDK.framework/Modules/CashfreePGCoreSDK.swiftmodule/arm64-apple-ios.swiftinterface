@@ -115,6 +115,7 @@ import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @objc open class CFPayment : ObjectiveC.NSObject {
   @objc public func printDescription()
   @objc final public func setPlatform(_ platform: Swift.String)
+  @objc final public func setShowLoader(_ flag: Swift.Bool)
   @objc public func getPlatform() -> Swift.String
   @objc final public func setTheme(_ theme: CashfreePGCoreSDK.CFTheme)
   @objc override dynamic public init()

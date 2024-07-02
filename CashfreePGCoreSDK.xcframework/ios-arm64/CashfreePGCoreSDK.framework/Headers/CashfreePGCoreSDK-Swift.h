@@ -399,6 +399,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK9CFPayment")
 /// \param platform It is of type string, by default it set to ios-el
 ///
 - (void)setPlatform:(NSString * _Nonnull)platform;
+- (void)setShowLoader:(BOOL)flag;
 - (NSString * _Nonnull)getPlatform SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the theme for core ui -> Headless OTP
 /// \param theme It is of type CFThemeCore
