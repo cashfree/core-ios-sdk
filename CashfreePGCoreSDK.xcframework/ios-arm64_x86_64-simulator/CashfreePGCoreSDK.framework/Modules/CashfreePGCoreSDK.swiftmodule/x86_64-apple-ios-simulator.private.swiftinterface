@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CashfreePGCoreSDK
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CashfreePGCoreSDK
 import AppTrackingTransparency
 import CFNetworkSDK
 import CashfreeAnalyticsSDK
@@ -20,6 +20,26 @@ import _SwiftConcurrencyShims
   public static func createCustomResponse(txStatus: Swift.String, response: Swift.Dictionary<Swift.String, Any>, order_id: Swift.String) -> CashfreePGCoreSDK.CFErrorResponse
   public static func setXRequestId(environment: CashfreePGCoreSDK.CFENVIRONMENT, payment_session_id: Swift.String)
   @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class CFCardComponent : UIKit.UIView, UIKit.UITextFieldDelegate, CFNetworkSDK.APIHandlers {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor(unsafe) public func initializeCardComponent(session: CashfreePGCoreSDK.CFSession, card_listener: any CashfreePGCoreSDK.CFCardListener, hint_text: Swift.String, font: UIKit.UIFont?, textColor: UIKit.UIColor?, enable_pasting: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func onSuccess(apiState: CFNetworkSDK.APIState, result: Swift.Dictionary<Swift.String, Any>)
+  @_Concurrency.MainActor(unsafe) public func onSuccess(apiState: CFNetworkSDK.APIState, result: [Swift.Dictionary<Swift.String, Any>])
+  @_Concurrency.MainActor(unsafe) public func onFailure(apiState: CFNetworkSDK.APIState, response: Swift.Dictionary<Swift.String, Any>)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class CFCardListenerResponse : ObjectiveC.NSObject {
+  public var numberOfCharacters: Swift.Int?
+  public var message: Swift.String?
+  public var type: Swift.String?
+  public var meta_data: Swift.Dictionary<Swift.String, Any>?
+  @objc deinit
+}
+@objc public protocol CFCardListener {
+  @objc func cardMetaData(card_listener_response: CashfreePGCoreSDK.CFCardListenerResponse)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFCardPayment : CashfreePGCoreSDK.CFPayment {
   @objc override final public func printDescription()
@@ -205,6 +225,7 @@ extension CashfreePGCoreSDK.CFCardValidator {
 }
 @_hasMissingDesignatedInitializers public class CFValidator {
   public static let shared: CashfreePGCoreSDK.CFValidator
+  public func luhnCheck(_ number: Swift.String) -> Swift.Bool
   public func getCardType(cardNumber: Swift.String) -> CashfreePGCoreSDK.CFCardValidator?
   public func validateUPI(upiId: Swift.String) -> Swift.Bool
   public func validateExpiry(cardExpiry: Swift.String) -> Swift.Bool
@@ -295,6 +316,7 @@ extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.CustomStringConvertible {
     @objc final public func setCardExpiryYear(_ year: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
     @objc final public func setCVV(_ cvv: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
     @objc final public func setInstrumentId(_ instrument_id: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func setCardComponet(_ card_component: CashfreePGCoreSDK.CFCardComponent) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
     @objc final public func build() throws -> CashfreePGCoreSDK.CFCard
     @objc deinit
   }
