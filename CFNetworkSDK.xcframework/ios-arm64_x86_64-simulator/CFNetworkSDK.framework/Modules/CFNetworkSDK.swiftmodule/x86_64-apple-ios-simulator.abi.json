@@ -313,6 +313,80 @@
             "moduleName": "CFNetworkSDK"
           },
           {
+            "kind": "Var",
+            "name": "CARD_BIN",
+            "printedName": "CARD_BIN",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CFNetworkSDK.APIState.Type) -> CFNetworkSDK.APIState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIState",
+                    "printedName": "CFNetworkSDK.APIState",
+                    "usr": "s:12CFNetworkSDK8APIStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CFNetworkSDK.APIState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIState",
+                        "printedName": "CFNetworkSDK.APIState",
+                        "usr": "s:12CFNetworkSDK8APIStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12CFNetworkSDK8APIStateO8CARD_BINyA2CmF",
+            "mangledName": "$s12CFNetworkSDK8APIStateO8CARD_BINyA2CmF",
+            "moduleName": "CFNetworkSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "CARD_TDR",
+            "printedName": "CARD_TDR",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CFNetworkSDK.APIState.Type) -> CFNetworkSDK.APIState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIState",
+                    "printedName": "CFNetworkSDK.APIState",
+                    "usr": "s:12CFNetworkSDK8APIStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CFNetworkSDK.APIState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APIState",
+                        "printedName": "CFNetworkSDK.APIState",
+                        "usr": "s:12CFNetworkSDK8APIStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12CFNetworkSDK8APIStateO8CARD_TDRyA2CmF",
+            "mangledName": "$s12CFNetworkSDK8APIStateO8CARD_TDRyA2CmF",
+            "moduleName": "CFNetworkSDK"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -650,12 +724,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -670,7 +744,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "APIHandlers",
-                "printedName": "CFNetworkSDK.APIHandlers",
+                "printedName": "any CFNetworkSDK.APIHandlers",
                 "usr": "s:12CFNetworkSDK11APIHandlersP"
               }
             ],
@@ -801,7 +875,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CFNetworkDelegate",
-                "printedName": "CFNetworkSDK.CFNetworkDelegate",
+                "printedName": "any CFNetworkSDK.CFNetworkDelegate",
                 "usr": "s:12CFNetworkSDK0A8DelegateP"
               },
               {
@@ -813,7 +887,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "APIHandlers",
-                "printedName": "CFNetworkSDK.APIHandlers",
+                "printedName": "any CFNetworkSDK.APIHandlers",
                 "usr": "s:12CFNetworkSDK11APIHandlersP"
               }
             ],
@@ -892,149 +966,142 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
       "kind": "IntegerLiteral",
-      "offset": 72,
-      "length": 12,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 94,
-      "length": 11,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 115,
-      "length": 3,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 128,
-      "length": 9,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 147,
-      "length": 10,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 167,
-      "length": 10,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 187,
-      "length": 12,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 72,
-      "length": 12,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 94,
-      "length": 11,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 115,
-      "length": 3,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 128,
-      "length": 9,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 147,
-      "length": 10,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 167,
-      "length": 10,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 187,
-      "length": 12,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/NetworkLayer\/BaseCashfreeNetworkLayer.swift",
-      "kind": "StringLiteral",
-      "offset": 589,
-      "length": 14,
-      "value": "\"Content-Type\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/NetworkLayer\/BaseCashfreeNetworkLayer.swift",
-      "kind": "StringLiteral",
-      "offset": 607,
-      "length": 18,
-      "value": "\"application\/json\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/NetworkLayer\/BaseCashfreeNetworkLayer.swift",
-      "kind": "StringLiteral",
-      "offset": 711,
-      "length": 5,
-      "value": "\"GET\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/NetworkLayer\/BaseCashfreeNetworkLayer.swift",
-      "kind": "Array",
-      "offset": 824,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/NetworkLayer\/BaseCashfreeNetworkLayer.swift",
-      "kind": "StringLiteral",
-      "offset": 1691,
-      "length": 14,
-      "value": "\"Content-Type\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/NetworkLayer\/BaseCashfreeNetworkLayer.swift",
-      "kind": "StringLiteral",
-      "offset": 1709,
-      "length": 18,
-      "value": "\"application\/json\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/NetworkLayer\/CFNetwork.swift",
-      "kind": "StringLiteral",
-      "offset": 429,
+      "offset": 209,
       "length": 8,
-      "value": "\"DELETE\""
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 227,
+      "length": 8,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 72,
+      "length": 12,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 94,
+      "length": 11,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 115,
+      "length": 3,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 128,
+      "length": 9,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 147,
+      "length": 10,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 167,
+      "length": 10,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 187,
+      "length": 12,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 209,
+      "length": 8,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 227,
+      "length": 8,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 72,
+      "length": 12,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 94,
+      "length": 11,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 115,
+      "length": 3,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 128,
+      "length": 9,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 147,
+      "length": 10,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 167,
+      "length": 10,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 187,
+      "length": 12,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 209,
+      "length": 8,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 227,
+      "length": 8,
+      "value": "9"
     }
   ]
 }

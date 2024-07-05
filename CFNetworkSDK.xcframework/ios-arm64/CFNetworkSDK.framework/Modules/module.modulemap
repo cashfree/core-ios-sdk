@@ -1,7 +1,7 @@
 framework module CFNetworkSDK {
   umbrella header "CFNetworkSDK.h"
-
   export *
+
   module * { export * }
 }
 
