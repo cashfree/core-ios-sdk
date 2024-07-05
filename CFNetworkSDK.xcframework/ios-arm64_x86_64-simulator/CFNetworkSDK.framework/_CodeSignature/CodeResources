@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CFNetworkSDK-Swift.h</key>
 		<data>
-		WCTZnWifi3hkW5H4GBGsalMRnQM=
+		tNqJa4r9Y1EaNdO/NIBn2rZPIw4=
 		</data>
 		<key>Headers/CFNetworkSDK.h</key>
 		<data>
@@ -14,51 +14,51 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cQteZYVpigaKXZTFfWl6WB+Ci/A=
+		hWK6pM2bJibV2UIc1dWyvgnnqVs=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ZaHAmtf+0gO1RFLkMGfWyVaCAa4=
+		U2+0GoAfbn5MYHpmTMho29d6EOU=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		O1m3YEoNgI0ohWWY4cdBxj6wBXM=
+		34/lcj6emXEjI6BR1nxu/dMefzQ=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		rXUVa7ElsJLLhG40f2r6Uxv87Os=
+		LL92KtySv1CBiy3SJt3uATJSkpc=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		O1m3YEoNgI0ohWWY4cdBxj6wBXM=
+		34/lcj6emXEjI6BR1nxu/dMefzQ=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WOSXQgiaetAGPuIcYEYTmWVhKMo=
+		iZs3Bs/t9ti22y3I1RsP1AR8HbY=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ZaHAmtf+0gO1RFLkMGfWyVaCAa4=
+		U2+0GoAfbn5MYHpmTMho29d6EOU=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		f5aH1TsczdhZf5gxK76HbDv/BL4=
+		6lpDKA6k6rxc475QSKooztH5GeA=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		2BSr/PQzXtthLvt8B/+DKiRTM2w=
+		lpZdK1UavvHZAJQQ+FAtciN/TNk=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		f5aH1TsczdhZf5gxK76HbDv/BL4=
+		6lpDKA6k6rxc475QSKooztH5GeA=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		V/Q6z2zsoO00i+8DkPctMMpuobc=
+		hhdkcaLMKW4Dfg3PtZCWHPsGB5Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		AFL0w7r3Xha1urM3OWhZciLjOrw=
+		tEegjEgvhLN9jvxHeZAM7Xb5nhI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nYkZPMT1CiM9xGZVeGa974IeHFNmtREvyDw6OOUZZmA=
+			PnUOeTi6r4zqK3CV4uUbdtxu6GyNLGcQfbwDtzRxH3M=
 			</data>
 		</dict>
 		<key>Headers/CFNetworkSDK.h</key>
@@ -81,77 +81,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MC/v87n7Q6Lu35e9iMmoeWue402qHax90yzeM///aoY=
+			dQZCYbOuM9a2i9gD3K0Gu8865BkVCXl4QMERM+vFd8k=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IDGfht3ixnoP+dMVS8o+eF/bbeDhzk8SDxOiN4jG4x0=
+			MbmG7JNx08Bewau5RtrgKh5S3z8PNOcMTLAelXo1stM=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8mSNDL3CfUSn6Hu74zc/aIfny5eYnOhJxSZnJKELJFg=
+			JKLySf+2iff6+LIZzn7AVTwtYToWRSJslwoHM7I4wBY=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IDGfht3ixnoP+dMVS8o+eF/bbeDhzk8SDxOiN4jG4x0=
+			MbmG7JNx08Bewau5RtrgKh5S3z8PNOcMTLAelXo1stM=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QZLmuJxTv5jViQGKdpzqjBB0yQlMZHQfhtP3O5AhS6Y=
+			HuwAvpZGIEv0LxsKnlAifvuXle6tJY6BG+rrAjlUTJ4=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MC/v87n7Q6Lu35e9iMmoeWue402qHax90yzeM///aoY=
+			dQZCYbOuM9a2i9gD3K0Gu8865BkVCXl4QMERM+vFd8k=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NKLsRdtHFf5PolsbgUIdBsyFJB+cN6tNev9BGOF1Fdo=
+			wHQmBxvkZ+NL1lgh7DcAfWuCaJV5A6lWjgw3dANSJhw=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1tlF2mkSnOuTYJxU06PwELw6mk6/F2GcaB5o2m+JTxE=
+			osjTfyjufbY+Y1XIs2jKBHVbVj3qzMc3BZvtlxK8UAc=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NKLsRdtHFf5PolsbgUIdBsyFJB+cN6tNev9BGOF1Fdo=
+			wHQmBxvkZ+NL1lgh7DcAfWuCaJV5A6lWjgw3dANSJhw=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bsdB7TM1wo2b2tWwFcrsW26RuJb8FZZuIgYJbg7Q9AU=
+			mMSLV1LMDIRdXWXbBoGLxwrM1MPG554UHExU6moaSjs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+7XJpKTMH4Rytmvg7/whzQy+o/PEFxXGQn7SG+9oVsw=
+			VQxqa9QIfq9ATHzin1OuIsInsz4uRjuzy631BIzAPv8=
 			</data>
 		</dict>
 	</dict>
