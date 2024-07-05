@@ -145,6 +145,1085 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CFNetworkSDK",
+        "printedName": "CFNetworkSDK",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CFCardComponent",
+        "printedName": "CFCardComponent",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CFCardComponent",
+                "printedName": "CashfreePGCoreSDK.CFCardComponent",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardComponent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardComponent(im)initWithFrame:",
+            "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC5frameACSo6CGRectV_tcfc",
+            "moduleName": "CashfreePGCoreSDK",
+            "overriding": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "initializeCardComponent",
+            "printedName": "initializeCardComponent(session:card_listener:hint_text:font:textColor:enable_pasting:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFSession",
+                "printedName": "CashfreePGCoreSDK.CFSession",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFSession"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFCardListener",
+                "printedName": "any CashfreePGCoreSDK.CFCardListener",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(pl)CFCardListener"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardComponent(im)initializeCardComponentWithSession:card_listener:hint_text:font:textColor:enable_pasting:",
+            "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC014initializeCardE07session13card_listener9hint_text4font0L5Color14enable_pastingyAA9CFSessionC_AA0D8Listener_pSSSo6UIFontCSgSo7UIColorCSgSbtF",
+            "moduleName": "CashfreePGCoreSDK",
+            "objc_name": "initializeCardComponentWithSession:card_listener:hint_text:font:textColor:enable_pasting:",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "textField",
+            "printedName": "textField(_:shouldChangeCharactersIn:replacementString:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UITextField",
+                "printedName": "UIKit.UITextField",
+                "usr": "c:objc(cs)UITextField"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "_NSRange",
+                "printedName": "Foundation._NSRange",
+                "usr": "c:@S@_NSRange"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardComponent(im)textField:shouldChangeCharactersInRange:replacementString:",
+            "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC9textField_24shouldChangeCharactersIn17replacementStringSbSo06UITextG0C_So8_NSRangeVSStF",
+            "moduleName": "CashfreePGCoreSDK",
+            "objc_name": "textField:shouldChangeCharactersInRange:replacementString:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "canPerformAction",
+            "printedName": "canPerformAction(_:withSender:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Selector",
+                "printedName": "ObjectiveC.Selector",
+                "usr": "s:10ObjectiveC8SelectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardComponent(im)canPerformAction:withSender:",
+            "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC16canPerformAction_10withSenderSb10ObjectiveC8SelectorV_ypSgtF",
+            "moduleName": "CashfreePGCoreSDK",
+            "overriding": true,
+            "objc_name": "canPerformAction:withSender:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onSuccess",
+            "printedName": "onSuccess(apiState:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APIState",
+                "printedName": "CFNetworkSDK.APIState",
+                "usr": "s:12CFNetworkSDK8APIStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK15CFCardComponentC9onSuccess8apiState6resulty09CFNetworkC08APIStateO_SDySSypGtF",
+            "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC9onSuccess8apiState6resulty09CFNetworkC08APIStateO_SDySSypGtF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onSuccess",
+            "printedName": "onSuccess(apiState:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APIState",
+                "printedName": "CFNetworkSDK.APIState",
+                "usr": "s:12CFNetworkSDK8APIStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK15CFCardComponentC9onSuccess8apiState6resulty09CFNetworkC08APIStateO_SaySDySSypGGtF",
+            "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC9onSuccess8apiState6resulty09CFNetworkC08APIStateO_SaySDySSypGGtF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onFailure",
+            "printedName": "onFailure(apiState:response:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APIState",
+                "printedName": "CFNetworkSDK.APIState",
+                "usr": "s:12CFNetworkSDK8APIStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK15CFCardComponentC9onFailure8apiState8responsey09CFNetworkC08APIStateO_SDySSypGtF",
+            "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC9onFailure8apiState8responsey09CFNetworkC08APIStateO_SDySSypGtF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardComponent",
+        "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC",
+        "moduleName": "CashfreePGCoreSDK",
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "APIHandlers",
+            "printedName": "APIHandlers",
+            "usr": "s:12CFNetworkSDK11APIHandlersP",
+            "mangledName": "$s12CFNetworkSDK11APIHandlersP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CFCardListenerResponse",
+        "printedName": "CFCardListenerResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "numberOfCharacters",
+            "printedName": "numberOfCharacters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC18numberOfCharactersSiSgvp",
+            "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC18numberOfCharactersSiSgvp",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC18numberOfCharactersSiSgvg",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC18numberOfCharactersSiSgvg",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC18numberOfCharactersSiSgvs",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC18numberOfCharactersSiSgvs",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC18numberOfCharactersSiSgvM",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC18numberOfCharactersSiSgvM",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC7messageSSSgvp",
+            "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC7messageSSSgvp",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC7messageSSSgvg",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC7messageSSSgvg",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC7messageSSSgvs",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC7messageSSSgvs",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC7messageSSSgvM",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC7messageSSSgvM",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC4typeSSSgvp",
+            "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC4typeSSSgvp",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC4typeSSSgvg",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC4typeSSSgvg",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC4typeSSSgvs",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC4typeSSSgvs",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC4typeSSSgvM",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC4typeSSSgvM",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "meta_data",
+            "printedName": "meta_data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC9meta_dataSDySSypGSgvp",
+            "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC9meta_dataSDySSypGSgvp",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC9meta_dataSDySSypGSgvg",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC9meta_dataSDySSypGSgvg",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC9meta_dataSDySSypGSgvs",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC9meta_dataSDySSypGSgvs",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CashfreePGCoreSDK22CFCardListenerResponseC9meta_dataSDySSypGSgvM",
+                "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC9meta_dataSDySSypGSgvM",
+                "moduleName": "CashfreePGCoreSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CFCardListenerResponse",
+                "printedName": "CashfreePGCoreSDK.CFCardListenerResponse",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardListenerResponse"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardListenerResponse(im)init",
+            "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseCACycfc",
+            "moduleName": "CashfreePGCoreSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardListenerResponse",
+        "mangledName": "$s17CashfreePGCoreSDK22CFCardListenerResponseC",
+        "moduleName": "CashfreePGCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CFCardListener",
+        "printedName": "CFCardListener",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "cardMetaData",
+            "printedName": "cardMetaData(card_listener_response:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFCardListenerResponse",
+                "printedName": "CashfreePGCoreSDK.CFCardListenerResponse",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardListenerResponse"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(pl)CFCardListener(im)cardMetaDataWithCard_listener_response:",
+            "mangledName": "$s17CashfreePGCoreSDK14CFCardListenerP12cardMetaData0F18_listener_responseyAA0dE8ResponseC_tF",
+            "moduleName": "CashfreePGCoreSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : CashfreePGCoreSDK.CFCardListener>",
+            "sugared_genericSig": "<Self where Self : CashfreePGCoreSDK.CFCardListener>",
+            "protocolReq": true,
+            "objc_name": "cardMetaDataWithCard_listener_response:",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@CashfreePGCoreSDK@objc(pl)CFCardListener",
+        "mangledName": "$s17CashfreePGCoreSDK14CFCardListenerP",
+        "moduleName": "CashfreePGCoreSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -5868,6 +6947,33 @@
           },
           {
             "kind": "Function",
+            "name": "luhnCheck",
+            "printedName": "luhnCheck(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK11CFValidatorC9luhnCheckySbSSF",
+            "mangledName": "$s17CashfreePGCoreSDK11CFValidatorC9luhnCheckySbSSF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getCardType",
             "printedName": "getCardType(cardNumber:)",
             "children": [
@@ -8439,6 +9545,35 @@
                   "AccessControl",
                   "ObjC",
                   "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "setCardComponet",
+                "printedName": "setCardComponet(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFCardBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFCard.CFCardBuilder",
+                    "usr": "s:17CashfreePGCoreSDK6CFCardC0D7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFCardComponent",
+                    "printedName": "CashfreePGCoreSDK.CFCardComponent",
+                    "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardComponent"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17CashfreePGCoreSDK6CFCardC0D7BuilderC15setCardComponetyAeA0D9ComponentCF",
+                "mangledName": "$s17CashfreePGCoreSDK6CFCardC0D7BuilderC15setCardComponetyAeA0D9ComponentCF",
+                "moduleName": "CashfreePGCoreSDK",
+                "declAttributes": [
+                  "Final",
+                  "AccessControl",
+                  "ObjC"
                 ],
                 "funcSelfKind": "NonMutating"
               },
@@ -13960,13 +15095,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "UITraitChangeObservable",
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
@@ -13978,6 +15106,13 @@
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
             "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       }
@@ -13991,6 +15126,27 @@
       "offset": 348,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/ViewComponent\/CFCardComponent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 424,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/ViewComponent\/CFCardComponent.swift",
+      "kind": "Dictionary",
+      "offset": 487,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/ViewComponent\/CFCardComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 9270,
+      "length": 22,
+      "value": "\"CashfreePGCoreSDK.CFCardListenerResponse\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashFreeCardObject.swift",
@@ -15528,42 +16684,77 @@
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1261,
+      "offset": 1265,
+      "length": 8,
+      "value": "\"diners\""
+    },
+    {
+      "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1399,
+      "length": 10,
+      "value": "\"discover\""
+    },
+    {
+      "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1527,
       "length": 6,
       "value": "\"gpay\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1397,
+      "offset": 1649,
+      "length": 5,
+      "value": "\"jcb\""
+    },
+    {
+      "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1778,
+      "length": 9,
+      "value": "\"maestro\""
+    },
+    {
+      "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1917,
       "length": 12,
       "value": "\"mastercard\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1529,
+      "offset": 2049,
       "length": 7,
       "value": "\"paytm\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1656,
+      "offset": 2176,
       "length": 7,
       "value": "\"phone\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1787,
+      "offset": 2307,
       "length": 9,
       "value": "\"phonepe\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1914,
+      "offset": 2436,
+      "length": 7,
+      "value": "\"rupay\""
+    },
+    {
+      "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2561,
       "length": 6,
       "value": "\"visa\""
     }

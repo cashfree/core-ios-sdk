@@ -277,8 +277,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
+@import UIKit;
 #endif
 
 #endif
@@ -324,6 +326,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK6CFCard")
 @end
 
 @class NSString;
+@class CFCardComponent;
 
 /// This class provides builder methods that help in creating an object of <code>CFCard</code>
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
@@ -379,6 +382,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
 /// returns:
 /// The method returns an instance of CFCardBuilder to continue building the CFCard object
 - (CFCardBuilder * _Nonnull)setInstrumentId:(NSString * _Nonnull)instrument_id SWIFT_WARN_UNUSED_RESULT;
+- (CFCardBuilder * _Nonnull)setCardComponet:(CFCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT;
 /// This method builds an object of CFCard and returns the object to the user. This CFCard object will be used in initiating card payment.
 ///
 /// throws:
@@ -387,6 +391,36 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
 /// returns:
 /// The method returns an instance (object) of CFCard.
 - (CFCard * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class NSCoder;
+@class CFSession;
+@protocol CFCardListener;
+@class UIFont;
+@class UIColor;
+@class UITextField;
+
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK15CFCardComponent")
+@interface CFCardComponent : UIView <UITextFieldDelegate>
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)initializeCardComponentWithSession:(CFSession * _Nonnull)session card_listener:(id <CFCardListener> _Nonnull)card_listener hint_text:(NSString * _Nonnull)hint_text font:(UIFont * _Nullable)font textColor:(UIColor * _Nullable)textColor enable_pasting:(BOOL)enable_pasting;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class CFCardListenerResponse;
+
+SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK14CFCardListener_")
+@protocol CFCardListener
+- (void)cardMetaDataWithCard_listener_response:(CFCardListenerResponse * _Nonnull)card_listener_response;
+@end
+
+
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK22CFCardListenerResponse")
+@interface CFCardListenerResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class CFTheme;
@@ -427,7 +461,6 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK13CFCardPayment")
 - (void)printDescription;
 @end
 
-@class CFSession;
 
 /// The CFCardPaymentBuilder class can be used to create an object of CFCardPayment. It consists of setter methods to set the values for <em>CFCard</em>, <em>CFSession</em> . And finally a <em>build</em> method that returns an object of <em>CFCardPayment</em>.
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK13CFCardPayment20CFCardPaymentBuilder")
@@ -1687,8 +1720,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
+@import UIKit;
 #endif
 
 #endif
@@ -1734,6 +1769,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK6CFCard")
 @end
 
 @class NSString;
+@class CFCardComponent;
 
 /// This class provides builder methods that help in creating an object of <code>CFCard</code>
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
@@ -1789,6 +1825,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
 /// returns:
 /// The method returns an instance of CFCardBuilder to continue building the CFCard object
 - (CFCardBuilder * _Nonnull)setInstrumentId:(NSString * _Nonnull)instrument_id SWIFT_WARN_UNUSED_RESULT;
+- (CFCardBuilder * _Nonnull)setCardComponet:(CFCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT;
 /// This method builds an object of CFCard and returns the object to the user. This CFCard object will be used in initiating card payment.
 ///
 /// throws:
@@ -1797,6 +1834,36 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
 /// returns:
 /// The method returns an instance (object) of CFCard.
 - (CFCard * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class NSCoder;
+@class CFSession;
+@protocol CFCardListener;
+@class UIFont;
+@class UIColor;
+@class UITextField;
+
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK15CFCardComponent")
+@interface CFCardComponent : UIView <UITextFieldDelegate>
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)initializeCardComponentWithSession:(CFSession * _Nonnull)session card_listener:(id <CFCardListener> _Nonnull)card_listener hint_text:(NSString * _Nonnull)hint_text font:(UIFont * _Nullable)font textColor:(UIColor * _Nullable)textColor enable_pasting:(BOOL)enable_pasting;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class CFCardListenerResponse;
+
+SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK14CFCardListener_")
+@protocol CFCardListener
+- (void)cardMetaDataWithCard_listener_response:(CFCardListenerResponse * _Nonnull)card_listener_response;
+@end
+
+
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK22CFCardListenerResponse")
+@interface CFCardListenerResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class CFTheme;
@@ -1837,7 +1904,6 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK13CFCardPayment")
 - (void)printDescription;
 @end
 
-@class CFSession;
 
 /// The CFCardPaymentBuilder class can be used to create an object of CFCardPayment. It consists of setter methods to set the values for <em>CFCard</em>, <em>CFSession</em> . And finally a <em>build</em> method that returns an object of <em>CFCardPayment</em>.
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK13CFCardPayment20CFCardPaymentBuilder")
