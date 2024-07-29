@@ -3322,226 +3322,247 @@
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1265,
+      "offset": 1282,
+      "length": 15,
+      "value": "\"amazonpay-upi\""
+    },
+    {
+      "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1415,
       "length": 6,
       "value": "\"amex\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1389,
+      "offset": 1539,
       "length": 6,
       "value": "\"back\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1513,
+      "offset": 1663,
       "length": 6,
       "value": "\"bank\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1637,
+      "offset": 1787,
       "length": 6,
       "value": "\"bhim\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1786,
+      "offset": 1936,
       "length": 19,
       "value": "\"bhim-configurable\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1931,
+      "offset": 2081,
       "length": 10,
       "value": "\"calendar\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2072,
+      "offset": 2222,
       "length": 13,
       "value": "\"cards-strip\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2214,
+      "offset": 2364,
       "length": 12,
       "value": "\"check-mark\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2348,
+      "offset": 2498,
       "length": 8,
       "value": "\"circle\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2476,
+      "offset": 2626,
       "length": 7,
       "value": "\"close\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2614,
+      "offset": 2751,
+      "length": 6,
+      "value": "\"cred\""
+    },
+    {
+      "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2888,
       "length": 13,
       "value": "\"credit-card\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2743,
+      "offset": 3017,
       "length": 5,
       "value": "\"cvv\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2881,
+      "offset": 3155,
       "length": 14,
       "value": "\"default-bank\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3032,
+      "offset": 3306,
       "length": 16,
       "value": "\"default-wallet\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3170,
+      "offset": 3444,
       "length": 8,
       "value": "\"delete\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3307,
+      "offset": 3581,
       "length": 12,
       "value": "\"down-arrow\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3449,
+      "offset": 3723,
       "length": 12,
       "value": "\"freecharge\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3579,
+      "offset": 3853,
       "length": 6,
       "value": "\"gpay\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3710,
+      "offset": 3984,
       "length": 10,
       "value": "\"gpay-new\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3836,
+      "offset": 4110,
       "length": 5,
       "value": "\"jio\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3967,
+      "offset": 4241,
       "length": 10,
       "value": "\"jiomoney\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4107,
+      "offset": 4381,
       "length": 12,
       "value": "\"mastercard\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4245,
+      "offset": 4519,
       "length": 10,
       "value": "\"mobikwik\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4371,
+      "offset": 4645,
       "length": 5,
       "value": "\"ola\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4502,
+      "offset": 4776,
       "length": 10,
       "value": "\"paylater\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4632,
+      "offset": 4906,
       "length": 7,
       "value": "\"paytm\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4763,
+      "offset": 5037,
       "length": 9,
       "value": "\"phonepe\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4895,
+      "offset": 5169,
       "length": 9,
       "value": "\"qr-code\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5029,
+      "offset": 5303,
       "length": 10,
       "value": "\"up-arrow\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5157,
+      "offset": 5431,
       "length": 6,
       "value": "\"user\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5281,
+      "offset": 5555,
       "length": 6,
       "value": "\"visa\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5409,
+      "offset": 5683,
       "length": 8,
       "value": "\"wallet\""
+    },
+    {
+      "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGUISDK\/IntermediateBuildFilesPath\/CashfreePGUISDK.build\/Release-iphonesimulator\/CashfreePGUISDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 5817,
+      "length": 10,
+      "value": "\"whatsapp\""
     }
   ]
 }
