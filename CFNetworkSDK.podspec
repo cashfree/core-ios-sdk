@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name			= "CFNetworkSDK"
-s.version		= "2.0.14"
+s.version		= "2.0.15"
 s.summary		= "Cocoapods implementation of Cashfree Payment's Payment Gateway UI SDK"
 
 s.description		= <<-DESC
@@ -20,8 +20,8 @@ s.license		= 'MIT'
 s.author			= { "Cashfree Payments" => "developers@cashfree.com" }
 s.source			= { :git => "https://github.com/cashfree/core-ios-sdk.git", :tag => "network-" + s.version.to_s }
 s.social_media_url	= "https://twitter.com/gocashfree"
-s.platform		= :ios, "12"
+s.platform		= :ios, "12.0"
 s.vendored_frameworks	= "CFNetworkSDK.xcframework"
-s.swift_version		= "5.0"
+s.swift_version		= "5.10"
 
 end
