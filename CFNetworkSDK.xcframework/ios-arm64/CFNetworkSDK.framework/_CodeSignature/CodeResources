@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ybxugQ5RPAMO+VWxI5vmHBhzJGk=
+		8br4a8gnSTlamdmJIbM57trQxwc=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		KynoSx2InlhQB0npdAGk1j6thfg=
+		UXKYWa6Xg77JgU7z7gjyENOCld0=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		ORKIIhcJsEj/zz3P3ZZ9BM5Vp3Y=
+		D5ao/3p0AG7Tk/H3oYUT53BTEw8=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		B3JvrdUYWX/Q2Ijum8d/f4pJOs8=
+		Uv08FeuxzRAi4JOkP01GxOR0Srg=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		ORKIIhcJsEj/zz3P3ZZ9BM5Vp3Y=
+		D5ao/3p0AG7Tk/H3oYUT53BTEw8=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		X9m+0Ad9yqJAYeeX2xKpSzcXtS4=
+		JLhxfc3LeGxG5/C0Z6W6WqdKK50=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GY162WelGF5r/0hsaL0RRkc+d6yUZTNq0hzauTQQABc=
+			/hdOeTC1WOb4WU8pj/0U9TGmHbl/GUFcSbv35FWklbY=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IElzJS5ChlqDY41WMXtM3KqWIS+XqbKSCoFEJDtQg2E=
+			mpXeiosvbTRBLm+Pu4y1CLuN76PUQle1YFj/sBUcBJ0=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZHFa3H+KfOkxZZopFtT5hhksDBMm2mREHLUeTG2W9Iw=
+			3pAaL7vYm/4kBeER4N9Exk+azrP6WmiXwTc26QMwNk8=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IElzJS5ChlqDY41WMXtM3KqWIS+XqbKSCoFEJDtQg2E=
+			mpXeiosvbTRBLm+Pu4y1CLuN76PUQle1YFj/sBUcBJ0=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RQiYQH6KgPga3JbWwQj6HpI38GT1u4VG43lP3UYt+fs=
+			461Z9DF/gxSr2Nhdj72QUEw1r7Nb/KEbSQTDN8Z1szU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
