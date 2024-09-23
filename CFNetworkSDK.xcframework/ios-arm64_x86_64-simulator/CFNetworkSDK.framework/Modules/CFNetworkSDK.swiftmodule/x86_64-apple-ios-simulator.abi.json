@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "CFNetworkSDK",
+    "printedName": "CFNetworkSDK",
     "children": [
       {
         "kind": "Import",
@@ -470,6 +470,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -666,6 +680,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -765,6 +795,22 @@
         "moduleName": "CFNetworkSDK",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -908,138 +954,28 @@
         "isOpen": true,
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 72,
-      "length": 12,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 94,
-      "length": 11,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 115,
-      "length": 3,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 128,
-      "length": 9,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 147,
-      "length": 10,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 167,
-      "length": 10,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 187,
-      "length": 12,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 209,
-      "length": 8,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 227,
-      "length": 8,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 72,
-      "length": 12,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 94,
-      "length": 11,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 115,
-      "length": 3,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 128,
-      "length": 9,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 147,
-      "length": 10,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 167,
-      "length": 10,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 187,
-      "length": 12,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 209,
-      "length": 8,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 227,
-      "length": 8,
-      "value": "9"
-    },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CFNetworkSDK\/CFNetworkSDK\/Utils\/CFNetworkUtils.swift",
       "kind": "IntegerLiteral",
