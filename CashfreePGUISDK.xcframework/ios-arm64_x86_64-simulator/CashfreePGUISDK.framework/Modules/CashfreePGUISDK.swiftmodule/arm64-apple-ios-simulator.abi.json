@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "CashfreePGUISDK",
+    "printedName": "CashfreePGUISDK",
     "children": [
       {
         "kind": "Import",
@@ -270,6 +270,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -595,6 +609,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -662,6 +690,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1118,6 +1160,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -1184,6 +1240,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1789,6 +1859,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -2214,11 +2298,74 @@
       "value": "0"
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/controllers\/qrcode controller\/CFQRCodeUIViewController.swift",
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3074,
+      "length": 2,
+      "value": "36"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
       "kind": "StringLiteral",
-      "offset": 166,
-      "length": 24,
-      "value": "\"CashfreePGUISDK.CFQRCodeUIViewController\""
+      "offset": 3130,
+      "length": 13,
+      "value": "\"strokeColor\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3175,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3349,
+      "length": 3,
+      "value": "108"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3355,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3367,
+      "length": 2,
+      "value": "48"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3372,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3383,
+      "length": 3,
+      "value": "202"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3389,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/loader\/Cashfree+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3401,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/saved card cell\/CFSavedCardTableViewCell.swift",
@@ -2263,6 +2410,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/controllers\/netbanking_popup\/CFNetbankingListViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1527,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/controllers\/quick_checkout\/CFQuickCheckoutViewController.swift",
       "kind": "Array",
       "offset": 592,
@@ -2271,10 +2425,10 @@
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/controllers\/quick_checkout\/CFQuickCheckoutViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 144,
-      "length": 29,
-      "value": "\"CashfreePGUISDK.CFQuickCheckoutViewController\""
+      "kind": "BooleanLiteral",
+      "offset": 818,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/views\/upiintent component\/CFUPIIntentTableViewCell.swift",
@@ -2338,216 +2492,6 @@
       "offset": 173,
       "length": 11,
       "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 78,
-      "length": 2,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 90,
-      "length": 6,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 106,
-      "length": 3,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 119,
-      "length": 3,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 132,
-      "length": 8,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 150,
-      "length": 13,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 173,
-      "length": 11,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 78,
-      "length": 2,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 90,
-      "length": 6,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 106,
-      "length": 3,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 119,
-      "length": 3,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 132,
-      "length": 8,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 150,
-      "length": 13,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 173,
-      "length": 11,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 882,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 894,
-      "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 900,
-      "length": 8,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 910,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 918,
-      "length": 20,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 940,
-      "length": 5,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 947,
-      "length": 3,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 952,
-      "length": 13,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 882,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 894,
-      "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 900,
-      "length": 8,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 910,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 918,
-      "length": 20,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 940,
-      "length": 5,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 947,
-      "length": 3,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
-      "kind": "IntegerLiteral",
-      "offset": 952,
-      "length": 13,
-      "value": "8"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Enums.swift",
@@ -2761,10 +2705,10 @@
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/controllers\/new emi controller\/CFEmiCheckoutViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 124,
-      "length": 27,
-      "value": "\"CashfreePGUISDK.CFEmiCheckoutViewController\""
+      "kind": "BooleanLiteral",
+      "offset": 1332,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/controllers\/checkout\/CFCheckoutViewModel.swift",
@@ -3049,35 +2993,35 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1992,
+      "offset": 2052,
       "length": 60,
       "value": "\"https:\/\/cashfreelogo.cashfree.com\/assets_images\/pg\/nb\/128\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2102,
+      "offset": 2162,
       "length": 66,
       "value": "\"https:\/\/cashfreelogo.cashfree.com\/assets_images\/pg\/paylater\/128\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2666,
+      "offset": 2726,
       "length": 16,
       "value": "\"default-wallet\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2713,
+      "offset": 2773,
       "length": 14,
       "value": "\"default-bank\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2750,
+      "offset": 2810,
       "length": 6,
       "value": "\"bank\""
     },
@@ -3244,10 +3188,10 @@
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/UI\/controllers\/checkout\/CFCheckoutViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 165,
-      "length": 24,
-      "value": "\"CashfreePGUISDK.CFCheckoutViewController\""
+      "kind": "BooleanLiteral",
+      "offset": 3452,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Models\/CFNativeCheckoutConfigurationModel.swift",
