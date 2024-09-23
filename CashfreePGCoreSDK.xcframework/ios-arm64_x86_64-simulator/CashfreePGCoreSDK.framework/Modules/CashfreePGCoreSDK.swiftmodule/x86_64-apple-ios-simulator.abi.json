@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "CashfreePGCoreSDK",
+    "printedName": "CashfreePGCoreSDK",
     "children": [
       {
         "kind": "Import",
@@ -120,7 +120,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -192,6 +208,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -267,6 +284,7 @@
             "moduleName": "CashfreePGCoreSDK",
             "objc_name": "initializeCardComponentWithSession:card_listener:hint_text:font:textColor:enable_pasting:",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "ObjC"
@@ -310,6 +328,7 @@
             "objc_name": "textField:shouldChangeCharactersInRange:replacementString:",
             "declAttributes": [
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -355,6 +374,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -402,6 +422,7 @@
             "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC9onSuccess8apiState6resulty09CFNetworkC08APIStateO_SDySSypGtF",
             "moduleName": "CashfreePGCoreSDK",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -456,6 +477,7 @@
             "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC9onSuccess8apiState6resulty09CFNetworkC08APIStateO_SaySDySSypGGtF",
             "moduleName": "CashfreePGCoreSDK",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -502,6 +524,7 @@
             "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC9onFailure8apiState8responsey09CFNetworkC08APIStateO_SDySSypGtF",
             "moduleName": "CashfreePGCoreSDK",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -513,6 +536,7 @@
         "mangledName": "$s17CashfreePGCoreSDK15CFCardComponentC",
         "moduleName": "CashfreePGCoreSDK",
         "declAttributes": [
+          "Preconcurrency",
           "Custom",
           "AccessControl",
           "ObjC"
@@ -532,6 +556,20 @@
             "printedName": "APIHandlers",
             "usr": "s:12CFNetworkSDK11APIHandlersP",
             "mangledName": "$s12CFNetworkSDK11APIHandlersP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -1125,6 +1163,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1220,6 +1272,22 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -1464,6 +1532,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -1532,6 +1614,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1791,6 +1887,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -1859,6 +1969,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -2276,6 +2400,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -2368,6 +2506,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -2683,6 +2835,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -2775,6 +2941,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -3154,6 +3334,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -3246,6 +3440,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -3476,6 +3684,22 @@
           "AccessControl",
           "ObjC",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -3682,6 +3906,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -3750,6 +3988,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -4062,6 +4314,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -5988,6 +6254,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -6256,6 +6536,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -6324,6 +6618,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -6846,6 +7154,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -7069,7 +7391,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -7309,6 +7647,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -7377,6 +7729,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -7708,6 +8074,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -7800,6 +8180,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -8094,6 +8488,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -8186,6 +8594,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -8387,6 +8809,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -8454,6 +8890,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -8992,7 +9442,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -9206,6 +9672,20 @@
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -9622,6 +10102,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -9714,6 +10208,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -10001,6 +10509,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -10093,6 +10615,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -10805,6 +11341,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -10849,7 +11399,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -10988,6 +11554,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -11251,6 +11831,20 @@
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -11983,6 +12577,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -12075,6 +12683,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -12315,6 +12937,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -12383,6 +13019,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -12614,6 +13264,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -12682,6 +13346,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -12893,6 +13571,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -13558,6 +14250,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -14566,6 +15272,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -14763,6 +15483,20 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -14990,7 +15724,23 @@
             "declAttributes": [
               "AccessControl"
             ],
-            "isFromExtension": true
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
           },
           {
             "kind": "Function",
@@ -15014,6 +15764,7 @@
             "mangledName": "$sSo11UITextFieldC17CashfreePGCoreSDKE10addPadding7paddingyAbCE0G5SpaceO_tF",
             "moduleName": "CashfreePGCoreSDK",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -15028,6 +15779,7 @@
         "intro_iOS": "2.0",
         "objc_name": "UITextField",
         "declAttributes": [
+          "Preconcurrency",
           "Available",
           "ObjC",
           "NonSendable",
@@ -15044,6 +15796,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -15142,13 +15908,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/ViewComponent\/CFCardComponent.swift",
-      "kind": "StringLiteral",
-      "offset": 9270,
-      "length": 22,
-      "value": "\"CashfreePGCoreSDK.CFCardListenerResponse\""
-    },
-    {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashFreeCardObject.swift",
       "kind": "BooleanLiteral",
       "offset": 763,
@@ -15200,16 +15959,9 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "IntegerLiteral",
-      "offset": 18037,
+      "offset": 18188,
       "length": 1,
       "value": "0"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Session\/CashfreeSession.swift",
-      "kind": "StringLiteral",
-      "offset": 2027,
-      "length": 9,
-      "value": "\"CashfreePGCoreSDK.CFSession\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/Controller\/CardPaymentFSM.swift",
@@ -15233,20 +15985,6 @@
       "value": "\"link\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Pay Later\/Model\/CashfreePayLater.swift",
-      "kind": "StringLiteral",
-      "offset": 754,
-      "length": 10,
-      "value": "\"CashfreePGCoreSDK.CFPaylater\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/Model\/CashfreeEMICardPayment.swift",
-      "kind": "StringLiteral",
-      "offset": 889,
-      "length": 9,
-      "value": "\"CashfreePGCoreSDK.CFEMICard\""
-    },
-    {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreeEMICardObject.swift",
       "kind": "BooleanLiteral",
       "offset": 1875,
@@ -15268,13 +16006,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 62,
-      "length": 22,
-      "value": "\"CashfreePGCoreSDK.CF2FAWebViewController\""
-    },
-    {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreePaymentObject.swift",
       "kind": "StringLiteral",
       "offset": 210,
@@ -15287,279 +16018,6 @@
       "offset": 380,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 140,
-      "length": 19,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 169,
-      "length": 26,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 205,
-      "length": 16,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 231,
-      "length": 19,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 260,
-      "length": 19,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 333,
-      "length": 15,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 358,
-      "length": 19,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 387,
-      "length": 24,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 421,
-      "length": 25,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 456,
-      "length": 24,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 490,
-      "length": 16,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 516,
-      "length": 22,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 548,
-      "length": 23,
-      "value": "13"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 605,
-      "length": 14,
-      "value": "14"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 652,
-      "length": 23,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 704,
-      "length": 16,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 730,
-      "length": 20,
-      "value": "17"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 784,
-      "length": 20,
-      "value": "18"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 814,
-      "length": 20,
-      "value": "19"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 844,
-      "length": 20,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 874,
-      "length": 30,
-      "value": "21"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 937,
-      "length": 22,
-      "value": "22"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 969,
-      "length": 27,
-      "value": "23"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1034,
-      "length": 22,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1066,
-      "length": 16,
-      "value": "25"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1092,
-      "length": 19,
-      "value": "26"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1121,
-      "length": 25,
-      "value": "27"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1156,
-      "length": 21,
-      "value": "28"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1187,
-      "length": 23,
-      "value": "29"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1220,
-      "length": 18,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1269,
-      "length": 25,
-      "value": "31"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1304,
-      "length": 16,
-      "value": "32"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1353,
-      "length": 19,
-      "value": "33"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1382,
-      "length": 27,
-      "value": "34"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1424,
-      "length": 16,
-      "value": "35"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1486,
-      "length": 32,
-      "value": "36"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1546,
-      "length": 21,
-      "value": "37"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1596,
-      "length": 18,
-      "value": "38"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1624,
-      "length": 39,
-      "value": "39"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CashfreeError.swift",
@@ -15872,128 +16330,16 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2022,
-      "length": 4,
-      "value": "true"
+      "offset": 1615,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 146,
-      "length": 40,
-      "value": "\"CashfreePGCoreSDK.CFPaymentVerificationReconViewController\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 94,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 106,
+      "kind": "BooleanLiteral",
+      "offset": 2022,
       "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 112,
-      "length": 8,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 122,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 130,
-      "length": 20,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 152,
-      "length": 5,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 159,
-      "length": 3,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 164,
-      "length": 13,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 94,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 106,
-      "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 112,
-      "length": 8,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 122,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 130,
-      "length": 20,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 152,
-      "length": 5,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 159,
-      "length": 3,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 164,
-      "length": 13,
-      "value": "8"
+      "value": "true"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFValidatoryCore.swift",
@@ -16080,13 +16426,6 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Model\/CashfreeUPI.swift",
-      "kind": "StringLiteral",
-      "offset": 1450,
-      "length": 5,
-      "value": "\"CashfreePGCoreSDK.CFUPI\""
-    },
-    {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Wallets\/Model\/CashfreeWallet.swift",
       "kind": "StringLiteral",
       "offset": 1840,
@@ -16094,11 +16433,74 @@
       "value": "\"link\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Wallets\/Model\/CashfreeWallet.swift",
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3074,
+      "length": 2,
+      "value": "36"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
       "kind": "StringLiteral",
-      "offset": 805,
-      "length": 8,
-      "value": "\"CashfreePGCoreSDK.CFWallet\""
+      "offset": 3130,
+      "length": 13,
+      "value": "\"strokeColor\""
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3175,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3349,
+      "length": 3,
+      "value": "108"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3355,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3367,
+      "length": 2,
+      "value": "48"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3372,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3383,
+      "length": 3,
+      "value": "202"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3389,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/spinner-view\/Cashfree+Core+Loader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3401,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
@@ -16411,23 +16813,9 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 3106,
+      "offset": 3166,
       "length": 7,
       "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3106,
-      "length": 7,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/Model\/CashfreeCardPayment.swift",
-      "kind": "StringLiteral",
-      "offset": 772,
-      "length": 6,
-      "value": "\"CashfreePGCoreSDK.CFCard\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Network\/NetworkService.swift",
@@ -16442,13 +16830,6 @@
       "offset": 404,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/NetBanking\/Model\/CashfreeNetbanking.swift",
-      "kind": "StringLiteral",
-      "offset": 556,
-      "length": 12,
-      "value": "\"CashfreePGCoreSDK.CFNetbanking\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Analytics Service\/CFAnalyticsService.swift",
@@ -16484,13 +16865,6 @@
       "offset": 429,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3454,
-      "length": 6,
-      "value": "1"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
@@ -16591,13 +16965,6 @@
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Theme\/CFTheme.swift",
-      "kind": "StringLiteral",
-      "offset": 214,
-      "length": 7,
-      "value": "\"CashfreePGCoreSDK.CFTheme\""
-    },
-    {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
       "kind": "StringLiteral",
       "offset": 1028,
@@ -16687,13 +17054,6 @@
       "offset": 1839,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/headless-otp\/CFOTPViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 156,
-      "length": 19,
-      "value": "\"CashfreePGCoreSDK.CFOTPViewController\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphonesimulator\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
