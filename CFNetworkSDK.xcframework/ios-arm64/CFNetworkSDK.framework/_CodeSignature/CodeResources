@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		z2RAF1AYkWTSm80+tTxhAMA0DpQ=
+		8br4a8gnSTlamdmJIbM57trQxwc=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		KynoSx2InlhQB0npdAGk1j6thfg=
+		UXKYWa6Xg77JgU7z7gjyENOCld0=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		xiXttyn5vC+fJ6nxg1LO/jYysNI=
+		JLhxfc3LeGxG5/C0Z6W6WqdKK50=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,7 +61,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GY162WelGF5r/0hsaL0RRkc+d6yUZTNq0hzauTQQABc=
+			/hdOeTC1WOb4WU8pj/0U9TGmHbl/GUFcSbv35FWklbY=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BhJTM3p5kLL+C/jsFxi3F4MaoqnMDJR2gVS7dCG7gRk=
+			461Z9DF/gxSr2Nhdj72QUEw1r7Nb/KEbSQTDN8Z1szU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
