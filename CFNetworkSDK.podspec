@@ -20,7 +20,7 @@ s.license		= 'MIT'
 s.author			= { "Cashfree Payments" => "developers@cashfree.com" }
 s.source			= { :git => "https://github.com/cashfree/core-ios-sdk.git", :tag => "network-" + s.version.to_s }
 s.social_media_url	= "https://twitter.com/gocashfree"
-s.platform		= :ios, "12.0"
+s.platform		= :ios, "13.0"
 s.vendored_frameworks	= "CFNetworkSDK.xcframework"
 s.swift_version		= "5.10"
 
