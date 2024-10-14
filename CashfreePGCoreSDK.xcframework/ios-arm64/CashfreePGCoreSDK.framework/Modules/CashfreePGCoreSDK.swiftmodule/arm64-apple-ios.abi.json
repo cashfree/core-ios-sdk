@@ -4086,7 +4086,10 @@
         "name": "WebKit",
         "printedName": "WebKit",
         "declKind": "Import",
-        "moduleName": "CashfreePGCoreSDK"
+        "moduleName": "CashfreePGCoreSDK",
+        "declAttributes": [
+          "Preconcurrency"
+        ]
       },
       {
         "kind": "Import",
@@ -4235,6 +4238,33 @@
             "declKind": "Func",
             "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment(im)getPlatform",
             "mangledName": "$s17CashfreePGCoreSDK9CFPaymentC11getPlatformSSyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setFullScreen",
+            "printedName": "setFullScreen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment(im)setFullScreen:",
+            "mangledName": "$s17CashfreePGCoreSDK9CFPaymentC13setFullScreenyySbF",
             "moduleName": "CashfreePGCoreSDK",
             "declAttributes": [
               "AccessControl",
@@ -7604,6 +7634,35 @@
               },
               {
                 "kind": "Function",
+                "name": "setShowAllLogos",
+                "printedName": "setShowAllLogos(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFUPIPaymentBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder",
+                    "usr": "s:17CashfreePGCoreSDK12CFUPIPaymentC0D7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17CashfreePGCoreSDK12CFUPIPaymentC0D7BuilderC15setShowAllLogosyAESbF",
+                "mangledName": "$s17CashfreePGCoreSDK12CFUPIPaymentC0D7BuilderC15setShowAllLogosyAESbF",
+                "moduleName": "CashfreePGCoreSDK",
+                "declAttributes": [
+                  "Final",
+                  "AccessControl",
+                  "ObjC"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
                 "name": "build",
                 "printedName": "build()",
                 "children": [
@@ -10049,6 +10108,37 @@
                 "declKind": "Func",
                 "usr": "s:17CashfreePGCoreSDK6CFCardC0D7BuilderC15setCardComponetyAeA0D9ComponentCF",
                 "mangledName": "$s17CashfreePGCoreSDK6CFCardC0D7BuilderC15setCardComponetyAeA0D9ComponentCF",
+                "moduleName": "CashfreePGCoreSDK",
+                "deprecated": true,
+                "declAttributes": [
+                  "Final",
+                  "AccessControl",
+                  "ObjC",
+                  "Available"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "setCardComponent",
+                "printedName": "setCardComponent(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFCardBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFCard.CFCardBuilder",
+                    "usr": "s:17CashfreePGCoreSDK6CFCardC0D7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFCardComponent",
+                    "printedName": "CashfreePGCoreSDK.CFCardComponent",
+                    "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFCardComponent"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17CashfreePGCoreSDK6CFCardC0D7BuilderC16setCardComponentyAeA0dH0CF",
+                "mangledName": "$s17CashfreePGCoreSDK6CFCardC0D7BuilderC16setCardComponentyAeA0dH0CF",
                 "moduleName": "CashfreePGCoreSDK",
                 "declAttributes": [
                   "Final",
@@ -15894,6 +15984,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/Controller\/EMICardPaymentFSM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 729,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/ViewComponent\/CFCardComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 424,
@@ -15958,10 +16055,24 @@
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1015,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Controller\/UPIPaymentFSM.swift",
       "kind": "IntegerLiteral",
-      "offset": 18188,
+      "offset": 18357,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Pay Later\/Controller\/CashfreePaylaterPayment.swift",
+      "kind": "BooleanLiteral",
+      "offset": 762,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/Controller\/CardPaymentFSM.swift",
@@ -15974,6 +16085,13 @@
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/Controller\/CardPaymentFSM.swift",
       "kind": "BooleanLiteral",
       "offset": 388,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Card\/Controller\/CardPaymentFSM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 798,
       "length": 5,
       "value": "false"
     },
@@ -16001,9 +16119,23 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 610,
+      "offset": 764,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 861,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/controller\/CF2FAWebViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 928,
+      "length": 2,
+      "value": "10"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreePaymentObject.swift",
@@ -16016,6 +16148,13 @@
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreePaymentObject.swift",
       "kind": "BooleanLiteral",
       "offset": 380,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreePaymentObject.swift",
+      "kind": "BooleanLiteral",
+      "offset": 427,
       "length": 5,
       "value": "false"
     },
@@ -16414,14 +16553,28 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreeUPIObject.swift",
       "kind": "BooleanLiteral",
-      "offset": 1999,
+      "offset": 822,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreeUPIObject.swift",
       "kind": "BooleanLiteral",
-      "offset": 2053,
+      "offset": 2185,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreeUPIObject.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2239,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Payment Gateway\/Model\/CashfreeUPIObject.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2288,
       "length": 4,
       "value": "true"
     },
@@ -16867,6 +17020,13 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Wallets\/Controller\/CashfreeWalletPayment.swift",
+      "kind": "BooleanLiteral",
+      "offset": 671,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
       "kind": "IntegerLiteral",
       "offset": 3454,
@@ -17056,6 +17216,13 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/NetBanking\/Controller\/CashfreeNetBankingPaymentFSM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 626,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 731,
@@ -17086,98 +17253,105 @@
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1256,
+      "offset": 1261,
+      "length": 9,
+      "value": "\"cf_logo\""
+    },
+    {
+      "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1388,
       "length": 6,
       "value": "\"cred\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1393,
+      "offset": 1525,
       "length": 13,
       "value": "\"credit-card\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1528,
+      "offset": 1660,
       "length": 8,
       "value": "\"diners\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1662,
+      "offset": 1794,
       "length": 10,
       "value": "\"discover\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1790,
+      "offset": 1922,
       "length": 6,
       "value": "\"gpay\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1912,
+      "offset": 2044,
       "length": 5,
       "value": "\"jcb\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2041,
+      "offset": 2173,
       "length": 9,
       "value": "\"maestro\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2180,
+      "offset": 2312,
       "length": 12,
       "value": "\"mastercard\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2312,
+      "offset": 2444,
       "length": 7,
       "value": "\"paytm\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2439,
+      "offset": 2571,
       "length": 7,
       "value": "\"phone\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2570,
+      "offset": 2702,
       "length": 9,
       "value": "\"phonepe\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2699,
+      "offset": 2831,
       "length": 7,
       "value": "\"rupay\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2824,
+      "offset": 2956,
       "length": 6,
       "value": "\"visa\""
     },
     {
       "filePath": "\/tmp\/iphoneos\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CashfreePGCoreSDK\/IntermediateBuildFilesPath\/CashfreePGCoreSDK.build\/Release-iphoneos\/CashfreePGCoreSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 2956,
+      "offset": 3088,
       "length": 10,
       "value": "\"whatsapp\""
     }

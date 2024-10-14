@@ -138,6 +138,7 @@ import _SwiftConcurrencyShims
   @objc final public func setPlatform(_ platform: Swift.String)
   @objc final public func setShowLoader(_ flag: Swift.Bool)
   @objc public func getPlatform() -> Swift.String
+  @objc public func setFullScreen(_ flag: Swift.Bool)
   @objc final public func setTheme(_ theme: CashfreePGCoreSDK.CFTheme)
   @objc override dynamic public init()
   @objc deinit
@@ -240,6 +241,7 @@ extension CashfreePGCoreSDK.CFCardValidator {
     @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
     @objc final public func enableRecon(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
     @objc final public func enableBackgroundBlur(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
+    @objc final public func setShowAllLogos(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
     @objc final public func build() throws -> CashfreePGCoreSDK.CFUPIPayment
     @objc deinit
   }
@@ -317,7 +319,9 @@ extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.CustomStringConvertible {
     @objc final public func setCardExpiryYear(_ year: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
     @objc final public func setCVV(_ cvv: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
     @objc final public func setInstrumentId(_ instrument_id: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @available(iOS, deprecated, message: "This method has been renamed to \"setCardComponent\"")
     @objc final public func setCardComponet(_ card_component: CashfreePGCoreSDK.CFCardComponent) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func setCardComponent(_ card_component: CashfreePGCoreSDK.CFCardComponent) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
     @objc final public func build() throws -> CashfreePGCoreSDK.CFCard
     @objc deinit
   }
