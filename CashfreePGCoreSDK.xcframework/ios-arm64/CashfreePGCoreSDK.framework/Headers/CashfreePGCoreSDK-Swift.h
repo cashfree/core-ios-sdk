@@ -386,7 +386,8 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
 /// returns:
 /// The method returns an instance of CFCardBuilder to continue building the CFCard object
 - (CFCardBuilder * _Nonnull)setInstrumentId:(NSString * _Nonnull)instrument_id SWIFT_WARN_UNUSED_RESULT;
-- (CFCardBuilder * _Nonnull)setCardComponet:(CFCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT;
+- (CFCardBuilder * _Nonnull)setCardComponet:(CFCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method has been renamed to \"setCardComponent\"");
+- (CFCardBuilder * _Nonnull)setCardComponent:(CFCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT;
 /// This method builds an object of CFCard and returns the object to the user. This CFCard object will be used in initiating card payment.
 ///
 /// throws:
@@ -439,6 +440,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK9CFPayment")
 - (void)setPlatform:(NSString * _Nonnull)platform;
 - (void)setShowLoader:(BOOL)flag;
 - (NSString * _Nonnull)getPlatform SWIFT_WARN_UNUSED_RESULT;
+- (void)setFullScreen:(BOOL)flag;
 /// This method sets the theme for core ui -> Headless OTP
 /// \param theme It is of type CFThemeCore
 ///
@@ -1204,6 +1206,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK12CFUPIPayment19CFUPIPaymentBuilder")
 - (CFUPIPaymentBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
 - (CFUPIPaymentBuilder * _Nonnull)enableRecon:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
 - (CFUPIPaymentBuilder * _Nonnull)enableBackgroundBlur:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
+- (CFUPIPaymentBuilder * _Nonnull)setShowAllLogos:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
 /// This method builds an object of <em>CFUPIPayment</em>
 ///
 /// throws:
