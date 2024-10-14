@@ -2993,35 +2993,35 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2052,
+      "offset": 1992,
       "length": 60,
       "value": "\"https:\/\/cashfreelogo.cashfree.com\/assets_images\/pg\/nb\/128\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2162,
+      "offset": 2102,
       "length": 66,
       "value": "\"https:\/\/cashfreelogo.cashfree.com\/assets_images\/pg\/paylater\/128\/\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2726,
+      "offset": 2666,
       "length": 16,
       "value": "\"default-wallet\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2773,
+      "offset": 2713,
       "length": 14,
       "value": "\"default-bank\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGUISDK\/CashfreePGUISDK\/Utils\/Cashfree+UI+Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2810,
+      "offset": 2750,
       "length": 6,
       "value": "\"bank\""
     },
