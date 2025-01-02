@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CashfreePGUISDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import CFNetworkSDK
@@ -23,7 +23,8 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class CFDropCheckoutPayment : CashfreePGCoreSDK.CFPayment {
-  @_inheritsConvenienceInitializers @objc public class CFDropCheckoutPaymentBuilder : ObjectiveC.NSObject {
+  @_inheritsConvenienceInitializers @available(iOS, deprecated, message: "This integration is no longer supported. Please use Web Checkout Payment")
+  @objc public class CFDropCheckoutPaymentBuilder : ObjectiveC.NSObject {
     @objc public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
     @objc public func setTheme(_ theme: CashfreePGCoreSDK.CFTheme) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
     @objc public func setComponent(_ paymentComponent: CashfreePGUISDK.CFPaymentComponent) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
@@ -35,7 +36,8 @@ import _SwiftConcurrencyShims
 }
 @_inheritsConvenienceInitializers @objc final public class CFPaymentComponent : ObjectiveC.NSObject {
   @objc override dynamic public init()
-  @_inheritsConvenienceInitializers @objc final public class CFPaymentComponentBuilder : ObjectiveC.NSObject {
+  @_inheritsConvenienceInitializers @available(iOS, deprecated, message: "This integration is no longer supported. Please use Web Checkout Payment")
+  @objc final public class CFPaymentComponentBuilder : ObjectiveC.NSObject {
     @objc final public func enableComponents(_ components: [Swift.String]) -> CashfreePGUISDK.CFPaymentComponent.CFPaymentComponentBuilder
     @objc final public func build() throws -> CashfreePGUISDK.CFPaymentComponent
     @objc override dynamic public init()

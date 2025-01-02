@@ -596,9 +596,11 @@
             "usr": "s:15CashfreePGUISDK21CFDropCheckoutPaymentC0cdE7BuilderC",
             "mangledName": "$s15CashfreePGUISDK21CFDropCheckoutPaymentC0cdE7BuilderC",
             "moduleName": "CashfreePGUISDK",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
+              "Available",
               "RawDocComment"
             ],
             "superclassUsr": "c:objc(cs)NSObject",
@@ -1146,10 +1148,12 @@
             "usr": "s:15CashfreePGUISDK18CFPaymentComponentC0cD7BuilderC",
             "mangledName": "$s15CashfreePGUISDK18CFPaymentComponentC0cD7BuilderC",
             "moduleName": "CashfreePGUISDK",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
               "Final",
               "ObjC",
+              "Available",
               "RawDocComment"
             ],
             "superclassUsr": "c:objc(cs)NSObject",
