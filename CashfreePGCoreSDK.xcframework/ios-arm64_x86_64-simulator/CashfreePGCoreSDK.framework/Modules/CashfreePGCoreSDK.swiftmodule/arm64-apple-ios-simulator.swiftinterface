@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CashfreePGCoreSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AppTrackingTransparency
@@ -139,15 +139,28 @@ import _SwiftConcurrencyShims
   @objc final public func setShowLoader(_ flag: Swift.Bool)
   @objc public func getPlatform() -> Swift.String
   @objc public func setFullScreen(_ flag: Swift.Bool)
+  @objc public func setCancelButtonVisibility(_ flag: Swift.Bool)
   @objc final public func setTheme(_ theme: CashfreePGCoreSDK.CFTheme)
   @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFSubscriptionPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFSubscriptionPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSubscriptionSession) -> CashfreePGCoreSDK.CFSubscriptionPayment.CFSubscriptionPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFSubscriptionPayment
+    @objc deinit
+  }
   @objc deinit
 }
 @objc public enum CashfreeError : Swift.Int, Swift.Error {
   case APP_ID_MISSING
   case ORDER_TOKEN_MISSING
   case PAYMENT_SESSION_ID_MISSING
+  case SUBSCRIPTION_SESSION_ID_MISSING
   case ORDER_ID_MISSING
+  case SUBSCRIPTION_ID_MISSING
   case ENVIRONMENT_MISSING
   case INVALID_ENVIRONMENT
   case CHANNEL_MISSING
@@ -247,6 +260,21 @@ extension CashfreePGCoreSDK.CFCardValidator {
   }
   @objc deinit
 }
+@_hasMissingDesignatedInitializers @objc final public class CFSubscriptionSession : ObjectiveC.NSObject {
+  final public func getSubscriptionSessionId() -> Swift.String
+  final public func getEnvironment() -> CashfreePGCoreSDK.CFENVIRONMENT
+  final public func getSubscriptionId() -> Swift.String
+  @objc final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFSubscriptionSessionBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSubscriptionSessionId(_ subscriptionSessionId: Swift.String) -> CashfreePGCoreSDK.CFSubscriptionSession.CFSubscriptionSessionBuilder
+    @objc final public func setSubscriptionId(_ id: Swift.String) -> CashfreePGCoreSDK.CFSubscriptionSession.CFSubscriptionSessionBuilder
+    @objc final public func setEnvironment(_ environment: CashfreePGCoreSDK.CFENVIRONMENT) -> CashfreePGCoreSDK.CFSubscriptionSession.CFSubscriptionSessionBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFSubscriptionSession
+    @objc deinit
+  }
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers @objc final public class CFUPI : ObjectiveC.NSObject {
   final public func getChannel() -> CashfreePGCoreSDK.CFUPIMODE
   final public func getUpiId() -> Swift.String
@@ -290,6 +318,8 @@ extension CashfreePGCoreSDK.CFCardValidator {
   public static var order_token_value: Swift.String
   public static var order_id: Swift.String
   public static var payment_session_id: Swift.String
+  public static var subs_session_id: Swift.String
+  public static var subscription_id: Swift.String
   public static let x_api_version: Swift.String
   public static var x_request_id: Swift.String
   @objc deinit
@@ -451,6 +481,7 @@ extension UIKit.UITextField {
   @objc public static func getInstance() -> CashfreePGCoreSDK.CFCorePaymentService
   @objc final public func setCallback(_ callback: any CashfreePGCoreSDK.CFResponseDelegate)
   @objc final public func doPayment(payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
+  @objc final public func startSubscriptionPayment(payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc final public func cancelPayment()
   @objc deinit
 }
