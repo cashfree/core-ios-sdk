@@ -345,6 +345,7 @@ SWIFT_CLASS("_TtC10CashfreePG23CFPaymentGatewayService")
 /// throws:
 /// In case the CFPayment instance variable is not set or not a payment mode, the method throws an exception
 - (BOOL)doPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)startSubscription:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 @end
 
 #endif
@@ -702,6 +703,7 @@ SWIFT_CLASS("_TtC10CashfreePG23CFPaymentGatewayService")
 /// throws:
 /// In case the CFPayment instance variable is not set or not a payment mode, the method throws an exception
 - (BOOL)doPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)startSubscription:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 @end
 
 #endif

@@ -15,5 +15,6 @@ import _SwiftConcurrencyShims
   public static func getInstance() -> CashfreePG.CFPaymentGatewayService
   @objc final public func setCallback(_ callback: any CashfreePGCoreSDK.CFResponseDelegate)
   @objc final public func doPayment(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
+  @objc final public func startSubscription(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc deinit
 }
