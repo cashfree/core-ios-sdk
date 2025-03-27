@@ -34,11 +34,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Fd8LgZZ0WprrFegW91IoxWDnTxU=
+		Yj6j3sOi9WJs7Mb6xRsD9UIY2SI=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		MrivZA7Wnzs/G8mT+e3LSWf5RlE=
+		UOngiG076IOolmXMcqJ5T7G96Aw=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		0rwL32Ee0QHNC1eJ8g+h6jEia6g=
+		72Jf6CDUXIn59HwBGX4GDDc5obI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -116,7 +116,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q+EQ0RxjCR/0pQgU+4jb1WYV+hGfXw7Ne9b63ktKpak=
+			Zpydwz24eBbj5QYx1X2iNDqYbD5S69Uj+jdMQ7mPli0=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g0GBrqykRdvFWIy4W0Dvq66MPfCr6GQNIZpYINJm8Wc=
+			dSm+gwQ0AowKrAWC+OltgTqX92rPm1q9pmeJOOMns8I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
