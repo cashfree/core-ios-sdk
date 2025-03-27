@@ -6814,6 +6814,13 @@
       },
       {
         "kind": "Import",
+        "name": "CashfreeAnalyticsSDK",
+        "printedName": "CashfreeAnalyticsSDK",
+        "declKind": "Import",
+        "moduleName": "CashfreePGCoreSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -17627,49 +17634,49 @@
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "StringLiteral",
-      "offset": 960,
+      "offset": 988,
       "length": 9,
       "value": "\"#00854A\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1015,
+      "offset": 1043,
       "length": 9,
       "value": "\"#DA3930\""
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1071,
+      "offset": 1099,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1228,
+      "offset": 1311,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1355,
+      "offset": 1438,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1615,
+      "offset": 1767,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Configuration\/recon\/CFPaymentVerificationReconViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2022,
+      "offset": 2174,
       "length": 4,
       "value": "true"
     },
