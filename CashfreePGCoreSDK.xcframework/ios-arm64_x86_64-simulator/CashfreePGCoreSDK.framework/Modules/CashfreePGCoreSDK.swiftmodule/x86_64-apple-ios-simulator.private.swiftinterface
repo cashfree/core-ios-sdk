@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CashfreePGCoreSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AppTrackingTransparency
@@ -118,6 +118,7 @@ import _SwiftConcurrencyShims
 @objc public protocol CFResponseDelegate {
   @objc func onError(_ error: CashfreePGCoreSDK.CFErrorResponse, order_id: Swift.String)
   @objc func verifyPayment(order_id: Swift.String)
+  @objc optional func verifySubscription(subscription_id: Swift.String)
   @objc optional func loadQRAndVerifyPayment(base64: Swift.String, order_id: Swift.String)
   @objc optional func receivedEvent(event_name: Swift.String, meta_data: Swift.Dictionary<Swift.String, Any>)
 }
