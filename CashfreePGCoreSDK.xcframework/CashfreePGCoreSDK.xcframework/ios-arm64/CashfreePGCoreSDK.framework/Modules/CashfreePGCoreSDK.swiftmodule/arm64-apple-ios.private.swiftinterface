@@ -1,0 +1,524 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CashfreePGCoreSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AppTrackingTransparency
+import CFNetworkSDK
+import CashfreeAnalyticsSDK
+@_exported import CashfreePGCoreSDK
+import CoreData
+import DeveloperToolsSupport
+import Foundation
+import MachO
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers open class CFConstantFunctions {
+  public static func createCustomResponse(txStatus: Swift.String, response: Swift.Dictionary<Swift.String, Any>, order_id: Swift.String) -> CashfreePGCoreSDK.CFErrorResponse
+  public static func setXRequestId(environment: CashfreePGCoreSDK.CFENVIRONMENT, payment_session_id: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class CFCardComponent : UIKit.UIView, UIKit.UITextFieldDelegate, CFNetworkSDK.APIHandlers {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor @preconcurrency public func initializeCardComponent(session: CashfreePGCoreSDK.CFSession, card_listener: any CashfreePGCoreSDK.CFCardListener, hint_text: Swift.String, font: UIKit.UIFont?, textColor: UIKit.UIColor?, enable_pasting: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func onSuccess(apiState: CFNetworkSDK.APIState, result: Swift.Dictionary<Swift.String, Any>)
+  @_Concurrency.MainActor @preconcurrency public func onSuccess(apiState: CFNetworkSDK.APIState, result: [Swift.Dictionary<Swift.String, Any>])
+  @_Concurrency.MainActor @preconcurrency public func onFailure(apiState: CFNetworkSDK.APIState, response: Swift.Dictionary<Swift.String, Any>)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class CFCardListenerResponse : ObjectiveC.NSObject {
+  public var numberOfCharacters: Swift.Int?
+  public var message: Swift.String?
+  public var type: Swift.String?
+  public var meta_data: Swift.Dictionary<Swift.String, Any>?
+  @objc deinit
+}
+@objc public protocol CFCardListener {
+  @objc func cardMetaData(card_listener_response: CashfreePGCoreSDK.CFCardListenerResponse)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFCardPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFCardPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setCard(_ card: CashfreePGCoreSDK.CFCard) -> CashfreePGCoreSDK.CFCardPayment.CFCardPaymentBuilder
+    @available(iOS, deprecated, message: "This method does not support tokenisation. Please use \"saveInstrument\"")
+    @objc final public func savePaymentMethod(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFCardPayment.CFCardPaymentBuilder
+    @objc final public func saveInstrument(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFCardPayment.CFCardPaymentBuilder
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFCardPayment.CFCardPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFCardPayment
+    @objc deinit
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFWalletPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFWalletPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFWalletPayment.CFWalletPaymentBuilder
+    @objc final public func setWallet(_ wallet: CashfreePGCoreSDK.CFWallet) -> CashfreePGCoreSDK.CFWalletPayment.CFWalletPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFWalletPayment
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class CFSession : ObjectiveC.NSObject {
+  final public func getOrderToken() -> Swift.String
+  final public func getPaymentSessionId() -> Swift.String
+  final public func getEnvironment() -> CashfreePGCoreSDK.CFENVIRONMENT
+  final public func getOrderId() -> Swift.String
+  @objc final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFSessionBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @available(*, deprecated, message: "order_token will no longer be used in the integration steps. Please switch to payment_session_id using setPaymentSessionId() method")
+    @objc final public func setOrderToken(_ token: Swift.String) -> CashfreePGCoreSDK.CFSession.CFSessionBuilder
+    @objc final public func setPaymentSessionId(_ paymentSessionId: Swift.String) -> CashfreePGCoreSDK.CFSession.CFSessionBuilder
+    @objc final public func setOrderID(_ id: Swift.String) -> CashfreePGCoreSDK.CFSession.CFSessionBuilder
+    @objc final public func setEnvironment(_ environment: CashfreePGCoreSDK.CFENVIRONMENT) -> CashfreePGCoreSDK.CFSession.CFSessionBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFSession
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class CFPaylater : ObjectiveC.NSObject {
+  final public func getChannel() -> Swift.String
+  final public func getProvider() -> Swift.String
+  @_inheritsConvenienceInitializers @objc final public class CFPaylaterBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setProvider(_ provider: Swift.String) -> CashfreePGCoreSDK.CFPaylater.CFPaylaterBuilder
+    @objc final public func setPhone(_ phone: Swift.String) -> CashfreePGCoreSDK.CFPaylater.CFPaylaterBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFPaylater
+    final public func getChannel() -> Swift.String
+    final public func getProvider() -> Swift.String
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class CFEMICard : ObjectiveC.NSObject {
+  @objc final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFEMICardBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setCardNumber(_ number: Swift.String) -> CashfreePGCoreSDK.CFEMICard.CFEMICardBuilder
+    @objc final public func setCardHolderName(_ name: Swift.String) -> CashfreePGCoreSDK.CFEMICard.CFEMICardBuilder
+    @objc final public func setCardExpiryMonth(_ month: Swift.String) -> CashfreePGCoreSDK.CFEMICard.CFEMICardBuilder
+    @objc final public func setCardExpiryYear(_ year: Swift.String) -> CashfreePGCoreSDK.CFEMICard.CFEMICardBuilder
+    @objc final public func setCVV(_ cvv: Swift.String) -> CashfreePGCoreSDK.CFEMICard.CFEMICardBuilder
+    @objc final public func setBankName(_ bankName: Swift.String) -> CashfreePGCoreSDK.CFEMICard.CFEMICardBuilder
+    @objc final public func setEMITenure(_ tenure: Swift.Int) -> CashfreePGCoreSDK.CFEMICard.CFEMICardBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFEMICard
+    @objc deinit
+  }
+  @objc deinit
+}
+@objc public protocol CFResponseDelegate {
+  @objc func onError(_ error: CashfreePGCoreSDK.CFErrorResponse, order_id: Swift.String)
+  @objc func verifyPayment(order_id: Swift.String)
+  @objc optional func verifySubscription(subscription_id: Swift.String)
+  @objc optional func loadQRAndVerifyPayment(base64: Swift.String, order_id: Swift.String)
+  @objc optional func receivedEvent(event_name: Swift.String, meta_data: Swift.Dictionary<Swift.String, Any>)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFEMICardPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc public class CFEMICardPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc public func setCard(_ card: CashfreePGCoreSDK.CFEMICard) -> CashfreePGCoreSDK.CFEMICardPayment.CFEMICardPaymentBuilder
+    @objc public func savePaymentMethod(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFEMICardPayment.CFEMICardPaymentBuilder
+    @objc public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFEMICardPayment.CFEMICardPaymentBuilder
+    @objc public func build() throws -> CashfreePGCoreSDK.CFEMICardPayment
+    @objc deinit
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class CFPayment : ObjectiveC.NSObject {
+  @objc public func printDescription()
+  @objc final public func setPlatform(_ platform: Swift.String)
+  @objc final public func setShowLoader(_ flag: Swift.Bool)
+  @objc public func getPlatform() -> Swift.String
+  @objc public func setFullScreen(_ flag: Swift.Bool)
+  @objc public func setCancelButtonVisibility(_ flag: Swift.Bool)
+  @objc final public func setTheme(_ theme: CashfreePGCoreSDK.CFTheme)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFSubscriptionPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFSubscriptionPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSubscriptionSession) -> CashfreePGCoreSDK.CFSubscriptionPayment.CFSubscriptionPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFSubscriptionPayment
+    @objc deinit
+  }
+  @objc deinit
+}
+@objc public enum CashfreeError : Swift.Int, Swift.Error {
+  case APP_ID_MISSING
+  case ORDER_TOKEN_MISSING
+  case PAYMENT_SESSION_ID_MISSING
+  case SUBSCRIPTION_SESSION_ID_MISSING
+  case ORDER_ID_MISSING
+  case SUBSCRIPTION_ID_MISSING
+  case ENVIRONMENT_MISSING
+  case INVALID_ENVIRONMENT
+  case CHANNEL_MISSING
+  case CARD_NUMBER_MISSING
+  case CARD_HOLDER_NAME_MISSING
+  case CARD_EXPIRY_MONTH_MISSING
+  case CARD_EXPIRY_YEAR_MISSING
+  case CARD_CVV_MISSING
+  case CARD_BANK_NAME_MISSING
+  case CARD_EMI_TENURE_MISSING
+  case UPI_ID_MISSING
+  case INVALID_UPI_APP_ID_SENT
+  case PROVIDER_MISSING
+  case PHONE_NUMBER_MISSING
+  case NB_BANK_CODE_MISSING
+  case NB_BANK_NAME_MISSING
+  case NB_BANK_IFSC_MISSING
+  case NB_BANK_ACCOUNT_NUMBER_MISSING
+  case PAYMENT_OBJECT_MISSING
+  case INVALID_PAYMENT_OBJECT_SENT
+  case SESSION_OBJECT_MISSING
+  case CALLBACK_MISSING
+  case CARD_OBJECT_MISSING
+  case NETBANKING_OBJECT_MISSING
+  case WALLET_OBJECT_MISSING
+  case PAYLATER_OBJECT_MISSING
+  case UPI_OBJECT_MISSING
+  case WEB_VIEW_CALLBACK_MISSING
+  case INVALID_WEB_DATA
+  case INVALID_QRCODE_DATA
+  case IMAGE_VIEW_CALLBACK_MISSING
+  case MISSING_CALLBACK
+  case MISSING_VIEW_CONTROLLER_INSTANCE
+  case HEX_SHOULD_START_WITH
+  case COMPONENTS_MISSING
+  case ONE_PAYMENT_COMPONENT_SHOULD_BE_PRESENT
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension CashfreePGCoreSDK.CashfreeError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFNetbankingPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFNetbankingPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFNetbankingPayment.CFNetbankingPaymentBuilder
+    @objc final public func setNetbanking(_ netbanking: CashfreePGCoreSDK.CFNetbanking) -> CashfreePGCoreSDK.CFNetbankingPayment.CFNetbankingPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFNetbankingPayment
+    @objc deinit
+  }
+  @objc deinit
+}
+public enum CFCardValidator : Swift.Int, Swift.CustomStringConvertible {
+  case VISA, MASTERCARD, AMEX, DISCOVER, DINERS, DINERS_CARTE_BLANCHE, RUPAY, JCB, VISA_ELECTRON
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension CashfreePGCoreSDK.CFCardValidator {
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class CFValidator {
+  public static let shared: CashfreePGCoreSDK.CFValidator
+  public func luhnCheck(_ number: Swift.String) -> Swift.Bool
+  public func getCardType(cardNumber: Swift.String) -> CashfreePGCoreSDK.CFCardValidator?
+  public func validateUPI(upiId: Swift.String) -> Swift.Bool
+  public func validateExpiry(cardExpiry: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFUPIPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFUPIPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setUPI(_ upi: CashfreePGCoreSDK.CFUPI) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
+    @objc final public func enableRecon(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
+    @objc final public func enableBackgroundBlur(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
+    @objc final public func setShowAllLogos(_ flag: Swift.Bool) -> CashfreePGCoreSDK.CFUPIPayment.CFUPIPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFUPIPayment
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class CFSubscriptionSession : ObjectiveC.NSObject {
+  final public func getSubscriptionSessionId() -> Swift.String
+  final public func getEnvironment() -> CashfreePGCoreSDK.CFENVIRONMENT
+  final public func getSubscriptionId() -> Swift.String
+  @objc final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFSubscriptionSessionBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSubscriptionSessionId(_ subscriptionSessionId: Swift.String) -> CashfreePGCoreSDK.CFSubscriptionSession.CFSubscriptionSessionBuilder
+    @objc final public func setSubscriptionId(_ id: Swift.String) -> CashfreePGCoreSDK.CFSubscriptionSession.CFSubscriptionSessionBuilder
+    @objc final public func setEnvironment(_ environment: CashfreePGCoreSDK.CFENVIRONMENT) -> CashfreePGCoreSDK.CFSubscriptionSession.CFSubscriptionSessionBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFSubscriptionSession
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class CFUPI : ObjectiveC.NSObject {
+  final public func getChannel() -> CashfreePGCoreSDK.CFUPIMODE
+  final public func getUpiId() -> Swift.String
+  @objc final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFUPIBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setChannel(_ channel: CashfreePGCoreSDK.CFUPIMODE) -> CashfreePGCoreSDK.CFUPI.CFUPIBuilder
+    @objc final public func setUPIID(_ id: Swift.String) -> CashfreePGCoreSDK.CFUPI.CFUPIBuilder
+    final public func getUpiId() -> Swift.String
+    final public func getChannel() -> CashfreePGCoreSDK.CFUPIMODE
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFUPI
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class CFWallet : ObjectiveC.NSObject {
+  final public func getChannel() -> Swift.String
+  final public func getProvider() -> Swift.String
+  @_inheritsConvenienceInitializers @objc final public class CFWalletBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setProvider(_ provider: Swift.String) -> CashfreePGCoreSDK.CFWallet.CFWalletBuilder
+    @objc final public func setPhone(_ phone: Swift.String) -> CashfreePGCoreSDK.CFWallet.CFWalletBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFWallet
+    final public func getChannel() -> Swift.String
+    final public func getProvider() -> Swift.String
+    @objc deinit
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFWebCheckoutPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFWebCheckoutPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFWebCheckoutPayment.CFWebCheckoutPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFWebCheckoutPayment
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class CFConstants {
+  public static var order_token_value: Swift.String
+  public static var order_id: Swift.String
+  public static var payment_session_id: Swift.String
+  public static var subs_session_id: Swift.String
+  public static var subscription_id: Swift.String
+  public static let x_api_version: Swift.String
+  public static var x_request_id: Swift.String
+  @objc deinit
+}
+@objc public enum CFENVIRONMENT : Swift.Int {
+  case PRODUCTION
+  case SANDBOX
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc final public class CFCard : ObjectiveC.NSObject {
+  final public func getChannel() -> Swift.String
+  @_inheritsConvenienceInitializers @objc final public class CFCardBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setChannel(_ channel: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func setCardNumber(_ number: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func setCardHolderName(_ name: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func setCardExpiryMonth(_ month: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func setCardExpiryYear(_ year: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func setCVV(_ cvv: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func setInstrumentId(_ instrument_id: Swift.String) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @available(iOS, deprecated, message: "This method has been renamed to \"setCardComponent\"")
+    @objc final public func setCardComponet(_ card_component: CashfreePGCoreSDK.CFCardComponent) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func setCardComponent(_ card_component: CashfreePGCoreSDK.CFCardComponent) -> CashfreePGCoreSDK.CFCard.CFCardBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFCard
+    @objc deinit
+  }
+  @objc deinit
+}
+extension UIKit.UIColor {
+  convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
+  convenience public init(hex: Swift.String)
+}
+@_hasMissingDesignatedInitializers @objc final public class CFNetbanking : ObjectiveC.NSObject {
+  final public func getChannel() -> Swift.String
+  final public func getBankCode() -> Swift.Int
+  @_inheritsConvenienceInitializers @objc final public class CFNetbankingBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setBankCode(_ code: Swift.Int) -> CashfreePGCoreSDK.CFNetbanking.CFNetbankingBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFNetbanking
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CFAnalyticsService {
+  public static let shared: CashfreePGCoreSDK.CFAnalyticsService
+  public func createMetaData(order_id: Swift.String, payment_id: Swift.String, request_id: Swift.String, currency: Swift.String, event_name: CashfreePGCoreSDK.CFAnalyticsService.AnalyticsEvent, callback: (any CashfreePGCoreSDK.CFResponseDelegate)?, payment_mode: Swift.String = "", payment_method: Swift.String = "", channel: Swift.String = "", error_code: Swift.String = "", error_message: Swift.String = "")
+  public enum AnalyticsEvent : Swift.String {
+    case cfevent_checkout_open
+    case cfevent_payment_mode_focus
+    case cfevent_payment_method_select
+    case cfevent_payment_pay
+    case cfevent_payment_started
+    case cfevent_payment_initiation_error
+    case cfevent_payment_ended
+    case cfevent_checkout_close
+    case cfevent_payment_processing_error
+    case cfevent_general_error
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CFUPIUtils : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public func getInstalledUPIApplications() -> [[Swift.String : Swift.String]]
+  @objc deinit
+}
+@objc public enum CFUPIMODE : Swift.Int {
+  case COLLECT
+  case INTENT
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension CashfreePGCoreSDK.CFUPIMODE : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc final public class CFTheme : ObjectiveC.NSObject {
+  final public func getPrimaryFontString() -> Swift.String
+  final public func getSecondaryFontString() -> Swift.String
+  final public func getPrimaryTextColor() -> UIKit.UIColor
+  final public func getPrimaryTextColorHex() -> Swift.String
+  final public func getSecondaryTextColor() -> UIKit.UIColor
+  final public func getSecondaryTextColorHex() -> Swift.String
+  final public func getbackgroundColor() -> UIKit.UIColor
+  final public func getNavigationBarBackgroundColor() -> UIKit.UIColor
+  final public func getNavigationBarBackgroundColorHex() -> Swift.String
+  final public func getNavigationBarTextColor() -> UIKit.UIColor
+  final public func getPrimaryFont() -> UIKit.UIFont
+  final public func getSecondaryFont() -> UIKit.UIFont
+  final public func getButtonBackgroundColor() -> UIKit.UIColor
+  final public func getButtonBackgroundColorHex() -> Swift.String
+  final public func getButtonTextColor() -> UIKit.UIColor
+  final public func getButtonTextColorHex() -> Swift.String
+  @_inheritsConvenienceInitializers @objc final public class CFThemeBuilder : ObjectiveC.NSObject {
+    @objc final public func setButtonTextColor(_ buttonTextColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setButtonBackgroundColor(_ buttonColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setPrimaryFont(_ fontName: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setSecondaryFont(_ fontName: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setPrimaryTextColor(_ textColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setSecondaryTextColor(_ textColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setNavigationBarBackgroundColor(_ navigationBarBackgroundColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func setNavigationBarTextColor(_ navigationBarTextColor: Swift.String) -> CashfreePGCoreSDK.CFTheme.CFThemeBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFTheme
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @objc deinit
+}
+extension UIKit.UITextField {
+  public enum PaddingSpace {
+    case left(CoreFoundation.CGFloat)
+    case right(CoreFoundation.CGFloat)
+    case equalSpacing(CoreFoundation.CGFloat)
+  }
+  @_Concurrency.MainActor @preconcurrency public func addPadding(padding: UIKit.UITextField.PaddingSpace)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFQRCodePayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFQRCodePaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFQRCodePayment.CFQRCodePaymentBuilder
+    final public func build() throws -> CashfreePGCoreSDK.CFQRCodePayment
+    @objc deinit
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFPaylaterPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFPaylaterPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGCoreSDK.CFPaylaterPayment.CFPaylaterPaymentBuilder
+    @objc final public func setPaylater(_ paylater: CashfreePGCoreSDK.CFPaylater) -> CashfreePGCoreSDK.CFPaylaterPayment.CFPaylaterPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFPaylaterPayment
+    @objc deinit
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFCorePaymentService : ObjectiveC.NSObject {
+  @objc public static func getInstance() -> CashfreePGCoreSDK.CFCorePaymentService
+  @objc final public func setCallback(_ callback: any CashfreePGCoreSDK.CFResponseDelegate)
+  @objc final public func doPayment(payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
+  @objc final public func startSubscriptionPayment(payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
+  @objc final public func cancelPayment()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CFErrorResponse : ObjectiveC.NSObject {
+  public var status: Swift.String?
+  public var message: Swift.String?
+  public var code: Swift.String?
+  public var type: Swift.String?
+  public var orderId: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CFPaymentResponse : ObjectiveC.NSObject {
+  public var orderAmount: Swift.String?
+  public var orderId: Swift.String?
+  public var paymentMode: Swift.String?
+  public var referenceId: Swift.String?
+  public var signature: Swift.String?
+  public var txMsg: Swift.String?
+  public var txStatus: Swift.String?
+  public var txTime: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension CashfreePGCoreSDK.CashfreeError : Swift.Equatable {}
+extension CashfreePGCoreSDK.CashfreeError : Swift.Hashable {}
+extension CashfreePGCoreSDK.CashfreeError : Swift.RawRepresentable {}
+extension CashfreePGCoreSDK.CFCardValidator : Swift.Equatable {}
+extension CashfreePGCoreSDK.CFCardValidator : Swift.Hashable {}
+extension CashfreePGCoreSDK.CFCardValidator : Swift.RawRepresentable {}
+extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.Equatable {}
+extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.Hashable {}
+extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.RawRepresentable {}
+extension CashfreePGCoreSDK.CFAnalyticsService.AnalyticsEvent : Swift.Equatable {}
+extension CashfreePGCoreSDK.CFAnalyticsService.AnalyticsEvent : Swift.Hashable {}
+extension CashfreePGCoreSDK.CFAnalyticsService.AnalyticsEvent : Swift.RawRepresentable {}
+extension CashfreePGCoreSDK.CFUPIMODE : Swift.Equatable {}
+extension CashfreePGCoreSDK.CFUPIMODE : Swift.Hashable {}
+extension CashfreePGCoreSDK.CFUPIMODE : Swift.RawRepresentable {}
