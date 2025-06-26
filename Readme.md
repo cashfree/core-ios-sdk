@@ -10,9 +10,76 @@
 Sample integration project for Cashfree Payment Gateway's iOS SDK, facilitating seamless and secure payment processing within your iOS application.
 
 
+
+## 📦 Installation
+
+### Swift Package Manager (Recommended)
+
+The easiest way to integrate Cashfree iOS SDK is through Swift Package Manager:
+
+#### **Method 1: Xcode GUI**
+1. Open your project in Xcode
+2. Go to **File** > **Add Package Dependencies**
+3. Enter the repository URL: `https://github.com/cashfree/core-ios-sdk.git`
+4. Select the version rule (recommend "Up to Next Major Version")
+5. Choose the products you need:
+   - `CashfreePG` - Complete Payment Gateway SDK (recommended)
+   - `CashfreePGCoreSDK` - Core payment processing
+   - `CashfreePGUISDK` - UI components
+   - `CashfreeAnalyticsSDK` - Analytics and tracking
+   - `CFNetworkSDK` - Networking layer
+
+#### **Method 2: Package.swift**
+Add the following to your `Package.swift` file:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.2.4")
+]
+```
+
+Then add to your target dependencies:
+
+```swift
+.target(
+    name: "YourApp",
+    dependencies: [
+        .product(name: "CashfreePG", package: "core-ios-sdk")
+    ]
+)
+```
+
+### CocoaPods
+
+Add the following to your `Podfile`:
+
+```ruby
+pod 'CashfreePG', '~> 2.2.4'
+```
+
+Then run:
+```bash
+pod install
+```
+
+## 🏗️ Framework Architecture
+
+The Cashfree iOS SDK is built with a modular architecture:
+
+```
+CashfreePG (Main SDK)
+    ├── CashfreePGUISDK (UI Components)
+    │   └── CashfreePGCoreSDK (Core Payment Logic)
+    │       └── CashfreeAnalyticsSDK (Analytics & Tracking)
+    │           └── CFNetworkSDK (Networking Layer)
+```
+
 ## Documentation
 
 The Cashfree iOS SDK allows you to integrate Cashfree Payment Gateway into your application and start collecting payments from your customers. It has been designed to minimise the complexity of handling and integrating payments in your iOS project.
+
+- **[SPM Integration Guide](SPM_INTEGRATION_GUIDE.md)** - Detailed SPM setup instructions
+- **[API Documentation](https://docs.cashfree.com/docs/ios)** - Complete API reference  
 
 ### Getting Started
 
