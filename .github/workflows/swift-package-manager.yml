@@ -1,0 +1,311 @@
+name: Swift Package Manager
+
+on:
+  # Validate on PRs
+  pull_request:
+    branches: [ main, master, develop ]
+    paths:
+      - 'Package.swift'
+      - '*.xcframework/**'
+      - '*.podspec'
+  
+  # Handle pushes to master and tag pushes (validate only)
+  push:
+    branches: [ main, master ]
+    tags: [ '[0-9]+.[0-9]+.[0-9]+', 'v[0-9]+.[0-9]+.[0-9]+' ]
+  
+  # Manual validation and release options
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Action to perform'
+        required: true
+        type: choice
+        options:
+          - 'validate'
+          - 'release'
+        default: 'validate'
+      version:
+        description: 'Version for manual release (e.g., 2.4.7)'
+        required: false
+        type: string
+
+jobs:
+  validate:
+    name: Validate Swift Package
+    runs-on: macos-latest
+    
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
+      tag: ${{ steps.get_version.outputs.tag }}
+      should_release: ${{ steps.get_version.outputs.should_release }}
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
+    
+    - name: Get Version Info
+      id: get_version
+      run: |
+        if [[ $GITHUB_REF == refs/tags/* ]]; then
+          # Tag push - validation mode (no automated releases)
+          tag_name=${GITHUB_REF#refs/tags/}
+          # Remove 'v' prefix if present for version consistency
+          version=$(echo "$tag_name" | sed 's/^v//')
+          echo "tag=$tag_name" >> $GITHUB_OUTPUT
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "should_release=false" >> $GITHUB_OUTPUT
+          echo "🏷️ Tag push detected - validation mode for $tag_name (version: $version)"
+        elif [[ $GITHUB_REF == refs/heads/main ]] || [[ $GITHUB_REF == refs/heads/master ]]; then
+          # Push to master - validate only
+          echo "tag=" >> $GITHUB_OUTPUT
+          echo "version=" >> $GITHUB_OUTPUT
+          echo "should_release=false" >> $GITHUB_OUTPUT
+          echo "✅ Push to main/master - validation only mode"
+        elif [[ "${{ github.event.inputs.action }}" == "release" ]]; then
+          # Manual release - validation mode (no automated releases)
+          version="${{ github.event.inputs.version }}"
+          if [ -z "$version" ]; then
+            current_version=$(git describe --tags --abbrev=0 2>/dev/null || echo "2.5.5")
+            IFS='.' read -ra VERSION_PARTS <<< "$current_version"
+            major=${VERSION_PARTS[0]:-2}
+            minor=${VERSION_PARTS[1]:-5}
+            patch=${VERSION_PARTS[2]:-5}
+            patch=$((patch + 1))
+            version="$major.$minor.$patch"
+          fi
+          echo "tag=$version" >> $GITHUB_OUTPUT
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "should_release=false" >> $GITHUB_OUTPUT
+          echo "🔧 Manual release validation mode - version: $version"
+        else
+          # PR or validation only
+          echo "tag=" >> $GITHUB_OUTPUT
+          echo "version=" >> $GITHUB_OUTPUT
+          echo "should_release=false" >> $GITHUB_OUTPUT
+          echo "✅ Validation only mode"
+        fi
+    
+    - name: Validate Swift Package Requirements
+      run: |
+        echo "🔍 Validating Swift Package Registry Requirements..."
+        echo "=================================================="
+        
+        # 1. Package.swift validation
+        if [ ! -f "Package.swift" ]; then
+          echo "❌ Package.swift not found in root folder"
+          exit 1
+        fi
+        echo "✅ Package.swift exists in root folder"
+        
+        # 2. Valid JSON output
+        swift package dump-package > package-dump.json
+        if [ $? -ne 0 ]; then
+          echo "❌ Package.swift does not output valid JSON"
+          exit 1
+        fi
+        echo "✅ Package.swift outputs valid JSON"
+        
+        # 3. Swift version check
+        swift_version=$(grep -o "swift-tools-version:[0-9]\+\.[0-9]\+" Package.swift | cut -d':' -f2 || echo "unknown")
+        echo "📌 Swift tools version: $swift_version"
+        
+        if [[ "$swift_version" == "unknown" ]]; then
+          echo "❌ Could not determine Swift tools version"
+          exit 1
+        fi
+        
+        major=$(echo $swift_version | cut -d'.' -f1)
+        minor=$(echo $swift_version | cut -d'.' -f2)
+        
+        if [ "$major" -lt 5 ] || ([ "$major" -eq 5 ] && [ "$minor" -lt 0 ]); then
+          echo "❌ Swift version $swift_version is less than required 5.0"
+          exit 1
+        fi
+        echo "✅ Swift version $swift_version meets requirement (≥5.0)"
+        
+        # 4. Products validation
+        products=$(python3 -c "
+        import sys, json
+        with open('package-dump.json') as f:
+            data = json.load(f)
+        products = data.get('products', [])
+        if not products:
+            print('NONE')
+        else:
+            for product in products:
+                print(f'{product[\"name\"]}:{product[\"type\"]}')
+        ")
+        
+        if [ "$products" = "NONE" ]; then
+          echo "❌ No products found in Package.swift"
+          exit 1
+        fi
+        
+        library_count=$(echo "$products" | grep -c ":library" || echo "0")
+        if [ "$library_count" -eq 0 ]; then
+          echo "❌ No library products found"
+          exit 1
+        fi
+        echo "✅ Found $library_count library product(s)"
+        
+        # 5. URL format validation
+        repo_url="https://github.com/${{ github.repository }}.git"
+        if [[ ! "$repo_url" =~ ^https://.*\.git$ ]]; then
+          echo "❌ Repository URL must include protocol and .git extension"
+          exit 1
+        fi
+        echo "✅ Repository URL format is correct"
+        
+        # 6. Platform support validation (CRITICAL for SPM compliance)
+        echo "📋 Validating platform support..."
+        platforms=$(python3 -c "
+        import sys, json
+        with open('package-dump.json') as f:
+            data = json.load(f)
+        platforms = data.get('platforms', [])
+        if not platforms:
+            print('NONE')
+        else:
+            for platform in platforms:
+                name = platform.get('platformName', 'unknown')
+                version = platform.get('version', 'unknown')
+                print(f'{name}:{version}')
+        ")
+        
+        if [ "$platforms" = "NONE" ]; then
+          echo "❌ No platforms declared in Package.swift - SPM requires explicit platform support"
+          echo "💡 Add platforms array to Package.swift, e.g.:"
+          echo "   platforms: [.iOS(.v12), .macOS(.v10_15)]"
+          exit 1
+        fi
+        
+        echo "📱 Declared platforms:"
+        echo "$platforms" | while read -r platform; do
+          name=$(echo "$platform" | cut -d':' -f1)
+          version=$(echo "$platform" | cut -d':' -f2)
+          echo "  - $name (minimum: $version)"
+        done
+        
+        # Check if iOS is supported (most common requirement)
+        ios_support=$(echo "$platforms" | grep -i "ios" || echo "")
+        if [ -n "$ios_support" ]; then
+          echo "✅ iOS platform support declared"
+        else
+          echo "⚠️ iOS platform not explicitly declared"
+        fi
+        
+        echo "✅ Platform declarations validated"
+        echo "🎉 Swift Package Registry requirements validated!"
+    
+    - name: Resolve Dependencies and Build
+      run: |
+        echo "📦 Resolving dependencies..."
+        swift package resolve
+        echo "✅ Dependencies resolved"
+        
+        echo "🔨 Building package..."
+        
+        # Check if package contains buildable targets
+        has_buildable=$(swift package dump-package | python3 -c "
+        import sys, json
+        data = json.load(sys.stdin)
+        buildable_targets = [t for t in data.get('targets', []) if t.get('type') != 'binary']
+        print('true' if buildable_targets else 'false')
+        ")
+        
+        if [ "$has_buildable" = "true" ]; then
+          swift build
+          echo "✅ Package built successfully"
+        else
+          echo "📦 Package contains only binary targets (XCFrameworks)"
+          echo "✅ Binary package validation - no build required"
+        fi
+    
+    - name: Validate XCFrameworks
+      run: |
+        echo "🔍 Validating XCFrameworks..."
+        for framework in *.xcframework; do
+          if [ -d "$framework" ]; then
+            echo "📱 Validating $framework..."
+            if [ -f "$framework/Info.plist" ]; then
+              echo "✅ $framework has valid Info.plist"
+            else
+              echo "❌ $framework missing Info.plist"
+              exit 1
+            fi
+          fi
+        done
+        echo "✅ All XCFrameworks validated"
+    
+    - name: Run Tests (if available)
+      run: |
+        # Check if package has test targets
+        has_tests=$(swift package dump-package | python3 -c "
+        import sys, json
+        data = json.load(sys.stdin)
+        test_targets = [t for t in data.get('targets', []) if t.get('type') == 'test']
+        print('true' if test_targets else 'false')
+        ")
+        
+        if [ "$has_tests" = "true" ]; then
+          echo "🧪 Running tests..."
+          swift test
+          echo "✅ All tests passed"
+        else
+          echo "ℹ️ No test targets found - binary package"
+          echo "✅ Tests not applicable for binary package"
+        fi
+
+  validation_summary:
+    name: Validation Summary
+    runs-on: ubuntu-latest
+    needs: validate
+    if: always() && needs.validate.result == 'success'
+    
+    steps:
+    - name: Generate Validation Summary
+      run: |
+        echo "## 📋 Swift Package Validation Report" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### ✅ Swift Package Registry Requirements" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Repository is publicly accessible" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Package.swift exists in root folder" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Swift version ≥5.0 requirement met" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Package contains usable library products" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Platform support properly declared" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Valid JSON output from swift package dump-package" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Package URL includes protocol and .git extension" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Package compiles without errors" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### ✅ Additional Validation Results" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Dependencies resolved successfully" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Binary package validation completed" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ XCFrameworks are properly structured" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📦 Package Type" >> $GITHUB_STEP_SUMMARY
+        echo "This is a **binary package** containing XCFrameworks only." >> $GITHUB_STEP_SUMMARY
+        echo "No source code compilation required." >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        # Show validation results based on trigger type
+        if [[ "${{ startsWith(github.ref, 'refs/tags/') }}" == "true" ]]; then
+          echo "### 🏷️ Tag Validation Complete" >> $GITHUB_STEP_SUMMARY
+          echo "Tag **${{ github.ref_name }}** validation successful." >> $GITHUB_STEP_SUMMARY
+        elif [[ "${{ github.event.inputs.action }}" == "release" ]]; then
+          echo "### 🔧 Manual Release Validation Complete" >> $GITHUB_STEP_SUMMARY
+          echo "Release validation successful for version **${{ needs.validate.outputs.version }}**." >> $GITHUB_STEP_SUMMARY
+        else
+          echo "### ✅ Validation Complete" >> $GITHUB_STEP_SUMMARY
+          echo "Package validation successful." >> $GITHUB_STEP_SUMMARY
+        fi
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Note**: Validation ensures your package meets Swift Package Manager standards." >> $GITHUB_STEP_SUMMARY

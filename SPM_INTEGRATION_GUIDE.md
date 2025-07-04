@@ -1,34 +1,42 @@
 # Swift Package Manager Integration Guide
 
-This guide provides detailed instructions for integrating the Cashfree iOS SDK using Swift Package Manager (SPM).
+This comprehensive guide provides detailed instructions for integrating the Cashfree iOS SDK using Swift Package Manager (SPM).
 
 ## Overview
 
 The Cashfree iOS SDK consists of multiple frameworks that work together to provide a complete payment solution:
 
-- **CashfreePG** - Main SDK that includes all payment functionality (recommended)
+- **CashfreePG** - Main SDK that includes all payment functionality (recommended for most use cases)
 - **CashfreePGCoreSDK** - Core payment processing functionality
 - **CashfreePGUISDK** - Pre-built UI components for payment flows
 - **CashfreeAnalyticsSDK** - Analytics and tracking functionality
 - **CFNetworkSDK** - Network layer for API communication
 
-## Installation
+## 📦 Installation Methods
 
-### Method 1: Xcode GUI
+### Method 1: Xcode GUI (Recommended for Beginners)
 
-1. Open your iOS project in Xcode
-2. Navigate to your project settings
-3. Select your app target
-4. Go to the **Package Dependencies** tab
-5. Click the **+** button
-6. Enter the repository URL: `https://github.com/cashfree/core-ios-sdk.git`
-7. Choose your preferred version rule (recommended: "Up to Next Major Version")
-8. Click **Add Package**
-9. Select the products you need:
+1. **Open your iOS project** in Xcode
+2. **Navigate to your project settings**
+   - Click on your project name in the navigator
+   - Select your app target
+3. **Go to Package Dependencies**
+   - Click on the **Package Dependencies** tab
+   - Click the **+** button to add a new package
+4. **Add the Cashfree SDK**
+   - Enter the repository URL: `https://github.com/cashfree/core-ios-sdk.git`
+   - Choose your preferred version rule:
+     - **Up to Next Major Version** (recommended): Automatically gets bug fixes and new features
+     - **Up to Next Minor Version**: Gets bug fixes only
+     - **Exact Version**: Locks to a specific version
+5. **Select Products**
    - For most use cases, select **CashfreePG** (includes all dependencies)
    - For custom implementations, select individual components as needed
+6. **Add to Target**
+   - Ensure the package is added to your app target
+   - Click **Add Package**
 
-### Method 2: Package.swift
+### Method 2: Package.swift (For Swift Packages)
 
 Add the following to your `Package.swift` file:
 
@@ -39,12 +47,12 @@ import PackageDescription
 let package = Package(
     name: "YourApp",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v12)  // Minimum iOS version supported
     ],
     dependencies: [
         .package(
             url: "https://github.com/cashfree/core-ios-sdk.git",
-            from: "2.2.4"
+            from: "2.5.5"
         )
     ],
     targets: [
@@ -58,208 +66,230 @@ let package = Package(
 )
 ```
 
-## Usage
+### Method 3: Xcode Project with Package.swift Dependencies
 
-### Basic Integration
+If you're adding SPM to an existing Xcode project programmatically:
+
+1. Create a `Package.swift` file in your project root
+2. Add the dependencies as shown in Method 2
+3. In Xcode, go to **File** → **Add Package Dependencies**
+4. Select **Add Local** and choose your `Package.swift` file
+
+## 🔧 Configuration
+
+### Import Statements
+
+Add the following import statements to your Swift files:
 
 ```swift
 import CashfreePG
-// Note: Due to SPM limitations, you may need to import dependencies manually
-// import CashfreePGUISDK
-// import CashfreePGCoreSDK
-// import CashfreeAnalyticsSDK
-// import CFNetworkSDK
+import CashfreePGCoreSDK  // If using separately
+import CashfreePGUISDK   // If using separately
+```
 
-class PaymentViewController: UIViewController {
+### Basic Setup
+
+```swift
+import UIKit
+import CashfreePG
+
+class ViewController: UIViewController {
     
-    // Configure your payment session
-    func initiatePayment() {
-        let environment: CFENVIRONMENT = .SANDBOX // Use .PRODUCTION for live
-        let paymentSessionId = "your_payment_session_id"
-        let orderId = "your_order_id"
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        // Initialize payment session
-        let paymentSession = CFPaymentSession()
-        paymentSession.setPaymentSessionId(paymentSessionId, 
-                                         order_id: orderId, 
-                                         environment: environment)
-        
-        // Start payment
-        paymentSession.presentPayment(from: self) { [weak self] result in
-            DispatchQueue.main.async {
-                self?.handlePaymentResult(result)
-            }
-        }
-    }
-    
-    private func handlePaymentResult(_ result: CFPaymentResult) {
-        switch result.status {
-        case .success:
-            print("Payment successful: \(result.orderId)")
-        case .failure:
-            print("Payment failed: \(result.error?.localizedDescription ?? "Unknown error")")
-        case .cancelled:
-            print("Payment cancelled by user")
-        }
+        // Initialize Cashfree SDK
+        CFSDKConfiguration.shared.setEnvironment(.SANDBOX) // or .PRODUCTION
     }
 }
 ```
 
-### Advanced Configuration
+## ⚠️ Common Issues and Solutions
+
+### 1. WebKit Framework Not Found
+
+**Problem:** Build error: "WebKit framework not found"
+
+**Solution 1: Manual Framework Addition**
+1. Select your project → Target → **Build Phases**
+2. Expand **Link Binary With Libraries**
+3. Click **+** and add **WebKit.framework**
+
+**Solution 2: Package.swift Configuration**
+```swift
+.target(
+    name: "YourApp",
+    dependencies: [
+        .product(name: "CashfreePG", package: "core-ios-sdk")
+    ],
+    linkerSettings: [
+        .linkedFramework("WebKit")
+    ]
+)
+```
+
+**Solution 3: Build Settings**
+1. Select your target → **Build Settings**
+2. Search for "Other Linker Flags"
+3. Add `-framework WebKit`
+
+### 2. Binary Target Issues
+
+**Problem:** "Binary target 'XXX' is not available for the current platform"
+
+**Solution:**
+- Ensure you're building for iOS 12.0 or later
+- Check that you're using a supported architecture (arm64 for device, x86_64/arm64 for simulator)
+- Clean build folder: **Product** → **Clean Build Folder**
+
+### 3. Version Conflicts
+
+**Problem:** Dependency resolution errors
+
+**Solution:**
+1. Update to latest Xcode version
+2. Reset package caches: **File** → **Packages** → **Reset Package Caches**
+3. Update packages: **File** → **Packages** → **Update to Latest Package Versions**
+
+### 4. Build Errors with Multiple Targets
+
+**Problem:** Package not found in test targets or extensions
+
+**Solution:**
+Add the package to all relevant targets:
+```swift
+.testTarget(
+    name: "YourAppTests",
+    dependencies: [
+        "YourApp",
+        .product(name: "CashfreePG", package: "core-ios-sdk")
+    ]
+)
+```
+
+## 🏗️ Advanced Configuration
+
+### Custom Target Setup
+
+For advanced users who need specific components:
 
 ```swift
-import CashfreePGCoreSDK
-import CashfreePGUISDK
-
-class AdvancedPaymentViewController: UIViewController {
-    
-    func setupAdvancedPayment() {
-        // Core SDK for custom implementations
-        let coreSDK = CFPGCoreSDK()
-        
-        // UI SDK for pre-built components
-        let uiSDK = CFPGUISDK()
-        
-        // Configure custom payment flow
-        let paymentConfig = CFPaymentConfig()
-        paymentConfig.theme = .light
-        paymentConfig.showSavedCards = true
-        paymentConfig.enableAnalytics = true
-        
-        // Apply configuration
-        coreSDK.configure(with: paymentConfig)
-    }
-}
+.target(
+    name: "PaymentModule",
+    dependencies: [
+        .product(name: "CashfreePGCoreSDK", package: "core-ios-sdk"),
+        .product(name: "CFNetworkSDK", package: "core-ios-sdk")
+    ]
+),
+.target(
+    name: "UIModule", 
+    dependencies: [
+        .product(name: "CashfreePGUISDK", package: "core-ios-sdk"),
+        "PaymentModule"
+    ]
+)
 ```
 
-## Framework Dependencies
-
-**Important Note**: Due to Swift Package Manager limitations, binary targets cannot depend on other binary targets within the same package. This means that unlike CocoaPods, SPM will not automatically resolve framework dependencies.
-
-### Dependency Management
-
-When using SPM, you need to manually ensure you import the required frameworks in the correct order:
-
-```
-CashfreePG (Requires: CashfreePGUISDK)
-├── CashfreePGUISDK (Requires: CashfreePGCoreSDK)
-│   └── CashfreePGCoreSDK (Requires: CashfreeAnalyticsSDK)
-│       └── CashfreeAnalyticsSDK (Requires: CFNetworkSDK)
-│           └── CFNetworkSDK (Base framework)
-```
-
-### Selecting the Right Package
-
-| Package | Use Case | Manual Dependencies Required |
-|---------|----------|------------------------------|
-| `CashfreePG` | Complete integration with UI | Import all dependent frameworks |
-| `CashfreePGUISDK` | Custom integration with pre-built UI | Import Core + Analytics + Network |
-| `CashfreePGCoreSDK` | Headless integration | Import Analytics + Network |
-| `CashfreeAnalyticsSDK` | Analytics only | Import Network |
-| `CFNetworkSDK` | Network layer only | None |
-
-### Recommended Approach
-
-For most use cases, we recommend adding all required frameworks to your project and importing them as needed:
+### Environment-Specific Configurations
 
 ```swift
-// In your Package.swift
-dependencies: [
-    .package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.2.4")
-],
-targets: [
-    .target(
-        name: "YourApp",
-        dependencies: [
-            .product(name: "CashfreePG", package: "core-ios-sdk"),
-            .product(name: "CashfreePGUISDK", package: "core-ios-sdk"),
-            .product(name: "CashfreePGCoreSDK", package: "core-ios-sdk"),
-            .product(name: "CashfreeAnalyticsSDK", package: "core-ios-sdk"),
-            .product(name: "CFNetworkSDK", package: "core-ios-sdk")
-        ]
-    )
-]
+#if DEBUG
+    dependencies: [
+        .package(url: "https://github.com/cashfree/core-ios-sdk.git", branch: "develop")
+    ]
+#else
+    dependencies: [
+        .package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.5.5")
+    ]
+#endif
 ```
 
-## Requirements
+## 📱 Platform Support
 
+### Minimum Requirements
 - **iOS**: 12.0+
 - **Xcode**: 14.0+
 - **Swift**: 5.7+
 
-## Troubleshooting
+### Supported Architectures
+- **Device**: arm64
+- **Simulator**: x86_64, arm64 (Apple Silicon Macs)
 
-### Common Issues
+### Platform Declaration
+Always specify minimum platform versions in your Package.swift:
 
-1. **"Package not found" error**
-   - Verify the repository URL is correct
-   - Check your internet connection
-   - Ensure Xcode has access to GitHub
+```swift
+platforms: [
+    .iOS(.v12),
+    .macOS(.v10_15) // If needed
+]
+```
 
-2. **Build errors after integration**
-   - Clean build folder (`Product` → `Clean Build Folder`)
-   - Reset package caches (`File` → `Packages` → `Reset Package Caches`)
-   - Verify minimum deployment target is iOS 12.0+
+## 🔍 Verification Steps
 
-3. **Import errors**
-   - Ensure you've imported the correct framework
-   - Check that the framework is added to your target's dependencies
+After installation, verify everything is working:
 
-4. **Missing symbol errors at runtime**
-   - This is likely due to missing framework dependencies
-   - Add all required frameworks to your target dependencies
-   - Import all necessary frameworks in your code
-   - Ensure framework linking order is correct
+1. **Build your project** - Should compile without errors
+2. **Import test** - Try importing `CashfreePG` in a Swift file
+3. **Basic initialization** - Test SDK initialization code
+4. **Run on device/simulator** - Ensure it works on both
 
-5. **SPM vs CocoaPods differences**
-   - SPM doesn't automatically resolve binary framework dependencies
-   - You may need to manually import and link dependent frameworks
-   - Consider using CocoaPods if automatic dependency resolution is critical
+```swift
+// Quick verification code
+import CashfreePG
 
-6. **WebKit not linked error**
-   - If you encounter "WebKit framework not found" or "WKWebView not available" errors:
-   
-   - **Solution 1**: Add WebKit framework manually to your target
-     1. Select your project in Xcode
-     2. Go to your app target
-     3. Navigate to **Build Phases** → **Link Binary With Libraries**
-     4. Click the **+** button
-     5. Search for and add **WebKit.framework**
+class TestViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // This should not crash
+        CFSDKConfiguration.shared.setEnvironment(.SANDBOX)
+        print("✅ Cashfree SDK loaded successfully")
+    }
+}
+```
 
-   - **Solution 2**: Import WebKit in your code
-     ```swift
-     import WebKit
-     import CashfreePG
-     ```
-   - **Solution 3**: For SPM projects, ensure WebKit is added to your Package.swift dependencies:
-     ```swift
-     .target(
-         name: "YourApp",
-         dependencies: [
-             .product(name: "CashfreePG", package: "core-ios-sdk")
-         ],
-         linkerSettings: [
-             .linkedFramework("WebKit")
-         ]
-     )
-     ```
+## 🚀 Next Steps
 
-### Support
+After successful installation:
 
-For additional support:
-- Check our [official documentation](https://docs.cashfree.com/docs/ios-native)
-- File an issue on [GitHub](https://github.com/cashfree/core-ios-sdk/issues)
-- Join our [Discord community](https://discord.gg/znT6X45qDS)
-- Email us at care@cashfree.com
+1. **[API Documentation](https://docs.cashfree.com/docs/ios)** - Learn about available APIs
+2. **[Sample Code](./Swift+Sample+Application/)** - Check out example implementations
+3. **[Integration Guide](https://docs.cashfree.com/docs/ios-native)** - Step-by-step integration
+4. **[Migration Guide](https://docs.cashfree.com/docs/ios-migration)** - Upgrading from older versions
 
-## Migration from CocoaPods
+## 📞 Support
 
-If you're migrating from CocoaPods to SPM:
+If you encounter any issues:
 
-1. Remove the Cashfree pods from your `Podfile`
-2. Run `pod install` to remove the frameworks
-3. Remove the CocoaPods-generated workspace if no other pods remain
-4. Follow the SPM installation steps above
-5. Update your import statements if necessary
+1. **Check this guide** for common solutions
+2. **[GitHub Issues](https://github.com/cashfree/core-ios-sdk/issues)** - Report bugs or ask questions
+3. **[Discord Community](https://discord.gg/znT6X45qDS)** - Get help from developers
+4. **Email Support** - contact care@cashfree.com
 
-The API remains the same, so no code changes should be required.
+## 📋 Troubleshooting Checklist
+
+- [ ] iOS deployment target is 12.0 or higher
+- [ ] Using Xcode 14.0 or newer
+- [ ] WebKit framework is linked
+- [ ] Package caches have been reset if needed
+- [ ] All targets that use the SDK have it as a dependency
+- [ ] Build settings are correct for your architecture
+- [ ] No conflicting dependencies
+
+---
+
+## 🔄 Updates and Versioning
+
+The Cashfree iOS SDK follows [Semantic Versioning](https://semver.org/):
+
+- **Major** (x.0.0): Breaking changes
+- **Minor** (x.y.0): New features, backward compatible
+- **Patch** (x.y.z): Bug fixes, backward compatible
+
+**Recommended version specification:**
+```swift
+.package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.5.5")
+```
+
+This allows automatic updates for bug fixes and new features while preventing breaking changes.
