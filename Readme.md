@@ -84,18 +84,6 @@ Then run:
 pod install
 ```
 
-## 🏗️ Framework Architecture
-
-The Cashfree iOS SDK is built with a modular architecture:
-
-```
-CashfreePG (Main SDK)
-    ├── CashfreePGUISDK (UI Components)
-    │   └── CashfreePGCoreSDK (Core Payment Logic)
-    │       └── CashfreeAnalyticsSDK (Analytics & Tracking)
-    │           └── CFNetworkSDK (Networking Layer)
-```
-
 ## Documentation
 
 The Cashfree iOS SDK allows you to integrate Cashfree Payment Gateway into your application and start collecting payments from your customers. It has been designed to minimise the complexity of handling and integrating payments in your iOS project
