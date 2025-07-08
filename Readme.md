@@ -17,7 +17,7 @@ Sample integration project for Cashfree Payment Gateway's iOS SDK, facilitating 
 
 The easiest way to integrate Cashfree iOS SDK is through Swift Package Manager
 
-#### ** Xcode GUI**
+#### Xcode GUI
 1. Open your project in Xcode
 2. Go to **File** > **Add Package Dependencies**
 3. Enter the repository URL: `https://github.com/cashfree/core-ios-sdk.git`
@@ -36,18 +36,6 @@ If you encounter "WebKit framework not found" errors with SPM, manually add WebK
 1. Select your project → Target → **Build Phases**
 2. **Link Binary With Libraries** → Add **WebKit.framework**
 3. Or add to your Package.swift:
-
-```swift
-.target(
-    name: "YourApp",
-    dependencies: [
-        .product(name: "CashfreePG", package: "core-ios-sdk")
-    ],
-    linkerSettings: [
-        .linkedFramework("WebKit")
-    ]
-)
-```
 
 
 ### CocoaPods
