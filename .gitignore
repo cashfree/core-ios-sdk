@@ -3,3 +3,8 @@
 */*/.DS_Store
 */*/*/.DS_Store
 Swift+Sample+Application/.DS_Store
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved

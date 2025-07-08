@@ -10,9 +10,85 @@
 Sample integration project for Cashfree Payment Gateway's iOS SDK, facilitating seamless and secure payment processing within your iOS application.
 
 
+
+## 📦 Installation
+
+### Swift Package Manager (Recommended)
+
+The easiest way to integrate Cashfree iOS SDK is through Swift Package Manager
+
+#### **Method 1: Xcode GUI**
+1. Open your project in Xcode
+2. Go to **File** > **Add Package Dependencies**
+3. Enter the repository URL: `https://github.com/cashfree/core-ios-sdk.git`
+4. Select the version rule (recommend "Up to Next Major Version")
+5. Choose the products you need:
+   - `CashfreePG` - Complete Payment Gateway SDK (recommended)
+   - `CashfreePGCoreSDK` - Core payment processing
+   - `CashfreePGUISDK` - UI components
+   - `CashfreeAnalyticsSDK` - Analytics and tracking
+   - `CFNetworkSDK` - Networking layer
+
+#### **Method 2: Package.swift**
+Add the following to your `Package.swift` file:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.2.5")
+]
+```
+
+Then add to your target dependencies:
+
+```swift
+.target(
+    name: "YourApp",
+    dependencies: [
+        .product(name: "CashfreePG", package: "core-ios-sdk")
+    ]
+)
+```
+
+#### **⚠️ WebKit Integration Note**
+If you encounter "WebKit framework not found" errors with SPM, manually add WebKit framework:
+
+1. Select your project → Target → **Build Phases**
+2. **Link Binary With Libraries** → Add **WebKit.framework**
+3. Or add to your Package.swift:
+
+```swift
+.target(
+    name: "YourApp",
+    dependencies: [
+        .product(name: "CashfreePG", package: "core-ios-sdk")
+    ],
+    linkerSettings: [
+        .linkedFramework("WebKit")
+    ]
+)
+```
+
+#### **📚 Comprehensive SPM Integration Guide**
+For detailed SPM integration instructions, troubleshooting, WebKit setup, and advanced configurations, see our complete **[Swift Package Manager Integration Guide](./SPM_INTEGRATION_GUIDE.md)**.
+
+### CocoaPods
+
+Add the following to your `Podfile`:
+
+```ruby
+pod 'CashfreePG', '~> 2.2.5'
+```
+
+Then run:
+```bash
+pod install
+```
+
 ## Documentation
 
-The Cashfree iOS SDK allows you to integrate Cashfree Payment Gateway into your application and start collecting payments from your customers. It has been designed to minimise the complexity of handling and integrating payments in your iOS project.
+The Cashfree iOS SDK allows you to integrate Cashfree Payment Gateway into your application and start collecting payments from your customers. It has been designed to minimise the complexity of handling and integrating payments in your iOS project
+
+- **[API Documentation](https://docs.cashfree.com/docs/ios)** - Complete API reference  
 
 ### Getting Started
 
