@@ -52,7 +52,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/cashfree/core-ios-sdk.git",
-            from: "2.5.5"
+            from: "2.2.5"
         )
     ],
     targets: [
@@ -199,7 +199,7 @@ For advanced users who need specific components:
     ]
 #else
     dependencies: [
-        .package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.5.5")
+        .package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.2.5")
     ]
 #endif
 ```
@@ -289,7 +289,7 @@ The Cashfree iOS SDK follows [Semantic Versioning](https://semver.org/):
 
 **Recommended version specification:**
 ```swift
-.package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.5.5")
+.package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.2.5")
 ```
 
 This allows automatic updates for bug fixes and new features while preventing breaking changes.

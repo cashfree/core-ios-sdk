@@ -74,7 +74,7 @@ jobs:
           # Manual release - validation mode (no automated releases)
           version="${{ github.event.inputs.version }}"
           if [ -z "$version" ]; then
-            current_version=$(git describe --tags --abbrev=0 2>/dev/null || echo "2.5.5")
+            current_version=$(git describe --tags --abbrev=0 2>/dev/null || echo "2.2.5")
             IFS='.' read -ra VERSION_PARTS <<< "$current_version"
             major=${VERSION_PARTS[0]:-2}
             minor=${VERSION_PARTS[1]:-5}

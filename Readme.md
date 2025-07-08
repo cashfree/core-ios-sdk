@@ -34,7 +34,7 @@ Add the following to your `Package.swift` file:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.5.5")
+    .package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.2.5")
 ]
 ```
 
@@ -76,7 +76,7 @@ For detailed SPM integration instructions, troubleshooting, WebKit setup, and ad
 Add the following to your `Podfile`:
 
 ```ruby
-pod 'CashfreePG', '~> 2.5.5'
+pod 'CashfreePG', '~> 2.2.5'
 ```
 
 Then run:
