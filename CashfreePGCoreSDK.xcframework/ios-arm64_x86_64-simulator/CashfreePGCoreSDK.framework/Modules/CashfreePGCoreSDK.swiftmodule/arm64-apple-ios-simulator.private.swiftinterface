@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CashfreePGCoreSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CashfreePGCoreSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AppTrackingTransparency
 import CFNetworkSDK
 import CashfreeAnalyticsSDK
@@ -24,9 +24,13 @@ import _SwiftConcurrencyShims
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class CFCardComponent : UIKit.UIView, UIKit.UITextFieldDelegate, CFNetworkSDK.APIHandlers {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency public func initializeCardComponent(session: CashfreePGCoreSDK.CFSession, card_listener: any CashfreePGCoreSDK.CFCardListener, hint_text: Swift.String, font: UIKit.UIFont?, textColor: UIKit.UIColor?, enable_pasting: Swift.Bool)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  #endif
   @_Concurrency.MainActor @preconcurrency public func onSuccess(apiState: CFNetworkSDK.APIState, result: Swift.Dictionary<Swift.String, Any>)
   @_Concurrency.MainActor @preconcurrency public func onSuccess(apiState: CFNetworkSDK.APIState, result: [Swift.Dictionary<Swift.String, Any>])
   @_Concurrency.MainActor @preconcurrency public func onFailure(apiState: CFNetworkSDK.APIState, response: Swift.Dictionary<Swift.String, Any>)
@@ -65,6 +69,21 @@ import _SwiftConcurrencyShims
     @objc final public func build() throws -> CashfreePGCoreSDK.CFWalletPayment
     @objc deinit
   }
+  @objc deinit
+}
+public struct CFBankConstants {
+  public static let sbiYONOName: Swift.String
+  public static let sbiYONOPackage: Swift.String
+  public static let auBankName: Swift.String
+  public static let auBankPackage: Swift.String
+  public static let federalBankName: Swift.String
+  public static let federalBankPackage: Swift.String
+  public static let yesBankName: Swift.String
+  public static let yesBankPackage: Swift.String
+}
+@_inheritsConvenienceInitializers @objc public class CFBankUtils : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public func getInstalledBankingApplications() -> [[Swift.String : Swift.String]]
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc final public class CFSession : ObjectiveC.NSObject {
@@ -198,7 +217,9 @@ import _SwiftConcurrencyShims
   case HEX_SHOULD_START_WITH
   case COMPONENTS_MISSING
   case ONE_PAYMENT_COMPONENT_SHOULD_BE_PRESENT
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public static var _nsErrorDomain: Swift.String {
     get
@@ -228,7 +249,9 @@ extension CashfreePGCoreSDK.CashfreeError : Swift.CustomStringConvertible {
 }
 public enum CFCardValidator : Swift.Int, Swift.CustomStringConvertible {
   case VISA, MASTERCARD, AMEX, DISCOVER, DINERS, DINERS_CARTE_BLANCHE, RUPAY, JCB, VISA_ELECTRON
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -242,7 +265,9 @@ extension CashfreePGCoreSDK.CFCardValidator {
 @_hasMissingDesignatedInitializers public class CFValidator {
   public static let shared: CashfreePGCoreSDK.CFValidator
   public func luhnCheck(_ number: Swift.String) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getCardType(cardNumber: Swift.String) -> CashfreePGCoreSDK.CFCardValidator?
+  #endif
   public func validateUPI(upiId: Swift.String) -> Swift.Bool
   public func validateExpiry(cardExpiry: Swift.String) -> Swift.Bool
   @objc deinit
@@ -328,7 +353,9 @@ extension CashfreePGCoreSDK.CFCardValidator {
 @objc public enum CFENVIRONMENT : Swift.Int {
   case PRODUCTION
   case SANDBOX
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -375,7 +402,9 @@ extension UIKit.UIColor {
 }
 @_hasMissingDesignatedInitializers public class CFAnalyticsService {
   public static let shared: CashfreePGCoreSDK.CFAnalyticsService
+  #if compiler(>=5.3) && $NonescapableTypes
   public func createMetaData(order_id: Swift.String, payment_id: Swift.String, request_id: Swift.String, currency: Swift.String, event_name: CashfreePGCoreSDK.CFAnalyticsService.AnalyticsEvent, callback: (any CashfreePGCoreSDK.CFResponseDelegate)?, payment_mode: Swift.String = "", payment_method: Swift.String = "", channel: Swift.String = "", error_code: Swift.String = "", error_message: Swift.String = "")
+  #endif
   public enum AnalyticsEvent : Swift.String {
     case cfevent_checkout_open
     case cfevent_payment_mode_focus
@@ -390,7 +419,9 @@ extension UIKit.UIColor {
     public var description: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -406,7 +437,9 @@ extension UIKit.UIColor {
 @objc public enum CFUPIMODE : Swift.Int {
   case COLLECT
   case INTENT
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
