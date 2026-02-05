@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CashfreePGUISDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CashfreePGUISDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import CFNetworkSDK
 import CashfreeAnalyticsSDK
 import CashfreePGCoreSDK
@@ -45,22 +45,34 @@ import _SwiftConcurrencyShims
   }
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc(CFBankImage) public class CFBankImage : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias CFBankImageCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CFBankImage) nonisolated public class CFBankImage : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias CFBankImageCoreDataPropertiesSet = Foundation.NSSet
 extension CashfreePGUISDK.CFBankImage {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<CashfreePGUISDK.CFBankImage>
-  @objc @NSManaged dynamic public var icon: ObjectiveC.NSObject? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var icon: ObjectiveC.NSObject? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var timeStamp: Foundation.Date? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var timeStamp: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var urlString: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var urlString: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
+public typealias CFImagesFoundationFrameworkSet = Foundation.NSSet
+public typealias CFImagesCoreDataFrameworkManagedObject = CoreData.NSManagedObject
