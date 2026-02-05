@@ -249,11 +249,11 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/kishankumarmaurya\/Development\/ios\/core-ios-pg-sdk\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/3Feb2026\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 1562,
       "length": 7,
-      "value": "\"2.2.4\""
+      "value": "\"2.2.6\""
     }
   ]
 }
