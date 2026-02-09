@@ -1,0 +1,11 @@
+framework module CashfreePGCoreSDK {
+  umbrella header "CashfreePGCoreSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module CashfreePGCoreSDK.Swift {
+  header "CashfreePGCoreSDK-Swift.h"
+  requires objc
+}
