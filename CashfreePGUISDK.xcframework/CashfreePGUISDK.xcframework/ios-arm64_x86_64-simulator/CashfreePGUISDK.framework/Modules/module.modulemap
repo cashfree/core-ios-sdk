@@ -1,0 +1,11 @@
+framework module CashfreePGUISDK {
+  umbrella header "CashfreePGUISDK.h"
+  export *
+
+  module * { export * }
+}
+
+module CashfreePGUISDK.Swift {
+  header "CashfreePGUISDK-Swift.h"
+  requires objc
+}
