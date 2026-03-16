@@ -128,6 +128,41 @@
           },
           {
             "kind": "Function",
+            "name": "doSubsPayment",
+            "printedName": "doSubsPayment(_:viewController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFPayment",
+                "printedName": "CashfreePGCoreSDK.CFPayment",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePG@objc(cs)CFPaymentGatewayService(im)doSubsPayment:viewController:error:",
+            "mangledName": "$s10CashfreePG23CFPaymentGatewayServiceC13doSubsPayment_14viewControllery0A9PGCoreSDK0C0C_So06UIViewJ0CtKF",
+            "moduleName": "CashfreePG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "startSubscription",
             "printedName": "startSubscription(_:viewController:)",
             "children": [
@@ -249,7 +284,7 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/iOS Sample App\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 1562,
       "length": 7,
