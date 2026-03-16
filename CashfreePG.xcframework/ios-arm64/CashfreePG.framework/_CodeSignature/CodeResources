@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CashfreePG-Swift.h</key>
 		<data>
-		o9SaGwwZfVDgAkAK+sRt974/ae0=
+		EYRUrDo/X7OXQfpji5eF7DTBFtM=
 		</data>
 		<key>Headers/CashfreePG.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tV+wgJBmV8g/fdGAWclkuG9SnM8=
+		+h84z21976gOuN0OER7zDaQTRQA=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		danTlz8AiWBtdm919RrrtRAln08=
+		hD5j49htYXPjud4tA4nHiATyudw=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		vlB1L/fAZbrdFOHxlb6brttO8nk=
+		skem8GBfmcVtk7T813QOQsW2vc4=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		k3JgJyCFBPhuuFChLedqpj4wQTE=
+		EDJoArAi4XLzQKW7SgpEItyYk74=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		vlB1L/fAZbrdFOHxlb6brttO8nk=
+		skem8GBfmcVtk7T813QOQsW2vc4=
 		</data>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		j/Iq9QqYgb3K1yhhuXGTF2mDspw=
+		Fzau1/ED66QuOXrIrot70C7NFs8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yyVDmiI5WDx1DOWd2SeWuRmmUoSRWKr+POpM5BaxX7k=
+			BfZEpqBiFd8T5HkIHa+Gi0QJXSFxzRDBELosJPO9AQY=
 			</data>
 		</dict>
 		<key>Headers/CashfreePG.h</key>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fI1a8FYNvzFthxRK7JzE1cRe5yEskmyyDyYMHa62/Us=
+			aUtfyO4+TCMVGvZXRkb/zWajGxFk1ImlTB9sPLmaZOU=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9cb9UnrHVWtaP9Illq8Y4jDqlB/pH00tMQ6XSRT+jCY=
+			yNTIrsP9O9s4DX69q5wrdBTsq1etJ1wXcjJvB21FRtY=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7h4vUoGlK1JYtaUAS4xLAgHPM2U4/snuWFkMVj8o1wk=
+			ROC47KFIZEWip/ktJaRa0QPeRXzAQ1F9Hk//5DKMCtA=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9cb9UnrHVWtaP9Illq8Y4jDqlB/pH00tMQ6XSRT+jCY=
+			yNTIrsP9O9s4DX69q5wrdBTsq1etJ1wXcjJvB21FRtY=
 			</data>
 		</dict>
 		<key>Modules/CashfreePG.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yuURUI84HxIVyUPHDbKNjIh3ov/HPaAkt7uSYp8XP5M=
+			uXkyfLHszb1dsYLxdmJXKwPo4bYEb5ufzqgYUDiyrI8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
