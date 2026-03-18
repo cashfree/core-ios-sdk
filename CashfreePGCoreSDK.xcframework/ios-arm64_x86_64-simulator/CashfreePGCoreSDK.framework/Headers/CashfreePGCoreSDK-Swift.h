@@ -589,15 +589,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK10CFCardSubs17CFCardSubsBuilder")
 /// returns:
 /// The method returns an instance of CFCardBuilder to continue building the CFCard object
 - (CFCardSubsBuilder * _Nonnull)setCVV:(NSString * _Nonnull)cvv SWIFT_WARN_UNUSED_RESULT;
-/// The method sets the value of the card instrument_id to the CFCard object
-/// \param instrument_id The card’s instrument_id has to be sent as the parameter.
-///
-///
-/// returns:
-/// The method returns an instance of CFCardBuilder to continue building the CFCard object
-- (CFCardSubsBuilder * _Nonnull)setInstrumentId:(NSString * _Nonnull)instrument_id SWIFT_WARN_UNUSED_RESULT;
-- (CFCardSubsBuilder * _Nonnull)setCardComponet:(CFCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method has been renamed to \"setCardComponent\"");
-- (CFCardSubsBuilder * _Nonnull)setCardComponent:(CFCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT;
 /// This method builds an object of CFCard and returns the object to the user. This CFCard object will be used in initiating card payment.
 ///
 /// throws:
@@ -608,17 +599,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK10CFCardSubs17CFCardSubsBuilder")
 - (CFCardSubs * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-/// The CFCardPayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFCardPaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the payment. An object of <code>CFCard</code>, <code>CFSession</code> for card payment are the class variables.
-/// <h2>Code Snippet</h2>
-/// \code
-/// let cfSession = ...
-/// let card = ...
-/// let cardPaymentObject = try CFCardPayment.CFCardPaymentBuilder()
-///     .setSession(cfSession)
-///     .setCard(card)
-///     .build()
-///
-/// \endcode
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFCardSubsPayment")
 @interface CFCardSubsPayment : CFPayment
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -626,52 +606,16 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFCardSubsPayment")
 - (void)printDescription;
 @end
 
-/// The CFCardPaymentBuilder class can be used to create an object of CFCardPayment. It consists of setter methods to set the values for <em>CFCard</em>, <em>CFSession</em> . And finally a <em>build</em> method that returns an object of <em>CFCardPayment</em>.
+@class CFSubscriptionSession;
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFCardSubsPayment24CFCardPaymentSubsBuilder")
 @interface CFCardPaymentSubsBuilder : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// This method sets the value for CFCard variable of the CFCardPayment class
-/// \param card It takes a parameter of type CFCard
-///
-///
-/// returns:
-/// It returns an instance of <em>CFCardPaymentBuilder</em> to continue the build process
 - (CFCardPaymentSubsBuilder * _Nonnull)setCard:(CFCardSubs * _Nonnull)card SWIFT_WARN_UNUSED_RESULT;
-/// This method is used to save the payment method that is being used, making it easier for future payments.
-/// \param flag The method accepts a boolean value. By default it is set to “false”
-///
-///
-/// returns:
-/// It returns an instance of <em>CFCardPaymentBuilder</em> to continue the build process
 - (CFCardPaymentSubsBuilder * _Nonnull)savePaymentMethod:(BOOL)flag SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method does not support tokenisation. Please use \"saveInstrument\"");
-/// This method is used to save the payment method that is being used, making it easier for future payments.
-/// \param flag The method accepts a boolean value. By default it is set to “false”
-///
-///
-/// returns:
-/// It returns an instance of <em>CFCardPaymentBuilder</em> to continue the build process
 - (CFCardPaymentSubsBuilder * _Nonnull)saveInstrument:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
-/// This method sets the value for CFSession variable of the CFCardPayment class
-/// \param session It takes a parameter of type CFSession
-///
-///
-/// returns:
-/// It returns an instance of <em>CFCardPaymentBuilder</em> to continue the build process
-- (CFCardPaymentSubsBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
-/// This method builds an object of <em>CFCardPayment</em>
-///
-/// throws:
-/// It throws an error (CashfreeError), in case <em>CFCard</em> or <em>CFSession</em> is not set.
-///
-/// returns:
-/// It returns an object of <em>CFCardPayment</em>
+- (CFCardPaymentSubsBuilder * _Nonnull)setSession:(CFSubscriptionSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
 - (CFCardSubsPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
-
-typedef SWIFT_ENUM(NSInteger, CFCheckoutFlow, open) {
-  CFCheckoutFlowPayment = 0,
-  CFCheckoutFlowSubscription = 1,
-};
 
 @protocol CFResponseDelegate;
 @class UIViewController;
@@ -974,7 +918,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK23CFNetbankingSubsPayment30CFNetbankingSubs
 ///
 /// returns:
 /// It returns an instance of <em>CFNetbankingPaymentBuilder</em> to continue the build process
-- (CFNetbankingSubsPaymentBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+- (CFNetbankingSubsPaymentBuilder * _Nonnull)setSession:(CFSubscriptionSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the value for CFNetbanking variable of the CFNetbankingPayment class
 /// \param netbanking It takes a parameter of type CFNetbanking
 ///
@@ -1223,7 +1167,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK9CFSession16CFSessionBuilder")
 /// returns:
 /// The method returns an instance of CFSessionBuilder to continue building the CFSession object
 - (CFSessionBuilder * _Nonnull)setEnvironment:(enum CFENVIRONMENT)environment SWIFT_WARN_UNUSED_RESULT;
-- (CFSessionBuilder * _Nonnull)setFlow:(enum CFCheckoutFlow)flow SWIFT_WARN_UNUSED_RESULT;
 /// The method validates the input, to check if the inputs are either nil or empty
 ///
 /// throws:
@@ -1249,7 +1192,6 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK21CFSubscriptionPayment")
 - (void)printDescription;
 @end
 
-@class CFSubscriptionSession;
 /// The CFSubscriptionPaymentBuilder class can be used to create an object of CFSubscriptionPayment. It consists of setter methods to set the values for <em>CFSubscriptionSession</em>. And finally a <em>build</em> method that returns an object of <em>CFSubscriptionPayment</em>.
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK21CFSubscriptionPayment28CFSubscriptionPaymentBuilder")
 @interface CFSubscriptionPaymentBuilder : NSObject
@@ -1561,17 +1503,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK9CFUPISubs16CFUPISubsBuilder")
 - (CFUPISubs * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-/// The CFUPIPayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFUPIPaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the payment. An object of <code>CFUPI</code>, <code>CFSession</code>  for UPI payment are the class variables.
-/// <h2>Code Snippet</h2>
-/// \code
-/// let cfSession = ...
-/// let cfUPICollect = ...
-/// let cfUPIPaymentObject = try CFUPIPayment.CFUPIPaymentBuilder()
-///     .setSession(cfSession)
-///     .setUPI(cfUPICollect)
-///     .build()
-///
-/// \endcode
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK16CFUPISubsPayment")
 @interface CFUPISubsPayment : CFPayment
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1579,34 +1510,14 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK16CFUPISubsPayment")
 - (void)printDescription;
 @end
 
-/// The CFUPIPaymentBuilder class can be used to create an object of CFUPIPayment. It consists of setter methods to set the values for <em>CFUPI</em>, <em>CFSession</em>. And finally a <em>build</em> method that returns an object of <em>CFUPIPayment</em>.
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK16CFUPISubsPayment23CFUPIPaymentSubsBuilder")
 @interface CFUPIPaymentSubsBuilder : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// This method sets the value for CFUPI variable of the CFUPIPayment class
-/// \param upi It takes a parameter of type CFUPI
-///
-///
-/// returns:
-/// It returns an instance of <em>CFUPIPaymentBuilder</em> to continue the build process
 - (CFUPIPaymentSubsBuilder * _Nonnull)setUPI:(CFUPISubs * _Nonnull)upi SWIFT_WARN_UNUSED_RESULT;
-/// This method sets the value for CFSession variable of the CFUPIPayment class
-/// \param session It takes a parameter of type CFSession
-///
-///
-/// returns:
-/// It returns an instance of <em>CFUPIPaymentBuilder</em> to continue the build process
-- (CFUPIPaymentSubsBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+- (CFUPIPaymentSubsBuilder * _Nonnull)setSession:(CFSubscriptionSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
 - (CFUPIPaymentSubsBuilder * _Nonnull)enableRecon:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
 - (CFUPIPaymentSubsBuilder * _Nonnull)enableBackgroundBlur:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
 - (CFUPIPaymentSubsBuilder * _Nonnull)setShowAllLogos:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
-/// This method builds an object of <em>CFUPIPayment</em>
-///
-/// throws:
-/// It throws an error (CashfreeError), in case <em>CFUPI</em> or <em>CFSession</em> is not set.
-///
-/// returns:
-/// It returns an object of <em>CFUPIPayment</em>
 - (CFUPISubsPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
@@ -2422,15 +2333,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK10CFCardSubs17CFCardSubsBuilder")
 /// returns:
 /// The method returns an instance of CFCardBuilder to continue building the CFCard object
 - (CFCardSubsBuilder * _Nonnull)setCVV:(NSString * _Nonnull)cvv SWIFT_WARN_UNUSED_RESULT;
-/// The method sets the value of the card instrument_id to the CFCard object
-/// \param instrument_id The card’s instrument_id has to be sent as the parameter.
-///
-///
-/// returns:
-/// The method returns an instance of CFCardBuilder to continue building the CFCard object
-- (CFCardSubsBuilder * _Nonnull)setInstrumentId:(NSString * _Nonnull)instrument_id SWIFT_WARN_UNUSED_RESULT;
-- (CFCardSubsBuilder * _Nonnull)setCardComponet:(CFCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method has been renamed to \"setCardComponent\"");
-- (CFCardSubsBuilder * _Nonnull)setCardComponent:(CFCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT;
 /// This method builds an object of CFCard and returns the object to the user. This CFCard object will be used in initiating card payment.
 ///
 /// throws:
@@ -2441,17 +2343,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK10CFCardSubs17CFCardSubsBuilder")
 - (CFCardSubs * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-/// The CFCardPayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFCardPaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the payment. An object of <code>CFCard</code>, <code>CFSession</code> for card payment are the class variables.
-/// <h2>Code Snippet</h2>
-/// \code
-/// let cfSession = ...
-/// let card = ...
-/// let cardPaymentObject = try CFCardPayment.CFCardPaymentBuilder()
-///     .setSession(cfSession)
-///     .setCard(card)
-///     .build()
-///
-/// \endcode
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFCardSubsPayment")
 @interface CFCardSubsPayment : CFPayment
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -2459,52 +2350,16 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFCardSubsPayment")
 - (void)printDescription;
 @end
 
-/// The CFCardPaymentBuilder class can be used to create an object of CFCardPayment. It consists of setter methods to set the values for <em>CFCard</em>, <em>CFSession</em> . And finally a <em>build</em> method that returns an object of <em>CFCardPayment</em>.
+@class CFSubscriptionSession;
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFCardSubsPayment24CFCardPaymentSubsBuilder")
 @interface CFCardPaymentSubsBuilder : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// This method sets the value for CFCard variable of the CFCardPayment class
-/// \param card It takes a parameter of type CFCard
-///
-///
-/// returns:
-/// It returns an instance of <em>CFCardPaymentBuilder</em> to continue the build process
 - (CFCardPaymentSubsBuilder * _Nonnull)setCard:(CFCardSubs * _Nonnull)card SWIFT_WARN_UNUSED_RESULT;
-/// This method is used to save the payment method that is being used, making it easier for future payments.
-/// \param flag The method accepts a boolean value. By default it is set to “false”
-///
-///
-/// returns:
-/// It returns an instance of <em>CFCardPaymentBuilder</em> to continue the build process
 - (CFCardPaymentSubsBuilder * _Nonnull)savePaymentMethod:(BOOL)flag SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method does not support tokenisation. Please use \"saveInstrument\"");
-/// This method is used to save the payment method that is being used, making it easier for future payments.
-/// \param flag The method accepts a boolean value. By default it is set to “false”
-///
-///
-/// returns:
-/// It returns an instance of <em>CFCardPaymentBuilder</em> to continue the build process
 - (CFCardPaymentSubsBuilder * _Nonnull)saveInstrument:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
-/// This method sets the value for CFSession variable of the CFCardPayment class
-/// \param session It takes a parameter of type CFSession
-///
-///
-/// returns:
-/// It returns an instance of <em>CFCardPaymentBuilder</em> to continue the build process
-- (CFCardPaymentSubsBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
-/// This method builds an object of <em>CFCardPayment</em>
-///
-/// throws:
-/// It throws an error (CashfreeError), in case <em>CFCard</em> or <em>CFSession</em> is not set.
-///
-/// returns:
-/// It returns an object of <em>CFCardPayment</em>
+- (CFCardPaymentSubsBuilder * _Nonnull)setSession:(CFSubscriptionSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
 - (CFCardSubsPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
-
-typedef SWIFT_ENUM(NSInteger, CFCheckoutFlow, open) {
-  CFCheckoutFlowPayment = 0,
-  CFCheckoutFlowSubscription = 1,
-};
 
 @protocol CFResponseDelegate;
 @class UIViewController;
@@ -2807,7 +2662,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK23CFNetbankingSubsPayment30CFNetbankingSubs
 ///
 /// returns:
 /// It returns an instance of <em>CFNetbankingPaymentBuilder</em> to continue the build process
-- (CFNetbankingSubsPaymentBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+- (CFNetbankingSubsPaymentBuilder * _Nonnull)setSession:(CFSubscriptionSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
 /// This method sets the value for CFNetbanking variable of the CFNetbankingPayment class
 /// \param netbanking It takes a parameter of type CFNetbanking
 ///
@@ -3056,7 +2911,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK9CFSession16CFSessionBuilder")
 /// returns:
 /// The method returns an instance of CFSessionBuilder to continue building the CFSession object
 - (CFSessionBuilder * _Nonnull)setEnvironment:(enum CFENVIRONMENT)environment SWIFT_WARN_UNUSED_RESULT;
-- (CFSessionBuilder * _Nonnull)setFlow:(enum CFCheckoutFlow)flow SWIFT_WARN_UNUSED_RESULT;
 /// The method validates the input, to check if the inputs are either nil or empty
 ///
 /// throws:
@@ -3082,7 +2936,6 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK21CFSubscriptionPayment")
 - (void)printDescription;
 @end
 
-@class CFSubscriptionSession;
 /// The CFSubscriptionPaymentBuilder class can be used to create an object of CFSubscriptionPayment. It consists of setter methods to set the values for <em>CFSubscriptionSession</em>. And finally a <em>build</em> method that returns an object of <em>CFSubscriptionPayment</em>.
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK21CFSubscriptionPayment28CFSubscriptionPaymentBuilder")
 @interface CFSubscriptionPaymentBuilder : NSObject
@@ -3394,17 +3247,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK9CFUPISubs16CFUPISubsBuilder")
 - (CFUPISubs * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-/// The CFUPIPayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFUPIPaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the payment. An object of <code>CFUPI</code>, <code>CFSession</code>  for UPI payment are the class variables.
-/// <h2>Code Snippet</h2>
-/// \code
-/// let cfSession = ...
-/// let cfUPICollect = ...
-/// let cfUPIPaymentObject = try CFUPIPayment.CFUPIPaymentBuilder()
-///     .setSession(cfSession)
-///     .setUPI(cfUPICollect)
-///     .build()
-///
-/// \endcode
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK16CFUPISubsPayment")
 @interface CFUPISubsPayment : CFPayment
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -3412,34 +3254,14 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK16CFUPISubsPayment")
 - (void)printDescription;
 @end
 
-/// The CFUPIPaymentBuilder class can be used to create an object of CFUPIPayment. It consists of setter methods to set the values for <em>CFUPI</em>, <em>CFSession</em>. And finally a <em>build</em> method that returns an object of <em>CFUPIPayment</em>.
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK16CFUPISubsPayment23CFUPIPaymentSubsBuilder")
 @interface CFUPIPaymentSubsBuilder : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// This method sets the value for CFUPI variable of the CFUPIPayment class
-/// \param upi It takes a parameter of type CFUPI
-///
-///
-/// returns:
-/// It returns an instance of <em>CFUPIPaymentBuilder</em> to continue the build process
 - (CFUPIPaymentSubsBuilder * _Nonnull)setUPI:(CFUPISubs * _Nonnull)upi SWIFT_WARN_UNUSED_RESULT;
-/// This method sets the value for CFSession variable of the CFUPIPayment class
-/// \param session It takes a parameter of type CFSession
-///
-///
-/// returns:
-/// It returns an instance of <em>CFUPIPaymentBuilder</em> to continue the build process
-- (CFUPIPaymentSubsBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+- (CFUPIPaymentSubsBuilder * _Nonnull)setSession:(CFSubscriptionSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
 - (CFUPIPaymentSubsBuilder * _Nonnull)enableRecon:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
 - (CFUPIPaymentSubsBuilder * _Nonnull)enableBackgroundBlur:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
 - (CFUPIPaymentSubsBuilder * _Nonnull)setShowAllLogos:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
-/// This method builds an object of <em>CFUPIPayment</em>
-///
-/// throws:
-/// It throws an error (CashfreeError), in case <em>CFUPI</em> or <em>CFSession</em> is not set.
-///
-/// returns:
-/// It returns an object of <em>CFUPIPayment</em>
 - (CFUPISubsPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
