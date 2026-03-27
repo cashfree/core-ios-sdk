@@ -545,6 +545,7 @@ extension UIKit.UITextField {
   @_Concurrency.MainActor @preconcurrency public func addPadding(padding: UIKit.UITextField.PaddingSpace)
 }
 @_hasMissingDesignatedInitializers @objc final public class CFNetBankingSubs : ObjectiveC.NSObject {
+  final public func getAuthMode() -> Swift.String
   final public func getChannel() -> Swift.String
   final public func getBankAccountCode() -> Swift.String
   final public func getAccountNumber() -> Swift.String
@@ -556,7 +557,9 @@ extension UIKit.UITextField {
     @objc final public func setAccountHolderName(_ code: Swift.String) -> CashfreePGCoreSDK.CFNetBankingSubs.CFNetbankingSubsBuilder
     @objc final public func setAccountNumber(_ code: Swift.String) -> CashfreePGCoreSDK.CFNetBankingSubs.CFNetbankingSubsBuilder
     @objc final public func setAccountType(_ code: Swift.String) -> CashfreePGCoreSDK.CFNetBankingSubs.CFNetbankingSubsBuilder
+    @objc final public func setAuthMode(_ code: Swift.String) -> CashfreePGCoreSDK.CFNetBankingSubs.CFNetbankingSubsBuilder
     @objc final public func build() throws -> CashfreePGCoreSDK.CFNetBankingSubs
+    final public func getAuthMode() -> Swift.String
     @objc deinit
   }
   @objc deinit

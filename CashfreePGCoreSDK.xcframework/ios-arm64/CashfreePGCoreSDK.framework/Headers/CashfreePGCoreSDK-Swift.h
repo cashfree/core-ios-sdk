@@ -794,6 +794,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK16CFNetBankingSubs23CFNetbankingSubsBuilder
 - (CFNetbankingSubsBuilder * _Nonnull)setAccountHolderName:(NSString * _Nonnull)code SWIFT_WARN_UNUSED_RESULT;
 - (CFNetbankingSubsBuilder * _Nonnull)setAccountNumber:(NSString * _Nonnull)code SWIFT_WARN_UNUSED_RESULT;
 - (CFNetbankingSubsBuilder * _Nonnull)setAccountType:(NSString * _Nonnull)code SWIFT_WARN_UNUSED_RESULT;
+- (CFNetbankingSubsBuilder * _Nonnull)setAuthMode:(NSString * _Nonnull)code SWIFT_WARN_UNUSED_RESULT;
 /// This method creates an object of CFNetbanking
 ///
 /// throws:
