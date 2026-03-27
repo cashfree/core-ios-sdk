@@ -16294,6 +16294,28 @@
         "children": [
           {
             "kind": "Function",
+            "name": "getAuthMode",
+            "printedName": "getAuthMode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CashfreePGCoreSDK16CFNetBankingSubsC11getAuthModeSSyF",
+            "mangledName": "$s17CashfreePGCoreSDK16CFNetBankingSubsC11getAuthModeSSyF",
+            "moduleName": "CashfreePGCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getChannel",
             "printedName": "getChannel()",
             "children": [
@@ -16551,6 +16573,35 @@
               },
               {
                 "kind": "Function",
+                "name": "setAuthMode",
+                "printedName": "setAuthMode(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFNetbankingSubsBuilder",
+                    "printedName": "CashfreePGCoreSDK.CFNetBankingSubs.CFNetbankingSubsBuilder",
+                    "usr": "s:17CashfreePGCoreSDK16CFNetBankingSubsC012CFNetbankingF7BuilderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17CashfreePGCoreSDK16CFNetBankingSubsC012CFNetbankingF7BuilderC11setAuthModeyAESSF",
+                "mangledName": "$s17CashfreePGCoreSDK16CFNetBankingSubsC012CFNetbankingF7BuilderC11setAuthModeyAESSF",
+                "moduleName": "CashfreePGCoreSDK",
+                "declAttributes": [
+                  "Final",
+                  "AccessControl",
+                  "ObjC"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
                 "name": "build",
                 "printedName": "build()",
                 "children": [
@@ -16573,6 +16624,28 @@
                   "RawDocComment"
                 ],
                 "throwing": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "getAuthMode",
+                "printedName": "getAuthMode()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17CashfreePGCoreSDK16CFNetBankingSubsC012CFNetbankingF7BuilderC11getAuthModeSSyF",
+                "mangledName": "$s17CashfreePGCoreSDK16CFNetBankingSubsC012CFNetbankingF7BuilderC11getAuthModeSSyF",
+                "moduleName": "CashfreePGCoreSDK",
+                "declAttributes": [
+                  "Final",
+                  "AccessControl"
+                ],
                 "funcSelfKind": "NonMutating"
               }
             ],
@@ -21669,112 +21742,126 @@
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2342,
+      "offset": 2298,
+      "length": 11,
+      "value": "\"SIMPLYPAY\""
+    },
+    {
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2388,
       "length": 8,
       "value": "\"tez:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2383,
+      "offset": 2429,
       "length": 12,
       "value": "\"phonepe:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2426,
+      "offset": 2472,
       "length": 12,
       "value": "\"paytmmp:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2468,
+      "offset": 2514,
       "length": 9,
       "value": "\"bhim:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2507,
+      "offset": 2553,
       "length": 12,
       "value": "\"credpay:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2554,
+      "offset": 2600,
       "length": 14,
       "value": "\"amazonpay:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2602,
-      "length": 8,
-      "value": "\"upi:\/\/\""
+      "offset": 2648,
+      "length": 13,
+      "value": "\"whatsapp:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2643,
+      "offset": 2694,
       "length": 12,
       "value": "\"navipay:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2692,
+      "offset": 2743,
       "length": 13,
       "value": "\"mobikwik:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2740,
+      "offset": 2791,
       "length": 13,
       "value": "\"myairtel:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2789,
+      "offset": 2840,
       "length": 15,
       "value": "\"popclubapp:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2838,
+      "offset": 2889,
       "length": 10,
       "value": "\"super:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2881,
+      "offset": 2932,
       "length": 9,
       "value": "\"kiwi:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2979,
+      "length": 17,
+      "value": "\"simplypayupi:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2933,
+      "offset": 3039,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "Array",
-      "offset": 2988,
-      "length": 283,
-      "value": "[\"tez:\/\/\", \"phonepe:\/\/\", \"paytmmp:\/\/\", \"bhim:\/\/\", \"amazonpay:\/\/\", \"upi:\/\/\", \"credpay:\/\/\", \"navipay:\/\/\", \"mobikwik:\/\/\", \"myairtel:\/\/\", \"popclubapp:\/\/\", \"super:\/\/\", \"kiwi:\/\/\"]"
+      "offset": 3094,
+      "length": 312,
+      "value": "[\"tez:\/\/\", \"phonepe:\/\/\", \"paytmmp:\/\/\", \"bhim:\/\/\", \"amazonpay:\/\/\", \"whatsapp:\/\/\", \"credpay:\/\/\", \"navipay:\/\/\", \"mobikwik:\/\/\", \"myairtel:\/\/\", \"popclubapp:\/\/\", \"super:\/\/\", \"kiwi:\/\/\", \"simplypayupi\"]"
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 4324,
+      "offset": 4459,
       "length": 7,
       "value": "1"
     },
@@ -21893,7 +21980,7 @@
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/UPI\/Util\/CashfreeUPIUtils.swift",
       "kind": "IntegerLiteral",
-      "offset": 4446,
+      "offset": 4618,
       "length": 6,
       "value": "1"
     },
