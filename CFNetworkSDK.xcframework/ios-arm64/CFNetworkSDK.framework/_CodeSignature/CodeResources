@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CFNetworkSDK-Swift.h</key>
 		<data>
-		rvCpqW+kY9swPumV5dpkLdrlDJs=
+		HmlGgUvwMAETesgZbkUgZWjtq84=
 		</data>
 		<key>Headers/CFNetworkSDK.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		B/jRe/FQXYFXgskh280F7cieOp0=
+		KJ/3hDCmeNptTGkW4tVZ4pw9SeI=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		KynoSx2InlhQB0npdAGk1j6thfg=
+		U5hcquYFq8PYCEDdLgUnCXJmE1o=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		2samKbeKIKx6D/eiw9GpK6GWikk=
+		xjtBVPhwPci1XyMtRRjomCRpgUg=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		UNA3OK9XQTjY+kTBm99lFyqCzHw=
+		Huwf4G6Lju7EWGaE+a/P6o5ccg8=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		2samKbeKIKx6D/eiw9GpK6GWikk=
+		xjtBVPhwPci1XyMtRRjomCRpgUg=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		yVaFTCD9CywnYm/G3V4DvCNEDYM=
+		m3pR1nfzDRE6L+c4qfCyEDtohGA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hppsupWdqkyvBEs+9BI0fdiBY9vkyeSp7+8xiO5tcvI=
+			gGEOlc9UE5G6eMj2npppnzEY3aWPO6omX3REZkL0xQ4=
 			</data>
 		</dict>
 		<key>Headers/CFNetworkSDK.h</key>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GY162WelGF5r/0hsaL0RRkc+d6yUZTNq0hzauTQQABc=
+			jw1NpQ4Hs/Nk7wyW8bGE/QNVeS7W8IqkpidnKNxdPgc=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rmAhbwbrfdAHxQY27boTQ2HqP+cB6sY8bFZ5L6w6ee8=
+			dtx4GqW7TUthFryrLJwqTbWLGnTe0MD4FTgohcaUhYA=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gwyN+56bTuelb+M6xOXlUFPQbM0TdwV7yo3qYjKMD8c=
+			HS0elcs8bCYw89Hcmnt8ZdiBkqoKOO92CK2p297MO2w=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rmAhbwbrfdAHxQY27boTQ2HqP+cB6sY8bFZ5L6w6ee8=
+			dtx4GqW7TUthFryrLJwqTbWLGnTe0MD4FTgohcaUhYA=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mJgP2swam5YaALTDMg9e4CWVuc2lxvf2UyRxMlZF+qM=
+			y7+WAJtD5E7HcArOLxR4aPiGM/9MDga5khJRZ+oCguA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

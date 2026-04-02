@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CFNetworkSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CFNetworkSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 @_exported import CFNetworkSDK
 import Foundation
 import Swift
@@ -19,7 +19,9 @@ public enum APIState : Swift.Int {
   case DELETE_CARDS
   case CARD_BIN
   case CARD_TDR
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -31,11 +33,15 @@ public protocol APIHandlers : AnyObject {
   func onFailure(apiState: CFNetworkSDK.APIState, response: Swift.Dictionary<Swift.String, Any>)
 }
 public protocol CFNetworkDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   func didCompleteAPICall(data: Foundation.Data?, response: Foundation.URLResponse?, error: (any Swift.Error)?, apiState: CFNetworkSDK.APIState, apiHandler: any CFNetworkSDK.APIHandlers)
+  #endif
 }
 open class CFNetworkLayer {
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func request(url: Foundation.URL, body: Swift.Dictionary<Swift.String, Any>?, method: Swift.String, headers: [Swift.String : Swift.String], delegate: any CFNetworkSDK.CFNetworkDelegate, apiState: CFNetworkSDK.APIState, apiHandler: any CFNetworkSDK.APIHandlers)
+  #endif
   @objc deinit
 }
 extension CFNetworkSDK.APIState : Swift.Equatable {}
