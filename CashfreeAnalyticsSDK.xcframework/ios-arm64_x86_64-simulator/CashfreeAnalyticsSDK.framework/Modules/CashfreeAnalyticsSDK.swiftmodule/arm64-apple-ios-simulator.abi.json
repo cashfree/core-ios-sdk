@@ -7122,6 +7122,7 @@
         "declKind": "Import",
         "moduleName": "CashfreeAnalyticsSDK",
         "declAttributes": [
+          "AccessControl",
           "RawDocComment"
         ]
       },
@@ -7130,7 +7131,10 @@
         "name": "CoreData",
         "printedName": "CoreData",
         "declKind": "Import",
-        "moduleName": "CashfreeAnalyticsSDK"
+        "moduleName": "CashfreeAnalyticsSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -7179,6 +7183,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Nonisolated",
               "Override"
             ],
             "init_kind": "Designated"
@@ -7241,6 +7246,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -7344,6 +7350,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -7447,6 +7454,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -7550,6 +7558,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -7653,6 +7662,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -7756,6 +7766,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -7859,6 +7870,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -7962,6 +7974,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8065,6 +8078,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8168,6 +8182,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8271,6 +8286,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8374,6 +8390,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8481,6 +8498,7 @@
             "objc_name": "insertObject:inEventsAtIndex:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8512,6 +8530,7 @@
             "objc_name": "removeObjectFromEventsAtIndex:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8557,6 +8576,7 @@
             "objc_name": "insertEvents:atIndexes:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8588,6 +8608,7 @@
             "objc_name": "removeEventsAtIndexes:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8625,6 +8646,7 @@
             "objc_name": "replaceObjectInEventsAtIndex:withObject:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8670,6 +8692,7 @@
             "objc_name": "replaceEventsAtIndexes:withEvents:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8701,6 +8724,7 @@
             "objc_name": "addEventsObject:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8732,6 +8756,7 @@
             "objc_name": "removeEventsObject:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8763,6 +8788,7 @@
             "objc_name": "addEvents:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8794,6 +8820,7 @@
             "objc_name": "removeEvents:",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -8808,6 +8835,7 @@
         "moduleName": "CashfreeAnalyticsSDK",
         "objc_name": "CFAnalytics",
         "declAttributes": [
+          "Nonisolated",
           "AccessControl",
           "ObjC"
         ],
@@ -8902,6 +8930,20 @@
             ],
             "usr": "s:7Combine16ObservableObjectP",
             "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -8912,6 +8954,7 @@
         "declKind": "Import",
         "moduleName": "CashfreeAnalyticsSDK",
         "declAttributes": [
+          "AccessControl",
           "RawDocComment"
         ]
       },
@@ -8920,7 +8963,10 @@
         "name": "CoreData",
         "printedName": "CoreData",
         "declKind": "Import",
-        "moduleName": "CashfreeAnalyticsSDK"
+        "moduleName": "CashfreeAnalyticsSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -8929,6 +8975,7 @@
         "declKind": "Import",
         "moduleName": "CashfreeAnalyticsSDK",
         "declAttributes": [
+          "AccessControl",
           "RawDocComment"
         ]
       },
@@ -8937,7 +8984,10 @@
         "name": "CoreData",
         "printedName": "CoreData",
         "declKind": "Import",
-        "moduleName": "CashfreeAnalyticsSDK"
+        "moduleName": "CashfreeAnalyticsSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -8986,6 +9036,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Nonisolated",
               "Override"
             ],
             "init_kind": "Designated"
@@ -9029,6 +9080,7 @@
         "moduleName": "CashfreeAnalyticsSDK",
         "objc_name": "CFCrash",
         "declAttributes": [
+          "Nonisolated",
           "AccessControl",
           "ObjC"
         ],
@@ -9123,6 +9175,20 @@
             ],
             "usr": "s:7Combine16ObservableObjectP",
             "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -9133,6 +9199,7 @@
         "declKind": "Import",
         "moduleName": "CashfreeAnalyticsSDK",
         "declAttributes": [
+          "AccessControl",
           "RawDocComment"
         ]
       },
@@ -9141,7 +9208,10 @@
         "name": "CoreData",
         "printedName": "CoreData",
         "declKind": "Import",
-        "moduleName": "CashfreeAnalyticsSDK"
+        "moduleName": "CashfreeAnalyticsSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -9150,6 +9220,7 @@
         "declKind": "Import",
         "moduleName": "CashfreeAnalyticsSDK",
         "declAttributes": [
+          "AccessControl",
           "RawDocComment"
         ]
       },
@@ -9158,7 +9229,10 @@
         "name": "CoreData",
         "printedName": "CoreData",
         "declKind": "Import",
-        "moduleName": "CashfreeAnalyticsSDK"
+        "moduleName": "CashfreeAnalyticsSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -9207,6 +9281,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Nonisolated",
               "Override"
             ],
             "init_kind": "Designated"
@@ -9269,6 +9344,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -9372,6 +9448,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -9475,6 +9552,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -9578,6 +9656,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -9681,6 +9760,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -9784,6 +9864,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -9879,6 +9960,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -9966,6 +10048,7 @@
             "moduleName": "CashfreeAnalyticsSDK",
             "declAttributes": [
               "Dynamic",
+              "Nonisolated",
               "AccessControl",
               "NSManaged",
               "ObjC"
@@ -10050,6 +10133,7 @@
         "moduleName": "CashfreeAnalyticsSDK",
         "objc_name": "CFEvent",
         "declAttributes": [
+          "Nonisolated",
           "AccessControl",
           "ObjC"
         ],
@@ -10144,6 +10228,20 @@
             ],
             "usr": "s:7Combine16ObservableObjectP",
             "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -10154,6 +10252,7 @@
         "declKind": "Import",
         "moduleName": "CashfreeAnalyticsSDK",
         "declAttributes": [
+          "AccessControl",
           "RawDocComment"
         ]
       },
@@ -10162,7 +10261,10 @@
         "name": "CoreData",
         "printedName": "CoreData",
         "declKind": "Import",
-        "moduleName": "CashfreeAnalyticsSDK"
+        "moduleName": "CashfreeAnalyticsSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -10171,6 +10273,7 @@
         "declKind": "Import",
         "moduleName": "CashfreeAnalyticsSDK",
         "declAttributes": [
+          "AccessControl",
           "RawDocComment"
         ]
       },
@@ -10179,91 +10282,94 @@
         "name": "CoreData",
         "printedName": "CoreData",
         "declKind": "Import",
-        "moduleName": "CashfreeAnalyticsSDK"
+        "moduleName": "CashfreeAnalyticsSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
       "kind": "StringLiteral",
       "offset": 94,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
       "kind": "BooleanLiteral",
       "offset": 138,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
       "kind": "BooleanLiteral",
       "offset": 191,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 213,
       "length": 35,
       "value": "\"com.cashfree.CashfreeAnalyticsSDK\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 281,
       "length": 19,
       "value": "\"CashFreeAnalytics\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 544,
       "length": 6,
       "value": "\"momd\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 845,
       "length": 29,
       "value": "\"DB Container Setting Failed\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
       "kind": "StringLiteral",
       "offset": 229,
       "length": 13,
       "value": "\"No Internet\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
       "kind": "StringLiteral",
       "offset": 275,
       "length": 8,
       "value": "\"Mobile\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
       "kind": "StringLiteral",
       "offset": 316,
       "length": 7,
       "value": "\"WI-FI\""
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
       "kind": "IntegerLiteral",
       "offset": 275,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/suhasg\/Documents\/master-ios\/core-ios-pg-sdk\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
       "kind": "IntegerLiteral",
       "offset": 304,
       "length": 1,

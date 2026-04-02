@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CashfreeAnalyticsSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CashfreeAnalyticsSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AppTrackingTransparency
 import CFNetworkSDK
 @_exported import CashfreeAnalyticsSDK
@@ -43,7 +43,9 @@ public struct CFTransactionMeta {
     case notReachable
     case reachableViaWWAN
     case reachableViaWiFi
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -221,119 +223,171 @@ public enum UserEventList : Swift.CustomStringConvertible {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc(CFAnalytics) public class CFAnalytics : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias CFAnalyticsCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CFAnalytics) nonisolated public class CFAnalytics : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias CFAnalyticsCoreDataPropertiesSet = Foundation.NSSet
 extension CashfreeAnalyticsSDK.CFAnalytics {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<CashfreeAnalyticsSDK.CFAnalytics>
-  @objc @NSManaged dynamic public var endTime: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var endTime: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var environment: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var environment: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var meta_data: Foundation.Data? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var meta_data: Foundation.Data? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var order_token: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var order_token: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var platform: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var platform: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var sdk_version: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var sdk_version: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var startTime: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var startTime: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var timestamp: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var timestamp: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var transaction_id: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var transaction_id: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var x_api_version: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var x_api_version: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var x_request_id: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var x_request_id: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var events: Foundation.NSOrderedSet? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var events: Foundation.NSOrderedSet? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension CashfreeAnalyticsSDK.CFAnalytics {
-  @objc(insertObject:inEventsAtIndex:) @NSManaged dynamic public func insertIntoEvents(_ value: CashfreeAnalyticsSDK.CFEvent, at idx: Swift.Int)
-  @objc(removeObjectFromEventsAtIndex:) @NSManaged dynamic public func removeFromEvents(at idx: Swift.Int)
-  @objc(insertEvents:atIndexes:) @NSManaged dynamic public func insertIntoEvents(_ values: [CashfreeAnalyticsSDK.CFEvent], at indexes: Foundation.NSIndexSet)
-  @objc(removeEventsAtIndexes:) @NSManaged dynamic public func removeFromEvents(at indexes: Foundation.NSIndexSet)
-  @objc(replaceObjectInEventsAtIndex:withObject:) @NSManaged dynamic public func replaceEvents(at idx: Swift.Int, with value: CashfreeAnalyticsSDK.CFEvent)
-  @objc(replaceEventsAtIndexes:withEvents:) @NSManaged dynamic public func replaceEvents(at indexes: Foundation.NSIndexSet, with values: [CashfreeAnalyticsSDK.CFEvent])
-  @objc(addEventsObject:) @NSManaged dynamic public func addToEvents(_ value: CashfreeAnalyticsSDK.CFEvent)
-  @objc(removeEventsObject:) @NSManaged dynamic public func removeFromEvents(_ value: CashfreeAnalyticsSDK.CFEvent)
-  @objc(addEvents:) @NSManaged dynamic public func addToEvents(_ values: Foundation.NSOrderedSet)
-  @objc(removeEvents:) @NSManaged dynamic public func removeFromEvents(_ values: Foundation.NSOrderedSet)
+  @objc(insertObject:inEventsAtIndex:) @NSManaged nonisolated dynamic public func insertIntoEvents(_ value: CashfreeAnalyticsSDK.CFEvent, at idx: Swift.Int)
+  @objc(removeObjectFromEventsAtIndex:) @NSManaged nonisolated dynamic public func removeFromEvents(at idx: Swift.Int)
+  @objc(insertEvents:atIndexes:) @NSManaged nonisolated dynamic public func insertIntoEvents(_ values: [CashfreeAnalyticsSDK.CFEvent], at indexes: Foundation.NSIndexSet)
+  @objc(removeEventsAtIndexes:) @NSManaged nonisolated dynamic public func removeFromEvents(at indexes: Foundation.NSIndexSet)
+  @objc(replaceObjectInEventsAtIndex:withObject:) @NSManaged nonisolated dynamic public func replaceEvents(at idx: Swift.Int, with value: CashfreeAnalyticsSDK.CFEvent)
+  @objc(replaceEventsAtIndexes:withEvents:) @NSManaged nonisolated dynamic public func replaceEvents(at indexes: Foundation.NSIndexSet, with values: [CashfreeAnalyticsSDK.CFEvent])
+  @objc(addEventsObject:) @NSManaged nonisolated dynamic public func addToEvents(_ value: CashfreeAnalyticsSDK.CFEvent)
+  @objc(removeEventsObject:) @NSManaged nonisolated dynamic public func removeFromEvents(_ value: CashfreeAnalyticsSDK.CFEvent)
+  @objc(addEvents:) @NSManaged nonisolated dynamic public func addToEvents(_ values: Foundation.NSOrderedSet)
+  @objc(removeEvents:) @NSManaged nonisolated dynamic public func removeFromEvents(_ values: Foundation.NSOrderedSet)
 }
-@_inheritsConvenienceInitializers @objc(CFCrash) public class CFCrash : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias CFCrashCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CFCrash) nonisolated public class CFCrash : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias CFCrashCoreDataPropertiesSet = Foundation.NSSet
 extension CashfreeAnalyticsSDK.CFCrash {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<CashfreeAnalyticsSDK.CFCrash>
 }
-@_inheritsConvenienceInitializers @objc(CFEvent) public class CFEvent : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias CFEventCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(CFEvent) nonisolated public class CFEvent : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias CFEventCoreDataPropertiesSet = Foundation.NSSet
 extension CashfreeAnalyticsSDK.CFEvent {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<CashfreeAnalyticsSDK.CFEvent>
-  @objc @NSManaged dynamic public var callingObject: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var callingObject: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var event_id: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var event_id: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var memoryUtilized: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var memoryUtilized: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var name: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var networkType: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var networkType: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var order_token: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var order_token: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var timeStamp: Swift.Int64 {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var timeStamp: Swift.Int64 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var transaction: CashfreeAnalyticsSDK.CFAnalytics? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var transaction: CashfreeAnalyticsSDK.CFAnalytics? {
     @objc get
     @objc set
   }
+  #endif
 }
+public typealias CashFreeAnalyticsFoundationFrameworkSet = Foundation.NSSet
+public typealias CashFreeAnalyticsCoreDataFrameworkManagedObject = CoreData.NSManagedObject
 extension CashfreeAnalyticsSDK.CFReachability.ReachabilityStatus : Swift.Equatable {}
 extension CashfreeAnalyticsSDK.CFReachability.ReachabilityStatus : Swift.Hashable {}
 extension CashfreeAnalyticsSDK.CFReachability.ReachabilityStatus : Swift.RawRepresentable {}
