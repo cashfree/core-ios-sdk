@@ -21792,76 +21792,76 @@
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
       "offset": 2648,
-      "length": 13,
-      "value": "\"whatsapp:\/\/\""
+      "length": 22,
+      "value": "\"whatsapp-consumer:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2694,
+      "offset": 2703,
       "length": 12,
       "value": "\"navipay:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2743,
+      "offset": 2752,
       "length": 13,
       "value": "\"mobikwik:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2791,
+      "offset": 2800,
       "length": 13,
       "value": "\"myairtel:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2840,
+      "offset": 2849,
       "length": 15,
       "value": "\"popclubapp:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2889,
+      "offset": 2898,
       "length": 10,
       "value": "\"super:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2932,
+      "offset": 2941,
       "length": 9,
       "value": "\"kiwi:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2979,
+      "offset": 2988,
       "length": 17,
       "value": "\"simplypayupi:\/\/\""
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 3039,
+      "offset": 3048,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "Array",
-      "offset": 3094,
-      "length": 312,
-      "value": "[\"tez:\/\/\", \"phonepe:\/\/\", \"paytmmp:\/\/\", \"bhim:\/\/\", \"amazonpay:\/\/\", \"whatsapp:\/\/\", \"credpay:\/\/\", \"navipay:\/\/\", \"mobikwik:\/\/\", \"myairtel:\/\/\", \"popclubapp:\/\/\", \"super:\/\/\", \"kiwi:\/\/\", \"simplypayupi\"]"
+      "offset": 3103,
+      "length": 321,
+      "value": "[\"tez:\/\/\", \"phonepe:\/\/\", \"paytmmp:\/\/\", \"bhim:\/\/\", \"amazonpay:\/\/\", \"whatsapp-consumer:\/\/\", \"credpay:\/\/\", \"navipay:\/\/\", \"mobikwik:\/\/\", \"myairtel:\/\/\", \"popclubapp:\/\/\", \"super:\/\/\", \"kiwi:\/\/\", \"simplypayupi\"]"
     },
     {
       "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Mar10\/CashfreePGCoreSDK\/CashfreePGCoreSDK\/Utils\/CFConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 4459,
+      "offset": 4477,
       "length": 7,
       "value": "1"
     },
