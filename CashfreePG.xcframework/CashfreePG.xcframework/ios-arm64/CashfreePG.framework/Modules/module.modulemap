@@ -1,0 +1,11 @@
+framework module CashfreePG {
+  umbrella header "CashfreePG.h"
+  export *
+
+  module * { export * }
+}
+
+module CashfreePG.Swift {
+  header "CashfreePG-Swift.h"
+  requires objc
+}

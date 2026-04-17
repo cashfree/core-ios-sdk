@@ -1,0 +1,21 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CashfreePG
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+@_exported import CashfreePG
+import CashfreePGCoreSDK
+import CashfreePGUISDK
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFPaymentGatewayService : ObjectiveC.NSObject {
+  public static func getInstance() -> CashfreePG.CFPaymentGatewayService
+  @objc final public func setCallback(_ callback: any CashfreePGCoreSDK.CFResponseDelegate)
+  @objc final public func doPayment(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
+  @objc final public func doSubsPayment(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
+  @objc final public func startSubscription(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
+  @objc deinit
+}
