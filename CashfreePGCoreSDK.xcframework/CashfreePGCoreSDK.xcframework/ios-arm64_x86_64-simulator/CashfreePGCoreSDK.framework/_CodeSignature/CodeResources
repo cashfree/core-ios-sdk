@@ -46,11 +46,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5ecl2Q5jaoOsdJl/0XgJPdmhMw8=
+		W6xfG07tGI+GeKymJa7aQzs1NvU=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		MIft4VR8+GJKpUrJdDL+baZizFk=
+		piDXPrRCzAVfnj2cV4eREdgN8gU=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		MIft4VR8+GJKpUrJdDL+baZizFk=
+		piDXPrRCzAVfnj2cV4eREdgN8gU=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -169,7 +169,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ktz8v+OaSyOB9lIO0Uyu32pKX2WSc8qwvbimEgYdHs=
+			NNi2FABXJIN6Ux2GopwX0Ct+S7ZjDxjQZF9QLAS6D34=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -204,7 +204,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ktz8v+OaSyOB9lIO0Uyu32pKX2WSc8qwvbimEgYdHs=
+			NNi2FABXJIN6Ux2GopwX0Ct+S7ZjDxjQZF9QLAS6D34=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
