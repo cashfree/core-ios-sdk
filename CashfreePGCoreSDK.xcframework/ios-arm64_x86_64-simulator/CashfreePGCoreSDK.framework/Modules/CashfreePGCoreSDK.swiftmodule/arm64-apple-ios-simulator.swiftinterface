@@ -60,21 +60,6 @@ import _SwiftConcurrencyShims
   }
   @objc deinit
 }
-public struct CFBankConstants {
-  public static let sbiYONOName: Swift.String
-  public static let sbiYONOPackage: Swift.String
-  public static let auBankName: Swift.String
-  public static let auBankPackage: Swift.String
-  public static let federalBankName: Swift.String
-  public static let federalBankPackage: Swift.String
-  public static let yesBankName: Swift.String
-  public static let yesBankPackage: Swift.String
-}
-@_inheritsConvenienceInitializers @objc public class CFBankUtils : ObjectiveC.NSObject {
-  @objc override dynamic public init()
-  @objc public func getInstalledBankingApplications() -> [[Swift.String : Swift.String]]
-  @objc deinit
-}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFWalletPayment : CashfreePGCoreSDK.CFPayment {
   @objc override final public func printDescription()
   @_inheritsConvenienceInitializers @objc final public class CFWalletPaymentBuilder : ObjectiveC.NSObject {
@@ -286,6 +271,21 @@ extension CashfreePGCoreSDK.CFCardValidator {
   public func validateExpiry(cardExpiry: Swift.String) -> Swift.Bool
   @objc deinit
 }
+public struct CFBankConstants {
+  public static let sbiYONOName: Swift.String
+  public static let sbiYONOPackage: Swift.String
+  public static let auBankName: Swift.String
+  public static let auBankPackage: Swift.String
+  public static let federalBankName: Swift.String
+  public static let federalBankPackage: Swift.String
+  public static let yesBankName: Swift.String
+  public static let yesBankPackage: Swift.String
+}
+@_inheritsConvenienceInitializers @objc public class CFBankUtils : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public func getInstalledBankingApplications() -> [[Swift.String : Swift.String]]
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFUPIPayment : CashfreePGCoreSDK.CFPayment {
   @objc override final public func printDescription()
   @_inheritsConvenienceInitializers @objc final public class CFUPIPaymentBuilder : ObjectiveC.NSObject {
@@ -424,6 +424,30 @@ extension CashfreePGCoreSDK.CFENVIRONMENT : Swift.CustomStringConvertible {
   }
   @objc deinit
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class CFSubsCardComponent : UIKit.UIView, UIKit.UITextFieldDelegate, CFNetworkSDK.APIHandlers {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @_Concurrency.MainActor @preconcurrency public func initializeCardComponent(session: CashfreePGCoreSDK.CFSubscriptionSession, card_listener: any CashfreePGCoreSDK.CFSubsCardListener, hint_text: Swift.String, font: UIKit.UIFont?, textColor: UIKit.UIColor?, enable_pasting: Swift.Bool)
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func onSuccess(apiState: CFNetworkSDK.APIState, result: Swift.Dictionary<Swift.String, Any>)
+  @_Concurrency.MainActor @preconcurrency public func onSuccess(apiState: CFNetworkSDK.APIState, result: [Swift.Dictionary<Swift.String, Any>])
+  @_Concurrency.MainActor @preconcurrency public func onFailure(apiState: CFNetworkSDK.APIState, response: Swift.Dictionary<Swift.String, Any>)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class CFSubsCardListenerResponse : ObjectiveC.NSObject {
+  public var numberOfCharacters: Swift.Int?
+  public var message: Swift.String?
+  public var type: Swift.String?
+  public var meta_data: Swift.Dictionary<Swift.String, Any>?
+  @objc deinit
+}
+@objc public protocol CFSubsCardListener {
+  @objc func cardMetaData(card_listener_response: CashfreePGCoreSDK.CFSubsCardListenerResponse)
+}
 extension UIKit.UIColor {
   convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
   convenience public init(hex: Swift.String)
@@ -478,6 +502,7 @@ extension UIKit.UIColor {
     @objc final public func setCardExpiryMonth(_ month: Swift.String) -> CashfreePGCoreSDK.CFCardSubs.CFCardSubsBuilder
     @objc final public func setCardExpiryYear(_ year: Swift.String) -> CashfreePGCoreSDK.CFCardSubs.CFCardSubsBuilder
     @objc final public func setCVV(_ cvv: Swift.String) -> CashfreePGCoreSDK.CFCardSubs.CFCardSubsBuilder
+    @objc final public func setCardComponent(_ card_component: CashfreePGCoreSDK.CFSubsCardComponent) -> CashfreePGCoreSDK.CFCardSubs.CFCardSubsBuilder
     @objc final public func build() throws -> CashfreePGCoreSDK.CFCardSubs
     @objc deinit
   }

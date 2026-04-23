@@ -542,6 +542,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK10CFCardSubs")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class CFSubsCardComponent;
 /// This class provides builder methods that help in creating an object of <code>CFCard</code>
 SWIFT_CLASS("_TtCC17CashfreePGCoreSDK10CFCardSubs17CFCardSubsBuilder")
 @interface CFCardSubsBuilder : NSObject
@@ -589,6 +590,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK10CFCardSubs17CFCardSubsBuilder")
 /// returns:
 /// The method returns an instance of CFCardBuilder to continue building the CFCard object
 - (CFCardSubsBuilder * _Nonnull)setCVV:(NSString * _Nonnull)cvv SWIFT_WARN_UNUSED_RESULT;
+- (CFCardSubsBuilder * _Nonnull)setCardComponent:(CFSubsCardComponent * _Nonnull)card_component SWIFT_WARN_UNUSED_RESULT;
 /// This method builds an object of CFCard and returns the object to the user. This CFCard object will be used in initiating card payment.
 ///
 /// throws:
@@ -1176,6 +1178,28 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK9CFSession16CFSessionBuilder")
 /// returns:
 /// The method returns a CFSession Object, which has to be used further in the integration process
 - (CFSession * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@protocol CFSubsCardListener;
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK19CFSubsCardComponent")
+@interface CFSubsCardComponent : UIView <UITextFieldDelegate>
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)initializeCardComponentWithSession:(CFSubscriptionSession * _Nonnull)session card_listener:(id <CFSubsCardListener> _Nonnull)card_listener hint_text:(NSString * _Nonnull)hint_text font:(UIFont * _Nullable)font textColor:(UIColor * _Nullable)textColor enable_pasting:(BOOL)enable_pasting;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class CFSubsCardListenerResponse;
+SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFSubsCardListener_")
+@protocol CFSubsCardListener
+- (void)cardMetaDataWithCard_listener_response:(CFSubsCardListenerResponse * _Nonnull)card_listener_response;
+@end
+
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK26CFSubsCardListenerResponse")
+@interface CFSubsCardListenerResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 /// <h2>Code Snippet</h2>
