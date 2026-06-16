@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name			= "CashfreeAnalyticsSDK"
-s.version		= "2.3.3"
+s.version		= "2.4.1"
 s.summary		= "Cocoapods implementation of Cashfree Payment's Payment Gateway UI SDK"
 
 s.description		= <<-DESC
@@ -24,6 +24,6 @@ s.platform		= :ios, "13.0"
 s.vendored_frameworks	= "CashfreeAnalyticsSDK.xcframework"
 s.swift_version		= "5.10"
 s.pod_target_xcconfig = { 'ENABLE_USER_SCRIPT_SANDBOXING' => 'NO' } 
-s.dependency 'CFNetworkSDK', '2.3.3'
+s.dependency 'CFNetworkSDK', '2.4.1'
 
 end

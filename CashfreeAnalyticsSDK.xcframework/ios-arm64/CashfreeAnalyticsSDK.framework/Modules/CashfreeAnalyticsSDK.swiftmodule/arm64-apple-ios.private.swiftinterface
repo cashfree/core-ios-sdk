@@ -35,6 +35,7 @@ public struct CFTransactionMeta {
   final public func isTransactionRowCreated() -> Swift.Bool
   final public func didFinishTransaction()
   final public func createARowInTransactionTableForTheTransaction(transactionMeta: CashfreeAnalyticsSDK.CFTransactionMeta)
+  final public func hasPendingTransactions(completionHandler: @escaping (Swift.Bool) -> Swift.Void)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class CFReachability {
@@ -60,6 +61,7 @@ public struct CFTransactionMeta {
   public static let shared: CashfreeAnalyticsSDK.CFEventManager
   final public func add_new_event(eventName: Swift.String, callingObject: Swift.String, payment_session_id: Swift.String)
   final public func sendEventsToBackEnd(fromUISDK: Swift.Bool, environment: Swift.String, payment_session_id: Swift.String)
+  final public func sendPendingReports()
   final public func onSuccess(apiState: CFNetworkSDK.APIState, result: Swift.Dictionary<Swift.String, Any>)
   final public func onFailure(apiState: CFNetworkSDK.APIState, response: Swift.Dictionary<Swift.String, Any>)
   final public func onSuccess(apiState: CFNetworkSDK.APIState, result: [Swift.Dictionary<Swift.String, Any>])
@@ -214,6 +216,24 @@ public enum UserEventList : Swift.CustomStringConvertible {
   case WALLET_FROM_QUICK_CHECKOUT
   case PAYLATER_FROM_QUICK_CHECKOUT
   case PAYMENT_VERFICATION_RECON
+  case INITIATING_CARD_PAYMENT_SUBSCRIPTION
+  case INVOKING_CARD_PAYMENT_PAY_API_SUBSCRIPTION
+  case CARD_PAYMENT_API_DATA_NIL_SUBSCRIPTION
+  case CARD_PAYMENT_HANDLE_SENT_TO_USER_TO_LAUNCH_WEB_FOR_AUTHENTICATION_SUBSCRIPTION
+  case CARD_PAYMENT_INITIATION_FAILED_SUBSCRIPTION
+  case INITIATING_NETBANKING_PAYMENT_SUBSCRIPTION
+  case INVOKING_NETBANKING_PAYMENT_PAY_API_SUBSCRIPTION
+  case NETBANKING_PAYMENT_INITIATION_FAILED_SUBSCRIPTION
+  case NETBANKING_PAYMENT_API_DATA_NIL_SUBSCRIPTION
+  case NETBANKING_PAYMENT_HANDLE_SENT_TO_USER_TO_LAUNCH_WEB_FOR_AUTHENTICATION_SUBSCRIPTION
+  case INITIATING_UPI_PAYMENT_SUBSCRIPTION
+  case INVOKING_UPI_PAYMENT_PAY_API_SUBSCRIPTION
+  case UPI_PAYMENT_INITIATION_FAILED_SUBSCRIPTION
+  case UPI_PAYMENT_FAILED_SUBSCRIPTION
+  case UPI_INTENT_LAUNCHING_UPI_APPLICATION_SUBSCRIPTION
+  case UPI_INTENT_USER_CANCELLED_APP_LAUNCH_SUBSCRIPTION
+  case UPI_INTENT_UNABLE_TO_OPEN_SELECTED_APP_SUBSCRIPTION
+  case UPI_INTENT_SANDBOX_WEB_AUTHENTICATION_SUBSCRIPTION
   public var description: Swift.String {
     get
   }
