@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5RaKWXS8kfwEMP8WGLwYE9F/fHw=
+		hewB1YAXu2SopK4Pd6PpBMhbqaI=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		U5hcquYFq8PYCEDdLgUnCXJmE1o=
+		pHkdgTZDxEwisrI9II6eqwb3Coo=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kAM9+hBNP9dehU14prlM92DRG4g=
+		iFX6b3Iy2/ehvEVQKXDAX4a+okc=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		U5hcquYFq8PYCEDdLgUnCXJmE1o=
+		pHkdgTZDxEwisrI9II6eqwb3Coo=
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0qehbxq8576IElVkgFBXDxeij/s=
+		rsWBMSH1cUVJecTAKImzQx9aCN4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jw1NpQ4Hs/Nk7wyW8bGE/QNVeS7W8IqkpidnKNxdPgc=
+			ItFj0GPfV51JhWBxYC+/DEuDYW4SG8oZYYdhXa0q0X0=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -109,14 +109,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oUSisF6J2bgg4wz/DQjQ/ScgVnu88Ox6m7tDbKtg/mI=
+			yL2GIdo/lJQJoWS8kqlmC3+CYCI2N71urfF4RWZsVrQ=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jw1NpQ4Hs/Nk7wyW8bGE/QNVeS7W8IqkpidnKNxdPgc=
+			ItFj0GPfV51JhWBxYC+/DEuDYW4SG8oZYYdhXa0q0X0=
 			</data>
 		</dict>
 		<key>Modules/CFNetworkSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uqvKRtuzAszgOJ1IraKfVLsicy54Yx8uP8/JQ0mgBo0=
+			QgHx/CvK6VdpQqd+eNLFGO1M2Gznfvg6KH25uexBoNA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

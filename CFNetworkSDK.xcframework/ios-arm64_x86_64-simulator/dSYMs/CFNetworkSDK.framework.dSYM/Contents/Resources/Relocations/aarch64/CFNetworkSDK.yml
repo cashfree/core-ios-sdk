@@ -1,0 +1,50 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/tmp/iphoneos/simulator/Build/Intermediates.noindex/ArchiveIntermediates/CFNetworkSDK/InstallationBuildProductsLocation/Library/Frameworks/CFNetworkSDK.framework/CFNetworkSDK'
+relocations:
+  - { offset: 0x31C21, size: 0x8, addend: 0x0, symName: _CFNetworkSDKVersionString, symObjAddr: 0x0, symBinAddr: 0x3590, symSize: 0x0 }
+  - { offset: 0x31C58, size: 0x8, addend: 0x0, symName: _CFNetworkSDKVersionNumber, symObjAddr: 0x38, symBinAddr: 0x35C8, symSize: 0x0 }
+  - { offset: 0x31D20, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOSHAASQWb', symObjAddr: 0x30, symBinAddr: 0xF58, symSize: 0x4 }
+  - { offset: 0x31D34, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOACSQAAWl', symObjAddr: 0x34, symBinAddr: 0xF5C, symSize: 0x40 }
+  - { offset: 0x31D53, size: 0x8, addend: 0x0, symName: ___swift_memcpy1_1, symObjAddr: 0x134, symBinAddr: 0x105C, symSize: 0xC }
+  - { offset: 0x31D67, size: 0x8, addend: 0x0, symName: ___swift_noop_void_return, symObjAddr: 0x140, symBinAddr: 0x1068, symSize: 0x4 }
+  - { offset: 0x31D7B, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOwet', symObjAddr: 0x144, symBinAddr: 0x106C, symSize: 0x90 }
+  - { offset: 0x31D8F, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOwst', symObjAddr: 0x1D4, symBinAddr: 0x10FC, symSize: 0xB0 }
+  - { offset: 0x31DA3, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOwug', symObjAddr: 0x284, symBinAddr: 0x11AC, symSize: 0x8 }
+  - { offset: 0x31DB7, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOwup', symObjAddr: 0x28C, symBinAddr: 0x11B4, symSize: 0x4 }
+  - { offset: 0x31DCB, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOwui', symObjAddr: 0x290, symBinAddr: 0x11B8, symSize: 0x8 }
+  - { offset: 0x31DDF, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOMa', symObjAddr: 0x298, symBinAddr: 0x11C0, symSize: 0x10 }
+  - { offset: 0x31E27, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOSQAASQ2eeoiySbx_xtFZTW', symObjAddr: 0x1C, symBinAddr: 0xF44, symSize: 0x14 }
+  - { offset: 0x31EB8, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOSHAASH9hashValueSivgTW', symObjAddr: 0x74, symBinAddr: 0xF9C, symSize: 0x44 }
+  - { offset: 0x31F52, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOSHAASH4hash4intoys6HasherVz_tFTW', symObjAddr: 0xB8, symBinAddr: 0xFE0, symSize: 0x28 }
+  - { offset: 0x31F90, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOSHAASH13_rawHashValue4seedS2i_tFTW', symObjAddr: 0xE0, symBinAddr: 0x1008, symSize: 0x40 }
+  - { offset: 0x32007, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateO8rawValueACSgSi_tcfC', symObjAddr: 0x0, symBinAddr: 0xF28, symSize: 0x14 }
+  - { offset: 0x32028, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateO8rawValueSivg', symObjAddr: 0x14, symBinAddr: 0xF3C, symSize: 0x8 }
+  - { offset: 0x32051, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOSYAASY8rawValuexSg03RawE0Qz_tcfCTW', symObjAddr: 0x120, symBinAddr: 0x1048, symSize: 0x8 }
+  - { offset: 0x3207C, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOSYAASY8rawValue03RawE0QzvgTW', symObjAddr: 0x128, symBinAddr: 0x1050, symSize: 0xC }
+  - { offset: 0x32094, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK8APIStateOSYAASY8rawValue03RawE0QzvgTW', symObjAddr: 0x128, symBinAddr: 0x1050, symSize: 0xC }
+  - { offset: 0x3219C, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK18CFBaseNetworkLayerCMa', symObjAddr: 0xB8, symBinAddr: 0x12A0, symSize: 0x20 }
+  - { offset: 0x321B0, size: 0x8, addend: 0x0, symName: ___swift_project_boxed_opaque_existential_1, symObjAddr: 0xE8, symBinAddr: 0x12D0, symSize: 0x24 }
+  - { offset: 0x321CC, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK18CFBaseNetworkLayerCfD', symObjAddr: 0xA8, symBinAddr: 0x1290, symSize: 0x10 }
+  - { offset: 0x32281, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVSgSo13NSURLResponseCSgs5Error_pSgIeghggg_So6NSDataCSgAGSo7NSErrorCSgIeyBhyyy_TR', symObjAddr: 0x0, symBinAddr: 0x12F8, symSize: 0xC8 }
+  - { offset: 0x32437, size: 0x8, addend: 0x0, symName: '_$ss17_NativeDictionaryV8setValue_6forKey8isUniqueyq_n_xSbtFSS_SSTg5', symObjAddr: 0x7E0, symBinAddr: 0x1AD8, symSize: 0x164 }
+  - { offset: 0x32502, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK0A8Delegate_pWOc', symObjAddr: 0x944, symBinAddr: 0x1C3C, symSize: 0x44 }
+  - { offset: 0x32516, size: 0x8, addend: 0x0, symName: ___swift_destroy_boxed_opaque_existential_1, symObjAddr: 0x98C, symBinAddr: 0x1C84, symSize: 0x20 }
+  - { offset: 0x3252A, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK0A8Delegate_pWOb', symObjAddr: 0x9AC, symBinAddr: 0x1CA4, symSize: 0x18 }
+  - { offset: 0x3253E, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK18CFBaseNetworkLayerC11makeAPICall3url4body6method7headers8delegate8apiState0M7Handlery10Foundation3URLV_SDySSypGSgSSSDyS2SGAA0A8Delegate_pAA8APIStateOAA11APIHandlers_ptFyAL4DataVSg_So13NSURLResponseCSgs5Error_pSgtYbcfU_TA', symObjAddr: 0x9C4, symBinAddr: 0x1CBC, symSize: 0x10 }
+  - { offset: 0x32552, size: 0x8, addend: 0x0, symName: _block_copy_helper, symObjAddr: 0x9D4, symBinAddr: 0x1CCC, symSize: 0x10 }
+  - { offset: 0x32566, size: 0x8, addend: 0x0, symName: _block_destroy_helper, symObjAddr: 0x9E4, symBinAddr: 0x1CDC, symSize: 0x8 }
+  - { offset: 0x3257A, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK0A5LayerCMa', symObjAddr: 0xA4C, symBinAddr: 0x1D10, symSize: 0x20 }
+  - { offset: 0x3258E, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVSgWOe', symObjAddr: 0xA94, symBinAddr: 0x1D58, symSize: 0x14 }
+  - { offset: 0x325A2, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOWOe', symObjAddr: 0xAA8, symBinAddr: 0x1D6C, symSize: 0x40 }
+  - { offset: 0x325C1, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSS_Tg5', symObjAddr: 0xAE8, symBinAddr: 0x1DAC, symSize: 0x64 }
+  - { offset: 0x325F9, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFSS_Tg5', symObjAddr: 0xB4C, symBinAddr: 0x1E10, symSize: 0xB4 }
+  - { offset: 0x3265B, size: 0x8, addend: 0x0, symName: '_$ss17_NativeDictionaryV4copyyyFSS_SSTg5', symObjAddr: 0xC00, symBinAddr: 0x1EC4, symSize: 0x174 }
+  - { offset: 0x32721, size: 0x8, addend: 0x0, symName: '_$ss17_NativeDictionaryV20_copyOrMoveAndResize8capacity12moveElementsySi_SbtFSS_SSTg5', symObjAddr: 0xD74, symBinAddr: 0x2038, symSize: 0x2BC }
+  - { offset: 0x32808, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x1030, symBinAddr: 0x22F4, symSize: 0x44 }
+  - { offset: 0x3283D, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK0A5LayerCACycfC', symObjAddr: 0xC8, symBinAddr: 0x13C0, symSize: 0x48 }
+  - { offset: 0x32870, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK0A5LayerCACycfc', symObjAddr: 0x110, symBinAddr: 0x1408, symSize: 0x2C }
+  - { offset: 0x32B18, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK0A5LayerC7request3url4body6method7headers8delegate8apiState0J7Handlery10Foundation3URLV_SDySSypGSgSSSDyS2SGAA0A8Delegate_pAA8APIStateOAA11APIHandlers_ptF', symObjAddr: 0x13C, symBinAddr: 0x1434, symSize: 0x664 }
+  - { offset: 0x32DC3, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK0A5LayerCfd', symObjAddr: 0x7A0, symBinAddr: 0x1A98, symSize: 0x1C }
+  - { offset: 0x32DF4, size: 0x8, addend: 0x0, symName: '_$s12CFNetworkSDK0A5LayerCfD', symObjAddr: 0x7BC, symBinAddr: 0x1AB4, symSize: 0x24 }
+...
