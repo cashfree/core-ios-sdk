@@ -280,6 +280,10 @@ public struct CFBankConstants {
   public static let federalBankPackage: Swift.String
   public static let yesBankName: Swift.String
   public static let yesBankPackage: Swift.String
+  public static let axisBankName: Swift.String
+  public static let axisBankPackage: Swift.String
+  public static let hdfcBankName: Swift.String
+  public static let hdfcBankPackage: Swift.String
 }
 @_inheritsConvenienceInitializers @objc public class CFBankUtils : ObjectiveC.NSObject {
   @objc override dynamic public init()
