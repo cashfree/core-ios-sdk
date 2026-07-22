@@ -4479,6 +4479,154 @@
           },
           {
             "kind": "Var",
+            "name": "QRCODE_PAYMENT_INVOKING_PAY_API",
+            "printedName": "QRCODE_PAYMENT_INVOKING_PAY_API",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO31QRCODE_PAYMENT_INVOKING_PAY_APIyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO31QRCODE_PAYMENT_INVOKING_PAY_APIyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "QRCODE_PAYMENT_API_DATA_NIL",
+            "printedName": "QRCODE_PAYMENT_API_DATA_NIL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO27QRCODE_PAYMENT_API_DATA_NILyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO27QRCODE_PAYMENT_API_DATA_NILyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "QRCODE_PAYMENT_HANDLE_SENT_TO_USER_TO_LAUNCH_WEB_FOR_AUTHENTICATION",
+            "printedName": "QRCODE_PAYMENT_HANDLE_SENT_TO_USER_TO_LAUNCH_WEB_FOR_AUTHENTICATION",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO035QRCODE_PAYMENT_HANDLE_SENT_TO_USER_K30_LAUNCH_WEB_FOR_AUTHENTICATIONyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO035QRCODE_PAYMENT_HANDLE_SENT_TO_USER_K30_LAUNCH_WEB_FOR_AUTHENTICATIONyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "QRCODE_PAYMENT_INITIATION_FAILED",
+            "printedName": "QRCODE_PAYMENT_INITIATION_FAILED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO32QRCODE_PAYMENT_INITIATION_FAILEDyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO32QRCODE_PAYMENT_INITIATION_FAILEDyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
             "name": "SET_UPI_CHANNEL",
             "printedName": "SET_UPI_CHANNEL",
             "children": [
@@ -7657,6 +7805,450 @@
             "declKind": "EnumElement",
             "usr": "s:20CashfreeAnalyticsSDK13UserEventListO50UPI_INTENT_SANDBOX_WEB_AUTHENTICATION_SUBSCRIPTIONyA2CmF",
             "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO50UPI_INTENT_SANDBOX_WEB_AUTHENTICATION_SUBSCRIPTIONyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "INITIATING_WEB_CHECKOUT_PAYMENT",
+            "printedName": "INITIATING_WEB_CHECKOUT_PAYMENT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO31INITIATING_WEB_CHECKOUT_PAYMENTyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO31INITIATING_WEB_CHECKOUT_PAYMENTyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_FORM_CREATED",
+            "printedName": "WEBVIEW_FORM_CREATED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO20WEBVIEW_FORM_CREATEDyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO20WEBVIEW_FORM_CREATEDyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_PAGE_LOADED",
+            "printedName": "WEBVIEW_PAGE_LOADED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO19WEBVIEW_PAGE_LOADEDyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO19WEBVIEW_PAGE_LOADEDyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_INVALID_URL",
+            "printedName": "WEBVIEW_INVALID_URL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO19WEBVIEW_INVALID_URLyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO19WEBVIEW_INVALID_URLyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_CANCEL_TAPPED",
+            "printedName": "WEBVIEW_CANCEL_TAPPED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO21WEBVIEW_CANCEL_TAPPEDyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO21WEBVIEW_CANCEL_TAPPEDyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_CANCEL_CONFIRMED",
+            "printedName": "WEBVIEW_CANCEL_CONFIRMED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO24WEBVIEW_CANCEL_CONFIRMEDyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO24WEBVIEW_CANCEL_CONFIRMEDyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_CANCEL_DISMISSED",
+            "printedName": "WEBVIEW_CANCEL_DISMISSED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO24WEBVIEW_CANCEL_DISMISSEDyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO24WEBVIEW_CANCEL_DISMISSEDyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_JS_DISMISS_WEB",
+            "printedName": "WEBVIEW_JS_DISMISS_WEB",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO22WEBVIEW_JS_DISMISS_WEByA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO22WEBVIEW_JS_DISMISS_WEByA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_JS_DISMISS_LOADER",
+            "printedName": "WEBVIEW_JS_DISMISS_LOADER",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO25WEBVIEW_JS_DISMISS_LOADERyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO25WEBVIEW_JS_DISMISS_LOADERyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_UPI_APP_CANNOT_OPEN",
+            "printedName": "WEBVIEW_UPI_APP_CANNOT_OPEN",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO27WEBVIEW_UPI_APP_CANNOT_OPENyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO27WEBVIEW_UPI_APP_CANNOT_OPENyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEBVIEW_BANK_APP_CANNOT_OPEN",
+            "printedName": "WEBVIEW_BANK_APP_CANNOT_OPEN",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO28WEBVIEW_BANK_APP_CANNOT_OPENyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO28WEBVIEW_BANK_APP_CANNOT_OPENyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "WEB_UPI_VERIFY_TRIGGERED",
+            "printedName": "WEB_UPI_VERIFY_TRIGGERED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO24WEB_UPI_VERIFY_TRIGGEREDyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO24WEB_UPI_VERIFY_TRIGGEREDyA2CmF",
             "moduleName": "CashfreeAnalyticsSDK"
           },
           {
@@ -11018,84 +11610,84 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
       "kind": "StringLiteral",
       "offset": 94,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
       "kind": "BooleanLiteral",
       "offset": 138,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
       "kind": "BooleanLiteral",
       "offset": 191,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 213,
       "length": 35,
       "value": "\"com.cashfree.CashfreeAnalyticsSDK\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 281,
       "length": 19,
       "value": "\"CashFreeAnalytics\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 544,
       "length": 6,
       "value": "\"momd\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 845,
       "length": 29,
       "value": "\"DB Container Setting Failed\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
       "kind": "StringLiteral",
       "offset": 229,
       "length": 13,
       "value": "\"No Internet\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
       "kind": "StringLiteral",
       "offset": 275,
       "length": 8,
       "value": "\"Mobile\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
       "kind": "StringLiteral",
       "offset": 316,
       "length": 7,
       "value": "\"WI-FI\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
       "kind": "IntegerLiteral",
       "offset": 275,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Jun16\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
+      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
       "kind": "IntegerLiteral",
       "offset": 304,
       "length": 1,
