@@ -959,7 +959,7 @@ relocations:
   - { offset: 0xAE478, size: 0x8, addend: 0x0, symName: '_$sSayxGSlsSly7ElementQz5IndexQzcirTWSaySJG_Tg5.resume.0', symObjAddr: 0x718, symBinAddr: 0x4772C, symSize: 0x8 }
   - { offset: 0xAE494, size: 0x8, addend: 0x0, symName: '_$sSayxGSlsSly7ElementQz5IndexQzcirTWSaySJG_Tg5.resume.0', symObjAddr: 0x718, symBinAddr: 0x4772C, symSize: 0x8 }
   - { offset: 0xAE681, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerCMa', symObjAddr: 0x0, symBinAddr: 0x47778, symSize: 0x38 }
-  - { offset: 0xAE6A5, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerC6sharedACvpZ', symObjAddr: 0x6148, symBinAddr: 0xAC450, symSize: 0x0 }
+  - { offset: 0xAE6A5, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerC6sharedACvpZ', symObjAddr: 0x6140, symBinAddr: 0xAC450, symSize: 0x0 }
   - { offset: 0xAE774, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerCMa', symObjAddr: 0x0, symBinAddr: 0x47778, symSize: 0x38 }
   - { offset: 0xAE788, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerCMr', symObjAddr: 0x38, symBinAddr: 0x477B0, symSize: 0x58 }
   - { offset: 0xAE79C, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerC6shared_WZ', symObjAddr: 0x90, symBinAddr: 0x47808, symSize: 0x98 }

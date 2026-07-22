@@ -638,8 +638,8 @@ relocations:
   - { offset: 0x97D78, size: 0x8, addend: 0x0, symName: '_$sxRi_zRi0_zlyxIsegn_SglWOe', symObjAddr: 0x114, symBinAddr: 0x2E7D0, symSize: 0x10 }
   - { offset: 0x97D8C, size: 0x8, addend: 0x0, symName: ___swift_instantiateGenericMetadata, symObjAddr: 0x124, symBinAddr: 0x2E7E0, symSize: 0x2C }
   - { offset: 0x97E2A, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK9CFBindingCfD', symObjAddr: 0xBC, symBinAddr: 0x2E778, symSize: 0x4C }
-  - { offset: 0x98019, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC6sharedACvpZ', symObjAddr: 0x6710, symBinAddr: 0xAFED8, symSize: 0x0 }
-  - { offset: 0x980FF, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC5cacheSo7NSCacheCySo8NSStringCSo7UIImageCGvpZ', symObjAddr: 0x6718, symBinAddr: 0xAFEE0, symSize: 0x0 }
+  - { offset: 0x98019, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC6sharedACvpZ', symObjAddr: 0x6708, symBinAddr: 0xAFED8, symSize: 0x0 }
+  - { offset: 0x980FF, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC5cacheSo7NSCacheCySo8NSStringCSo7UIImageCGvpZ', symObjAddr: 0x6710, symBinAddr: 0xAFEE0, symSize: 0x0 }
   - { offset: 0x9810D, size: 0x8, addend: 0x0, symName: '_$sSo22NSManagedObjectContextCIeghg_ABIeyBhy_TR', symObjAddr: 0x0, symBinAddr: 0x2E80C, symSize: 0x4C }
   - { offset: 0x98136, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC6shared_WZ', symObjAddr: 0x4C, symBinAddr: 0x2E858, symSize: 0xF0 }
   - { offset: 0x98184, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC5cache_WZ', symObjAddr: 0x13C, symBinAddr: 0x2E948, symSize: 0x30 }

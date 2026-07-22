@@ -294,7 +294,7 @@ relocations:
   - { offset: 0x84AAE, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK24CFSavedCardTableViewCellC5coderACSgSo7NSCoderC_tcfcTo', symObjAddr: 0x3D90, symBinAddr: 0x18E10, symSize: 0x30 }
   - { offset: 0x84AC2, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK24CFSavedCardTableViewCellCfD', symObjAddr: 0x3DC0, symBinAddr: 0x18E40, symSize: 0x30 }
   - { offset: 0x84C8B, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK38CFNativeCheckoutDataPersistenceManagerC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x19090, symSize: 0x30 }
-  - { offset: 0x84CAF, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK38CFNativeCheckoutDataPersistenceManagerC6sharedACvpZ', symObjAddr: 0x9BB8, symBinAddr: 0xB5DA8, symSize: 0x0 }
+  - { offset: 0x84CAF, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK38CFNativeCheckoutDataPersistenceManagerC6sharedACvpZ', symObjAddr: 0x9BB0, symBinAddr: 0xB5DA8, symSize: 0x0 }
   - { offset: 0x84D81, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK38CFNativeCheckoutDataPersistenceManagerC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x19090, symSize: 0x30 }
   - { offset: 0x84DA9, size: 0x8, addend: 0x0, symName: '_$sSo28NSPersistentStoreDescriptionCs5Error_pSgIeggg_ABSo7NSErrorCSgIeyByy_TR', symObjAddr: 0x350, symBinAddr: 0x193E0, symSize: 0x70 }
   - { offset: 0x84F5F, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK38CFNativeCheckoutDataPersistenceManagerCMa', symObjAddr: 0x11C0, symBinAddr: 0x1A250, symSize: 0x20 }
@@ -317,8 +317,8 @@ relocations:
   - { offset: 0x8652C, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK35CFQuickCheckoutPaymentOptionServiceCMa', symObjAddr: 0x3E0, symBinAddr: 0x1AB70, symSize: 0x20 }
   - { offset: 0x86644, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK35CFQuickCheckoutPaymentOptionServiceC17clearFirstElement3keyySS_tF', symObjAddr: 0x60, symBinAddr: 0x1A7F0, symSize: 0x350 }
   - { offset: 0x868BC, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK35CFQuickCheckoutPaymentOptionServiceCfD', symObjAddr: 0x3B0, symBinAddr: 0x1AB40, symSize: 0x30 }
-  - { offset: 0x86A99, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK21CFDropCheckoutServiceC6sharedACvpZ', symObjAddr: 0x5358, symBinAddr: 0xB5DB8, symSize: 0x0 }
-  - { offset: 0x86BC7, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK21CFDropCheckoutServiceC8callback0A9PGCoreSDK18CFResponseDelegate_pSgvpZ', symObjAddr: 0x5360, symBinAddr: 0xB5DC0, symSize: 0x0 }
+  - { offset: 0x86A99, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK21CFDropCheckoutServiceC6sharedACvpZ', symObjAddr: 0x5350, symBinAddr: 0xB5DB8, symSize: 0x0 }
+  - { offset: 0x86BC7, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK21CFDropCheckoutServiceC8callback0A9PGCoreSDK18CFResponseDelegate_pSgvpZ', symObjAddr: 0x5358, symBinAddr: 0xB5DC0, symSize: 0x0 }
   - { offset: 0x86BD5, size: 0x8, addend: 0x0, symName: '_$sIeg_IeyB_TR', symObjAddr: 0x0, symBinAddr: 0x1AB90, symSize: 0x30 }
   - { offset: 0x86BED, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK21CFDropCheckoutServiceC6shared_WZ', symObjAddr: 0x30, symBinAddr: 0x1ABC0, symSize: 0x30 }
   - { offset: 0x86C1D, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK21CFDropCheckoutServiceC8callback_WZ', symObjAddr: 0x60, symBinAddr: 0x1ABF0, symSize: 0x20 }
@@ -591,8 +591,8 @@ relocations:
   - { offset: 0x97E89, size: 0x8, addend: 0x0, symName: '_$sxRi_zRi0_zlyxIsegn_SglWOe', symObjAddr: 0x120, symBinAddr: 0x2EDF0, symSize: 0x20 }
   - { offset: 0x97E9D, size: 0x8, addend: 0x0, symName: ___swift_instantiateGenericMetadata, symObjAddr: 0x140, symBinAddr: 0x2EE10, symSize: 0x26 }
   - { offset: 0x97F3B, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK9CFBindingCfD', symObjAddr: 0xC0, symBinAddr: 0x2ED90, symSize: 0x50 }
-  - { offset: 0x9812A, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC6sharedACvpZ', symObjAddr: 0x6998, symBinAddr: 0xB5DD8, symSize: 0x0 }
-  - { offset: 0x98210, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC5cacheSo7NSCacheCySo8NSStringCSo7UIImageCGvpZ', symObjAddr: 0x69A0, symBinAddr: 0xB5DE0, symSize: 0x0 }
+  - { offset: 0x9812A, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC6sharedACvpZ', symObjAddr: 0x6990, symBinAddr: 0xB5DD8, symSize: 0x0 }
+  - { offset: 0x98210, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC5cacheSo7NSCacheCySo8NSStringCSo7UIImageCGvpZ', symObjAddr: 0x6998, symBinAddr: 0xB5DE0, symSize: 0x0 }
   - { offset: 0x9821E, size: 0x8, addend: 0x0, symName: '_$sSo22NSManagedObjectContextCIeghg_ABIeyBhy_TR', symObjAddr: 0x0, symBinAddr: 0x2EE40, symSize: 0x50 }
   - { offset: 0x98247, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC6shared_WZ', symObjAddr: 0x50, symBinAddr: 0x2EE90, symSize: 0xE0 }
   - { offset: 0x98295, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK22CFImageDownloadManagerC5cache_WZ', symObjAddr: 0x130, symBinAddr: 0x2EF70, symSize: 0x30 }
@@ -913,7 +913,7 @@ relocations:
   - { offset: 0xAF916, size: 0x8, addend: 0x0, symName: '_$sSayxGSlsSly7ElementQz5IndexQzcirTWSaySJG_Tg5', symObjAddr: 0x8D0, symBinAddr: 0x4E750, symSize: 0x40 }
   - { offset: 0xAF972, size: 0x8, addend: 0x0, symName: '_$sSayxGSlsSly7ElementQz5IndexQzcirTWSaySJG_Tg5.resume.0', symObjAddr: 0x910, symBinAddr: 0x4E790, symSize: 0xD }
   - { offset: 0xAFB7B, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerCMa', symObjAddr: 0x0, symBinAddr: 0x4E7A0, symSize: 0x30 }
-  - { offset: 0xAFB9F, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerC6sharedACvpZ', symObjAddr: 0x6448, symBinAddr: 0xB5DE8, symSize: 0x0 }
+  - { offset: 0xAFB9F, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerC6sharedACvpZ', symObjAddr: 0x6440, symBinAddr: 0xB5DE8, symSize: 0x0 }
   - { offset: 0xAFC6E, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerCMa', symObjAddr: 0x0, symBinAddr: 0x4E7A0, symSize: 0x30 }
   - { offset: 0xAFC82, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerCMr', symObjAddr: 0x30, symBinAddr: 0x4E7D0, symSize: 0x60 }
   - { offset: 0xAFC96, size: 0x8, addend: 0x0, symName: '_$s15CashfreePGUISDK30CFNativeCheckoutNetworkManagerC6shared_WZ', symObjAddr: 0x90, symBinAddr: 0x4E830, symSize: 0x90 }
