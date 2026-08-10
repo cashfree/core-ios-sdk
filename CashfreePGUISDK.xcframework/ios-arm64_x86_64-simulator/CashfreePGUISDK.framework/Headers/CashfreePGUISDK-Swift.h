@@ -281,6 +281,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CashfreePGCoreSDK;
 @import CoreData;
 @import Foundation;
 @import ObjectiveC;
@@ -320,6 +321,43 @@ SWIFT_CLASS_NAMED("CFBankImage")
 @property (nonatomic, strong) NSObject * _Nullable icon;
 @property (nonatomic, copy) NSDate * _Nullable timeStamp;
 @property (nonatomic, copy) NSString * _Nullable urlString;
+@end
+
+/// This class sets the payment information like <code>CFSession</code>, <code>CFTheme</code> and <code>CFPaymentComponent</code> using a builder pattern with help of <code>CFDropCheckoutPaymentBuilder</code>
+SWIFT_RESILIENT_CLASS("_TtC15CashfreePGUISDK21CFDropCheckoutPayment")
+@interface CFDropCheckoutPayment : CFPayment
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class CFSession;
+@class CFTheme;
+@class CFPaymentComponent;
+/// This class sets the payment information like <code>CFSession</code>, <code>CFTheme</code> and <code>CFPaymentComponent</code>
+SWIFT_CLASS("_TtCC15CashfreePGUISDK21CFDropCheckoutPayment28CFDropCheckoutPaymentBuilder") SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This integration is no longer supported. Please use Web Checkout Payment")
+@interface CFDropCheckoutPaymentBuilder : NSObject
+/// This methos sets the <code>CFSession</code> object.
+/// \param session An instance of <code>CFSession</code>
+///
+///
+/// returns:
+/// It returns an instance of <code>CFDropCheckoutPaymentBuilder</code> to continue building the payment object
+- (CFDropCheckoutPaymentBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+/// This methos sets the <code>CFTheme</code> object.
+/// \param theme An instance of <code>CFTheme</code>
+///
+///
+/// returns:
+/// It returns an instance of <code>CFDropCheckoutPaymentBuilder</code> to continue building the payment object
+- (CFDropCheckoutPaymentBuilder * _Nonnull)setTheme:(CFTheme * _Nonnull)theme SWIFT_WARN_UNUSED_RESULT;
+/// This methos sets the <code>CFPaymentComponent</code> object.
+/// \param paymentComponent An instance of <code>CFPaymentComponent</code>
+///
+///
+/// returns:
+/// It returns an instance of <code>CFDropCheckoutPaymentBuilder</code> to continue building the payment object
+- (CFDropCheckoutPaymentBuilder * _Nonnull)setComponent:(CFPaymentComponent * _Nonnull)paymentComponent SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @protocol CFResponseDelegate;
@@ -646,6 +684,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CashfreePGCoreSDK;
 @import CoreData;
 @import Foundation;
 @import ObjectiveC;
@@ -685,6 +724,43 @@ SWIFT_CLASS_NAMED("CFBankImage")
 @property (nonatomic, strong) NSObject * _Nullable icon;
 @property (nonatomic, copy) NSDate * _Nullable timeStamp;
 @property (nonatomic, copy) NSString * _Nullable urlString;
+@end
+
+/// This class sets the payment information like <code>CFSession</code>, <code>CFTheme</code> and <code>CFPaymentComponent</code> using a builder pattern with help of <code>CFDropCheckoutPaymentBuilder</code>
+SWIFT_RESILIENT_CLASS("_TtC15CashfreePGUISDK21CFDropCheckoutPayment")
+@interface CFDropCheckoutPayment : CFPayment
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class CFSession;
+@class CFTheme;
+@class CFPaymentComponent;
+/// This class sets the payment information like <code>CFSession</code>, <code>CFTheme</code> and <code>CFPaymentComponent</code>
+SWIFT_CLASS("_TtCC15CashfreePGUISDK21CFDropCheckoutPayment28CFDropCheckoutPaymentBuilder") SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This integration is no longer supported. Please use Web Checkout Payment")
+@interface CFDropCheckoutPaymentBuilder : NSObject
+/// This methos sets the <code>CFSession</code> object.
+/// \param session An instance of <code>CFSession</code>
+///
+///
+/// returns:
+/// It returns an instance of <code>CFDropCheckoutPaymentBuilder</code> to continue building the payment object
+- (CFDropCheckoutPaymentBuilder * _Nonnull)setSession:(CFSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+/// This methos sets the <code>CFTheme</code> object.
+/// \param theme An instance of <code>CFTheme</code>
+///
+///
+/// returns:
+/// It returns an instance of <code>CFDropCheckoutPaymentBuilder</code> to continue building the payment object
+- (CFDropCheckoutPaymentBuilder * _Nonnull)setTheme:(CFTheme * _Nonnull)theme SWIFT_WARN_UNUSED_RESULT;
+/// This methos sets the <code>CFPaymentComponent</code> object.
+/// \param paymentComponent An instance of <code>CFPaymentComponent</code>
+///
+///
+/// returns:
+/// It returns an instance of <code>CFDropCheckoutPaymentBuilder</code> to continue building the payment object
+- (CFDropCheckoutPaymentBuilder * _Nonnull)setComponent:(CFPaymentComponent * _Nonnull)paymentComponent SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @protocol CFResponseDelegate;
