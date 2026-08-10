@@ -348,6 +348,7 @@ SWIFT_CLASS("_TtC10CashfreePG23CFPaymentGatewayService")
 - (BOOL)doPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doSubsPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)startSubscription:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)doWorkflowPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 @end
 
 #endif
@@ -708,6 +709,7 @@ SWIFT_CLASS("_TtC10CashfreePG23CFPaymentGatewayService")
 - (BOOL)doPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doSubsPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)startSubscription:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)doWorkflowPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 @end
 
 #endif
