@@ -630,6 +630,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
 - (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doSubsPaymentWithSubscriptionPayment:(CFPayment * _Nonnull)subscriptionPayment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)startSubscriptionPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)doWorkflowPaymentWithWorkflowPayment:(CFPayment * _Nonnull)workflowPayment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (void)cancelPayment;
 @end
 
@@ -1713,49 +1714,131 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK20CFWebCheckoutPayment27CFWebCheckoutPaymen
 - (CFWebCheckoutPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
+/// The CFWorkflowCheckoutPayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFWorkflowCheckoutPaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the workflow payment. An object of <code>CFWorkflowSession</code> is the class variable.
+/// <h2>Code Snippet</h2>
+/// \code
+/// let cfWorkflowSession = ...
+/// let cfPaymentObject = try CFWorkflowCheckoutPayment.CFWorkflowCheckoutPaymentBuilder()
+///     .setSession(cfWorkflowSession)
+///     .build()
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK25CFWorkflowCheckoutPayment")
+@interface CFWorkflowCheckoutPayment : CFPayment
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)printDescription;
+@end
+
+@class CFWorkflowSession;
+/// The CFWorkflowCheckoutPaymentBuilder class can be used to create an object of CFWorkflowCheckoutPayment. It consists of setter methods to set the values for <em>CFWorkflowSession</em>. And finally a <em>build</em> method that returns an object of <em>CFWorkflowCheckoutPayment</em>.
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK25CFWorkflowCheckoutPayment32CFWorkflowCheckoutPaymentBuilder")
+@interface CFWorkflowCheckoutPaymentBuilder : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// This method sets the value for CFWorkflowSession variable of the CFWorkflowCheckoutPayment class
+/// \param session It takes a parameter of type CFWorkflowSession
+///
+///
+/// returns:
+/// It returns an instance of <em>CFWorkflowCheckoutPaymentBuilder</em> to continue the build process
+- (CFWorkflowCheckoutPaymentBuilder * _Nonnull)setSession:(CFWorkflowSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+/// This method builds an object of <em>CFWorkflowCheckoutPayment</em>
+///
+/// throws:
+/// It throws an error (CashfreeError), in case <em>CFWorkflowSession</em> is not set.
+///
+/// returns:
+/// It returns an object of <em>CFWorkflowCheckoutPayment</em>
+- (CFWorkflowCheckoutPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFWorkflowSession")
+@interface CFWorkflowSession : NSObject
+- (void)printDescription;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// This class provides builder methods that help in creating an object of <code>CFWorkflowSession</code>
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFWorkflowSession24CFWorkflowSessionBuilder")
+@interface CFWorkflowSessionBuilder : NSObject
+/// No Arguments Constructor
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// The method sets the value of the generated workflow_session_id to the CFWorkflowSession Object (The workflow session creation should be strictly a server to server call)
+/// \param workflowSessionId Send the workflow_session_id that is generated.
+///
+///
+/// returns:
+/// The method returns an instance of CFWorkflowSessionBuilder to continue building the CFWorkflowSession object
+- (CFWorkflowSessionBuilder * _Nonnull)setWorkflowSessionId:(NSString * _Nonnull)workflowSessionId SWIFT_WARN_UNUSED_RESULT;
+/// The method sets the value of the Order Id to the CFWorkflowSession Object
+/// \param id Send the Order Id of the order under process.
+///
+///
+/// returns:
+/// The method returns an instance of CFWorkflowSessionBuilder to continue building the CFWorkflowSession object
+- (CFWorkflowSessionBuilder * _Nonnull)setOrderID:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+/// The method sets the value of the environment in which the payment has to be executed
+/// \param environment The value of the environment can be either SANDBOX or PRODUCTION depending on the environment the payment has to be executed
+///
+///
+/// returns:
+/// The method returns an instance of CFWorkflowSessionBuilder to continue building the CFWorkflowSession object
+- (CFWorkflowSessionBuilder * _Nonnull)setEnvironment:(enum CFENVIRONMENT)environment SWIFT_WARN_UNUSED_RESULT;
+/// The method validates the input, to check if the inputs are either nil or empty
+///
+/// throws:
+/// In case of validation failure, a custom error adhering to Error protocol is thrown.
+///
+/// returns:
+/// The method returns a CFWorkflowSession Object, which has to be used further in the integration process
+- (CFWorkflowSession * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
 typedef SWIFT_ENUM(NSInteger, CashfreeError, open) {
   CashfreeErrorAPP_ID_MISSING = 0,
   CashfreeErrorORDER_TOKEN_MISSING = 1,
   CashfreeErrorPAYMENT_SESSION_ID_MISSING = 2,
   CashfreeErrorSUBSCRIPTION_SESSION_ID_MISSING = 3,
-  CashfreeErrorORDER_ID_MISSING = 4,
-  CashfreeErrorSUBSCRIPTION_ID_MISSING = 5,
-  CashfreeErrorENVIRONMENT_MISSING = 6,
-  CashfreeErrorINVALID_ENVIRONMENT = 7,
-  CashfreeErrorCHANNEL_MISSING = 8,
-  CashfreeErrorCARD_NUMBER_MISSING = 9,
-  CashfreeErrorCARD_HOLDER_NAME_MISSING = 10,
-  CashfreeErrorCARD_EXPIRY_MONTH_MISSING = 11,
-  CashfreeErrorCARD_EXPIRY_YEAR_MISSING = 12,
-  CashfreeErrorCARD_CVV_MISSING = 13,
-  CashfreeErrorCARD_BANK_NAME_MISSING = 14,
-  CashfreeErrorCARD_EMI_TENURE_MISSING = 15,
-  CashfreeErrorUPI_ID_MISSING = 16,
-  CashfreeErrorINVALID_UPI_APP_ID_SENT = 17,
-  CashfreeErrorPROVIDER_MISSING = 18,
-  CashfreeErrorPHONE_NUMBER_MISSING = 19,
-  CashfreeErrorNB_BANK_CODE_MISSING = 20,
-  CashfreeErrorNB_BANK_NAME_MISSING = 21,
-  CashfreeErrorNB_BANK_IFSC_MISSING = 22,
-  CashfreeErrorNB_BANK_ACCOUNT_NUMBER_MISSING = 23,
-  CashfreeErrorPAYMENT_OBJECT_MISSING = 24,
-  CashfreeErrorINVALID_PAYMENT_OBJECT_SENT = 25,
-  CashfreeErrorSESSION_OBJECT_MISSING = 26,
-  CashfreeErrorCALLBACK_MISSING = 27,
-  CashfreeErrorCARD_OBJECT_MISSING = 28,
-  CashfreeErrorNETBANKING_OBJECT_MISSING = 29,
-  CashfreeErrorWALLET_OBJECT_MISSING = 30,
-  CashfreeErrorPAYLATER_OBJECT_MISSING = 31,
-  CashfreeErrorUPI_OBJECT_MISSING = 32,
-  CashfreeErrorWEB_VIEW_CALLBACK_MISSING = 33,
-  CashfreeErrorINVALID_WEB_DATA = 34,
-  CashfreeErrorINVALID_QRCODE_DATA = 35,
-  CashfreeErrorIMAGE_VIEW_CALLBACK_MISSING = 36,
-  CashfreeErrorMISSING_CALLBACK = 37,
-  CashfreeErrorMISSING_VIEW_CONTROLLER_INSTANCE = 38,
-  CashfreeErrorHEX_SHOULD_START_WITH = 39,
-  CashfreeErrorCOMPONENTS_MISSING = 40,
-  CashfreeErrorONE_PAYMENT_COMPONENT_SHOULD_BE_PRESENT = 41,
+  CashfreeErrorWORKFLOW_SESSION_ID_MISSING = 4,
+  CashfreeErrorORDER_ID_MISSING = 5,
+  CashfreeErrorSUBSCRIPTION_ID_MISSING = 6,
+  CashfreeErrorENVIRONMENT_MISSING = 7,
+  CashfreeErrorINVALID_ENVIRONMENT = 8,
+  CashfreeErrorCHANNEL_MISSING = 9,
+  CashfreeErrorCARD_NUMBER_MISSING = 10,
+  CashfreeErrorCARD_HOLDER_NAME_MISSING = 11,
+  CashfreeErrorCARD_EXPIRY_MONTH_MISSING = 12,
+  CashfreeErrorCARD_EXPIRY_YEAR_MISSING = 13,
+  CashfreeErrorCARD_CVV_MISSING = 14,
+  CashfreeErrorCARD_BANK_NAME_MISSING = 15,
+  CashfreeErrorCARD_EMI_TENURE_MISSING = 16,
+  CashfreeErrorUPI_ID_MISSING = 17,
+  CashfreeErrorINVALID_UPI_APP_ID_SENT = 18,
+  CashfreeErrorPROVIDER_MISSING = 19,
+  CashfreeErrorPHONE_NUMBER_MISSING = 20,
+  CashfreeErrorNB_BANK_CODE_MISSING = 21,
+  CashfreeErrorNB_BANK_NAME_MISSING = 22,
+  CashfreeErrorNB_BANK_IFSC_MISSING = 23,
+  CashfreeErrorNB_BANK_ACCOUNT_NUMBER_MISSING = 24,
+  CashfreeErrorPAYMENT_OBJECT_MISSING = 25,
+  CashfreeErrorINVALID_PAYMENT_OBJECT_SENT = 26,
+  CashfreeErrorSESSION_OBJECT_MISSING = 27,
+  CashfreeErrorCALLBACK_MISSING = 28,
+  CashfreeErrorCARD_OBJECT_MISSING = 29,
+  CashfreeErrorNETBANKING_OBJECT_MISSING = 30,
+  CashfreeErrorWALLET_OBJECT_MISSING = 31,
+  CashfreeErrorPAYLATER_OBJECT_MISSING = 32,
+  CashfreeErrorUPI_OBJECT_MISSING = 33,
+  CashfreeErrorWEB_VIEW_CALLBACK_MISSING = 34,
+  CashfreeErrorINVALID_WEB_DATA = 35,
+  CashfreeErrorINVALID_QRCODE_DATA = 36,
+  CashfreeErrorIMAGE_VIEW_CALLBACK_MISSING = 37,
+  CashfreeErrorMISSING_CALLBACK = 38,
+  CashfreeErrorMISSING_VIEW_CONTROLLER_INSTANCE = 39,
+  CashfreeErrorHEX_SHOULD_START_WITH = 40,
+  CashfreeErrorCOMPONENTS_MISSING = 41,
+  CashfreeErrorONE_PAYMENT_COMPONENT_SHOULD_BE_PRESENT = 42,
 };
 static NSString * _Nonnull const CashfreeErrorDomain = @"CashfreePGCoreSDK.CashfreeError";
 
@@ -2399,6 +2482,7 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
 - (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doSubsPaymentWithSubscriptionPayment:(CFPayment * _Nonnull)subscriptionPayment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)startSubscriptionPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)doWorkflowPaymentWithWorkflowPayment:(CFPayment * _Nonnull)workflowPayment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (void)cancelPayment;
 @end
 
@@ -3482,49 +3566,131 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK20CFWebCheckoutPayment27CFWebCheckoutPaymen
 - (CFWebCheckoutPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
+/// The CFWorkflowCheckoutPayment is a sub-class of CFPayment. An object of this class has to be created with the help of <em>CFWorkflowCheckoutPaymentBuilder</em> class and that object has to be sent to <code>CFPaymentGatewayService</code> while initiating the workflow payment. An object of <code>CFWorkflowSession</code> is the class variable.
+/// <h2>Code Snippet</h2>
+/// \code
+/// let cfWorkflowSession = ...
+/// let cfPaymentObject = try CFWorkflowCheckoutPayment.CFWorkflowCheckoutPaymentBuilder()
+///     .setSession(cfWorkflowSession)
+///     .build()
+///
+/// \endcode
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK25CFWorkflowCheckoutPayment")
+@interface CFWorkflowCheckoutPayment : CFPayment
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)printDescription;
+@end
+
+@class CFWorkflowSession;
+/// The CFWorkflowCheckoutPaymentBuilder class can be used to create an object of CFWorkflowCheckoutPayment. It consists of setter methods to set the values for <em>CFWorkflowSession</em>. And finally a <em>build</em> method that returns an object of <em>CFWorkflowCheckoutPayment</em>.
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK25CFWorkflowCheckoutPayment32CFWorkflowCheckoutPaymentBuilder")
+@interface CFWorkflowCheckoutPaymentBuilder : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// This method sets the value for CFWorkflowSession variable of the CFWorkflowCheckoutPayment class
+/// \param session It takes a parameter of type CFWorkflowSession
+///
+///
+/// returns:
+/// It returns an instance of <em>CFWorkflowCheckoutPaymentBuilder</em> to continue the build process
+- (CFWorkflowCheckoutPaymentBuilder * _Nonnull)setSession:(CFWorkflowSession * _Nonnull)session SWIFT_WARN_UNUSED_RESULT;
+/// This method builds an object of <em>CFWorkflowCheckoutPayment</em>
+///
+/// throws:
+/// It throws an error (CashfreeError), in case <em>CFWorkflowSession</em> is not set.
+///
+/// returns:
+/// It returns an object of <em>CFWorkflowCheckoutPayment</em>
+- (CFWorkflowCheckoutPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_CLASS("_TtC17CashfreePGCoreSDK17CFWorkflowSession")
+@interface CFWorkflowSession : NSObject
+- (void)printDescription;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// This class provides builder methods that help in creating an object of <code>CFWorkflowSession</code>
+SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFWorkflowSession24CFWorkflowSessionBuilder")
+@interface CFWorkflowSessionBuilder : NSObject
+/// No Arguments Constructor
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// The method sets the value of the generated workflow_session_id to the CFWorkflowSession Object (The workflow session creation should be strictly a server to server call)
+/// \param workflowSessionId Send the workflow_session_id that is generated.
+///
+///
+/// returns:
+/// The method returns an instance of CFWorkflowSessionBuilder to continue building the CFWorkflowSession object
+- (CFWorkflowSessionBuilder * _Nonnull)setWorkflowSessionId:(NSString * _Nonnull)workflowSessionId SWIFT_WARN_UNUSED_RESULT;
+/// The method sets the value of the Order Id to the CFWorkflowSession Object
+/// \param id Send the Order Id of the order under process.
+///
+///
+/// returns:
+/// The method returns an instance of CFWorkflowSessionBuilder to continue building the CFWorkflowSession object
+- (CFWorkflowSessionBuilder * _Nonnull)setOrderID:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+/// The method sets the value of the environment in which the payment has to be executed
+/// \param environment The value of the environment can be either SANDBOX or PRODUCTION depending on the environment the payment has to be executed
+///
+///
+/// returns:
+/// The method returns an instance of CFWorkflowSessionBuilder to continue building the CFWorkflowSession object
+- (CFWorkflowSessionBuilder * _Nonnull)setEnvironment:(enum CFENVIRONMENT)environment SWIFT_WARN_UNUSED_RESULT;
+/// The method validates the input, to check if the inputs are either nil or empty
+///
+/// throws:
+/// In case of validation failure, a custom error adhering to Error protocol is thrown.
+///
+/// returns:
+/// The method returns a CFWorkflowSession Object, which has to be used further in the integration process
+- (CFWorkflowSession * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@end
+
 typedef SWIFT_ENUM(NSInteger, CashfreeError, open) {
   CashfreeErrorAPP_ID_MISSING = 0,
   CashfreeErrorORDER_TOKEN_MISSING = 1,
   CashfreeErrorPAYMENT_SESSION_ID_MISSING = 2,
   CashfreeErrorSUBSCRIPTION_SESSION_ID_MISSING = 3,
-  CashfreeErrorORDER_ID_MISSING = 4,
-  CashfreeErrorSUBSCRIPTION_ID_MISSING = 5,
-  CashfreeErrorENVIRONMENT_MISSING = 6,
-  CashfreeErrorINVALID_ENVIRONMENT = 7,
-  CashfreeErrorCHANNEL_MISSING = 8,
-  CashfreeErrorCARD_NUMBER_MISSING = 9,
-  CashfreeErrorCARD_HOLDER_NAME_MISSING = 10,
-  CashfreeErrorCARD_EXPIRY_MONTH_MISSING = 11,
-  CashfreeErrorCARD_EXPIRY_YEAR_MISSING = 12,
-  CashfreeErrorCARD_CVV_MISSING = 13,
-  CashfreeErrorCARD_BANK_NAME_MISSING = 14,
-  CashfreeErrorCARD_EMI_TENURE_MISSING = 15,
-  CashfreeErrorUPI_ID_MISSING = 16,
-  CashfreeErrorINVALID_UPI_APP_ID_SENT = 17,
-  CashfreeErrorPROVIDER_MISSING = 18,
-  CashfreeErrorPHONE_NUMBER_MISSING = 19,
-  CashfreeErrorNB_BANK_CODE_MISSING = 20,
-  CashfreeErrorNB_BANK_NAME_MISSING = 21,
-  CashfreeErrorNB_BANK_IFSC_MISSING = 22,
-  CashfreeErrorNB_BANK_ACCOUNT_NUMBER_MISSING = 23,
-  CashfreeErrorPAYMENT_OBJECT_MISSING = 24,
-  CashfreeErrorINVALID_PAYMENT_OBJECT_SENT = 25,
-  CashfreeErrorSESSION_OBJECT_MISSING = 26,
-  CashfreeErrorCALLBACK_MISSING = 27,
-  CashfreeErrorCARD_OBJECT_MISSING = 28,
-  CashfreeErrorNETBANKING_OBJECT_MISSING = 29,
-  CashfreeErrorWALLET_OBJECT_MISSING = 30,
-  CashfreeErrorPAYLATER_OBJECT_MISSING = 31,
-  CashfreeErrorUPI_OBJECT_MISSING = 32,
-  CashfreeErrorWEB_VIEW_CALLBACK_MISSING = 33,
-  CashfreeErrorINVALID_WEB_DATA = 34,
-  CashfreeErrorINVALID_QRCODE_DATA = 35,
-  CashfreeErrorIMAGE_VIEW_CALLBACK_MISSING = 36,
-  CashfreeErrorMISSING_CALLBACK = 37,
-  CashfreeErrorMISSING_VIEW_CONTROLLER_INSTANCE = 38,
-  CashfreeErrorHEX_SHOULD_START_WITH = 39,
-  CashfreeErrorCOMPONENTS_MISSING = 40,
-  CashfreeErrorONE_PAYMENT_COMPONENT_SHOULD_BE_PRESENT = 41,
+  CashfreeErrorWORKFLOW_SESSION_ID_MISSING = 4,
+  CashfreeErrorORDER_ID_MISSING = 5,
+  CashfreeErrorSUBSCRIPTION_ID_MISSING = 6,
+  CashfreeErrorENVIRONMENT_MISSING = 7,
+  CashfreeErrorINVALID_ENVIRONMENT = 8,
+  CashfreeErrorCHANNEL_MISSING = 9,
+  CashfreeErrorCARD_NUMBER_MISSING = 10,
+  CashfreeErrorCARD_HOLDER_NAME_MISSING = 11,
+  CashfreeErrorCARD_EXPIRY_MONTH_MISSING = 12,
+  CashfreeErrorCARD_EXPIRY_YEAR_MISSING = 13,
+  CashfreeErrorCARD_CVV_MISSING = 14,
+  CashfreeErrorCARD_BANK_NAME_MISSING = 15,
+  CashfreeErrorCARD_EMI_TENURE_MISSING = 16,
+  CashfreeErrorUPI_ID_MISSING = 17,
+  CashfreeErrorINVALID_UPI_APP_ID_SENT = 18,
+  CashfreeErrorPROVIDER_MISSING = 19,
+  CashfreeErrorPHONE_NUMBER_MISSING = 20,
+  CashfreeErrorNB_BANK_CODE_MISSING = 21,
+  CashfreeErrorNB_BANK_NAME_MISSING = 22,
+  CashfreeErrorNB_BANK_IFSC_MISSING = 23,
+  CashfreeErrorNB_BANK_ACCOUNT_NUMBER_MISSING = 24,
+  CashfreeErrorPAYMENT_OBJECT_MISSING = 25,
+  CashfreeErrorINVALID_PAYMENT_OBJECT_SENT = 26,
+  CashfreeErrorSESSION_OBJECT_MISSING = 27,
+  CashfreeErrorCALLBACK_MISSING = 28,
+  CashfreeErrorCARD_OBJECT_MISSING = 29,
+  CashfreeErrorNETBANKING_OBJECT_MISSING = 30,
+  CashfreeErrorWALLET_OBJECT_MISSING = 31,
+  CashfreeErrorPAYLATER_OBJECT_MISSING = 32,
+  CashfreeErrorUPI_OBJECT_MISSING = 33,
+  CashfreeErrorWEB_VIEW_CALLBACK_MISSING = 34,
+  CashfreeErrorINVALID_WEB_DATA = 35,
+  CashfreeErrorINVALID_QRCODE_DATA = 36,
+  CashfreeErrorIMAGE_VIEW_CALLBACK_MISSING = 37,
+  CashfreeErrorMISSING_CALLBACK = 38,
+  CashfreeErrorMISSING_VIEW_CONTROLLER_INSTANCE = 39,
+  CashfreeErrorHEX_SHOULD_START_WITH = 40,
+  CashfreeErrorCOMPONENTS_MISSING = 41,
+  CashfreeErrorONE_PAYMENT_COMPONENT_SHOULD_BE_PRESENT = 42,
 };
 static NSString * _Nonnull const CashfreeErrorDomain = @"CashfreePGCoreSDK.CashfreeError";
 
