@@ -195,6 +195,41 @@
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "doWorkflowPayment",
+            "printedName": "doWorkflowPayment(_:viewController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFPayment",
+                "printedName": "CashfreePGCoreSDK.CFPayment",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFPayment"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePG@objc(cs)CFPaymentGatewayService(im)doWorkflowPayment:viewController:error:",
+            "mangledName": "$s10CashfreePG23CFPaymentGatewayServiceC17doWorkflowPayment_14viewControllery0A9PGCoreSDK0C0C_So06UIViewJ0CtKF",
+            "moduleName": "CashfreePG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -284,11 +319,11 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 1562,
       "length": 7,
-      "value": "\"2.4.2\""
+      "value": "\"2.4.3\""
     }
   ]
 }

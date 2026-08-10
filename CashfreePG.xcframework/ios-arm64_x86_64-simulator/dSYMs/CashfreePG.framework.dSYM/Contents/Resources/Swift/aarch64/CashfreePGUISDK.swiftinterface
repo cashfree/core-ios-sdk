@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CashfreePGUISDK
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CashfreePGUISDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import CFNetworkSDK
 import CashfreeAnalyticsSDK
@@ -22,7 +22,7 @@ import _SwiftConcurrencyShims
   public func doPayment(viewController: UIKit.UIViewController, payment: CashfreePGUISDK.CFDropCheckoutPayment)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class CFDropCheckoutPayment : CashfreePGCoreSDK.CFPayment {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class CFDropCheckoutPayment : CashfreePGCoreSDK.CFPayment {
   @_inheritsConvenienceInitializers @available(iOS, deprecated, message: "This integration is no longer supported. Please use Web Checkout Payment")
   @objc public class CFDropCheckoutPaymentBuilder : ObjectiveC.NSObject {
     @objc public func setSession(_ session: CashfreePGCoreSDK.CFSession) -> CashfreePGUISDK.CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder
@@ -73,6 +73,9 @@ extension CashfreePGUISDK.CFBankImage {
     @objc set
   }
   #endif
+}
+extension CashfreePGUISDK.CFBankImage : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
 }
 public typealias CFImagesFoundationFrameworkSet = Foundation.NSSet
 public typealias CFImagesCoreDataFrameworkManagedObject = CoreData.NSManagedObject
