@@ -4,7 +4,7 @@ binary-path:     '/tmp/iphoneos/simulator/Build/Intermediates.noindex/ArchiveInt
 relocations:
   - { offset: 0x6D94A, size: 0x8, addend: 0x0, symName: _CashfreePGVersionString, symObjAddr: 0x0, symBinAddr: 0x4400, symSize: 0x0 }
   - { offset: 0x6D981, size: 0x8, addend: 0x0, symName: _CashfreePGVersionNumber, symObjAddr: 0x30, symBinAddr: 0x4430, symSize: 0x0 }
-  - { offset: 0x6D9E7, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC6sharedACvpZ', symObjAddr: 0x61B8, symBinAddr: 0x69F0, symSize: 0x0 }
+  - { offset: 0x6D9E7, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC6sharedACvpZ', symObjAddr: 0x6190, symBinAddr: 0x69F0, symSize: 0x0 }
   - { offset: 0x6DAF0, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x1350, symSize: 0x30 }
   - { offset: 0x6DB89, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x700, symBinAddr: 0x1A50, symSize: 0x40 }
   - { offset: 0x6DB9D, size: 0x8, addend: 0x0, symName: '_$s17CashfreePGCoreSDK0A5ErrorOACs0D0AAWl', symObjAddr: 0x740, symBinAddr: 0x1A90, symSize: 0x30 }
