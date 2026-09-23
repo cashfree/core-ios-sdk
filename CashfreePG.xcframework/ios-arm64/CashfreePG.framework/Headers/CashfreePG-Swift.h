@@ -307,6 +307,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @protocol CFResponseDelegate;
 @class CFPayment;
 @class UIViewController;
+@class CFSession;
 /// CFPaymentGatewayService class contains the payment initiation method. Invoking this method triggers the payment execution flow. It has a member variable of type <code>CFPayment</code>. The value of this variable can be set using <code>doPayment(payment: ...)</code> which takes in a CFPaymentt as a parameter and initiates the payment
 /// <h2>Code Snippet</h2>
 /// \code
@@ -348,6 +349,9 @@ SWIFT_CLASS("_TtC10CashfreePG23CFPaymentGatewayService")
 - (BOOL)doPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doSubsPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)startSubscription:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
+/// Fetches the merchant’s checkout configuration and presents a bottom sheet for the user to
+/// pick a UPI app to pay with, using the values already set on <code>session</code>.
+- (BOOL)doUPIPayment:(CFSession * _Nonnull)session viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doWorkflowPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 @end
 
