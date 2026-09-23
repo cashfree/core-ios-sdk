@@ -198,6 +198,42 @@
           },
           {
             "kind": "Function",
+            "name": "doUPIPayment",
+            "printedName": "doUPIPayment(_:viewController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFSession",
+                "printedName": "CashfreePGCoreSDK.CFSession",
+                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFSession"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CashfreePG@objc(cs)CFPaymentGatewayService(im)doUPIPayment:viewController:error:",
+            "mangledName": "$s10CashfreePG23CFPaymentGatewayServiceC12doUPIPayment_14viewControllery0A9PGCoreSDK9CFSessionC_So06UIViewI0CtKF",
+            "moduleName": "CashfreePG",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "doWorkflowPayment",
             "printedName": "doWorkflowPayment(_:viewController:)",
             "children": [
@@ -319,11 +355,11 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/simran.semwal\/Documents\/Sep17\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreePG\/CashfreePG\/Payment Gateway Interfaces\/CashfreePaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 1562,
       "length": 7,
-      "value": "\"2.4.4\""
+      "value": "\"2.5.0\""
     }
   ]
 }
