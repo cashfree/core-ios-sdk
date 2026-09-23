@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		vi0IylmVaIT2FTTgC+8dCdcQyNE=
+		0RuBT+NkYLh2jJKg/pfDZ61J8Q8=
 		</data>
 		<key>CF2FAWebViewController.nib</key>
 		<data>
@@ -40,9 +40,13 @@
 		<data>
 		Mxt3lqGbMzXB9k04OtRBrvz+Giw=
 		</data>
+		<key>DMSans-Variable.ttf</key>
+		<data>
+		fke5pCmkk+3JS04S/RqPASLkoZY=
+		</data>
 		<key>Headers/CashfreePGCoreSDK-Swift.h</key>
 		<data>
-		WEYrzn1Mt0D+gW4BhiQ728GQSMQ=
+		JzT3wFpMssz4Vs+c8B6SnwjQ1bY=
 		</data>
 		<key>Headers/CashfreePGCoreSDK.h</key>
 		<data>
@@ -50,31 +54,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		I8dWYkv9zmnKpFQiTBikdZRFErI=
+		RzHs+g6znStnFyqHL2+VDoEWhNY=
+		</data>
+		<key>Lato-SemiBold.ttf</key>
+		<data>
+		uzbVDd92S0E6UQLFYgOBfpvxPpg=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		473pCo7YNPAtloCEMVDrTZs8+cc=
+		XcUrL8u5FPZlponDz0M1qtd7W7g=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		PBVb/ZGY/v8145PjRgGDxAWGcS8=
+		/tv6CyvqbzMlAWu/AVOX46usrtk=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		aoPYDvwdiykFK3ugLPGHphrCPJQ=
+		TY6s9NAaZAUn22zPdXngEkWFAvU=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		PBVb/ZGY/v8145PjRgGDxAWGcS8=
+		/tv6CyvqbzMlAWu/AVOX46usrtk=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		kaMhxsXSpC/irT+e1qLj/rPVda4=
+		hlAQoSuWVMM9v9Q7dy7R+iUvJ8U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		UzfnJMZXfwK90obJRCFWxXXbx1Y=
+		</data>
+		<key>cf_loader.json</key>
+		<data>
+		jIEzsXYJ168uOKQO0Mrwo4jovjs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -83,7 +95,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EQTqG/wv7a2WWd29x7AwiSVIKJvsagSOu0bO2PCEoLE=
+			Xv38XFm9eX53pmuNxShepjKka9Py1wj+qYy3mb0HqIs=
 			</data>
 		</dict>
 		<key>CF2FAWebViewController.nib</key>
@@ -142,11 +154,18 @@
 			sWm9qc4P7+ZXU+dts0Xjr0+U9yqwGTGVBz7spItJRD4=
 			</data>
 		</dict>
+		<key>DMSans-Variable.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jNCNl+icJNCqku3S8PTI7mGV7um3yfFUhlpYsC8MHA0=
+			</data>
+		</dict>
 		<key>Headers/CashfreePGCoreSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yMbp02V6xEBz0ivmhgV+PRGbKxaa3izS4JuuPuIxoKA=
+			GK/A2ipTQ6GZkDtiJgycGiwYi2lJvqXbcWfic39+dLw=
 			</data>
 		</dict>
 		<key>Headers/CashfreePGCoreSDK.h</key>
@@ -156,39 +175,46 @@
 			+qVDhGJAXVWAOQEGOTu/tp3mlRbHFFapaX3hJ18R8P8=
 			</data>
 		</dict>
+		<key>Lato-SemiBold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cbi33svnWoge0me+U51AK9HpQgt5lliq2k4NG9WvgDw=
+			</data>
+		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UssB3wWJslkb3jQf3hV0F5rw5h/CrPGXspAsxnarZAw=
+			n9dR9Q0939myvgST58MS6eiDXwaXw0YWsQfExj9SWU0=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iJM273Ju4eskuXLqqpxnqcu+JM0/b+Jp7oVTQOAQnAI=
+			VqWswKxrRqnUXmPxcICiS7UKAkYsFnwbhDuOyOffP6M=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Q3nl9snK+tthEdyI9l0XtbhyXzJLLoSz90+bPI4U1I=
+			sXoQz5RsTCyBXRemZwHC/GobaER2MAhEYG+TRVoAAkM=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iJM273Ju4eskuXLqqpxnqcu+JM0/b+Jp7oVTQOAQnAI=
+			VqWswKxrRqnUXmPxcICiS7UKAkYsFnwbhDuOyOffP6M=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CkBwwpOzqj48NgqjTIx8CGLsbgnCeya3JosSuERObVQ=
+			W6X27/YAQ5eUiRyftxZimssEWlDC13id5CrJWzs/xZE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -196,6 +222,13 @@
 			<key>hash2</key>
 			<data>
 			U/XL9+eIcGOM96SXDMk4qsLRWxrfj1pLfRQtZTUrkik=
+			</data>
+		</dict>
+		<key>cf_loader.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			U46IgJGIMBAKEZB5mEQuxnmRlrPeT2YM3BeP+uBhbZc=
 			</data>
 		</dict>
 	</dict>

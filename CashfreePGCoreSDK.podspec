@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name			= "CashfreePGCoreSDK"
-s.version		= "2.4.4"
+s.version		= "2.5.0"
 s.summary		= "Cocoapods implementation of Cashfree's Payment SDK"
 
 s.description		= <<-DESC
@@ -25,5 +25,6 @@ s.vendored_frameworks	= "CashfreePGCoreSDK.xcframework"
 s.swift_version		= "5.10"
 s.pod_target_xcconfig = { 'ENABLE_USER_SCRIPT_SANDBOXING' => 'NO' }
 s.dependency 'CashfreeAnalyticsSDK', '2.4.2'
+s.dependency 'lottie-ios', '>= 4.6.1', '< 5.0'
 
 end
