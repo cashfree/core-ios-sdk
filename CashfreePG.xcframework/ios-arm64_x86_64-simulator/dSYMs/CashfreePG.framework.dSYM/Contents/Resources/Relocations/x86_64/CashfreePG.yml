@@ -2,22 +2,21 @@
 triple:          'x86_64-apple-darwin'
 binary-path:     '/tmp/iphoneos/simulator/Build/Intermediates.noindex/ArchiveIntermediates/CashfreePG/InstallationBuildProductsLocation/Library/Frameworks/CashfreePG.framework/CashfreePG'
 relocations:
-  - { offset: 0x6DACC, size: 0x8, addend: 0x0, symName: _CashfreePGVersionString, symObjAddr: 0x0, symBinAddr: 0x4890, symSize: 0x0 }
-  - { offset: 0x6DB03, size: 0x8, addend: 0x0, symName: _CashfreePGVersionNumber, symObjAddr: 0x30, symBinAddr: 0x48C0, symSize: 0x0 }
-  - { offset: 0x6DB69, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC6sharedACvpZ', symObjAddr: 0x6DB0, symBinAddr: 0x6A10, symSize: 0x0 }
-  - { offset: 0x6DC98, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x1540, symSize: 0x30 }
-  - { offset: 0x6DD31, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x700, symBinAddr: 0x1C40, symSize: 0x40 }
-  - { offset: 0x6DD45, size: 0x8, addend: 0x0, symName: '_$s17CashfreePGCoreSDK0A5ErrorOACs0D0AAWl', symObjAddr: 0x740, symBinAddr: 0x1C80, symSize: 0x30 }
-  - { offset: 0x6DD59, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceCfETo', symObjAddr: 0x1170, symBinAddr: 0x26B0, symSize: 0x30 }
-  - { offset: 0x6DDA9, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceCMa', symObjAddr: 0x1230, symBinAddr: 0x2770, symSize: 0x20 }
-  - { offset: 0x6DDBD, size: 0x8, addend: 0x0, symName: '_$s17CashfreePGCoreSDK18CFResponseDelegate_pSgXwWOh', symObjAddr: 0x1250, symBinAddr: 0x2790, symSize: 0x18 }
-  - { offset: 0x6DDFE, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceCACyc33_7A2626B8FE03C2042129BEAD30E28628LlfcTo', symObjAddr: 0x30, symBinAddr: 0x1570, symSize: 0x70 }
-  - { offset: 0x6DE45, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC11getInstanceACyFZ', symObjAddr: 0xA0, symBinAddr: 0x15E0, symSize: 0x40 }
-  - { offset: 0x6DED1, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC11setCallbackyy0A9PGCoreSDK18CFResponseDelegate_pF', symObjAddr: 0xE0, symBinAddr: 0x1620, symSize: 0x20 }
-  - { offset: 0x6DF1F, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC11setCallbackyy0A9PGCoreSDK18CFResponseDelegate_pFTo', symObjAddr: 0x100, symBinAddr: 0x1640, symSize: 0x20 }
-  - { offset: 0x6E027, size: 0x8, addend: 0x0, symName: '_$sSlsE6prefixy11SubSequenceQzSiFSS_Tg5Tf4ng_n', symObjAddr: 0x11A0, symBinAddr: 0x26E0, symSize: 0x90 }
-  - { offset: 0x6E0E1, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC9doPayment_14viewControllery0A9PGCoreSDK0C0C_So06UIViewI0CtKF', symObjAddr: 0x120, symBinAddr: 0x1660, symSize: 0x5E0 }
-  - { offset: 0x6E3E9, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC17startSubscription_14viewControllery0A9PGCoreSDK0C0C_So06UIViewI0CtKF', symObjAddr: 0x880, symBinAddr: 0x1DC0, symSize: 0x310 }
-  - { offset: 0x6E59D, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC12doUPIPayment_14viewControllery0A9PGCoreSDK9CFSessionC_So06UIViewI0CtKF', symObjAddr: 0xBB0, symBinAddr: 0x20F0, symSize: 0x270 }
-  - { offset: 0x6E737, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceCfD', symObjAddr: 0x1140, symBinAddr: 0x2680, symSize: 0x30 }
+  - { offset: 0x6D94A, size: 0x8, addend: 0x0, symName: _CashfreePGVersionString, symObjAddr: 0x0, symBinAddr: 0x4400, symSize: 0x0 }
+  - { offset: 0x6D981, size: 0x8, addend: 0x0, symName: _CashfreePGVersionNumber, symObjAddr: 0x30, symBinAddr: 0x4430, symSize: 0x0 }
+  - { offset: 0x6D9E7, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC6sharedACvpZ', symObjAddr: 0x61B8, symBinAddr: 0x69F0, symSize: 0x0 }
+  - { offset: 0x6DAF0, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x1350, symSize: 0x30 }
+  - { offset: 0x6DB89, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x700, symBinAddr: 0x1A50, symSize: 0x40 }
+  - { offset: 0x6DB9D, size: 0x8, addend: 0x0, symName: '_$s17CashfreePGCoreSDK0A5ErrorOACs0D0AAWl', symObjAddr: 0x740, symBinAddr: 0x1A90, symSize: 0x30 }
+  - { offset: 0x6DBB1, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceCfETo', symObjAddr: 0xEE0, symBinAddr: 0x2230, symSize: 0x30 }
+  - { offset: 0x6DC01, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceCMa', symObjAddr: 0xFA0, symBinAddr: 0x22F0, symSize: 0x20 }
+  - { offset: 0x6DC15, size: 0x8, addend: 0x0, symName: '_$s17CashfreePGCoreSDK18CFResponseDelegate_pSgXwWOh', symObjAddr: 0xFC0, symBinAddr: 0x2310, symSize: 0x18 }
+  - { offset: 0x6DC56, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceCACyc33_7A2626B8FE03C2042129BEAD30E28628LlfcTo', symObjAddr: 0x30, symBinAddr: 0x1380, symSize: 0x70 }
+  - { offset: 0x6DC9D, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC11getInstanceACyFZ', symObjAddr: 0xA0, symBinAddr: 0x13F0, symSize: 0x40 }
+  - { offset: 0x6DD1D, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC11setCallbackyy0A9PGCoreSDK18CFResponseDelegate_pF', symObjAddr: 0xE0, symBinAddr: 0x1430, symSize: 0x20 }
+  - { offset: 0x6DD6B, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC11setCallbackyy0A9PGCoreSDK18CFResponseDelegate_pFTo', symObjAddr: 0x100, symBinAddr: 0x1450, symSize: 0x20 }
+  - { offset: 0x6DE6E, size: 0x8, addend: 0x0, symName: '_$sSlsE6prefixy11SubSequenceQzSiFSS_Tg5Tf4ng_n', symObjAddr: 0xF10, symBinAddr: 0x2260, symSize: 0x90 }
+  - { offset: 0x6DF28, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC9doPayment_14viewControllery0A9PGCoreSDK0C0C_So06UIViewI0CtKF', symObjAddr: 0x120, symBinAddr: 0x1470, symSize: 0x5E0 }
+  - { offset: 0x6E230, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceC17startSubscription_14viewControllery0A9PGCoreSDK0C0C_So06UIViewI0CtKF', symObjAddr: 0x880, symBinAddr: 0x1BD0, symSize: 0x310 }
+  - { offset: 0x6E3E4, size: 0x8, addend: 0x0, symName: '_$s10CashfreePG23CFPaymentGatewayServiceCfD', symObjAddr: 0xEB0, symBinAddr: 0x2200, symSize: 0x30 }
 ...
