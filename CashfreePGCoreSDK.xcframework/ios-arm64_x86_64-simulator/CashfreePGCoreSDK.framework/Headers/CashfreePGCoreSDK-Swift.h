@@ -322,34 +322,6 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK11CFBankUtils")
 - (NSArray<NSDictionary<NSString *, NSString *> *> * _Nonnull)getInstalledBankingApplications SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class UIView;
-@class NSBundle;
-@class NSCoder;
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK27CFBottomSheetViewController")
-@interface CFBottomSheetViewController : UIViewController
-/// Called after the sheet has finished dismissing (both from the close button and from
-/// <code>dismissSheet()</code>), so callers can react to the sheet closing — e.g. launching payment for
-/// whatever app the user selected right before dismissing.
-@property (nonatomic, copy) void (^ _Nullable onDismiss)(void);
-/// If set (non-empty), tapping the close button shows a “Yes”/“No” confirmation alert with
-/// this title/message before the sheet actually dismisses. Left empty by default so this
-/// generic component keeps its immediate-dismiss behavior for callers that don’t need one.
-@property (nonatomic, copy) NSString * _Nonnull closeConfirmationTitle;
-@property (nonatomic, copy) NSString * _Nonnull closeConfirmationMessage;
-- (void)viewDidLoad;
-/// Creates and presents a new sheet, hosting <code>content</code>. <code>content</code> is optional so a caller can
-/// present a bare sheet immediately (e.g. to show a loader) and attach real content moments
-/// later via <code>setContent(_:)</code>, without the sheet ever having to be re-presented.
-+ (CFBottomSheetViewController * _Nonnull)presentWithContent:(UIView * _Nullable)content over:(UIViewController * _Nonnull)presentingViewController animated:(BOOL)animated preferredHeight:(CGFloat)preferredHeight;
-- (void)setContentView:(UIView * _Nonnull)view;
-/// Public trigger to dismiss the sheet directly — e.g. after the user <em>successfully</em> picks an
-/// app in the content view and taps “Proceed to Pay”. Unlike the close button, this is not a
-/// cancellation, so it skips the confirmation-alert gate entirely.
-- (void)dismissSheetWithAnimated:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 /// CFCard class consists of parameters required to make a card payment. CFCard object can be build using the <code>CFCardBuilder</code>. The CFCardBuilder class is embedded within the CFCard class and provides the users with setters to set the values of all the details that are required while making a card payment.
 /// <h2>Code Snippet</h2>
 /// \code
@@ -440,6 +412,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
 - (CFCard * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
+@class NSCoder;
 @class CFSession;
 @protocol CFCardListener;
 @class UIFont;
@@ -646,14 +619,8 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFCardSubsPayment24CFCardPaymentSubsBuild
 - (CFCardSubsPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-/// Parsed response of the <code>checkouts/configurations</code> API, limited to the fields the UPI apps bottom sheet needs.
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK31CFCheckoutConfigurationResponse")
-@interface CFCheckoutConfigurationResponse : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @protocol CFResponseDelegate;
+@class UIViewController;
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
 @interface CFCorePaymentService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -663,13 +630,6 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
 - (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doSubsPaymentWithSubscriptionPayment:(CFPayment * _Nonnull)subscriptionPayment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)startSubscriptionPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
-/// Fetches the merchant’s checkout configuration (merchant name, amount, quick UPI apps) and
-/// presents a bottom sheet from which the user can pick an installed UPI app to pay with.
-/// \param platform Since there’s no <code>CFPayment</code> object here to call <code>setPlatform(_:)</code> on,
-/// the caller (<code>CFPaymentGatewayService</code>) computes and passes the platform string directly;
-/// it’s stored on <code>CFConstants.source</code>, which the pay-initiate API requires on every request.
-///
-- (BOOL)doUPIPaymentWithSession:(CFSession * _Nonnull)session platform:(NSString * _Nonnull)platform viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doWorkflowPaymentWithWorkflowPayment:(CFPayment * _Nonnull)workflowPayment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (void)cancelPayment;
 @end
@@ -1113,13 +1073,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK15CFQRCodePayment22CFQRCodePaymentBuilder")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-/// Represents one entry from the <code>quickUPIApps</code> list returned by the checkout configurations API.
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK13CFQuickUPIApp")
-@interface CFQuickUPIApp : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFResponseDelegate_")
 @protocol CFResponseDelegate
 - (void)onError:(CFErrorResponse * _Nonnull)error order_id:(NSString * _Nonnull)order_id;
@@ -1465,12 +1418,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK5CFUPI12CFUPIBuilder")
 /// returns:
 /// It returns an object of CFUPICollect which can be used to Initiate the CFUPICollect Payment Mode
 - (CFUPI * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-@end
-
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK22CFUPIAppsSelectionView")
-@interface CFUPIAppsSelectionView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 typedef SWIFT_ENUM(NSInteger, CFUPIMODE, open) {
@@ -2227,34 +2174,6 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK11CFBankUtils")
 - (NSArray<NSDictionary<NSString *, NSString *> *> * _Nonnull)getInstalledBankingApplications SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class UIView;
-@class NSBundle;
-@class NSCoder;
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK27CFBottomSheetViewController")
-@interface CFBottomSheetViewController : UIViewController
-/// Called after the sheet has finished dismissing (both from the close button and from
-/// <code>dismissSheet()</code>), so callers can react to the sheet closing — e.g. launching payment for
-/// whatever app the user selected right before dismissing.
-@property (nonatomic, copy) void (^ _Nullable onDismiss)(void);
-/// If set (non-empty), tapping the close button shows a “Yes”/“No” confirmation alert with
-/// this title/message before the sheet actually dismisses. Left empty by default so this
-/// generic component keeps its immediate-dismiss behavior for callers that don’t need one.
-@property (nonatomic, copy) NSString * _Nonnull closeConfirmationTitle;
-@property (nonatomic, copy) NSString * _Nonnull closeConfirmationMessage;
-- (void)viewDidLoad;
-/// Creates and presents a new sheet, hosting <code>content</code>. <code>content</code> is optional so a caller can
-/// present a bare sheet immediately (e.g. to show a loader) and attach real content moments
-/// later via <code>setContent(_:)</code>, without the sheet ever having to be re-presented.
-+ (CFBottomSheetViewController * _Nonnull)presentWithContent:(UIView * _Nullable)content over:(UIViewController * _Nonnull)presentingViewController animated:(BOOL)animated preferredHeight:(CGFloat)preferredHeight;
-- (void)setContentView:(UIView * _Nonnull)view;
-/// Public trigger to dismiss the sheet directly — e.g. after the user <em>successfully</em> picks an
-/// app in the content view and taps “Proceed to Pay”. Unlike the close button, this is not a
-/// cancellation, so it skips the confirmation-alert gate entirely.
-- (void)dismissSheetWithAnimated:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 /// CFCard class consists of parameters required to make a card payment. CFCard object can be build using the <code>CFCardBuilder</code>. The CFCardBuilder class is embedded within the CFCard class and provides the users with setters to set the values of all the details that are required while making a card payment.
 /// <h2>Code Snippet</h2>
 /// \code
@@ -2345,6 +2264,7 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK6CFCard13CFCardBuilder")
 - (CFCard * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
+@class NSCoder;
 @class CFSession;
 @protocol CFCardListener;
 @class UIFont;
@@ -2551,14 +2471,8 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK17CFCardSubsPayment24CFCardPaymentSubsBuild
 - (CFCardSubsPayment * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
-/// Parsed response of the <code>checkouts/configurations</code> API, limited to the fields the UPI apps bottom sheet needs.
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK31CFCheckoutConfigurationResponse")
-@interface CFCheckoutConfigurationResponse : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @protocol CFResponseDelegate;
+@class UIViewController;
 SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
 @interface CFCorePaymentService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -2568,13 +2482,6 @@ SWIFT_CLASS("_TtC17CashfreePGCoreSDK20CFCorePaymentService")
 - (BOOL)doPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doSubsPaymentWithSubscriptionPayment:(CFPayment * _Nonnull)subscriptionPayment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)startSubscriptionPaymentWithPayment:(CFPayment * _Nonnull)payment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
-/// Fetches the merchant’s checkout configuration (merchant name, amount, quick UPI apps) and
-/// presents a bottom sheet from which the user can pick an installed UPI app to pay with.
-/// \param platform Since there’s no <code>CFPayment</code> object here to call <code>setPlatform(_:)</code> on,
-/// the caller (<code>CFPaymentGatewayService</code>) computes and passes the platform string directly;
-/// it’s stored on <code>CFConstants.source</code>, which the pay-initiate API requires on every request.
-///
-- (BOOL)doUPIPaymentWithSession:(CFSession * _Nonnull)session platform:(NSString * _Nonnull)platform viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (BOOL)doWorkflowPaymentWithWorkflowPayment:(CFPayment * _Nonnull)workflowPayment viewController:(UIViewController * _Nonnull)viewController error:(NSError * _Nullable * _Nullable)error;
 - (void)cancelPayment;
 @end
@@ -3018,13 +2925,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK15CFQRCodePayment22CFQRCodePaymentBuilder")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-/// Represents one entry from the <code>quickUPIApps</code> list returned by the checkout configurations API.
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK13CFQuickUPIApp")
-@interface CFQuickUPIApp : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 SWIFT_PROTOCOL("_TtP17CashfreePGCoreSDK18CFResponseDelegate_")
 @protocol CFResponseDelegate
 - (void)onError:(CFErrorResponse * _Nonnull)error order_id:(NSString * _Nonnull)order_id;
@@ -3370,12 +3270,6 @@ SWIFT_CLASS("_TtCC17CashfreePGCoreSDK5CFUPI12CFUPIBuilder")
 /// returns:
 /// It returns an object of CFUPICollect which can be used to Initiate the CFUPICollect Payment Mode
 - (CFUPI * _Nullable)buildAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-@end
-
-SWIFT_CLASS("_TtC17CashfreePGCoreSDK22CFUPIAppsSelectionView")
-@interface CFUPIAppsSelectionView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 typedef SWIFT_ENUM(NSInteger, CFUPIMODE, open) {
