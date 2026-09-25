@@ -7,10 +7,8 @@ import CFNetworkSDK
 import CashfreeAnalyticsSDK
 @_exported import CashfreePGCoreSDK
 import CoreData
-import CoreText
 import DeveloperToolsSupport
 import Foundation
-import Lottie
 import MachO
 import Swift
 import SwiftUI
@@ -22,16 +20,6 @@ import _SwiftConcurrencyShims
 @_hasMissingDesignatedInitializers open class CFConstantFunctions {
   public static func createCustomResponse(txStatus: Swift.String, response: Swift.Dictionary<Swift.String, Any>, order_id: Swift.String) -> CashfreePGCoreSDK.CFErrorResponse
   public static func setXRequestId(environment: CashfreePGCoreSDK.CFENVIRONMENT, payment_session_id: Swift.String)
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFWorkflowCheckoutPayment : CashfreePGCoreSDK.CFPayment {
-  @objc override final public func printDescription()
-  @_inheritsConvenienceInitializers @objc final public class CFWorkflowCheckoutPaymentBuilder : ObjectiveC.NSObject {
-    @objc override dynamic public init()
-    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFWorkflowSession) -> CashfreePGCoreSDK.CFWorkflowCheckoutPayment.CFWorkflowCheckoutPaymentBuilder
-    @objc final public func build() throws -> CashfreePGCoreSDK.CFWorkflowCheckoutPayment
-    @objc deinit
-  }
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class CFCardComponent : UIKit.UIView, UIKit.UITextFieldDelegate, CFNetworkSDK.APIHandlers {
@@ -363,25 +351,6 @@ extension CashfreePGCoreSDK.CFCardValidator {
   }
   @objc deinit
 }
-public struct CFBankConstants {
-  public static let sbiYONOName: Swift.String
-  public static let sbiYONOPackage: Swift.String
-  public static let auBankName: Swift.String
-  public static let auBankPackage: Swift.String
-  public static let federalBankName: Swift.String
-  public static let federalBankPackage: Swift.String
-  public static let yesBankName: Swift.String
-  public static let yesBankPackage: Swift.String
-  public static let axisBankName: Swift.String
-  public static let axisBankPackage: Swift.String
-  public static let hdfcBankName: Swift.String
-  public static let hdfcBankPackage: Swift.String
-}
-@_inheritsConvenienceInitializers @objc public class CFBankUtils : ObjectiveC.NSObject {
-  @objc override dynamic public init()
-  @objc public func getInstalledBankingApplications() -> [[Swift.String : Swift.String]]
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers open class CFConstants {
   public static var order_token_value: Swift.String
   public static var order_id: Swift.String
@@ -471,6 +440,25 @@ extension UIKit.UIColor {
   convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
   convenience public init(hex: Swift.String)
 }
+public struct CFBankConstants {
+  public static let sbiYONOName: Swift.String
+  public static let sbiYONOPackage: Swift.String
+  public static let auBankName: Swift.String
+  public static let auBankPackage: Swift.String
+  public static let federalBankName: Swift.String
+  public static let federalBankPackage: Swift.String
+  public static let yesBankName: Swift.String
+  public static let yesBankPackage: Swift.String
+  public static let axisBankName: Swift.String
+  public static let axisBankPackage: Swift.String
+  public static let hdfcBankName: Swift.String
+  public static let hdfcBankPackage: Swift.String
+}
+@_inheritsConvenienceInitializers @objc public class CFBankUtils : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public func getInstalledBankingApplications() -> [[Swift.String : Swift.String]]
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers @objc final public class CFNetbanking : ObjectiveC.NSObject {
   final public func getChannel() -> Swift.String
   final public func getBankCode() -> Swift.Int
@@ -542,6 +530,16 @@ extension UIKit.UIColor {
   }
   @objc deinit
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class CFWorkflowCheckoutPayment : CashfreePGCoreSDK.CFPayment {
+  @objc override final public func printDescription()
+  @_inheritsConvenienceInitializers @objc final public class CFWorkflowCheckoutPaymentBuilder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc final public func setSession(_ session: CashfreePGCoreSDK.CFWorkflowSession) -> CashfreePGCoreSDK.CFWorkflowCheckoutPayment.CFWorkflowCheckoutPaymentBuilder
+    @objc final public func build() throws -> CashfreePGCoreSDK.CFWorkflowCheckoutPayment
+    @objc deinit
+  }
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @objc public class CFUPIUtils : ObjectiveC.NSObject {
   @objc override dynamic public init()
   @objc public func getInstalledUPIApplications() -> [[Swift.String : Swift.String]]
@@ -593,44 +591,6 @@ extension CashfreePGCoreSDK.CFUPIMODE : Swift.CustomStringConvertible {
     @objc override dynamic public init()
     @objc deinit
   }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency final public class CFBottomSheetViewController : UIKit.UIViewController {
-  @objc @_Concurrency.MainActor @preconcurrency final public var onDismiss: (() -> Swift.Void)?
-  @objc @_Concurrency.MainActor @preconcurrency final public var closeConfirmationTitle: Swift.String
-  @objc @_Concurrency.MainActor @preconcurrency final public var closeConfirmationMessage: Swift.String
-  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
-  #if compiler(>=5.3) && $NonescapableTypes
-  @discardableResult
-  @objc @_Concurrency.MainActor @preconcurrency public static func present(content: UIKit.UIView?, over presentingViewController: UIKit.UIViewController, animated: Swift.Bool = true, preferredHeight: CoreFoundation.CGFloat = 0) -> CashfreePGCoreSDK.CFBottomSheetViewController
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency final public func present(content: UIKit.UIView?, over presentingViewController: UIKit.UIViewController, animated: Swift.Bool = true, preferredHeight: CoreFoundation.CGFloat = 0)
-  #endif
-  @objc(setContentView:) @_Concurrency.MainActor @preconcurrency final public func setContent(_ view: UIKit.UIView)
-  @objc @_Concurrency.MainActor @preconcurrency final public func dismissSheet(animated: Swift.Bool = true)
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc public class CFQuickUPIApp : ObjectiveC.NSObject {
-  final public let id: Swift.String
-  final public let appName: Swift.String
-  final public let appPackage: Swift.String
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc public class CFCheckoutConfigurationResponse : ObjectiveC.NSObject {
-  final public let merchantName: Swift.String
-  final public let orderAmount: Swift.Double
-  final public let orderCurrency: Swift.String
-  final public let quickUPIApps: [CashfreePGCoreSDK.CFQuickUPIApp]
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class CFUPIAppsSelectionView : UIKit.UIView {
   @objc deinit
 }
 extension UIKit.UITextField {
@@ -688,7 +648,6 @@ extension UIKit.UITextField {
   @objc final public func doPayment(payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc final public func doSubsPayment(subscriptionPayment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc final public func startSubscriptionPayment(payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
-  @objc final public func doUPIPayment(session: CashfreePGCoreSDK.CFSession, platform: Swift.String, viewController: UIKit.UIViewController) throws
   @objc final public func doWorkflowPayment(workflowPayment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc final public func cancelPayment()
   @objc deinit

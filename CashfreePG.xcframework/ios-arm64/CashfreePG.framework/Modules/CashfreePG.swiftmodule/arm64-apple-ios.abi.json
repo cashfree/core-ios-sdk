@@ -198,42 +198,6 @@
           },
           {
             "kind": "Function",
-            "name": "doUPIPayment",
-            "printedName": "doUPIPayment(_:viewController:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CFSession",
-                "printedName": "CashfreePGCoreSDK.CFSession",
-                "usr": "c:@M@CashfreePGCoreSDK@objc(cs)CFSession"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIViewController",
-                "printedName": "UIKit.UIViewController",
-                "usr": "c:objc(cs)UIViewController"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@CashfreePG@objc(cs)CFPaymentGatewayService(im)doUPIPayment:viewController:error:",
-            "mangledName": "$s10CashfreePG23CFPaymentGatewayServiceC12doUPIPayment_14viewControllery0A9PGCoreSDK9CFSessionC_So06UIViewI0CtKF",
-            "moduleName": "CashfreePG",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "doWorkflowPayment",
             "printedName": "doWorkflowPayment(_:viewController:)",
             "children": [
@@ -359,7 +323,7 @@
       "kind": "StringLiteral",
       "offset": 1562,
       "length": 7,
-      "value": "\"2.5.0\""
+      "value": "\"2.5.1\""
     }
   ]
 }
