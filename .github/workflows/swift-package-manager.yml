@@ -7,7 +7,7 @@ on:
     paths:
       - 'Package.swift'
       - '*.xcframework/**'
-      - '*.podspec'
+      - 'Sources/**'
   
   # Handle pushes to master and tag pushes (validate only)
   push:
@@ -223,7 +223,8 @@ jobs:
         ")
         
         if [ "$has_buildable" = "true" ]; then
-          swift build
+          # The XCFrameworks are iOS-only, so build for iOS (swift build would target macOS)
+          xcodebuild -scheme CashfreePG -destination 'generic/platform=iOS Simulator' build -quiet
           echo "✅ Package built successfully"
         else
           echo "📦 Package contains only binary targets (XCFrameworks)"

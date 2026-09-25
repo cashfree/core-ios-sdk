@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AC4904EE1F7E10C0D6A28A2 /* CashfreePG in Frameworks */ = {isa = PBXBuildFile; productRef = 4B7560429198380A9883518E /* CashfreePG */; };
 		A14984F028103641001AE55E /* SwiftUI_Sample_ApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14984EF28103641001AE55E /* SwiftUI_Sample_ApplicationApp.swift */; };
 		A14984F228103641001AE55E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14984F128103641001AE55E /* ContentView.swift */; };
 		A14984F428103643001AE55E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14984F328103643001AE55E /* Assets.xcassets */; };
@@ -14,13 +15,9 @@
 		A14984FE281036F6001AE55E /* CFOrderPayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14984FD281036F6001AE55E /* CFOrderPayController.swift */; };
 		A149850128103A26001AE55E /* CFOrderPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14984FF28103A26001AE55E /* CFOrderPayViewController.swift */; };
 		A149850228103A26001AE55E /* CFOrderPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A149850028103A26001AE55E /* CFOrderPayViewController.xib */; };
-		B010CAB1705EDD40E5A13CF2 /* Pods_SwiftUI_Sample_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CD65A1F1B32F6D830D2ED6 /* Pods_SwiftUI_Sample_Application.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E67CEB0C931256DA342F710 /* Pods-SwiftUI+Sample+Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI+Sample+Application.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI+Sample+Application/Pods-SwiftUI+Sample+Application.debug.xcconfig"; sourceTree = "<group>"; };
-		76E2F01D950DADC2E45DB418 /* Pods-SwiftUI+Sample+Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI+Sample+Application.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI+Sample+Application/Pods-SwiftUI+Sample+Application.release.xcconfig"; sourceTree = "<group>"; };
-		95CD65A1F1B32F6D830D2ED6 /* Pods_SwiftUI_Sample_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Sample_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14984EC28103641001AE55E /* SwiftUI+Sample+Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI+Sample+Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14984EF28103641001AE55E /* SwiftUI_Sample_ApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Sample_ApplicationApp.swift; sourceTree = "<group>"; };
 		A14984F128103641001AE55E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,37 +33,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B010CAB1705EDD40E5A13CF2 /* Pods_SwiftUI_Sample_Application.framework in Frameworks */,
+				9AC4904EE1F7E10C0D6A28A2 /* CashfreePG in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13F9C177417FF10D8677C0D1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				95CD65A1F1B32F6D830D2ED6 /* Pods_SwiftUI_Sample_Application.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		57372AFAB6631921072ADEF6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1E67CEB0C931256DA342F710 /* Pods-SwiftUI+Sample+Application.debug.xcconfig */,
-				76E2F01D950DADC2E45DB418 /* Pods-SwiftUI+Sample+Application.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		A14984E328103641001AE55E = {
 			isa = PBXGroup;
 			children = (
 				A14984EE28103641001AE55E /* SwiftUI+Sample+Application */,
 				A14984ED28103641001AE55E /* Products */,
-				57372AFAB6631921072ADEF6 /* Pods */,
-				13F9C177417FF10D8677C0D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,17 +85,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A14984FA28103643001AE55E /* Build configuration list for PBXNativeTarget "SwiftUI+Sample+Application" */;
 			buildPhases = (
-				AA47FE750565A9958BAF6A92 /* [CP] Check Pods Manifest.lock */,
 				A14984E828103641001AE55E /* Sources */,
 				A14984E928103641001AE55E /* Frameworks */,
 				A14984EA28103641001AE55E /* Resources */,
-				7CD2FE9E5D95018F869F0500 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "SwiftUI+Sample+Application";
+			packageProductDependencies = (
+				4B7560429198380A9883518E /* CashfreePG */,
+			);
 			productName = "SwiftUI+Sample+Application";
 			productReference = A14984EC28103641001AE55E /* SwiftUI+Sample+Application.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +125,9 @@
 				Base,
 			);
 			mainGroup = A14984E328103641001AE55E;
+			packageReferences = (
+				FBF0708976E0F28EE53DCC77 /* XCLocalSwiftPackageReference ".." */,
+			);
 			productRefGroup = A14984ED28103641001AE55E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,48 +149,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7CD2FE9E5D95018F869F0500 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftUI+Sample+Application/Pods-SwiftUI+Sample+Application-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftUI+Sample+Application/Pods-SwiftUI+Sample+Application-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUI+Sample+Application/Pods-SwiftUI+Sample+Application-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA47FE750565A9958BAF6A92 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftUI+Sample+Application-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A14984E828103641001AE55E /* Sources */ = {
@@ -341,7 +281,6 @@
 		};
 		A14984FB28103643001AE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E67CEB0C931256DA342F710 /* Pods-SwiftUI+Sample+Application.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -371,7 +310,6 @@
 		};
 		A14984FC28103643001AE55E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76E2F01D950DADC2E45DB418 /* Pods-SwiftUI+Sample+Application.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -421,6 +359,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		FBF0708976E0F28EE53DCC77 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B7560429198380A9883518E /* CashfreePG */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF0708976E0F28EE53DCC77 /* XCLocalSwiftPackageReference ".." */;
+			productName = CashfreePG;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A14984E428103641001AE55E /* Project object */;
 }
