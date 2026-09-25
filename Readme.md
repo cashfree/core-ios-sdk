@@ -13,43 +13,38 @@ Sample integration project for Cashfree Payment Gateway's iOS SDK, facilitating 
 
 ## 📦 Installation
 
-### Swift Package Manager (Recommended)
+### Swift Package Manager
 
-The easiest way to integrate Cashfree iOS SDK is through Swift Package Manager
+Cashfree iOS SDK is distributed through Swift Package Manager.
 
 #### Xcode GUI
 1. Open your project in Xcode
 2. Go to **File** > **Add Package Dependencies**
 3. Enter the repository URL: `https://github.com/cashfree/core-ios-sdk.git`
 4. Select the version rule (recommend "Up to Next Major Version")
-5. Choose the products you need:
+5. Choose the product you need. Each product includes the SDKs it depends on, so you only need one:
    - `CashfreePG` - Complete Payment Gateway SDK (recommended)
-   - `CashfreePGCoreSDK` - Core payment processing
    - `CashfreePGUISDK` - UI components
+   - `CashfreePGCoreSDK` - Core payment processing
    - `CashfreeAnalyticsSDK` - Analytics and tracking
    - `CFNetworkSDK` - Networking layer
 
+#### Package.swift
 
-#### **⚠️ WebKit Integration Note**
-If you encounter "WebKit framework not found" errors with SPM, manually add WebKit framework:
-
-1. Select your project → Target → **Build Phases**
-2. **Link Binary With Libraries** → Add **WebKit.framework**
-3. Or add to your Package.swift:
-
-
-### CocoaPods
-
-Add the following to your `Podfile`:
-
-```ruby
-pod 'CashfreePG', '~> 2.2.4'
+```swift
+dependencies: [
+    .package(url: "https://github.com/cashfree/core-ios-sdk.git", from: "2.5.1")
+],
+targets: [
+    .target(name: "YourApp", dependencies: [
+        .product(name: "CashfreePG", package: "core-ios-sdk")
+    ])
+]
 ```
 
-Then run:
-```bash
-pod install
-```
+### CocoaPods (no longer supported)
+
+CocoaPods is no longer supported. Versions already published to CocoaPods keep working but will not receive updates. To migrate, remove `pod 'CashfreePG'` from your `Podfile`, run `pod install`, then add the package through Swift Package Manager as described above.
 
 ## Documentation
 

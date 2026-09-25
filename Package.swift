@@ -3,69 +3,88 @@
 
 import PackageDescription
 
+// Binary targets cannot declare dependencies, so each product points at a thin
+// wrapper target that pulls in its SDK plus every SDK below it in the chain:
+// CFNetworkSDK -> CashfreeAnalyticsSDK -> CashfreePGCoreSDK -> CashfreePGUISDK -> CashfreePG
 let package = Package(
     name: "CashfreePG",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v13)
     ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "CashfreePG",
-            targets: ["CashfreePG"]
-        ),
-        .library(
-            name: "CashfreePGCoreSDK",
-            targets: ["CashfreePGCoreSDK"]
+            targets: ["CashfreePGWrapper"]
         ),
         .library(
             name: "CashfreePGUISDK",
-            targets: ["CashfreePGUISDK"]
+            targets: ["CashfreePGUISDKWrapper"]
+        ),
+        .library(
+            name: "CashfreePGCoreSDK",
+            targets: ["CashfreePGCoreSDKWrapper"]
         ),
         .library(
             name: "CashfreeAnalyticsSDK",
-            targets: ["CashfreeAnalyticsSDK"]
+            targets: ["CashfreeAnalyticsSDKWrapper"]
         ),
         .library(
             name: "CFNetworkSDK",
-            targets: ["CFNetworkSDK"]
+            targets: ["CFNetworkSDKWrapper"]
         )
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-    ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        
-        // CFNetworkSDK - Base networking framework
+        // MARK: Binary SDKs
+
         .binaryTarget(
             name: "CFNetworkSDK",
             path: "CFNetworkSDK.xcframework"
         ),
-        
-        // CashfreeAnalyticsSDK - Depends on CFNetworkSDK
         .binaryTarget(
             name: "CashfreeAnalyticsSDK",
             path: "CashfreeAnalyticsSDK.xcframework"
         ),
-        
-        // CashfreePGCoreSDK - Depends on CashfreeAnalyticsSDK
         .binaryTarget(
             name: "CashfreePGCoreSDK",
             path: "CashfreePGCoreSDK.xcframework"
         ),
-        
-        // CashfreePGUISDK - Depends on CashfreePGCoreSDK
         .binaryTarget(
             name: "CashfreePGUISDK",
             path: "CashfreePGUISDK.xcframework"
         ),
-        
-        // CashfreePG - Main target that depends on CashfreePGUISDK
         .binaryTarget(
             name: "CashfreePG",
             path: "CashfreePG.xcframework"
+        ),
+
+        // MARK: Wrappers (dependency chain)
+
+        .target(
+            name: "CFNetworkSDKWrapper",
+            dependencies: ["CFNetworkSDK"],
+            path: "Sources/CFNetworkSDKWrapper"
+        ),
+        .target(
+            name: "CashfreeAnalyticsSDKWrapper",
+            dependencies: ["CashfreeAnalyticsSDK", "CFNetworkSDKWrapper"],
+            path: "Sources/CashfreeAnalyticsSDKWrapper"
+        ),
+        .target(
+            name: "CashfreePGCoreSDKWrapper",
+            dependencies: ["CashfreePGCoreSDK", "CashfreeAnalyticsSDKWrapper"],
+            path: "Sources/CashfreePGCoreSDKWrapper",
+            // CashfreePGCoreSDK uses WebKit but does not link it itself
+            linkerSettings: [.linkedFramework("WebKit")]
+        ),
+        .target(
+            name: "CashfreePGUISDKWrapper",
+            dependencies: ["CashfreePGUISDK", "CashfreePGCoreSDKWrapper"],
+            path: "Sources/CashfreePGUISDKWrapper"
+        ),
+        .target(
+            name: "CashfreePGWrapper",
+            dependencies: ["CashfreePG", "CashfreePGUISDKWrapper"],
+            path: "Sources/CashfreePGWrapper"
         )
     ]
 )
