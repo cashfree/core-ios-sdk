@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CashfreeAnalyticsSDK
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CashfreeAnalyticsSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AppTrackingTransparency
 import CFNetworkSDK
@@ -134,6 +134,7 @@ public enum UserEventList : Swift.CustomStringConvertible {
   case MISSING_BANK_ACCOUNT_NUMBER
   case SUCCESSFULLY_CREATED_CFNETBANKING_OBJECT
   case INITIATING_WALLET_PAYMENT
+  case INITIATING_WEB_CHECKOUT_PAYMENT
   case INITIATING_PAY_LATER_PAYMENT
   case WALLET_PAYMENT_INITIATION_FAILED
   case PAY_LATER_PAYMENT_INITIATION_FAILED
@@ -238,7 +239,6 @@ public enum UserEventList : Swift.CustomStringConvertible {
   case UPI_INTENT_USER_CANCELLED_APP_LAUNCH_SUBSCRIPTION
   case UPI_INTENT_UNABLE_TO_OPEN_SELECTED_APP_SUBSCRIPTION
   case UPI_INTENT_SANDBOX_WEB_AUTHENTICATION_SUBSCRIPTION
-  case INITIATING_WEB_CHECKOUT_PAYMENT
   case WEBVIEW_FORM_CREATED
   case WEBVIEW_PAGE_LOADED
   case WEBVIEW_INVALID_URL
@@ -354,6 +354,9 @@ extension CashfreeAnalyticsSDK.CFAnalytics {
   @objc(addEvents:) @NSManaged nonisolated dynamic public func addToEvents(_ values: Foundation.NSOrderedSet)
   @objc(removeEvents:) @NSManaged nonisolated dynamic public func removeFromEvents(_ values: Foundation.NSOrderedSet)
 }
+extension CashfreeAnalyticsSDK.CFAnalytics : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
 public typealias CFCrashCoreDataClassSet = Foundation.NSSet
 @_inheritsConvenienceInitializers @objc(CFCrash) nonisolated public class CFCrash : CoreData.NSManagedObject {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -364,6 +367,9 @@ public typealias CFCrashCoreDataClassSet = Foundation.NSSet
 public typealias CFCrashCoreDataPropertiesSet = Foundation.NSSet
 extension CashfreeAnalyticsSDK.CFCrash {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<CashfreeAnalyticsSDK.CFCrash>
+}
+extension CashfreeAnalyticsSDK.CFCrash : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
 }
 public typealias CFEventCoreDataClassSet = Foundation.NSSet
 @_inheritsConvenienceInitializers @objc(CFEvent) nonisolated public class CFEvent : CoreData.NSManagedObject {
@@ -421,6 +427,9 @@ extension CashfreeAnalyticsSDK.CFEvent {
     @objc set
   }
   #endif
+}
+extension CashfreeAnalyticsSDK.CFEvent : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
 }
 public typealias CashFreeAnalyticsFoundationFrameworkSet = Foundation.NSSet
 public typealias CashFreeAnalyticsCoreDataFrameworkManagedObject = CoreData.NSManagedObject
