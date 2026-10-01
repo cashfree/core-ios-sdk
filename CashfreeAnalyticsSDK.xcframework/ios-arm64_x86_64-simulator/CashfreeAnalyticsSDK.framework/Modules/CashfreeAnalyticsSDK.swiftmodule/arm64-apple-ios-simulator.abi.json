@@ -3961,6 +3961,43 @@
           },
           {
             "kind": "Var",
+            "name": "INITIATING_WEB_CHECKOUT_PAYMENT",
+            "printedName": "INITIATING_WEB_CHECKOUT_PAYMENT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserEventList",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserEventList",
+                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
+                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO31INITIATING_WEB_CHECKOUT_PAYMENTyA2CmF",
+            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO31INITIATING_WEB_CHECKOUT_PAYMENTyA2CmF",
+            "moduleName": "CashfreeAnalyticsSDK"
+          },
+          {
+            "kind": "Var",
             "name": "INITIATING_PAY_LATER_PAYMENT",
             "printedName": "INITIATING_PAY_LATER_PAYMENT",
             "children": [
@@ -7809,43 +7846,6 @@
           },
           {
             "kind": "Var",
-            "name": "INITIATING_WEB_CHECKOUT_PAYMENT",
-            "printedName": "INITIATING_WEB_CHECKOUT_PAYMENT",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(CashfreeAnalyticsSDK.UserEventList.Type) -> CashfreeAnalyticsSDK.UserEventList",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UserEventList",
-                    "printedName": "CashfreeAnalyticsSDK.UserEventList",
-                    "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "CashfreeAnalyticsSDK.UserEventList.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UserEventList",
-                        "printedName": "CashfreeAnalyticsSDK.UserEventList",
-                        "usr": "s:20CashfreeAnalyticsSDK13UserEventListO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:20CashfreeAnalyticsSDK13UserEventListO31INITIATING_WEB_CHECKOUT_PAYMENTyA2CmF",
-            "mangledName": "$s20CashfreeAnalyticsSDK13UserEventListO31INITIATING_WEB_CHECKOUT_PAYMENTyA2CmF",
-            "moduleName": "CashfreeAnalyticsSDK"
-          },
-          {
-            "kind": "Var",
             "name": "WEBVIEW_FORM_CREATED",
             "printedName": "WEBVIEW_FORM_CREATED",
             "children": [
@@ -10262,6 +10262,28 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObjectIdentifier",
+                    "printedName": "Swift.ObjectIdentifier",
+                    "usr": "s:SO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
           }
         ]
       },
@@ -10507,6 +10529,28 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObjectIdentifier",
+                    "printedName": "Swift.ObjectIdentifier",
+                    "usr": "s:SO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
           }
         ]
       },
@@ -11560,6 +11604,28 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObjectIdentifier",
+                    "printedName": "Swift.ObjectIdentifier",
+                    "usr": "s:SO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
           }
         ]
       },
@@ -11610,84 +11676,84 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
       "kind": "StringLiteral",
       "offset": 94,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
       "kind": "BooleanLiteral",
       "offset": 138,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CFAnalyticsConstants.swift",
       "kind": "BooleanLiteral",
       "offset": 191,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 213,
       "length": 35,
       "value": "\"com.cashfree.CashfreeAnalyticsSDK\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 281,
       "length": 19,
       "value": "\"CashFreeAnalytics\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 544,
       "length": 6,
       "value": "\"momd\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Controller\/CFCoreDataPersistenceController.swift",
       "kind": "StringLiteral",
       "offset": 845,
       "length": 29,
       "value": "\"DB Container Setting Failed\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
       "kind": "StringLiteral",
       "offset": 229,
       "length": 13,
       "value": "\"No Internet\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
       "kind": "StringLiteral",
       "offset": 275,
       "length": 8,
       "value": "\"Mobile\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Utils\/CashfreeReachability.swift",
       "kind": "StringLiteral",
       "offset": 316,
       "length": 7,
       "value": "\"WI-FI\""
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
       "kind": "IntegerLiteral",
       "offset": 275,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/simran.semwal\/Desktop\/July22\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
+      "filePath": "\/Users\/simran.semwal\/Documents\/iOS Sample\/Jul31\/CashfreeAnalyticsSDK\/CashfreeAnalyticsSDK\/Network\/CFAnalyticsNetworkService.swift",
       "kind": "IntegerLiteral",
       "offset": 304,
       "length": 1,
