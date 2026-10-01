@@ -17,6 +17,7 @@ import _SwiftConcurrencyShims
   @objc final public func doPayment(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc final public func doSubsPayment(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc final public func startSubscription(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
+  @objc final public func doUPIPayment(_ session: CashfreePGCoreSDK.CFSession, viewController: UIKit.UIViewController) throws
   @objc final public func doWorkflowPayment(_ payment: CashfreePGCoreSDK.CFPayment, viewController: UIKit.UIViewController) throws
   @objc deinit
 }
