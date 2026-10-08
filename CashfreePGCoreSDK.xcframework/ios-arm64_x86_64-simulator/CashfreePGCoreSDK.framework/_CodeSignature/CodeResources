@@ -54,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KJ34NmBCyPrlizECjmji379TccY=
+		KyVp+VARokI9G1xMjGDfb0YCzXI=
 		</data>
 		<key>Lato-SemiBold.ttf</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		X/5Z/Vtrp2foWwNRp47L5w/6S8w=
+		wmHyedCDJ55hna6zDQHz+jScuu8=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -78,11 +78,11 @@
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mOO9mBzzJ7sj0IDKdkflT8hSoNU=
+		FwTbqDDj4Gqnwc4DmmavKwJC5io=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		X/5Z/Vtrp2foWwNRp47L5w/6S8w=
+		wmHyedCDJ55hna6zDQHz+jScuu8=
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		CX+wESnzLt8wN3mQWPo5U0RaGZY=
+		Dcv/FnbHQEgZjTK/gj0Qx/ZYNCk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -202,7 +202,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3JWsgo2n1pCj5nmc6ehTaqmGR47Dh/ioiq5WmTmOQIg=
+			sU66p/QXsaNx7GQrdLmqSVtPKFVm4XpOQC/PVK1Y6Bk=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -230,14 +230,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XVHN1aSKImYln/lMGOKkCatRJvGru55KJKrjkP+INp0=
+			vGML/DrHMmqPguW8C+8Omxy8CAglsK/buHoVkCXuv38=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3JWsgo2n1pCj5nmc6ehTaqmGR47Dh/ioiq5WmTmOQIg=
+			sU66p/QXsaNx7GQrdLmqSVtPKFVm4XpOQC/PVK1Y6Bk=
 			</data>
 		</dict>
 		<key>Modules/CashfreePGCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -265,7 +265,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XXzZqMonHSV/HRJwJsPQv8WGB+uO569HRxCX4aM8234=
+			/aGfZO8XhqbQ8A61lcilaojO75o4D1zlbhWj9Wwwr6M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
